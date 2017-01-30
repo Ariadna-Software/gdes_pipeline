@@ -1,25 +1,25 @@
 {
-  "name": "proasistencia",
-  "version": "1.2.3",
-  "description": "Server and API for PROASISTENCIA application",
+  "name": "gdes_pipeline",
+  "version": "0.0.1",
+  "description": "GDES-PIPELINE",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafaelgr/proasistencia.git"
+    "url": "git+https://github.com/Ariadna-Software/gdes_pipeline.git"
   },
   "keywords": [
     "node",
-    "proasistencia"
+    "gdes_pipeline"
   ],
   "author": "'Rafael Garcia <'rafa@myariadna.com'>",
   "license": "CC-BY-NC-4.0",
   "bugs": {
-    "url": "https://github.com/rafaelgr/proasistencia/issues"
+    "url": "https://github.com/Ariadna-Software/gdes_pipeline/issues"
   },
-  "homepage": "https://github.com/rafaelgr/proasistencia#readme",
+  "homepage": "https://github.com/Ariadna-Software/gdes_pipelinea#readme",
   "dependencies": {
     "async": "^2.0.0",
     "body-parser": "^1.14.0",
