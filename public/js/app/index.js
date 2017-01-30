@@ -1,23 +1,15 @@
-﻿// de blank_ (pruebas)
-var chart = null;
-var responsiveHelper_dt_basic = undefined;
-var responsiveHelper_datatable_fixed_column = undefined;
-var responsiveHelper_datatable_col_reorder = undefined;
-var responsiveHelper_datatable_tabletools = undefined;
+﻿/*
+ index.js
+ Funciones propias de la página index.html
+*/
 
-var dataRondasRealizadas;
-var rondaRealizadaId;
+var usuario = JSON.parse(apiComunGeneral.getCookie('usuario'));
 
-var breakpointDefinition = {
-    tablet: 1024,
-    phone: 480
-};
-
-
-function initForm() {
-    comprobarLogin();
-    // de smart admin
-    pageSetUp();
-    getVersionFooter();
+var apiPaginaIndex = {
+    ini: function(){
+        apiComunGeneral.initPage(usuario);
+        $('#inicio').attr('class', 'active');
+    }
 }
+
 

@@ -8,6 +8,42 @@ var apiComunGeneral = {
         // Inicialización específica de la página de login
         apiComunIdiomas.iniIdiomas();
     },
+    initPage: function (usuario) {
+        if (!usuario) window.open('login.html', '_self');
+        var expTime = moment(usuario.expKeyTime);
+        var ahora = moment(new Date());
+        if (ahora > expTime) window.open('login.html', '_self');
+
+        var lg = i18n.lng();
+        if (usuario.codigoIdioma) lg = usuario.codigoIdioma;
+
+        i18n.init({lng: lg}, function (t) { $('.I18N').i18n(); });
+        
+        var flag = "flag flag-es";
+        var lgn = "ES";
+        switch (lg) {
+            case "en":
+                flag = "flag flag-us";
+                lgn = "EN";
+                break;
+        };
+        $('#language-flag').attr('class', flag);
+        $('#language-abrv').text(lgn);
+        validator_languages(lgn);
+
+        apiComunGeneral.getVersion();
+        $("#nombreUsuario").text(usuario.nombre);
+    },
+    getVersion: function(){
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/version", null, function(err, data){
+            if (err) return;
+            if (!data.version) return this.mostrarMensaje('No se pudo obtener version');
+            $("#version").text(data.version);
+        });
+    },
+    mostrarMensaje: function (mensaje) {
+        $("#mensaje").text(mens);
+    },
     areCookiesEnabled: function () {
         var cookieEnabled = (navigator.cookieEnabled) ? true : false;
         if (typeof navigator.cookieEnabled == "undefined" && !cookieEnabled) {

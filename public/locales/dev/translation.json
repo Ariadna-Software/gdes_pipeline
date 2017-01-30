@@ -8,6 +8,18 @@
         "authorization": "No autorizado",
         "close": "Cerrar"
     },
+    "menu":{
+        "inicio": "Inicio",
+        "administracion":{
+            "cab": "Administración",
+            "gruposUsuarios": "Grupos usuarios",
+            "usuarios": "Usuarios"
+        },
+        "gestion":{
+            "cab": "Gestión",
+            "ofertas": "Ofertas"
+        }
+    },
     "login":{
         "acceso": "Acceso a la aplicación",
         "login": "Usuario",
@@ -17,5 +29,12 @@
         "btnLogin": "Entrar",
         "valLogin": "Introduzca el login",
         "valPassword": "Introduzca la contraseña"
+    },
+    "inicio": {
+        "titulo": "INICIO",
+        "panel": "Panel de inicio",
+        "cabecera": "Bienvenido a la aplicación GDES-PIPELINE.",
+        "linea1": "Le recordamos que el uso de esta aplicación está sujeto a las normas internas de la empresa y de manera general a los compromisos de confidencialidad expresados en la LOPD",
+        "linea2": "Para poder acceder a las diferentes funcionalidades utilice el menú de la izquierda que le mostrará las opciones a las que tiene acceso"
     }
 }
