@@ -51,7 +51,7 @@ var apiPaginaLogin = {
         return $('#login-form').valid();
     },
     lanzarLogin: function (data) {
-        apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/api/usuarios/login", data, function (err, data) {
+        apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/login/clave", data, function (err, data) {
             if (err) return;
             if (!data) {
                 this.mostrarMensaje('Login y/o password incorrectos');

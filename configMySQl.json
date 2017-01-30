@@ -2,6 +2,6 @@
     "host": "localhost",
     "user": "root",
     "password": "aritel",
-    "database": "proasistencia",
+    "database": "gdes_pipeline",
     "port": 3306
 }
