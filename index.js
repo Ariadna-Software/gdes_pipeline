@@ -14,8 +14,6 @@ var cors = require('cors');
 var serveIndex = require('serve-index');
 var moment = require('moment');
 
-var login_router = require('./lib/login/login_controller');
-
 var pack = require('./package.json');
 var config = require('./config.json');
 var loginDb = require('./lib/login/login_db_mysql');
@@ -61,7 +59,8 @@ router.get('/', function (req, res) {
 });
 
 // -- registering routes
-app.use('/login', login_router);
+app.use('/login', require('./lib/login/login_controller'));
+app.use('/version', require('./lib/version/version_controller'));
 app.use('/api', router);
 
 // -- start server

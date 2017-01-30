@@ -66,7 +66,7 @@ var apiPaginaLogin = {
         $("#mensaje").text(mens);
     },
     getVersion: function(){
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/version", null, function(err, data){
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/version", null, function(err, data){
             if (err) return;
             if (!data.version) return this.mostrarMensaje('No se pudo obtener version');
             $("#version").text(data.version);
@@ -74,28 +74,6 @@ var apiPaginaLogin = {
     }
 }
 
-function getVersion() {
-    $.ajax({
-        type: "GET",
-        url: myconfig.apiUrl + "/api/version",
-        dataType: "json",
-        contentType: "application/json",
-        success: function (data, status) {
-            // Regresa el mensaje
-            if (!data.version) {
-                mostrarMensaje('No se pudo obtener la versión ');
-            }
-            var a = data.version;
-            $("#version").text(a);
-
-        },
-        error: function (xhr, textStatus, errorThrwon) {
-            var m = xhr.responseText;
-            if (!m) m = "Error general posiblemente falla la conexión";
-            mostrarMensaje(m);
-        }
-    });
-}
 
 
 
