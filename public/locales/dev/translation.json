@@ -1,0 +1,21 @@
+{
+    "empresa": "GD Energy Services",
+    "app_titulo": "GDES PIPELINE (DEV)",
+    "app_descripcion": "Gestión de ofertas",
+    "error":{
+        "general": "Error",
+        "ajax_general": "Error comunicado",
+        "authorization": "No autorizado",
+        "close": "Cerrar"
+    },
+    "login":{
+        "acceso": "Acceso a la aplicación",
+        "login": "Usuario",
+        "password":"Contraseña",
+        "olvido": "He olvidado el usuario o la contraseña",
+        "conectado": "Permanecer conectado",
+        "btnLogin": "Entrar",
+        "valLogin": "Introduzca el login",
+        "valPassword": "Introduzca la contraseña"
+    }
+}

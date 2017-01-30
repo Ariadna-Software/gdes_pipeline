@@ -1,0 +1,6 @@
+{
+    "apiPort": 5000,
+    "apiHost": "127.0.0.1",
+    "dsn":"proasistenciag2",
+    "conta_dir": "C:\\Proyectos\\proasistencia\\public\\ficheros\\contabilidad"
+}
