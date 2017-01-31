@@ -17,7 +17,15 @@
         "administracion":{
             "cab": "Administración",
             "gruposUsuarios": "Grupos usuarios",
-            "usuarios": "Usuarios"
+            "usuarios": "Usuarios",
+            "responsables": "Responsables",
+            "empresas": "Empresas",
+            "paises": "Paises",
+            "areas": "Áreas",
+            "centros": "Centros",
+            "grupoActividades": "Grupo actividades",
+            "tipoActividades": "Tipos actividades",
+            "tiposSoporte": "Tipos soporte"
         },
         "gestion":{
             "cab": "Gestión",
