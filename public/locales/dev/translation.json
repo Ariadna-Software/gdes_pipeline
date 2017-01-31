@@ -2,6 +2,8 @@
     "empresa": "GD Energy Services",
     "app_titulo": "GDES PIPELINE (DEV)",
     "app_descripcion": "Gestión de ofertas",
+    "mostrar_ocultar": "Mostrar ocultar columnas",
+    "eliminar_pregunta": "¿Desea realmente eliminar este registro?",
     "error":{
         "general": "Error",
         "ajax_general": "Error comunicado",
@@ -36,5 +38,14 @@
         "cabecera": "Bienvenido a la aplicación GDES-PIPELINE.",
         "linea1": "Le recordamos que el uso de esta aplicación está sujeto a las normas internas de la empresa y de manera general a los compromisos de confidencialidad expresados en la LOPD",
         "linea2": "Para poder acceder a las diferentes funcionalidades utilice el menú de la izquierda que le mostrará las opciones a las que tiene acceso"
+    },
+    "gruposUsuarios":{
+        "titulo": "Grupos de usuarios",
+        "panel": "Grupos de usuarios",
+        "nuevo": "Nuevo usuario",
+        "nombre": "Nombre grupo",
+        "id": "ID",
+        "editar": "Editar grupo",
+        "eliminar": "Eliminar grupo"
     }
 }

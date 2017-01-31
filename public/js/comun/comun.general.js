@@ -3,6 +3,17 @@
  Funciones comunes a todas las páginas de manera general
 */
 
+// table managment related
+var responsiveHelper_dt_basic = undefined;
+var responsiveHelper_datatable_fixed_column = undefined;
+var responsiveHelper_datatable_col_reorder = undefined;
+var responsiveHelper_datatable_tabletools = undefined;
+
+var breakpointDefinition = {
+    tablet: 1024,
+    phone: 480
+};
+
 var apiComunGeneral = {
     iniLogin: function () {
         // Inicialización específica de la página de login
@@ -17,8 +28,8 @@ var apiComunGeneral = {
         var lg = i18n.lng();
         if (usuario.codigoIdioma) lg = usuario.codigoIdioma;
 
-        i18n.init({lng: lg}, function (t) { $('.I18N').i18n(); });
-        
+        i18n.init({ lng: lg }, function (t) { $('.I18N').i18n(); });
+
         var flag = "flag flag-es";
         var lgn = "ES";
         switch (lg) {
@@ -34,8 +45,8 @@ var apiComunGeneral = {
         apiComunGeneral.getVersion();
         $("#nombreUsuario").text(usuario.nombre);
     },
-    getVersion: function(){
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/version", null, function(err, data){
+    getVersion: function () {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/version", null, function (err, data) {
             if (err) return;
             if (!data.version) return this.mostrarMensaje('No se pudo obtener version');
             $("#version").text(data.version);
@@ -77,5 +88,79 @@ var apiComunGeneral = {
                 return unescape(y);
             }
         }
+    },
+    initTableOptions: function (table, lang) {
+        var options = {
+            "sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l C T >r>" +
+            "t" +
+            "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+            "oColVis": {
+                "buttonText": "Mostrar / ocultar columnas"
+            },
+            "oTableTools": {
+                "aButtons": [
+                    {
+                        "sExtends": "pdf",
+                        "sTitle": "Registros Seleccionadas",
+                        "sPdfMessage": "proasistencia PDF Export",
+                        "sPdfSize": "A4",
+                        "sPdfOrientation": "landscape",
+                        "oSelectorOpts": { filter: 'applied', order: 'current' }
+                    },
+                    {
+                        "sExtends": "copy",
+                        "sMessage": "Registros filtradas <i>(pulse Esc para cerrar)</i>",
+                        "oSelectorOpts": { filter: 'applied', order: 'current' }
+                    },
+                    {
+                        "sExtends": "csv",
+                        "sMessage": "Registros filtradas <i>(pulse Esc para cerrar)</i>",
+                        "oSelectorOpts": { filter: 'applied', order: 'current' }
+                    },
+                    {
+                        "sExtends": "xls",
+                        "sMessage": "Registros filtradas <i>(pulse Esc para cerrar)</i>",
+                        "oSelectorOpts": { filter: 'applied', order: 'current' }
+                    },
+                    {
+                        "sExtends": "print",
+                        "sMessage": "Registros filtradas <i>(pulse Esc para cerrar)</i>",
+                        "oSelectorOpts": { filter: 'applied', order: 'current' }
+                    }
+                ],
+                "sSwfPath": "js/plugin/datatables/swf/copy_csv_xls_pdf.swf"
+            },
+            "autoWidth": true,
+            "preDrawCallback": function () {
+                // Initialize the responsive datatables helper once.
+                if (!responsiveHelper_dt_basic) {
+                    responsiveHelper_dt_basic = new ResponsiveDatatablesHelper($('#' + table), breakpointDefinition);
+                }
+            },
+            "rowCallback": function (nRow) {
+                responsiveHelper_dt_basic.createExpandIcon(nRow);
+            },
+            "drawCallback": function (oSettings) {
+                responsiveHelper_dt_basic.respond();
+            },
+            "language": datatable_languages()[lang]
+        };
+        // change serach, it doesn't matter language
+        options.language.search = '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>';
+        return options;
+    },
+    mensajeAceptarCancelar: function (mensaje, fnAceptar, fnCancelar) {
+        $.SmartMessageBox({
+            title: "<i class='fa fa-info'></i> Mensaje",
+            content: mensaje,
+            buttons: '[Aceptar][Cancelar]'
+        }, function (ButtonPressed) {
+            if (ButtonPressed === "Aceptar") {
+                fnAceptar();
+            }
+            if (ButtonPressed === "Cancelar") {
+                fnCancelar();
+            }
+        });
     }
 }

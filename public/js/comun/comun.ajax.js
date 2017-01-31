@@ -39,5 +39,11 @@ var apiComunAjax = {
             opciones.data = JSON.stringify(datos);
         }
         $.ajax(opciones);
+    },
+    establecerClave: function (clave) {
+        $.ajaxSetup({
+            headers: { 'x-apiKey': clave }
+        });
+
     }
 }

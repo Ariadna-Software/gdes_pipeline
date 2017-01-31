@@ -62,6 +62,7 @@ router.get('/', function (req, res) {
 app.use('/login', require('./lib/login/login_controller'));
 app.use('/version', require('./lib/version/version_controller'));
 app.use('/api', router);
+app.use('/api/grupos-usuarios', require('./lib/grupos-usuarios/grupos-usuarios.controller'));
 
 // -- start server
 app.listen(config.apiPort);
