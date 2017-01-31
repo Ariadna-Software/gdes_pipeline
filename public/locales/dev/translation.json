@@ -6,15 +6,15 @@
     "eliminar_pregunta": "¿Desea realmente eliminar este registro?",
     "aceptar": "Aceptar",
     "salir": "Salir",
-    "error":{
+    "error": {
         "general": "Error",
         "ajax_general": "Error comunicado",
         "authorization": "No autorizado",
         "close": "Cerrar"
     },
-    "menu":{
+    "menu": {
         "inicio": "Inicio",
-        "administracion":{
+        "administracion": {
             "cab": "Administración",
             "gruposUsuarios": "Grupos usuarios",
             "usuarios": "Usuarios",
@@ -27,15 +27,15 @@
             "tipoActividades": "Tipos actividades",
             "tiposSoporte": "Tipos soporte"
         },
-        "gestion":{
+        "gestion": {
             "cab": "Gestión",
             "ofertas": "Ofertas"
         }
     },
-    "login":{
+    "login": {
         "acceso": "Acceso a la aplicación",
         "login": "Usuario",
-        "password":"Contraseña",
+        "password": "Contraseña",
         "olvido": "He olvidado el usuario o la contraseña",
         "conectado": "Permanecer conectado",
         "btnLogin": "Entrar",
@@ -49,14 +49,25 @@
         "linea1": "Le recordamos que el uso de esta aplicación está sujeto a las normas internas de la empresa y de manera general a los compromisos de confidencialidad expresados en la LOPD",
         "linea2": "Para poder acceder a las diferentes funcionalidades utilice el menú de la izquierda que le mostrará las opciones a las que tiene acceso"
     },
-    "gruposUsuarios":{
+    "gruposUsuarios": {
         "titulo": "Grupos de usuarios",
         "panel": "Grupos de usuarios",
-        "nuevo": "Nuevo usuario",
+        "nuevo": "Nuevo grupo usuario",
         "nombre": "Nombre grupo",
         "id": "ID",
         "editar": "Editar grupo",
         "eliminar": "Eliminar grupo",
         "valNombre": "Nombre necesario"
+    },
+    "usuarios": {
+        "titulo": "Usuarios",
+        "panel": "Usuarios",
+        "nuevo": "Nuevo usuario",
+        "nombre": "Nombre usuario",
+        "id": "ID",
+        "editar": "Editar usuario",
+        "eliminar": "Eliminar usuario",
+        "valNombre": "Nombre necesario",
+        "grupo": "Grupo"
     }
 }
