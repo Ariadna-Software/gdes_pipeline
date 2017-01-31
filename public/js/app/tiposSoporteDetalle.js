@@ -17,7 +17,7 @@ var apiPaginaTiposSoportesDetalle = {
         ko.applyBindings(vm);
 
         $('#tiposSoporte').attr('class', 'active');
-        $('#tipoSoporte-form').submit(function () { return false; });
+        // $('#tipoSoporte-form').submit(function () { return false; });
         $('#btnAceptar').click(apiPaginaTiposSoportesDetalle.aceptar);
         $('#btnSalir').click(apiPaginaTiposSoportesDetalle.salir);
 
