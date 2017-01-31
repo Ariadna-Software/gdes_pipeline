@@ -74,19 +74,19 @@
                     </a>
                 </span>
             </div>
-			<ul class="header-dropdown-list hidden-xs">
-				<li>
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img id="language-flag" src="img/blank.gif" class="flag flag-es" alt="Español (España)"> <span id="language-abrv"> ES</span>						<i class="fa fa-angle-down"></i> </a>
-					<ul class="dropdown-menu pull-right">
-						<li>
-							<a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('en');"><img src="img/blank.gif" class="flag flag-us" alt="en-US"> English (US)</a>
-						</li>
-						<li>
-							<a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('es');"><img src="img/blank.gif" class="flag flag-es" alt="es"> Español (España)</a>
-						</li>
-					</ul>
-				</li>
-			</ul>            
+            <ul class="header-dropdown-list hidden-xs">
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img id="language-flag" src="img/blank.gif" class="flag flag-es" alt="Español (España)"> <span id="language-abrv"> ES</span> <i class="fa fa-angle-down"></i> </a>
+                    <ul class="dropdown-menu pull-right">
+                        <li>
+                            <a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('en');"><img src="img/blank.gif" class="flag flag-us" alt="en-US"> English (US)</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('es');"><img src="img/blank.gif" class="flag flag-es" alt="es"> Español (España)</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </header>
     <aside id="left-panel">
@@ -95,7 +95,7 @@
                 <a href="javascript:void(0);" id="show-shortcut">
                     <i class="fa fa-user fa-2x"></i>
                     <span id="nombreUsuario"></span>
-                </a>
+            </a>
             </span>
         </div>
         <!-- NAVIGATION : -->
@@ -119,6 +119,56 @@
                         <li id="usuarios">
                             <a href="UsuariosGeneral.html">
                                 <i class="fa fa-user"></i> <span data-i18n="menu.administracion.usuarios">Usuarios</span>
+                            </a>
+                        </li>
+                        <li id="responsables">
+                            <a href="ResponsablesGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.responsables">Responsables</span>
+                            </a>
+                        </li>
+                        <li id="empresas">
+                            <a href="EmpresasGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.empresas">Empresas</span>
+                            </a>
+                        </li>
+                        <li id="paises">
+                            <a href="PaisesGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.paises">Paises</span>
+                            </a>
+                        </li>
+                        <li id="areas">
+                            <a href="AreasGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.areas">Areas</span>
+                            </a>
+                        </li>
+                        <li id="centros">
+                            <a href="CentrosGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.centros">Centros</span>
+                            </a>
+                        </li>
+                        <li id="gruposActividades">
+                            <a href="GruposActividadesGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.gruposActividades">GruposActividades</span>
+                            </a>
+                        </li>
+                        <li id="tiposActividades">
+                            <a href="TiposActividadesGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.tiposActividades">TiposActividades</span>
+                            </a>
+                        </li>
+                        <li id="tiposSoporte">
+                            <a href="TiposSoporteGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.tiposSoporte">TiposSoporte</span>
+                            </a>
+                        </li>
+                        <li id="tiposOferta">
+                            <a href="TiposOfertaGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.tiposOferta">TiposOferta</span>
+                            </a>
+                        </li>
+                        <li id="proyectos">
+                            <a href="ProyectosGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.proyectos">Proyectos</span>
                             </a>
                         </li>
                     </ul>
@@ -149,7 +199,7 @@
         <div id="content">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="page-title txt-color-blueDark" >
+                    <h1 class="page-title txt-color-blueDark">
                         <i class="fa-fw fa fa-home"></i> <span data-i18n="inicio.titulo">Inicio *</span> <a href="#" title="Ayuda"><i class="fa fa-question"></i></a>
                     </h1>
                 </div>
@@ -201,27 +251,27 @@
     <script src="js/plugin/pace/pace.min.js"></script>
     <!-- JQUERY -->
     <script src="js/libs/jquery/jquery-2.1.1.min.js"></script>
-    <script src="js/libs/jquery/jquery-ui-1.10.3.min.js"></script>    
+    <script src="js/libs/jquery/jquery-ui-1.10.3.min.js"></script>
     <script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
     <script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
     <!-- Otras librerias necesarias -->
-    <script src="js/libs/bootstrap/bootstrap.min.js"></script>    
+    <script src="js/libs/bootstrap/bootstrap.min.js"></script>
     <script src="js/libs/sprintf/sprintf.min.js"></script>
-    <script src="js/libs/numeral/numeral.js"></script>    
-    <script src="js/libs/knockout/knockout-3.1.0.js"></script>    
+    <script src="js/libs/numeral/numeral.js"></script>
+    <script src="js/libs/knockout/knockout-3.1.0.js"></script>
     <script src="js/libs/moment/moment.js"></script>
     <script src="js/libs/notification/SmartNotification.min.js"></script>
     <script src="js/plugin/datatables/jquery.dataTables.min.js"></script>
     <script src="js/plugin/datatables/dataTables.colVis.min.js"></script>
     <script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
     <script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
-    <script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>    
+    <script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
     <!-- Idiomas -->
-	<script src="js/libs/i18next/i18next-1.9.0.js"></script>
-	<script src="locales/validator-languages.js"></script>
-	<script src="locales/datatable-languages.js"></script>
-	<script src="locales/select2-languages.js"></script>
-	<script src="locales/numeral-languages.js"></script>
+    <script src="js/libs/i18next/i18next-1.9.0.js"></script>
+    <script src="locales/validator-languages.js"></script>
+    <script src="locales/datatable-languages.js"></script>
+    <script src="locales/select2-languages.js"></script>
+    <script src="locales/numeral-languages.js"></script>
     <!-- SADMIN -->
     <script src="js/libs/sadmin/app.config.js"></script>
     <script src="js/libs/sadmin/app.min.js"></script>

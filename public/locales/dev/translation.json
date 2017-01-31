@@ -23,9 +23,11 @@
             "paises": "Paises",
             "areas": "Áreas",
             "centros": "Centros",
-            "grupoActividades": "Grupo actividades",
-            "tipoActividades": "Tipos actividades",
-            "tiposSoporte": "Tipos soporte"
+            "gruposActividades": "Grupos actividades",
+            "tiposActividades": "Tipos actividades",
+            "tiposSoporte": "Tipos soporte",
+            "tiposOferta": "Tipos oferta",
+            "proyectos": "Proyectos"
         },
         "gestion": {
             "cab": "Gestión",
