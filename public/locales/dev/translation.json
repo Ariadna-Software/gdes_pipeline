@@ -4,6 +4,8 @@
     "app_descripcion": "Gestión de ofertas",
     "mostrar_ocultar": "Mostrar ocultar columnas",
     "eliminar_pregunta": "¿Desea realmente eliminar este registro?",
+    "aceptar": "Aceptar",
+    "salir": "Salir",
     "error":{
         "general": "Error",
         "ajax_general": "Error comunicado",
@@ -46,6 +48,7 @@
         "nombre": "Nombre grupo",
         "id": "ID",
         "editar": "Editar grupo",
-        "eliminar": "Eliminar grupo"
+        "eliminar": "Eliminar grupo",
+        "valNombre": "Nombre necesario"
     }
 }

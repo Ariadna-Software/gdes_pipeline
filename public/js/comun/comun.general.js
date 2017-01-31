@@ -149,18 +149,14 @@ var apiComunGeneral = {
         options.language.search = '<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>';
         return options;
     },
-    mensajeAceptarCancelar: function (mensaje, fnAceptar, fnCancelar) {
-        $.SmartMessageBox({
-            title: "<i class='fa fa-info'></i> Mensaje",
-            content: mensaje,
-            buttons: '[Aceptar][Cancelar]'
-        }, function (ButtonPressed) {
-            if (ButtonPressed === "Aceptar") {
-                fnAceptar();
-            }
-            if (ButtonPressed === "Cancelar") {
-                fnCancelar();
-            }
-        });
+    gup: function (name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regexS = "[\\?&]" + name + "=([^&#]*)";
+        var regex = new RegExp(regexS);
+        var results = regex.exec(window.location.href);
+        if (results === null)
+            return "";
+        else
+            return results[1];
     }
 }

@@ -24,5 +24,19 @@ var apiComunNotificaciones = {
             color: "#C46A69",
             iconSmall: "fa fa-warning shake animated",
         });
+    },
+    mensajeAceptarCancelar: function (mensaje, fnAceptar, fnCancelar) {
+        $.SmartMessageBox({
+            title: "<i class='fa fa-info'></i> Mensaje",
+            content: mensaje,
+            buttons: '[Aceptar][Cancelar]'
+        }, function (ButtonPressed) {
+            if (ButtonPressed === "Aceptar") {
+                fnAceptar();
+            }
+            if (ButtonPressed === "Cancelar") {
+                fnCancelar();
+            }
+        });
     }
 }
