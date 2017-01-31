@@ -99,6 +99,34 @@
         "id": "ID",
         "editar": "Editar pais",
         "eliminar": "Eliminar pais",
+        "codPais": "Código de país"
+    },
+    "areas": {
+        "titulo": "Areas",
+        "panel": "Areas",
+        "nuevo": "Nueva area",
+        "nombre": "Nombre area",
+        "id": "ID",
+        "editar": "Editar area",
+        "eliminar": "Eliminar area"
+    },
+    "centros": {
+        "titulo": "Centros",
+        "panel": "Centros",
+        "nuevo": "Nueva centro",
+        "nombre": "Nombre centro",
+        "id": "ID",
+        "editar": "Editar centro",
+        "eliminar": "Eliminar centro"
+    },
+    "gruposActividades": {
+        "titulo": "Grupos de actividades",
+        "panel": "Grupos de actividades",
+        "nuevo": "Nuevo grupo actividad",
+        "nombre": "Nombre grupo",
+        "id": "ID",
+        "editar": "Editar grupo",
+        "eliminar": "Eliminar grupo",
         "valNombre": "Nombre necesario"
     }
 }

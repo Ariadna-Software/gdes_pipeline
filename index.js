@@ -67,6 +67,9 @@ app.use('/api/usuarios', require('./lib/usuarios/usuarios.controller'));
 app.use('/api/responsables', require('./lib/responsables/responsables.controller'));
 app.use('/api/empresas', require('./lib/empresas/empresas.controller'));
 app.use('/api/paises', require('./lib/paises/paises.controller'));
+app.use('/api/areas', require('./lib/areas/areas.controller'));
+app.use('/api/centros', require('./lib/centros/centros.controller'));
+app.use('/api/grupos-actividades', require('./lib/grupos-actividades/grupos-actividades.controller'));
 
 // -- start server
 app.listen(config.apiPort);
