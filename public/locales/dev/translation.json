@@ -80,5 +80,15 @@
         "eliminar": "Eliminar responsable",
         "valNombre": "Nombre necesario",
         "usuario": "Usuario"
+    },
+    "empresas": {
+        "titulo": "Empresas",
+        "panel": "Empresas",
+        "nuevo": "Nueva empresa",
+        "nombre": "Nombre empresa",
+        "id": "ID",
+        "editar": "Editar empresa",
+        "eliminar": "Eliminar empresa",
+        "valNombre": "Nombre necesario"
     }
 }
