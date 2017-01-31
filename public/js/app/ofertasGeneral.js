@@ -28,7 +28,7 @@ var apiPaginaOfertasGeneral = {
         },{
             data: "fechaLimiteProyecto"
         },{
-            data: "fechaAceptacion"
+            data: "fechaUltimoEstado"
         },{
             data: "importePresupuesto"
         },{

@@ -193,14 +193,14 @@
     <div id="main" role="main" style="min-height: 800px;">
         <div id="ribbon">
             <ol class="breadcrumb">
-                <li data-i18n="ofertas.titulo">Grupo usuarios</li>
+                <li data-i18n="tiposOferta.titulo">Grupo usuarios</li>
             </ol>
         </div>
         <div id="content">
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="page-title txt-color-blueDark">
-                        <i class="fa-fw fa fa-file-o"></i> <span data-i18n="ofertas.titulo">Empresas</span> <a href="#" title="Ayuda"><i class="fa fa-question"></i></a>
+                        <i class="fa-fw fa fa-cog"></i> <span data-i18n="tiposOferta.titulo">Tipos soporte</span> <a href="#" title="Ayuda"><i class="fa fa-question"></i></a>
                     </h1>
                 </div>
                 <!-- end col -->
@@ -212,13 +212,13 @@
                         <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
                             <header>
                                 <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
-                                <h2 data-i18n="ofertas.panel"> Panel</h2>
+                                <h2 data-i18n="tiposOferta.panel"> Panel</h2>
                             </header>
                             <div class="row">
-                                <form id="ofertas-form" class="smart-form">
+                                <form id="tiposOferta-form" class="smart-form">
                                     <fieldset>
                                         <div class="pull-right">
-                                            <button id="btnNuevo" data-i18n="[title]ofertas.nuevo" class="btn btn-success btn-circle btn-lg">
+                                            <button id="btnNuevo" data-i18n="[title]tiposOferta.nuevo" class="btn btn-success btn-circle btn-lg">
                                                 <i class="fa fa-lg fa-plus"></i>
                                             </button>
                                         </div>
@@ -226,82 +226,16 @@
                                 </form>
                             </div>
                             <div class="row">
-                                <div id="tb_ofertas">
-                                    <table id="dt_ofertas" class="table table-striped table-bordered table-hover" width="100%">
+                                <div id="tb_tiposOferta">
+                                    <table id="dt_tiposOferta" class="table table-striped table-bordered table-hover" width="100%">
                                         <thead>
                                             <tr>
                                                 <th data-hide="phone">
-                                                    <span data-i18n="ofertas.id">ID</span>
+                                                    <span data-i18n="tiposOferta.id">ID</span>
                                                 </th>
                                                 <th data-class="expand">
-                                                    <i class="fa fa-fw fa-file-o text-muted hidden-md hidden-sm hidden-xs"></i>
-                                                    <span data-i18n="ofertas.numeroOferta">Nr. Oferta</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.fechaOferta">Fecha oferta</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.fechaLimiteProyecto">Fecha limite pr.</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.fechaUltimoEstado">Fecha estado</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.importePresupuesto">Imp. presupuesto</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.importePresupuestoDivisa">Imp. pre. divisa</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.codigoDivisa">Cod. divisa</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.importeInversion">Imp. inv.</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.importeRetorno">Imp.ret</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.descripcion">Descripción</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.observaciones">Observaciones</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.autorizaciones">Autorizaciones</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.numeroPedido">N. Pedido</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.personaContacto">Pers. Contacto</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.empresa">Empresa</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.proyecto">Proyecto</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.area">Area</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.tipoActividad">Tipo actividad</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.pais">Pais</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.estado">Estado</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.tipoSoporte">T. Soporte</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.responsable">Responsable</span>
-                                                </th>
-                                                <th data-hide="phone">
-                                                    <span data-i18n="ofertas.centro">Centro</span>
+                                                    <i class="fa fa-fw fa-users text-muted hidden-md hidden-sm hidden-xs"></i>
+                                                    <span data-i18n="tiposOferta.nombre">NOMBRE</span>
                                                 </th>
                                                 <th style="text-align: center;">
                                                     <i class="fa fa-fw fa-cogs text-muted hidden-md hidden-sm hidden-xs"></i>
@@ -371,11 +305,11 @@
     <script src="js/comun/comun.ajax.js"></script>
     <script src="js/comun/comun.general.js"></script>
     <!-- Funciones propias de esta página -->
-    <script src="js/app/ofertasGeneral.js"></script>
+    <script src="js/app/tiposOfertaGeneral.js"></script>
     <script type="text/javascript">
     (function($) {
         $(document).ready(function() {
-            apiPaginaOfertasGeneral.ini();
+            apiPaginaTiposOfertaGeneral.ini();
         });
     })(jQuery);
     </script>

@@ -193,14 +193,14 @@
     <div id="main" role="main" style="min-height: 800px;">
         <div id="ribbon">
             <ol class="breadcrumb">
-                <li data-i18n="empresas.titulo">Grupo usuarios</li>
+                <li data-i18n="proyectos.titulo">Grupo usuarios</li>
             </ol>
         </div>
         <div id="content">
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="page-title txt-color-blueDark">
-                        <i class="fa-fw fa fa-cog"></i> <span data-i18n="empresas.titulo">Empresas</span> <a href="#" title="Ayuda"><i class="fa fa-question"></i></a>
+                        <i class="fa-fw fa fa-cog"></i> <span data-i18n="proyectos.titulo">Proyectos</span> <a href="#" title="Ayuda"><i class="fa fa-question"></i></a>
                     </h1>
                 </div>
                 <!-- end col -->
@@ -212,18 +212,30 @@
                         <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
                             <header>
                                 <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
-                                <h2 data-i18n="empresas.panel"> Panel</h2>
+                                <h2 data-i18n="proyectos.panel"> Panel</h2>
                             </header>
                             <div class="row">
-                                <form id="empresa-form" class="smart-form">
+                                <form id="proyecto-form" class="smart-form">
                                     <fieldset>
                                         <div class="row">
-                                            <section class="col col-md-12">
-                                                <label class="label" data-i18n="empresas.nombre">Nombre:</label>
+                                            <section class="col col-md-6">
+                                                <label class="label" data-i18n="proyectos.nombre">Nombre:</label>
                                                 <label class="input">
                                                     <input id="txtNombre" name="txtNombre" data-bind="value: nombre">
                                                 </label>
                                             </section>
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="proyectos.referencia">Referencia:</label>
+                                                <label class="input">
+                                                    <input id="txtReferencia" name="txtReferencia" data-bind="value: referencia">
+                                                </label>
+                                            </section>
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="proyectos.numeroProyecto">Numero proyecto:</label>
+                                                <label class="input">
+                                                    <input id="txtNumeroProyecto" name="txtNumeroProyecto" data-bind="value: numeroProyecto">
+                                                </label>
+                                            </section>                                                                                        
                                         </div>
                                     </fieldset>
                                     <fieldset>
@@ -298,11 +310,11 @@
     <script src="js/comun/comun.ajax.js"></script>
     <script src="js/comun/comun.general.js"></script>
     <!-- Funciones propias de esta página -->
-    <script src="js/app/empresasDetalle.js"></script>
+    <script src="js/app/proyectosDetalle.js"></script>
     <script type="text/javascript">
     (function($) {
         $(document).ready(function() {
-            apiPaginaEmpresasDetalle.ini();
+            apiPaginaProyectosDetalle.ini();
         });
     })(jQuery);
     </script>

@@ -163,7 +163,7 @@
         "numeroOferta": "Numero oferta",
         "fechaOferta": "Fecha oferta",
         "fechaLimiteProyecto": "Fecha limite de proyecto",
-        "fechaAceptacion": "Fecha de aceptacion",
+        "fechaUltimoEstado": "Fecha ultimo estado",
         "importePresupuesto": "Importe presupuesto",
         "importePresupuestoDivisa": "Importe presupuesto divisa",
         "codigoDivisa": "Codigo divisa",
@@ -183,5 +183,26 @@
         "tipoSoporte": "Tipo soporte",
         "responsable": "Responsable",
         "centro": "Centro"
+    },
+    "proyectos": {
+        "titulo": "Proyectos",
+        "panel": "Proyectos",
+        "nuevo": "Nueva proyecto",
+        "nombre": "Nombre proyecto",
+        "id": "ID",
+        "editar": "Editar proyecto",
+        "eliminar": "Eliminar proyecto",
+        "referencia": "Referencia",
+        "numeroProyecto": "Numero proyecto"
+    },
+    "tiposOferta": {
+        "titulo": "Tipos oferta",
+        "panel": "Tipos oferta",
+        "nuevo": "Nuevo tipo oferta",
+        "nombre": "Nombre tipo oferta",
+        "id": "ID",
+        "editar": "Editar tipo oferta",
+        "eliminar": "Eliminar tipo oferta",
+        "valNombre": "Nombre necesario"
     }
 }

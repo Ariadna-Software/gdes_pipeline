@@ -1,63 +1,69 @@
 ﻿/*
- empresas.js
- Funciones propias de la página Empresas.html
+ proyectos.js
+ Funciones propias de la página Proyectos.html
 */
 
 var usuario = JSON.parse(apiComunGeneral.getCookie('usuario'));
 var data = null;
-var empresaId = 0;
+var proyectoId = 0;
 var vm;
 
-var apiPaginaEmpresasDetalle = {
+var apiPaginaProyectosDetalle = {
     ini: function () {
         apiComunGeneral.initPage(usuario);
         apiComunAjax.establecerClave(usuario.apiKey);
 
-        vm = new apiPaginaEmpresasDetalle.datosPagina();
+        vm = new apiPaginaProyectosDetalle.datosPagina();
         ko.applyBindings(vm);
 
-        $('#empresas').attr('class', 'active');
-        $('#empresa-form').submit(function () { return false; });
-        $('#btnAceptar').click(apiPaginaEmpresasDetalle.aceptar);
-        $('#btnSalir').click(apiPaginaEmpresasDetalle.salir);
+        $('#proyectos').attr('class', 'active');
+        $('#proyecto-form').submit(function () { return false; });
+        $('#btnAceptar').click(apiPaginaProyectosDetalle.aceptar);
+        $('#btnSalir').click(apiPaginaProyectosDetalle.salir);
 
-        empresaId = apiComunGeneral.gup("id");
-        if (empresaId == 0){
-            vm.empresaId(0);
+        proyectoId = apiComunGeneral.gup("id");
+        if (proyectoId == 0){
+            vm.proyectoId(0);
         }else{
-            apiPaginaEmpresasDetalle.cargarEmpresa(empresaId);
+            apiPaginaProyectosDetalle.cargarProyecto(proyectoId);
         }
     },
-    cargarEmpresa: function(id){
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/empresas/" + id, null, function(err, data){
+    cargarProyecto: function(id){
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/proyectos/" + id, null, function(err, data){
             if (err) return;
-            apiPaginaEmpresasDetalle.cargarDatosPagina(data);
+            apiPaginaProyectosDetalle.cargarDatosPagina(data);
         });
     },
     cargarDatosPagina: function(data){
-        vm.empresaId(data.empresaId);
+        vm.proyectoId(data.proyectoId);
         vm.nombre(data.nombre);
+        vm.referencia(data.referencia);
+        vm.numeroProyecto(data.numeroProyecto);
     },
     datosPagina: function () {
         var self = this;
-        self.empresaId = ko.observable();
+        self.proyectoId = ko.observable();
         self.nombre = ko.observable();
+        self.referencia = ko.observable();
+        self.numeroProyecto = ko.observable();
     },
     aceptar: function () {
-        if (!apiPaginaEmpresasDetalle.datosOk()) return;
+        if (!apiPaginaProyectosDetalle.datosOk()) return;
         var data = {
-            empresaId: vm.empresaId(),
-            nombre: vm.nombre()
+            proyectoId: vm.proyectoId(),
+            nombre: vm.nombre(),
+            referencia: vm.referencia(),
+            numeroProyecto: vm.numeroProyecto()
         };
         var verb = "PUT";
-        if (vm.empresaId() == 0) verb = "POST";
-        apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/empresas", data, function(err, data){
+        if (vm.proyectoId() == 0) verb = "POST";
+        apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/proyectos", data, function(err, data){
             if (err) return;
-            apiPaginaEmpresasDetalle.salir();
+            apiPaginaProyectosDetalle.salir();
         });
     },
     datosOk: function(){
-        $('#empresa-form').validate({
+        $('#proyecto-form').validate({
             rules: {
                 txtNombre: { required: true }
             },
@@ -65,10 +71,10 @@ var apiPaginaEmpresasDetalle = {
                 error.insertAfter(element.parent());
             }
         });
-        return $('#empresa-form').valid();
+        return $('#proyecto-form').valid();
     },
     salir: function () {
-        window.open(sprintf('EmpresasGeneral.html'), '_self');
+        window.open(sprintf('ProyectosGeneral.html'), '_self');
     }
 }
 
