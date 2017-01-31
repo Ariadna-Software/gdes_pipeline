@@ -64,6 +64,7 @@ app.use('/version', require('./lib/version/version_controller'));
 app.use('/api', router);
 app.use('/api/grupos-usuarios', require('./lib/grupos-usuarios/grupos-usuarios.controller'));
 app.use('/api/usuarios', require('./lib/usuarios/usuarios.controller'));
+app.use('/api/responsables', require('./lib/responsables/responsables.controller'));
 
 // -- start server
 app.listen(config.apiPort);

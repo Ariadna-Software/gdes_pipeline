@@ -5,4 +5,6 @@ ALTER TABLE `gdes_pipeline`.`usuarios`
   ADD COLUMN `getKeyTime` DATETIME NULL COMMENT 'Fecha y hora en la que se obtuvo la última clave API' AFTER `password`,
   ADD COLUMN `expKeyTime` DATETIME NULL COMMENT 'Fecha y hora en la que expira la clave API' AFTER `getKeyTime`,
   ADD COLUMN `apiKey` VARCHAR(255) NULL COMMENT 'Clave API utilizada para identificar al usuario en las llamadas' AFTER `expKeyTime`;  
+ALTER TABLE `gdes_pipeline`.`responsables`   
+  CHANGE `userId` `usuarioId` INT(11) NULL COMMENT 'Usuario relacionado';  
   

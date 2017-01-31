@@ -69,5 +69,16 @@
         "eliminar": "Eliminar usuario",
         "valNombre": "Nombre necesario",
         "grupo": "Grupo"
+    },
+    "responsables": {
+        "titulo": "Responsables",
+        "panel": "Responsables",
+        "nuevo": "Nuevo responsable",
+        "nombre": "Nombre responsable",
+        "id": "ID",
+        "editar": "Editar responsable",
+        "eliminar": "Eliminar responsable",
+        "valNombre": "Nombre necesario",
+        "usuario": "Usuario"
     }
 }
