@@ -70,6 +70,8 @@ app.use('/api/paises', require('./lib/paises/paises.controller'));
 app.use('/api/areas', require('./lib/areas/areas.controller'));
 app.use('/api/centros', require('./lib/centros/centros.controller'));
 app.use('/api/grupos-actividades', require('./lib/grupos-actividades/grupos-actividades.controller'));
+app.use('/api/tipos-actividades', require('./lib/tipos-actividades/tipos-actividades.controller'));
+app.use('/api/tipos-soporte', require('./lib/tipos-soporte/tipos-soporte.controller'));
 
 // -- start server
 app.listen(config.apiPort);

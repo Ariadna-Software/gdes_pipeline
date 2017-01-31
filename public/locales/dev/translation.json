@@ -128,5 +128,26 @@
         "editar": "Editar grupo",
         "eliminar": "Eliminar grupo",
         "valNombre": "Nombre necesario"
+    },
+    "tiposActividades": {
+        "titulo": "Tipos de actividades",
+        "panel": "Tipos de actividades",
+        "nuevo": "Nuevo tipo actividad",
+        "nombre": "Nombre tipo actividad",
+        "id": "ID",
+        "editar": "Editar tipo actividad",
+        "eliminar": "Eliminar tipo actividad",
+        "valNombre": "Nombre necesario",
+        "grupoActividad": "Grupo actividad"
+    },
+    "tiposSoporte": {
+        "titulo": "Tipos soporte",
+        "panel": "Tipos soporte",
+        "nuevo": "Nuevo tipo soporte",
+        "nombre": "Nombre tipo soporte",
+        "id": "ID",
+        "editar": "Editar tipo soporte",
+        "eliminar": "Eliminar tipo soporte",
+        "valNombre": "Nombre necesario"
     }
 }
