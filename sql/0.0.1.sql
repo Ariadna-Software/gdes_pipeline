@@ -16,6 +16,7 @@ ALTER TABLE `gdes_pipeline`.`grupos_actividades`
 ALTER TABLE `gdes_pipeline`.`tipos_actividades`   
   ADD COLUMN `grupoActividadId` INT(11) NULL AFTER `nombre`,
   ADD CONSTRAINT `tipoa_grupoac` FOREIGN KEY (`grupoActividadId`) REFERENCES `gdes_pipeline`.`grupos_actividades`(`grupoActividadId`);
-  
+ALTER TABLE `gdes_pipeline`.`ofertas`   
+  CHANGE `reponsableId` `responsableId` INT(11) NULL COMMENT 'Responsable de GDES';  
     
   

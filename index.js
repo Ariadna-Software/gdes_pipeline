@@ -72,6 +72,7 @@ app.use('/api/centros', require('./lib/centros/centros.controller'));
 app.use('/api/grupos-actividades', require('./lib/grupos-actividades/grupos-actividades.controller'));
 app.use('/api/tipos-actividades', require('./lib/tipos-actividades/tipos-actividades.controller'));
 app.use('/api/tipos-soporte', require('./lib/tipos-soporte/tipos-soporte.controller'));
+app.use('/api/ofertas', require('./lib/ofertas/ofertas.controller'));
 
 // -- start server
 app.listen(config.apiPort);
