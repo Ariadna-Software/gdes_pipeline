@@ -90,5 +90,15 @@
         "editar": "Editar empresa",
         "eliminar": "Eliminar empresa",
         "valNombre": "Nombre necesario"
+    },
+    "paises": {
+        "titulo": "Paises",
+        "panel": "Paises",
+        "nuevo": "Nueva pais",
+        "nombre": "Nombre pais",
+        "id": "ID",
+        "editar": "Editar pais",
+        "eliminar": "Eliminar pais",
+        "valNombre": "Nombre necesario"
     }
 }

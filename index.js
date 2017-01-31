@@ -66,6 +66,7 @@ app.use('/api/grupos-usuarios', require('./lib/grupos-usuarios/grupos-usuarios.c
 app.use('/api/usuarios', require('./lib/usuarios/usuarios.controller'));
 app.use('/api/responsables', require('./lib/responsables/responsables.controller'));
 app.use('/api/empresas', require('./lib/empresas/empresas.controller'));
+app.use('/api/paises', require('./lib/paises/paises.controller'));
 
 // -- start server
 app.listen(config.apiPort);
