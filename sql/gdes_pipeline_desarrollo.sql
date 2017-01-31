@@ -170,7 +170,7 @@ CREATE TABLE `ofertas` (
   `numeroOferta` varchar(255) DEFAULT NULL COMMENT 'Número de la oferta',
   `fechaOferta` date DEFAULT NULL COMMENT 'Fecha original de la oferta',
   `fechaLimiteProyecto` date DEFAULT NULL COMMENT 'Fecha estimada para el proyecto ofertado',
-  `fechaAceptacion` date DEFAULT NULL COMMENT 'Fecha en que la oferta pasó al estado de aceptada',
+  `fechaUltimoEstado` date DEFAULT NULL COMMENT 'Fecha en la que se produjo el cambio a estado actual',
   `importePresupuesto` decimal(12,2) DEFAULT NULL COMMENT 'Importe presupuestado',
   `importePresupuestoDivisa` decimal(12,2) DEFAULT NULL COMMENT 'Importe presupuestado en otra moneda',
   `codigoDivisa` varchar(255) DEFAULT NULL COMMENT 'Código de la divisa de la otra moneda (ISO 4217)',
@@ -247,11 +247,14 @@ CREATE TABLE `proyectos` (
   `proyectoId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de proyecto',
   `nombre` varchar(255) DEFAULT NULL COMMENT 'Nombre del proyecto',
   `referencia` varchar(255) DEFAULT NULL COMMENT 'Referencia de proyecto',
-  `numeroProyecto` int(11) DEFAULT NULL COMMENT 'Número de proyecto en GDES',
+  `numeroProyecto` varchar(255) DEFAULT NULL COMMENT 'Número de proyecto en GDES',
   PRIMARY KEY (`proyectoId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Proyectos a los que pertenecen las ofertas';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Proyectos a los que pertenecen las ofertas';
 
 /*Data for the table `proyectos` */
+
+insert  into `proyectos`(`proyectoId`,`nombre`,`referencia`,`numeroProyecto`) values (2,'Proyecto 1','RFP1','NR1');
+insert  into `proyectos`(`proyectoId`,`nombre`,`referencia`,`numeroProyecto`) values (3,'Proyecto 2',NULL,NULL);
 
 /*Table structure for table `responsables` */
 
@@ -309,9 +312,14 @@ CREATE TABLE `tipos_oferta` (
   `tipoOfertaId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único del tipo de oferta',
   `nombre` varchar(255) NOT NULL COMMENT 'Nombre del tipo de oferta',
   PRIMARY KEY (`tipoOfertaId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 /*Data for the table `tipos_oferta` */
+
+insert  into `tipos_oferta`(`tipoOfertaId`,`nombre`) values (1,'Oportunidad negocio');
+insert  into `tipos_oferta`(`tipoOfertaId`,`nombre`) values (2,'Precalificación');
+insert  into `tipos_oferta`(`tipoOfertaId`,`nombre`) values (3,'Oferta contrato');
+insert  into `tipos_oferta`(`tipoOfertaId`,`nombre`) values (4,'Oferta diversificación');
 
 /*Table structure for table `tipos_soporte` */
 
@@ -352,7 +360,7 @@ CREATE TABLE `usuarios` (
 
 /*Data for the table `usuarios` */
 
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (1,1,'Administrador','es','admin','admin','2017-01-31 11:46:20','2017-01-31 16:46:20','i0T6z');
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (1,1,'Administrador','es','admin','admin','2017-01-31 17:21:54','2017-01-31 22:21:54','EE63P');
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (2,1,'Antonio Martinez','es','a.martinez@gdes.com','1234',NULL,NULL,NULL);
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (3,1,'Marceliano Curiel','es','m.curiel@gdes.com','1234',NULL,NULL,NULL);
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (4,1,'Antonio Andrés','es','a.andres@gdes.com','1234',NULL,NULL,NULL);
