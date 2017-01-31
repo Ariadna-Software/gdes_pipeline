@@ -40,7 +40,7 @@ var apiComunGeneral = {
         };
         $('#language-flag').attr('class', flag);
         $('#language-abrv').text(lgn);
-        validator_languages(lgn);
+        validator_languages(lg);
 
         apiComunGeneral.getVersion();
         $("#nombreUsuario").text(usuario.nombre);

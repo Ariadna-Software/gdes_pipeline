@@ -59,7 +59,7 @@ var apiPaginaGruposUsuariosDetalle = {
     datosOk: function(){
         $('#grupoUsuario-form').validate({
             rules: {
-                txtName: { required: true }
+                txtNombre: { required: true }
             },
             errorPlacement: function (error, element) {
                 error.insertAfter(element.parent());
