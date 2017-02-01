@@ -18,7 +18,7 @@
     <!-- SmartAdmin RTL Support -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css">
     <!-- Pivot table -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/1.3.0/pivot.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/ariadna.css" />
     <!-- #FAVICONS -->
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -232,13 +232,13 @@
                                             </section> 
                                             <section class="col col-md-4">
                                                 <label class="label" data-i18n="ofertas.tipoOferta">TipoOferta:</label>
-                                                <select style="width:100%;" id="cmbTipoOfertas" name="cmbTipoOfertas" data-bind="options: optionsTipoOfertas, optionsText: 'nombre', optionsValue: 'tipoOfertaId', 
+                                                <select class="aswselect2" id="cmbTipoOfertas" name="cmbTipoOfertas" data-bind="options: optionsTipoOfertas, optionsText: 'nombre', optionsValue: 'tipoOfertaId', 
                                                     value: sTipoOferta, valueAllowUnset: true, selectedOptions: selectedTipoOfertas, selected2:{}">
                                                 </select>
                                             </section>   
                                             <section class="col col-md-4">
                                                 <label class="label" data-i18n="ofertas.responsable">Responsable:</label>
-                                                <select style="width:100%;" id="cmbResponsables" name="cmbResponsables" data-bind="options: optionsResponsables, optionsText: 'nombre', optionsValue: 'responsableId', 
+                                                <select class="aswselect2" id="cmbResponsables" name="cmbResponsables" data-bind="options: optionsResponsables, optionsText: 'nombre', optionsValue: 'responsableId', 
                                                     value: sResponsable, valueAllowUnset: true, selectedOptions: selectedResponsables, selected2:{}">
                                                 </select>
                                             </section>                                                                                       
@@ -260,7 +260,7 @@
                                             </section> 
                                             <section class="col col-md-4">
                                                 <label class="label" data-i18n="ofertas.estado">Estado:</label>
-                                                <select style="width:100%;" id="cmbEstados" name="cmbEstados" data-bind="options: optionsEstados, optionsText: 'nombre', optionsValue: 'estadoId', 
+                                                <select class="aswselect2" id="cmbEstados" name="cmbEstados" data-bind="options: optionsEstados, optionsText: 'nombre', optionsValue: 'estadoId', 
                                                     value: sEstado, valueAllowUnset: true, selectedOptions: selectedEstados, selected2:{}">
                                                 </select>
                                             </section>                                              
@@ -268,25 +268,25 @@
                                         <div class="row">
                                             <section class="col col-md-3">
                                                 <label class="label" data-i18n="ofertas.pais">Pais:</label>
-                                                <select style="width:100%;" id="cmbPaiss" name="cmbPaiss" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
+                                                <select class="aswselect2" id="cmbPaiss" name="cmbPaiss" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
                                                     value: sPais, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
                                                 </select>
                                             </section> 
                                             <section class="col col-md-3">
                                                 <label class="label" data-i18n="ofertas.empresa">Empresa:</label>
-                                                <select style="width:100%;" id="cmbEmpresas" name="cmbEmpresas" data-bind="options: optionsEmpresas, optionsText: 'nombre', optionsValue: 'empresaId', 
+                                                <select class="aswselect2" id="cmbEmpresas" name="cmbEmpresas" data-bind="options: optionsEmpresas, optionsText: 'nombre', optionsValue: 'empresaId', 
                                                     value: sEmpresa, valueAllowUnset: true, selectedOptions: selectedEmpresas, selected2:{}">
                                                 </select>
                                             </section>   
                                             <section class="col col-md-3">
                                                 <label class="label" data-i18n="ofertas.area">Area:</label>
-                                                <select style="width:100%;" id="cmbAreas" name="cmbAreas" data-bind="options: optionsAreas, optionsText: 'nombre', optionsValue: 'areaId', 
+                                                <select class="aswselect2" id="cmbAreas" name="cmbAreas" data-bind="options: optionsAreas, optionsText: 'nombre', optionsValue: 'areaId', 
                                                     value: sArea, valueAllowUnset: true, selectedOptions: selectedAreas, selected2:{}">
                                                 </select>
                                             </section>     
                                             <section class="col col-md-3">
                                                 <label class="label" data-i18n="ofertas.centro">Centroa:</label>
-                                                <select style="width:100%;" id="cmbCentros" name="cmbCentros" data-bind="options: optionsCentros, optionsText: 'nombre', optionsValue: 'centroId', 
+                                                <select class="aswselect2" id="cmbCentros" name="cmbCentros" data-bind="options: optionsCentros, optionsText: 'nombre', optionsValue: 'centroId', 
                                                     value: sCentro, valueAllowUnset: true, selectedOptions: selectedCentros, selected2:{}">
                                                 </select>
                                             </section>     
@@ -294,19 +294,19 @@
                                         <div class="row">
                                             <section class="col col-md-3">
                                                 <label class="label" data-i18n="ofertas.proyecto">Proyecto:</label>
-                                                <select style="width:100%;" id="cmbProyectos" name="cmbProyectos" data-bind="options: optionsProyectos, optionsText: 'nombre', optionsValue: 'proyectoId', 
+                                                <select class="aswselect2" id="cmbProyectos" name="cmbProyectos" data-bind="options: optionsProyectos, optionsText: 'nombre', optionsValue: 'proyectoId', 
                                                     value: sProyecto, valueAllowUnset: true, selectedOptions: selectedProyectos, selected2:{}">
                                                 </select>
                                             </section>   
                                             <section class="col col-md-3">
                                                 <label class="label" data-i18n="ofertas.tipoActividad">TipoActividad:</label>
-                                                <select style="width:100%;" id="cmbTipoActividads" name="cmbTipoActividads" data-bind="options: optionsTipoActividads, optionsText: 'nombre', optionsValue: 'tipoActividadId', 
+                                                <select class="aswselect2" id="cmbTipoActividads" name="cmbTipoActividads" data-bind="options: optionsTipoActividads, optionsText: 'nombre', optionsValue: 'tipoActividadId', 
                                                     value: sTipoActividad, valueAllowUnset: true, selectedOptions: selectedTipoActividads, selected2:{}">
                                                 </select>
                                             </section>     
                                             <section class="col col-md-3">
                                                 <label class="label" data-i18n="ofertas.tipoSoporte">TipoSoporte:</label>
-                                                <select style="width:100%;" id="cmbTipoSoportes" name="cmbTipoSoportes" data-bind="options: optionsTipoSoportes, optionsText: 'nombre', optionsValue: 'tipoSoporteId', 
+                                                <select class="aswselect2" id="cmbTipoSoportes" name="cmbTipoSoportes" data-bind="options: optionsTipoSoportes, optionsText: 'nombre', optionsValue: 'tipoSoporteId', 
                                                     value: sTipoSoporte, valueAllowUnset: true, selectedOptions: selectedTipoSoportes, selected2:{}">
                                                 </select>
                                             </section>     

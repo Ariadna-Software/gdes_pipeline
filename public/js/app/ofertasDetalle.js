@@ -31,15 +31,15 @@ var apiPaginaOfertasDetalle = {
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarAreas();
         $('#cmbCentros').select2(select2_languages[usuario.codigoIdioma]);
-        apiPaginaOfertasDetalle.cargarCentros();    
+        apiPaginaOfertasDetalle.cargarCentros();
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
-        apiPaginaOfertasDetalle.cargarEstados();   
+        apiPaginaOfertasDetalle.cargarEstados();
         $('#cmbProyectos').select2(select2_languages[usuario.codigoIdioma]);
-        apiPaginaOfertasDetalle.cargarProyectos();   
+        apiPaginaOfertasDetalle.cargarProyectos();
         $('#cmbTipoActividads').select2(select2_languages[usuario.codigoIdioma]);
-        apiPaginaOfertasDetalle.cargarTipoActividads();   
+        apiPaginaOfertasDetalle.cargarTipoActividads();
         $('#cmbTipoSoportes').select2(select2_languages[usuario.codigoIdioma]);
-        apiPaginaOfertasDetalle.cargarTipoSoportes();                                      
+        apiPaginaOfertasDetalle.cargarTipoSoportes();
 
         ofertaId = apiComunGeneral.gup("id");
 
@@ -130,19 +130,19 @@ var apiPaginaOfertasDetalle = {
 
         self.optionsEstados = ko.observableArray([]);
         self.selectedEstados = ko.observableArray([]);
-        self.sEstado = ko.observable();        
+        self.sEstado = ko.observable();
 
         self.optionsProyectos = ko.observableArray([]);
         self.selectedProyectos = ko.observableArray([]);
-        self.sProyecto = ko.observable();  
+        self.sProyecto = ko.observable();
 
         self.optionsTipoActividads = ko.observableArray([]);
         self.selectedTipoActividads = ko.observableArray([]);
-        self.sTipoActividad = ko.observable();  
+        self.sTipoActividad = ko.observable();
 
         self.optionsTipoSoportes = ko.observableArray([]);
         self.selectedTipoSoportes = ko.observableArray([]);
-        self.sTipoSoporte = ko.observable();                  
+        self.sTipoSoporte = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -185,20 +185,26 @@ var apiPaginaOfertasDetalle = {
         $('#oferta-form').validate({
             rules: {
                 txtNumeroOferta: { required: true },
-                txtFechaOferta: {required: true},
-                cmbTipoOfertas: {required: true},
-                cmbResponsables: {required: true},
-                cmbEstados: {required: true},
-                cmbPaiss: {required: true},
-                cmbEmpresas: {required: true},
-                cmbAreas: {required: true},
-                cmbCentros: {required: true},
-                cmbProyectos: {required: true},
-                txtImportePresupuesto: {required: true},
-                txtDescripcion: {required: true}
+                txtFechaOferta: { required: true },
+                cmbTipoOfertas: { required: true },
+                cmbResponsables: { required: true },
+                cmbEstados: { required: true },
+                cmbPaiss: { required: true },
+                cmbEmpresas: { required: true },
+                cmbAreas: { required: true },
+                cmbCentros: { required: true },
+                cmbProyectos: { required: true },
+                txtImportePresupuesto: { required: true },
+                txtDescripcion: { required: true }
             },
             errorPlacement: function (error, element) {
-                error.insertAfter(element.parent());
+                if (element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());      // radio/checkbox?
+                } else if (element.hasClass('aswselect2')) {
+                    error.insertAfter(element);  // select2
+                } else {
+                    error.insertAfter(element.parent());               // default
+                }
             }
         });
         return $('#oferta-form').valid();
