@@ -45,6 +45,8 @@ var apiPaginaOfertasDetalle = {
 
         if (ofertaId == 0) {
             vm.ofertaId(0);
+            vm.fechaOferta(moment(new Date()).format("DD/MM/YYYY"));
+            vm.fechaUltimoEstado(moment(new Date()).format("DD/MM/YYYY"));
         } else {
             apiPaginaOfertasDetalle.cargarOferta(ofertaId);
         }
@@ -61,22 +63,27 @@ var apiPaginaOfertasDetalle = {
         vm.fechaOferta(moment(data.fechaOferta).format(i18n.t('util.date_format')));
         vm.fechaUltimoEstado(moment(data.fechaUltimoEstado).format(i18n.t('util.date_format')));
         vm.fechaLimiteProyecto(moment(data.fechaLimiteProyecto).format(i18n.t('util.date_format')));
-        cargarTipoOfertas(data.tipoOfertaId);
-        cargarResponsables(data.responsableId);
-        cargarPaiss(data.paisId);
-        cargarEmpresas(data.empresaId);
-        cargarAreas(data.areaId);
-        cargarCentros(data.centroId);
-        cargarEstados(data.estadoId);
-        cargarProyectos(data.proyectoId);
-        cargarTipoSoportes(data.tipoSoporteId);
-        cargarTipoActividads(data.tipoActividadId);
+        vm.numeroPedido(data.numeroPedido);
+        apiPaginaOfertasDetalle.cargarTipoOfertas(data.tipoOfertaId);
+        apiPaginaOfertasDetalle.cargarResponsables(data.responsableId);
+        apiPaginaOfertasDetalle.cargarPaiss(data.paisId);
+        apiPaginaOfertasDetalle.cargarEmpresas(data.empresaId);
+        apiPaginaOfertasDetalle.cargarAreas(data.areaId);
+        apiPaginaOfertasDetalle.cargarCentros(data.centroId);
+        apiPaginaOfertasDetalle.cargarEstados(data.estadoId);
+        apiPaginaOfertasDetalle.cargarProyectos(data.proyectoId);
+        apiPaginaOfertasDetalle.cargarTipoSoportes(data.tipoSoporteId);
+        apiPaginaOfertasDetalle.cargarTipoActividads(data.tipoActividadId);
         vm.importePresupuesto(data.importePresupuesto);
         vm.importePresupuestoDivisa(data.importePresupuestoDivisa);
         vm.codigoDivisa(data.codigoDivisa);
         vm.importeInversion(data.importeInversion);
         vm.importeRetorno(data.importeRetorno);
         vm.tiempoEmpleado(data.tiempoEmpleado);
+        vm.personaContacto(data.personaContacto);
+        vm.descripcion(data.descripcion);
+        vm.observaciones(data.observaciones);
+        vm.autorizaciones(data.autorizaciones);
     },
     datosPagina: function () {
         var self = this;
@@ -92,6 +99,10 @@ var apiPaginaOfertasDetalle = {
         self.importeInversion = ko.observable();
         self.importeRetorno = ko.observable();
         self.tiempoEmpleado = ko.observable();
+        self.personaContacto = ko.observable();
+        self.descripcion = ko.observable();
+        self.observaciones = ko.observable();
+        self.autorizaciones = ko.observable();
 
         self.optionsTipoOfertas = ko.observableArray([]);
         self.selectedTipoOfertas = ko.observableArray([]);
@@ -149,15 +160,19 @@ var apiPaginaOfertasDetalle = {
             centroId: vm.sCentro(),
             estadoId: vm.sEstado(),
             proyectoId: vm.sProyecto(),
-            tipoActividad: vm.sTipoActividad(),
-            tipoSoporte: vm.sTipoSoporte(),
+            tipoActividadId: vm.sTipoActividad(),
+            tipoSoporteId: vm.sTipoSoporte(),
             numeroPedido: vm.numeroPedido(),
             importePresupuesto: vm.importePresupuesto(),
             importePresupuestoDivisa: vm.importePresupuestoDivisa(),
             codigoDivisa: vm.codigoDivisa(),
             importeInversion: vm.importeInversion(),
             importeRetorno: vm.importeRetorno(),
-            tiempoEmpleado: vm.tiempoEmpleado()
+            tiempoEmpleado: vm.tiempoEmpleado(),
+            personaContacto: vm.personaContacto(),
+            descripcion: vm.descripcion(),
+            observaciones: vm.observaciones(),
+            autorizaciones: vm.autorizaciones()
         };
         var verb = "PUT";
         if (vm.ofertaId() == 0) verb = "POST";
@@ -169,7 +184,18 @@ var apiPaginaOfertasDetalle = {
     datosOk: function () {
         $('#oferta-form').validate({
             rules: {
-                txtNombre: { required: true }
+                txtNumeroOferta: { required: true },
+                txtFechaOferta: {required: true},
+                cmbTipoOfertas: {required: true},
+                cmbResponsables: {required: true},
+                cmbEstados: {required: true},
+                cmbPaiss: {required: true},
+                cmbEmpresas: {required: true},
+                cmbAreas: {required: true},
+                cmbCentros: {required: true},
+                cmbProyectos: {required: true},
+                txtImportePresupuesto: {required: true},
+                txtDescripcion: {required: true}
             },
             errorPlacement: function (error, element) {
                 error.insertAfter(element.parent());

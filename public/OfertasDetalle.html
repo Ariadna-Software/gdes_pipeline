@@ -215,7 +215,7 @@
                                 <h2 data-i18n="ofertas.panel"> Panel</h2>
                             </header>
                             <div class="row">
-                                <form id="empresa-form" class="smart-form">
+                                <form id="oferta-form" class="smart-form">
                                     <fieldset>
                                         <div class="row">
                                             <section class="col col-md-2">
@@ -345,7 +345,7 @@
                                             <section class="col col-md-2">
                                                 <label class="label" data-i18n="ofertas.importeRetorno">Retorno:</label>
                                                 <label class="input">
-                                                    <input id="txtImporteRetorno" name="txtImporteRetorno" data-bind="value: numeroPedido">
+                                                    <input id="txtImporteRetorno" name="txtImporteRetorno" data-bind="value: importeRetorno">
                                                 </label>
                                             </section>                                             
                                             <section class="col col-md-2">
@@ -354,7 +354,39 @@
                                                     <input id="txtTiempoEmpleado" name="txtTiempoEmpleado" data-bind="value: tiempoEmpleado">
                                                 </label>
                                             </section>                                             
-                                        </div>                                     
+                                        </div>             
+                                        <div class="row">
+                                            <section class="col col-md-12">
+                                                <label class="label" data-i18n="ofertas.personaContacto">PersonaContacto:</label>
+                                                <label class="input">
+                                                    <input id="txtPersonaContacto" name="txtPersonaContacto" data-bind="value: personaContacto">
+                                                </label>                                                
+                                            </section>
+                                        </div>      
+                                        <div class="row">
+                                            <section class="col col-md-12">
+                                                <label class="label" data-i18n="ofertas.descripcion">Descripcion:</label>
+                                                <label class="textarea textarea-resizable">
+                                                    <textarea id="txtDescripcion" rows="3" class="custom-scroll" data-bind="value:descripcion"></textarea>
+                                                </label>
+                                            </section>                                            
+                                        </div>         
+                                        <div class="row">
+                                            <section class="col col-md-12">
+                                                <label class="label" data-i18n="ofertas.observaciones">Observaciones:</label>
+                                                <label class="textarea textarea-resizable">
+                                                    <textarea id="txtObservaciones" rows="3" class="custom-scroll" data-bind="value:observaciones"></textarea>
+                                                </label>
+                                            </section>                                            
+                                        </div>      
+                                        <div class="row">
+                                            <section class="col col-md-12">
+                                                <label class="label" data-i18n="ofertas.autorizaciones">Autorizaciones:</label>
+                                                <label class="textarea textarea-resizable">
+                                                    <textarea id="txtAutorizaciones" rows="3" class="custom-scroll" data-bind="value:autorizaciones"></textarea>
+                                                </label>
+                                            </section>                                            
+                                        </div>                                                                                   
                                     </fieldset>
                                     <fieldset>
                                         <div class="pull-right">
