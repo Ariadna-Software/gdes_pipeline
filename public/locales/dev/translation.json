@@ -12,6 +12,11 @@
         "authorization": "No autorizado",
         "close": "Cerrar"
     },
+    "util": {
+        "date_iso": "YYYY-MM-DD",
+        "date_format": "DD/MM/YYYY",
+        "date_format2": "dd/mm/yy"
+    },
     "menu": {
         "inicio": "Inicio",
         "administracion": {
@@ -165,7 +170,7 @@
         "fechaLimiteProyecto": "Fecha limite de proyecto",
         "fechaUltimoEstado": "Fecha ultimo estado",
         "importePresupuesto": "Importe presupuesto",
-        "importePresupuestoDivisa": "Importe presupuesto divisa",
+        "importePresupuestoDivisa": "Imp. presupuesto divisa",
         "codigoDivisa": "Codigo divisa",
         "importeInversion": "Importe inversion",
         "importeRetorno": "Importe retorno",
@@ -182,7 +187,9 @@
         "estado": "Estado",
         "tipoSoporte": "Tipo soporte",
         "responsable": "Responsable",
-        "centro": "Centro"
+        "centro": "Centro",
+        "tipoOferta": "Tipo oferta",
+        "tiempoEmpleado": "Tiempo empleado"
     },
     "proyectos": {
         "titulo": "Proyectos",

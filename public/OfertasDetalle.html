@@ -218,13 +218,143 @@
                                 <form id="empresa-form" class="smart-form">
                                     <fieldset>
                                         <div class="row">
-                                            <section class="col col-md-12">
-                                                <label class="label" data-i18n="ofertas.nombre">Nombre:</label>
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.numeroOferta">N.Oferta:</label>
                                                 <label class="input">
-                                                    <input id="txtNombre" name="txtNombre" data-bind="value: nombre">
+                                                    <input id="txtNumeroOferta" name="txtNumeroOferta" data-bind="value: numeroOferta">
                                                 </label>
                                             </section>
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.fechaOferta">Fecha oferta:</label>
+                                                <label class="input">
+                                                    <input id="txtFechaOferta" name="txtFechaOferta" data-bind="value: fechaOferta" class="datepicker" data-dateformat="dd/mm/yy">
+                                                </label>
+                                            </section> 
+                                            <section class="col col-md-4">
+                                                <label class="label" data-i18n="ofertas.tipoOferta">TipoOferta:</label>
+                                                <select style="width:100%;" id="cmbTipoOfertas" name="cmbTipoOfertas" data-bind="options: optionsTipoOfertas, optionsText: 'nombre', optionsValue: 'tipoOfertaId', 
+                                                    value: sTipoOferta, valueAllowUnset: true, selectedOptions: selectedTipoOfertas, selected2:{}">
+                                                </select>
+                                            </section>   
+                                            <section class="col col-md-4">
+                                                <label class="label" data-i18n="ofertas.responsable">Responsable:</label>
+                                                <select style="width:100%;" id="cmbResponsables" name="cmbResponsables" data-bind="options: optionsResponsables, optionsText: 'nombre', optionsValue: 'responsableId', 
+                                                    value: sResponsable, valueAllowUnset: true, selectedOptions: selectedResponsables, selected2:{}">
+                                                </select>
+                                            </section>                                                                                       
                                         </div>
+                                        <div class="row">
+                                            <section class="col col-md-4">
+                                            </section>
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.fechaLimiteProyecto">Fecha limite proyecto:</label>
+                                                <label class="input">
+                                                    <input id="txtFechaLimiteProyecto" name="txtFechaLimiteProyecto" data-bind="value: fechaLimiteProyecto" class="datepicker" data-dateformat="dd/mm/yy">
+                                                </label>
+                                            </section>                                            
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.fechaUltimoEstado">Ultimo cambio estado:</label>
+                                                <label class="input">
+                                                    <input id="txtFechaUltimoEstado" name="txtFechaUltimoEstado" data-bind="value: fechaUltimoEstado" class="datepicker" data-dateformat="dd/mm/yy">
+                                                </label>
+                                            </section> 
+                                            <section class="col col-md-4">
+                                                <label class="label" data-i18n="ofertas.estado">Estado:</label>
+                                                <select style="width:100%;" id="cmbEstados" name="cmbEstados" data-bind="options: optionsEstados, optionsText: 'nombre', optionsValue: 'estadoId', 
+                                                    value: sEstado, valueAllowUnset: true, selectedOptions: selectedEstados, selected2:{}">
+                                                </select>
+                                            </section>                                              
+                                        </div>
+                                        <div class="row">
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.pais">Pais:</label>
+                                                <select style="width:100%;" id="cmbPaiss" name="cmbPaiss" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
+                                                    value: sPais, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
+                                                </select>
+                                            </section> 
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.empresa">Empresa:</label>
+                                                <select style="width:100%;" id="cmbEmpresas" name="cmbEmpresas" data-bind="options: optionsEmpresas, optionsText: 'nombre', optionsValue: 'empresaId', 
+                                                    value: sEmpresa, valueAllowUnset: true, selectedOptions: selectedEmpresas, selected2:{}">
+                                                </select>
+                                            </section>   
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.area">Area:</label>
+                                                <select style="width:100%;" id="cmbAreas" name="cmbAreas" data-bind="options: optionsAreas, optionsText: 'nombre', optionsValue: 'areaId', 
+                                                    value: sArea, valueAllowUnset: true, selectedOptions: selectedAreas, selected2:{}">
+                                                </select>
+                                            </section>     
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.centro">Centroa:</label>
+                                                <select style="width:100%;" id="cmbCentros" name="cmbCentros" data-bind="options: optionsCentros, optionsText: 'nombre', optionsValue: 'centroId', 
+                                                    value: sCentro, valueAllowUnset: true, selectedOptions: selectedCentros, selected2:{}">
+                                                </select>
+                                            </section>     
+                                        </div>
+                                        <div class="row">
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.proyecto">Proyecto:</label>
+                                                <select style="width:100%;" id="cmbProyectos" name="cmbProyectos" data-bind="options: optionsProyectos, optionsText: 'nombre', optionsValue: 'proyectoId', 
+                                                    value: sProyecto, valueAllowUnset: true, selectedOptions: selectedProyectos, selected2:{}">
+                                                </select>
+                                            </section>   
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.tipoActividad">TipoActividad:</label>
+                                                <select style="width:100%;" id="cmbTipoActividads" name="cmbTipoActividads" data-bind="options: optionsTipoActividads, optionsText: 'nombre', optionsValue: 'tipoActividadId', 
+                                                    value: sTipoActividad, valueAllowUnset: true, selectedOptions: selectedTipoActividads, selected2:{}">
+                                                </select>
+                                            </section>     
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.tipoSoporte">TipoSoporte:</label>
+                                                <select style="width:100%;" id="cmbTipoSoportes" name="cmbTipoSoportes" data-bind="options: optionsTipoSoportes, optionsText: 'nombre', optionsValue: 'tipoSoporteId', 
+                                                    value: sTipoSoporte, valueAllowUnset: true, selectedOptions: selectedTipoSoportes, selected2:{}">
+                                                </select>
+                                            </section>     
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.numeroPedido">N.Pedido:</label>
+                                                <label class="input">
+                                                    <input id="txtNumeroPedido" name="txtNumeroPedido" data-bind="value: numeroPedido">
+                                                </label>
+                                            </section>                                            
+                                        </div>   
+                                        <div class="row">
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.importePresupuesto">Presupuesto:</label>
+                                                <label class="input">
+                                                    <input id="txtImportePresupuesto" name="txtImportePresupuesto" data-bind="value: importePresupuesto">
+                                                </label>
+                                            </section>                                             
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.importePresupuestoDivisa">Imp Divisa:</label>
+                                                <label class="input">
+                                                    <input id="txtImportePresupuestoDivisa" name="txtImportePresupuestoDivisa" data-bind="value: importePresupuestoDivisa">
+                                                </label>
+                                            </section>                                             
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.codigoDivisa">Divisa:</label>
+                                                <label class="input">
+                                                    <input id="txtCodigoDivisa" name="txtCodigoDivisa" data-bind="value: codigoDivisa">
+                                                </label>
+                                            </section>                                             
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.importeInversion">Inversion:</label>
+                                                <label class="input">
+                                                    <input id="txtImporteInversion" name="txtImporteInversion" data-bind="value: importeInversion">
+                                                </label>
+                                            </section>                                             
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.importeRetorno">Retorno:</label>
+                                                <label class="input">
+                                                    <input id="txtImporteRetorno" name="txtImporteRetorno" data-bind="value: numeroPedido">
+                                                </label>
+                                            </section>                                             
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.tiempoEmpleado">Tiempo:</label>
+                                                <label class="input">
+                                                    <input id="txtTiempoEmpleado" name="txtTiempoEmpleado" data-bind="value: tiempoEmpleado">
+                                                </label>
+                                            </section>                                             
+                                        </div>                                     
                                     </fieldset>
                                     <fieldset>
                                         <div class="pull-right">
@@ -280,9 +410,11 @@
     <script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
     <script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
     <script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+    <script src="js/plugin/select2/select2.min.js"></script>
     <!-- Idiomas -->
     <script src="js/libs/i18next/i18next-1.9.0.js"></script>
     <script src="locales/validator-languages.js"></script>
+    <script src="locales/datepicker-languages.js"></script>
     <script src="locales/datatable-languages.js"></script>
     <script src="locales/select2-languages.js"></script>
     <script src="locales/numeral-languages.js"></script>
@@ -302,7 +434,7 @@
     <script type="text/javascript">
     (function($) {
         $(document).ready(function() {
-            apiPaginaEmpresasDetalle.ini();
+            apiPaginaOfertasDetalle.ini();
         });
     })(jQuery);
     </script>

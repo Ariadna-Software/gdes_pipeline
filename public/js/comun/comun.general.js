@@ -25,6 +25,8 @@ var apiComunGeneral = {
         var ahora = moment(new Date());
         if (ahora > expTime) window.open('login.html', '_self');
 
+        pageSetUp();
+        
         var lg = i18n.lng();
         if (usuario.codigoIdioma) lg = usuario.codigoIdioma;
 
@@ -41,6 +43,7 @@ var apiComunGeneral = {
         $('#language-flag').attr('class', flag);
         $('#language-abrv').text(lgn);
         validator_languages(lg);
+        datepicker_languages(lg);
 
         apiComunGeneral.getVersion();
         $("#nombreUsuario").text(usuario.nombre);

@@ -104,10 +104,10 @@ var apiPaginaOfertasGeneral = {
         dt.fnDraw();
     },
     nuevo: function(){
-        window.open(sprintf('OfertasDetalle.html?id=%s', 0), '_self');
+        window.open(sprintf('OfertasDetalle.html?id=%s', 0), '_new');
     },
     editar: function(id){
-        window.open(sprintf('OfertasDetalle.html?id=%s', id), '_self');
+        window.open(sprintf('OfertasDetalle.html?id=%s', id), '_new');
     },
     eliminar: function(id){
         apiComunNotificaciones.mensajeAceptarCancelar(i18n.t("eliminar_pregunta"),function(){
