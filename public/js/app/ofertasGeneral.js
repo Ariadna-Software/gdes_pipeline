@@ -24,11 +24,20 @@ var apiPaginaOfertasGeneral = {
         }, {
             data: "numeroOferta"
         },{
-            data: "fechaOferta"
+            data: "fechaOferta",
+            render: function (data, type, row) {
+                if (data) return moment(data).format('DD/MM/YYYY');
+            }
         },{
-            data: "fechaLimiteProyecto"
+            data: "fechaLimiteProyecto",
+            render: function (data, type, row) {
+                if (data) return moment(data).format('DD/MM/YYYY');
+            }
         },{
-            data: "fechaUltimoEstado"
+            data: "fechaUltimoEstado",
+            render: function (data, type, row) {
+                if (data) return moment(data).format('DD/MM/YYYY');
+            }
         },{
             data: "importePresupuesto"
         },{
