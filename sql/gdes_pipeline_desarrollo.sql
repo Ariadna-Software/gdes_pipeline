@@ -213,9 +213,11 @@ CREATE TABLE `ofertas` (
   CONSTRAINT `oft_tipo_actividad` FOREIGN KEY (`tipoActividadId`) REFERENCES `tipos_actividades` (`tipoActividadId`),
   CONSTRAINT `oft_tipo_oferta` FOREIGN KEY (`tipoOfertaId`) REFERENCES `tipos_oferta` (`tipoOfertaId`),
   CONSTRAINT `oft_tipo_soporte` FOREIGN KEY (`tipoSoporteId`) REFERENCES `tipos_soporte` (`tipoSoporteId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabla general de ofertas';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Tabla general de ofertas';
 
 /*Data for the table `ofertas` */
+
+insert  into `ofertas`(`ofertaId`,`numeroOferta`,`fechaOferta`,`fechaLimiteProyecto`,`fechaUltimoEstado`,`importePresupuesto`,`importePresupuestoDivisa`,`codigoDivisa`,`importeInversion`,`importeRetorno`,`descripcion`,`observaciones`,`tiempoEmpleado`,`autorizaciones`,`numeroPedido`,`personaContacto`,`empresaId`,`proyectoId`,`areaId`,`tipoActividadId`,`paisId`,`estadoId`,`tipoSoporteId`,`responsableId`,`centroId`,`tipoOfertaId`) values (1,'78555','2017-02-01','2017-02-01','2017-02-01',10.00,20.00,'30',40.00,50.00,'lkjklj','lkjklj',60,'lkjkljkl','48555','lkjklj',1,2,1,NULL,1,1,1,2,0,1);
 
 /*Table structure for table `paises` */
 
@@ -360,7 +362,7 @@ CREATE TABLE `usuarios` (
 
 /*Data for the table `usuarios` */
 
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (1,1,'Administrador','es','admin','admin','2017-01-31 17:21:54','2017-01-31 22:21:54','EE63P');
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (1,1,'Administrador','es','admin','admin','2017-02-01 08:29:35','2017-02-01 13:29:35','VC4Hv');
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (2,1,'Antonio Martinez','es','a.martinez@gdes.com','1234',NULL,NULL,NULL);
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (3,1,'Marceliano Curiel','es','m.curiel@gdes.com','1234',NULL,NULL,NULL);
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (4,1,'Antonio Andrés','es','a.andres@gdes.com','1234',NULL,NULL,NULL);
