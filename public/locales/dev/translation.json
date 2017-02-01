@@ -80,7 +80,8 @@
         "empresa": "Empresa por defecto",
         "area": "Area por defecto",
         "centro": "Centro por defecto",
-        "codigoIdioma": "Codigo idioma"
+        "codigoIdioma": "Codigo idioma",
+        "esAdministrador": "Este usuario es administrador"
     },
     "responsables": {
         "titulo": "Responsables",
