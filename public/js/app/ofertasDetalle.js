@@ -24,6 +24,7 @@ var apiPaginaOfertasDetalle = {
         apiPaginaOfertasDetalle.cargarTipoOfertas();
         $('#cmbResponsables').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarResponsables();
+
         $('#cmbPaiss').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarPaiss();
         $('#cmbEmpresas').select2(select2_languages[usuario.codigoIdioma]);
@@ -32,6 +33,7 @@ var apiPaginaOfertasDetalle = {
         apiPaginaOfertasDetalle.cargarAreas();
         $('#cmbCentros').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarCentros();
+
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEstados();
         $('#cmbProyectos').select2(select2_languages[usuario.codigoIdioma]);
@@ -47,6 +49,12 @@ var apiPaginaOfertasDetalle = {
             vm.ofertaId(0);
             vm.fechaOferta(moment(new Date()).format("DD/MM/YYYY"));
             vm.fechaUltimoEstado(moment(new Date()).format("DD/MM/YYYY"));
+
+            apiPaginaOfertasDetalle.cargarPaiss(usuario.paisId);
+            apiPaginaOfertasDetalle.cargarEmpresas(usuario.empresaId);
+            apiPaginaOfertasDetalle.cargarAreas(usuario.areaId);
+            apiPaginaOfertasDetalle.cargarCentros(usuario.centroId);
+            apiPaginaOfertasDetalle.cargarResponsables(usuario.responsableId);
         } else {
             apiPaginaOfertasDetalle.cargarOferta(ofertaId);
         }
@@ -66,10 +74,12 @@ var apiPaginaOfertasDetalle = {
         vm.numeroPedido(data.numeroPedido);
         apiPaginaOfertasDetalle.cargarTipoOfertas(data.tipoOfertaId);
         apiPaginaOfertasDetalle.cargarResponsables(data.responsableId);
+
         apiPaginaOfertasDetalle.cargarPaiss(data.paisId);
         apiPaginaOfertasDetalle.cargarEmpresas(data.empresaId);
         apiPaginaOfertasDetalle.cargarAreas(data.areaId);
         apiPaginaOfertasDetalle.cargarCentros(data.centroId);
+
         apiPaginaOfertasDetalle.cargarEstados(data.estadoId);
         apiPaginaOfertasDetalle.cargarProyectos(data.proyectoId);
         apiPaginaOfertasDetalle.cargarTipoSoportes(data.tipoSoporteId);

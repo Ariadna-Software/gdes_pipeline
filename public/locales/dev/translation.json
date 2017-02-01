@@ -75,7 +75,11 @@
         "editar": "Editar usuario",
         "eliminar": "Eliminar usuario",
         "valNombre": "Nombre necesario",
-        "grupo": "Grupo"
+        "grupo": "Grupo",
+        "pais": "Pais por defecto",
+        "empresa": "Empresa por defecto",
+        "area": "Area por defecto",
+        "centro": "Centro por defecto"
     },
     "responsables": {
         "titulo": "Responsables",

@@ -273,7 +273,7 @@ CREATE TABLE `responsables` (
 
 /*Data for the table `responsables` */
 
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (1,1,'Administrador');
+insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (1,1,'Administrador RESP');
 insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (2,2,'Antonio Martinez');
 insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (3,3,'Marceliano Curiel');
 insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (4,4,'Antonio Andrés');
@@ -355,30 +355,42 @@ CREATE TABLE `usuarios` (
   `getKeyTime` datetime DEFAULT NULL COMMENT 'Fecha y hora en la que se obtuvo la última clave API',
   `expKeyTime` datetime DEFAULT NULL COMMENT 'Fecha y hora en la que expira la clave API',
   `apiKey` varchar(255) DEFAULT NULL COMMENT 'Clave API utilizada para identificar al usuario en las llamadas',
+  `paisId` int(11) DEFAULT NULL COMMENT 'Pais por defecto para ofertas',
+  `empresaId` int(11) DEFAULT NULL COMMENT 'Empresa por defecto para ofertas',
+  `areaId` int(11) DEFAULT NULL COMMENT 'Área por defecto para ofertas',
+  `centroId` int(11) DEFAULT NULL COMMENT 'Centro por defecto para ofertas',
   PRIMARY KEY (`usuarioId`),
   KEY `usuarios_grupos` (`grupoUsuarioId`),
-  CONSTRAINT `usuarios_grupos` FOREIGN KEY (`grupoUsuarioId`) REFERENCES `grupos_usuarios` (`grupoUsuarioId`)
+  KEY `usuarios_paises` (`paisId`),
+  KEY `usuarios_empresas` (`empresaId`),
+  KEY `usuarios_areas` (`areaId`),
+  KEY `usuarios_centros` (`centroId`),
+  CONSTRAINT `usuarios_areas` FOREIGN KEY (`areaId`) REFERENCES `areas` (`areaId`),
+  CONSTRAINT `usuarios_centros` FOREIGN KEY (`centroId`) REFERENCES `centros` (`centroId`),
+  CONSTRAINT `usuarios_empresas` FOREIGN KEY (`empresaId`) REFERENCES `empresas` (`empresaId`),
+  CONSTRAINT `usuarios_grupos` FOREIGN KEY (`grupoUsuarioId`) REFERENCES `grupos_usuarios` (`grupoUsuarioId`),
+  CONSTRAINT `usuarios_paises` FOREIGN KEY (`paisId`) REFERENCES `paises` (`paisId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='Tabla de usuarios. Todos los usuarios pertenecen a un grupo';
 
 /*Data for the table `usuarios` */
 
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (1,1,'Administrador','es','admin','admin','2017-02-01 08:29:35','2017-02-01 13:29:35','VC4Hv');
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (2,1,'Antonio Martinez','es','a.martinez@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (3,1,'Marceliano Curiel','es','m.curiel@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (4,1,'Antonio Andrés','es','a.andres@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (5,1,'Fernando de Pablo','es','f.pablo@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (6,1,'Jose Tomás Ruiz','es','j.ruiz@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (7,1,'Joan Romeu','es','j.romeu@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (8,1,'Ivan Maqueda','es','i.maqueda@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (9,1,'Fernando Lázaro','es','f.lazaro@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (10,1,'André Martínez','es','an.martinez@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (11,1,'Patrice Guerra','es','p.guerra@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (12,1,'Jorge Luis Uzcátegui','es','j.uzcategui@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (13,1,'Fernando Fernandez','es','f.fernandez@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (14,1,'Vassil Gueorguiev Hristov Georgiev','es','v.hristov@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (15,1,'Ramses Anguizola','es','r.anguizola@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (16,1,'Ramón Almoguera','es','r.almoguera_ext@gdes.com','1234',NULL,NULL,NULL);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`) values (18,1,'Nelia Martínez','es','n.martinez@gdes.com','1234',NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (1,1,'Administrador','es','admin','admin','2017-02-01 12:51:50','2017-02-01 17:51:50','63kGI',1,1,1,1);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (2,1,'Antonio Martinez','es','a.martinez@gdes.com','1234','2017-02-01 12:27:29','2017-02-01 17:27:29','cH55I',NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (3,1,'Marceliano Curiel','es','m.curiel@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (4,1,'Antonio Andrés','es','a.andres@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (5,1,'Fernando de Pablo','es','f.pablo@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (6,1,'Jose Tomás Ruiz','es','j.ruiz@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (7,1,'Joan Romeu','es','j.romeu@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (8,1,'Ivan Maqueda','es','i.maqueda@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (9,1,'Fernando Lázaro','es','f.lazaro@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (10,1,'André Martínez','es','an.martinez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (11,1,'Patrice Guerra','es','p.guerra@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (12,1,'Jorge Luis Uzcátegui','es','j.uzcategui@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (13,1,'Fernando Fernandez','es','f.fernandez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (14,1,'Vassil Gueorguiev Hristov Georgiev','es','v.hristov@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (15,1,'Ramses Anguizola','es','r.anguizola@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (16,1,'Ramón Almoguera','es','r.almoguera_ext@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`) values (18,1,'Nelia Martínez','es','n.martinez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
