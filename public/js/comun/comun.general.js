@@ -47,6 +47,8 @@ var apiComunGeneral = {
 
         apiComunGeneral.getVersion();
         $("#nombreUsuario").text(usuario.nombre);
+
+        apiComunGeneral.controlPermisos(usuario);
     },
     getVersion: function () {
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/version", null, function (err, data) {
@@ -161,5 +163,10 @@ var apiComunGeneral = {
             return "";
         else
             return results[1];
+    },
+    controlPermisos: function(usuario){
+        if (!usuario.esAdministrador){
+            $("#administracion").hide();
+        }
     }
 }

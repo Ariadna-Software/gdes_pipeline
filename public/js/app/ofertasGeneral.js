@@ -101,7 +101,9 @@ var apiPaginaOfertasGeneral = {
         tabla.columns(21).visible(false);
     },
     cargarOfertas: function () {
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/ofertas", null, function (err, data) {
+        var url = myconfig.apiUrl + "/api/ofertas/responsable/" + usuario.responsableId;
+        if (usuario.esAdministrador) url = myconfig.apiUrl + "/api/ofertas";
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;
             apiPaginaOfertasGeneral.cargarOfertasTabla(data);
         });
