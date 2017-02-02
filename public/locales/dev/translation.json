@@ -7,7 +7,7 @@
     "aceptar": "Aceptar",
     "salir": "Salir",
     "ayuda": "AYUDA",
-    "cerrar": "Haga clic en el recuadro para cerrarlo",
+    "cerrar": "Haga clic aquí para cerrar el recuadro",
     "error": {
         "general": "Error",
         "ajax_general": "Error comunicado",
@@ -218,6 +218,10 @@
             "<li>Sin anticipo</li>",
             "<li>Con cashflow negativo durante > 3 meses</li>",
             "</ul>"
+        ],
+        "ayudaEstado":[
+            "PRUEBA DE AYUDA COMPLEJA <br/>",
+            "<a href='OfertasGeneral.html' target='_new' style='color:white;'>Haz clic aquí y te vas a Ofertas General</a>"
         ]
     },
     "proyectos": {

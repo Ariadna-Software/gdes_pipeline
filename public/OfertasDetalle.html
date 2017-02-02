@@ -265,7 +265,10 @@
                                                 </label>
                                             </section> 
                                             <section class="col col-md-4">
-                                                <label class="label" data-i18n="ofertas.estado">Estado:</label>
+                                                <label class="label" >
+                                                    <span data-i18n="ofertas.estado">Estado:</span>
+                                                    <i class="fa fa-info-circle txt-color-blue" onclick="apiPaginaOfertasDetalle.lanzarMensajeAyuda('ofertas.ayudaEstado');"></i>
+                                                </label>
                                                 <select class="aswselect2" id="cmbEstados" name="cmbEstados" data-bind="options: optionsEstados, optionsText: 'nombre', optionsValue: 'estadoId', 
                                                     value: sEstado, valueAllowUnset: true, selectedOptions: selectedEstados, selected2:{}">
                                                 </select>
