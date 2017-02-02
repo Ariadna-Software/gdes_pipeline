@@ -49,6 +49,7 @@ var apiPaginaOfertasDetalle = {
             vm.ofertaId(0);
             vm.fechaOferta(moment(new Date()).format("DD/MM/YYYY"));
             vm.fechaUltimoEstado(moment(new Date()).format("DD/MM/YYYY"));
+            apiPaginaOfertasDetalle.cargarEstados(1);
 
             apiPaginaOfertasDetalle.cargarPaiss(usuario.paisId);
             apiPaginaOfertasDetalle.cargarEmpresas(usuario.empresaId);
@@ -94,6 +95,7 @@ var apiPaginaOfertasDetalle = {
         vm.descripcion(data.descripcion);
         vm.observaciones(data.observaciones);
         vm.autorizaciones(data.autorizaciones);
+        vm.ofertaSingular(data.ofertaSingular);
     },
     datosPagina: function () {
         var self = this;
@@ -117,6 +119,7 @@ var apiPaginaOfertasDetalle = {
         self.optionsTipoOfertas = ko.observableArray([]);
         self.selectedTipoOfertas = ko.observableArray([]);
         self.sTipoOferta = ko.observable();
+        self.ofertaSingular = ko.observable();
 
         self.optionsResponsables = ko.observableArray([]);
         self.selectedResponsables = ko.observableArray([]);
@@ -182,7 +185,8 @@ var apiPaginaOfertasDetalle = {
             personaContacto: vm.personaContacto(),
             descripcion: vm.descripcion(),
             observaciones: vm.observaciones(),
-            autorizaciones: vm.autorizaciones()
+            autorizaciones: vm.autorizaciones(),
+            ofertaSingular: vm.ofertaSingular()
         };
         var verb = "PUT";
         if (vm.ofertaId() == 0) verb = "POST";
@@ -301,6 +305,9 @@ var apiPaginaOfertasDetalle = {
             vm.optionsTipoSoportes(options);
             $("#cmbTipoSoportes").val([id]).trigger('change');
         });
+    },
+    lanzarMensajeAyuda: function(mensaje){
+        apiComunNotificaciones.mensajeAyuda(mensaje);
     }
 }
 

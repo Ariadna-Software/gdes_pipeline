@@ -102,6 +102,7 @@ var apiPaginaOfertasGeneral = {
     },
     cargarOfertas: function () {
         var url = myconfig.apiUrl + "/api/ofertas/responsable/" + usuario.responsableId;
+        if (usuario.verOfertasGrupo) url = myconfig.apiUrl + "/api/ofertas/responsable/grupo/" + usuario.responsableId;
         if (usuario.esAdministrador) url = myconfig.apiUrl + "/api/ofertas";
         apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;

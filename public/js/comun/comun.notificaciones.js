@@ -17,7 +17,7 @@ var apiComunNotificaciones = {
         html += sprintf("<div><strong>status: </strong>%s</div>", err.status);
         html += sprintf("<div><strong>statusText: </strong>%s</div>", err.statusText);
         html += "<hr/>";
-        html += sprintf("<div><small>%s</small></div>", i18n.t('error.close'));
+        html += sprintf("<div><small>%s</small></div>", i18n.t('cerrar'));
         $.smallBox({
             title: "ERROR",
             content: html,
@@ -37,6 +37,18 @@ var apiComunNotificaciones = {
             if (ButtonPressed === "Cancelar") {
                 fnCancelar();
             }
+        });
+    },
+    mensajeAyuda: function (mensaje) {
+        html = "<hr/>";
+        html += i18n.t(mensaje);
+        html += "<hr/>";
+        html += "<br/>" + i18n.t('cerrar');
+        $.smallBox({
+            title: i18n.t('ayuda'),
+            content: html,
+            color: "#006666",
+            iconSmall: "fa fa-info-circle bounce animated",
         });
     }
 }

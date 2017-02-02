@@ -231,7 +231,9 @@
                                                 </label>
                                             </section> 
                                             <section class="col col-md-4">
-                                                <label class="label" data-i18n="ofertas.tipoOferta">TipoOferta:</label>
+                                                <label class="label"><span data-i18n="ofertas.tipoOferta">TipoOferta:</span> 
+                                                <i class="fa fa-info-circle txt-color-blue" onclick="apiPaginaOfertasDetalle.lanzarMensajeAyuda('ofertas.ayudaTipoOferta');"></i>
+                                                </label>
                                                 <select class="aswselect2" id="cmbTipoOfertas" name="cmbTipoOfertas" data-bind="options: optionsTipoOfertas, optionsText: 'nombre', optionsValue: 'tipoOfertaId', 
                                                     value: sTipoOferta, valueAllowUnset: true, selectedOptions: selectedTipoOfertas, selected2:{}">
                                                 </select>
@@ -245,6 +247,10 @@
                                         </div>
                                         <div class="row">
                                             <section class="col col-md-4">
+                                                <label class="checkbox">
+                                                    <input id="chkOfertaSingular" type="checkbox" name="chkOfertaSingular" data-bind="checked: ofertaSingular">
+                                                    <i></i><span data-i18n="ofertas.ofertaSingular">ESD</span>
+                                                </label>                                               
                                             </section>
                                             <section class="col col-md-2">
                                                 <label class="label" data-i18n="ofertas.fechaLimiteProyecto">Fecha limite proyecto:</label>

@@ -58,6 +58,7 @@ var apiPaginaUsuariosDetalle = {
         vm.nombre(data.nombre);
         vm.codigoIdioma(data.codigoIdioma);
         vm.esAdministrador(data.esAdministrador);
+        vm.verOfertasGrupo(data.verOfertasGrupo);
         apiPaginaUsuariosDetalle.cargarGrupos(data.grupoUsuarioId);
 
         apiPaginaUsuariosDetalle.cargarPaiss(data.paisId);
@@ -71,6 +72,7 @@ var apiPaginaUsuariosDetalle = {
         self.nombre = ko.observable();
         self.codigoIdioma = ko.observable();
         self.esAdministrador = ko.observable();
+        self.verOfertasGrupo = ko.observable();
 
         self.optionsGrupos = ko.observableArray([]);
         self.selectedGrupos = ko.observableArray([]);
@@ -100,6 +102,7 @@ var apiPaginaUsuariosDetalle = {
             grupoUsuarioId: vm.sGrupo(),
             codigoIdioma: vm.codigoIdioma(),
             esAdministrador: vm.esAdministrador(),
+            verOfertasGrupo: vm.verOfertasGrupo(),
             paisId: vm.sPais(),
             empresaId: vm.sEmpresa(),
             areaId: vm.sArea(),

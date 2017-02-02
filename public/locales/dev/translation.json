@@ -6,6 +6,8 @@
     "eliminar_pregunta": "¿Desea realmente eliminar este registro?",
     "aceptar": "Aceptar",
     "salir": "Salir",
+    "ayuda": "AYUDA",
+    "cerrar": "Haga clic en el recuadro para cerrarlo",
     "error": {
         "general": "Error",
         "ajax_general": "Error comunicado",
@@ -81,7 +83,8 @@
         "area": "Area por defecto",
         "centro": "Centro por defecto",
         "codigoIdioma": "Codigo idioma",
-        "esAdministrador": "Este usuario es administrador"
+        "esAdministrador": "Este usuario es administrador",
+        "verOfertasGrupo": "Este usuario puede ver ofertas de los responsables de su grupo de usuarios"
     },
     "responsables": {
         "titulo": "Responsables",
@@ -195,7 +198,27 @@
         "responsable": "Responsable",
         "centro": "Centro",
         "tipoOferta": "Tipo oferta",
-        "tiempoEmpleado": "Tiempo empleado"
+        "tiempoEmpleado": "Tiempo empleado",
+        "ofertaSingular": "Oferta singular",
+        "ayudaTipoOferta": [
+            "SINGULARES <br>",
+            "*Oportunidad Estratégica <br/>",
+            "*Oportunidad de Servicio nuevo <br/>",
+            "*Oportunidad con necesidad de soporte Jurídico/Laboral:<br/>",
+            "<ul>",
+            "<li>Crecación de una sociedad o joint venture</li>",
+            "<li>Condiciones contractuales fuera de estandard</li>",
+            "<li>Con convenios laborales fuera de estándar</i>",
+            "</ul>",
+            "*Oportunidad con condiciones financieras y/o jurídicas especiales: <br/>",
+            "<ul>",
+            "<li>Inversión Relevante (> 10% al presupuesto)</li>",
+            "<li>Aval > 15%</li>",
+            "<li>Forma de Pago > 60 días</li>",
+            "<li>Sin anticipo</li>",
+            "<li>Con cashflow negativo durante > 3 meses</li>",
+            "</ul>"
+        ]
     },
     "proyectos": {
         "titulo": "Proyectos",
