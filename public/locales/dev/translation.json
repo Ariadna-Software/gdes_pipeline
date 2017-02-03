@@ -226,7 +226,7 @@
             "<li>Con cashflow negativo durante > 3 meses</li>",
             "</ul>"
         ],
-        "ayudaEstado":[
+        "ayudaEstado": [
             "Esta será la ayuda de los estados <br/>",
             "....."
         ]
@@ -251,5 +251,23 @@
         "editar": "Editar tipo oferta",
         "eliminar": "Eliminar tipo oferta",
         "valNombre": "Nombre necesario"
-    }
+    },
+    "centrosEstablecidos": {
+        "titulo": "Centros establecidos",
+        "panel": "Centros establecidos",
+        "nuevo": "Nuevo centro establecido",
+        "nombre": "Nombre centro establecido",
+        "id": "ID",
+        "editar": "Editar centro establecido",
+        "eliminar": "Eliminar centro establecido"
+    },
+    "divisas": {
+        "titulo": "Divisas",
+        "panel": "Divisas",
+        "nuevo": "Nueva divisa",
+        "nombre": "Nombre divisa",
+        "id": "ID",
+        "editar": "Editar divisa",
+        "eliminar": "Eliminar divisa"
+    }    
 }
