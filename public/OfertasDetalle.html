@@ -345,13 +345,20 @@
                                             <div class="row">
                                                 <section class="col col-md-4">
                                                     <label class="label"><span data-i18n="ofertas.tipoOferta">TipoOferta:</span> 
-                                                    <i class="fa fa-info-circle txt-color-blue" onclick="apiPaginaOfertasDetalle.lanzarMensajeAyuda('ofertas.ayudaTipoOferta');"></i>
+                                                    <a href="javascript:void(0);" rel="popover" data-placement="top" data-original-title="<i class='fa fa-lg fa-info-circle'></i>" data-i18n="[data-content]ofertas.ayudaTipoOferta" data-html="true">
+                                                        <i class='fa fa-lg fa-info-circle'></i>
+                                                    </a>
                                                     </label>
                                                     <select class="aswselect2" id="cmbTipoOfertas" name="cmbTipoOfertas" data-bind="options: optionsTipoOfertas, optionsText: 'nombre', optionsValue: 'tipoOfertaId', 
                                                         value: sTipoOferta, valueAllowUnset: true, selectedOptions: selectedTipoOfertas, selected2:{}">
                                                     </select>
                                                 </section>
                                                 <section class="col col-md-4">
+                                                    <label class="label">
+                                                        <a href="javascript:void(0);" rel="popover" data-placement="top" data-original-title="<i class='fa fa-lg fa-info-circle'></i>" data-i18n="[data-content]ofertas.ayudaOfertaSingular" data-html="true">
+                                                            <i class='fa fa-lg fa-info-circle'></i>
+                                                        </a>                                                         
+                                                    </label>
                                                     <label class="checkbox">
                                                         <input id="chkOfertaSingular" type="checkbox" name="chkOfertaSingular" data-bind="checked: ofertaSingular">
                                                         <i></i><span data-i18n="ofertas.ofertaSingular">ESD</span>
@@ -387,9 +394,8 @@
                                                     </label>
                                                 </section> 
                                                 <section class="col col-md-1">
-                                                    <div style="padding:15px;">
-                                                        <h2> 1€ = </h2>
-                                                    </div>
+                                                    <label class="label">EQ</label>
+                                                    <h2> 1€ = </h2>
                                                 </section>
                                                 <section class="col col-md-1">
                                                     <label class="label" data-i18n="ofertas.multiplicador">MUL:</label>
@@ -473,7 +479,9 @@
                                                 <section class="col col-md-4">
                                                     <label class="label" >
                                                         <span data-i18n="ofertas.estado">Estado:</span>
-                                                        <i class="fa fa-info-circle txt-color-blue" onclick="apiPaginaOfertasDetalle.lanzarMensajeAyuda('ofertas.ayudaEstado');"></i>
+                                                        <a href="javascript:void(0);" rel="popover" data-placement="top" data-original-title="<i class='fa fa-lg fa-info-circle'></i>" data-i18n="[data-content]ofertas.ayudaEstado" data-html="true">
+                                                            <i class='fa fa-lg fa-info-circle'></i>
+                                                        </a>
                                                     </label>
                                                     <select class="aswselect2" id="cmbEstados" name="cmbEstados" data-bind="options: optionsEstados, optionsText: 'nombre', optionsValue: 'estadoId', 
                                                         value: sEstado, valueAllowUnset: true, selectedOptions: selectedEstados, selected2:{}">
@@ -519,7 +527,7 @@
                                                 </section>                                                  
                                             </div>
                                         </fieldset>   
-                                    </div>                                                                                                 
+                                    </div>
                                     <fieldset>
                                         <div class="pull-right">
                                             <button id="btnSalir" data-i18n="[title]salir" class="btn btn-warning btn-circle btn-lg">
