@@ -1,6 +1,6 @@
 /*
 SQLyog Community v12.3.3 (64 bit)
-MySQL - 5.7.14-log : Database - gdes_pipeline
+MySQL - 5.7.13-log : Database - gdes_pipeline
 *********************************************************************
 */
 
@@ -28,16 +28,17 @@ CREATE TABLE `areas` (
 
 /*Data for the table `areas` */
 
-insert  into `areas`(`areaId`,`nombre`) values (1,'DMT - Nuclear Desmantelamiento');
-insert  into `areas`(`areaId`,`nombre`) values (2,'IDI - I+D+i');
-insert  into `areas`(`areaId`,`nombre`) values (3,'GEN - General');
-insert  into `areas`(`areaId`,`nombre`) values (4,'IND - Industrial');
-insert  into `areas`(`areaId`,`nombre`) values (5,'NUC - Nuclear Generación');
-insert  into `areas`(`areaId`,`nombre`) values (6,'LOG - Logística');
-insert  into `areas`(`areaId`,`nombre`) values (7,'RED - Redes Eléctricas');
-insert  into `areas`(`areaId`,`nombre`) values (8,'REV - Aplicación de Revestimientos');
-insert  into `areas`(`areaId`,`nombre`) values (9,'SVT - Eólica');
-insert  into `areas`(`areaId`,`nombre`) values (10,'PR - Protección Radiológica');
+insert  into `areas`(`areaId`,`nombre`) values 
+(1,'DMT - Nuclear Desmantelamiento'),
+(2,'IDI - I+D+i'),
+(3,'GEN - General'),
+(4,'IND - Industrial'),
+(5,'NUC - Nuclear Generación'),
+(6,'LOG - Logística'),
+(7,'RED - Redes Eléctricas'),
+(8,'REV - Aplicación de Revestimientos'),
+(9,'SVT - Eólica'),
+(10,'PR - Protección Radiológica');
 
 /*Table structure for table `centros` */
 
@@ -51,11 +52,44 @@ CREATE TABLE `centros` (
 
 /*Data for the table `centros` */
 
-insert  into `centros`(`centroId`,`nombre`) values (0,'No Existe Centro');
-insert  into `centros`(`centroId`,`nombre`) values (1,'CN ALMARAZ');
-insert  into `centros`(`centroId`,`nombre`) values (2,'CN TRILLO');
-insert  into `centros`(`centroId`,`nombre`) values (3,'CN COFRENTES');
-insert  into `centros`(`centroId`,`nombre`) values (4,'CN VANDELLÓS II');
+insert  into `centros`(`centroId`,`nombre`) values 
+(0,'No Existe Centro'),
+(1,'CN ALMARAZ'),
+(2,'CN TRILLO'),
+(3,'CN COFRENTES'),
+(4,'CN VANDELLÓS II');
+
+/*Table structure for table `centros_establecidos` */
+
+DROP TABLE IF EXISTS `centros_establecidos`;
+
+CREATE TABLE `centros_establecidos` (
+  `centroEstablecidoId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de centro establecido',
+  `nombre` varchar(255) DEFAULT NULL COMMENT 'Nombre de centro establecido',
+  PRIMARY KEY (`centroEstablecidoId`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+/*Data for the table `centros_establecidos` */
+
+insert  into `centros_establecidos`(`centroEstablecidoId`,`nombre`) values 
+(2,'CES 1'),
+(3,'CES 2');
+
+/*Table structure for table `divisas` */
+
+DROP TABLE IF EXISTS `divisas`;
+
+CREATE TABLE `divisas` (
+  `divisaId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de divisa',
+  `nombre` varchar(255) DEFAULT NULL COMMENT 'Nombre de divisa',
+  PRIMARY KEY (`divisaId`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+/*Data for the table `divisas` */
+
+insert  into `divisas`(`divisaId`,`nombre`) values 
+(1,'FR'),
+(2,'USD');
 
 /*Table structure for table `empresas` */
 
@@ -69,19 +103,20 @@ CREATE TABLE `empresas` (
 
 /*Data for the table `empresas` */
 
-insert  into `empresas`(`empresaId`,`nombre`) values (1,'GDEA - GDES erba SAS');
-insert  into `empresas`(`empresaId`,`nombre`) values (2,'GDES - GD ENERGY SERVICES SAU');
-insert  into `empresas`(`empresaId`,`nombre`) values (3,'GDFR - GD ENERGY SERVICES SARL ');
-insert  into `empresas`(`empresaId`,`nombre`) values (4,'GDLC - LAINSA CORPORATE');
-insert  into `empresas`(`empresaId`,`nombre`) values (5,'GDUK - GD ENERGY SERVICES LTD ');
-insert  into `empresas`(`empresaId`,`nombre`) values (6,'GDMX - GD ENERGY SERVICES NUCLEAR SA DE CV ');
-insert  into `empresas`(`empresaId`,`nombre`) values (7,'GDPA - GDES JC LINEMAN SRL');
-insert  into `empresas`(`empresaId`,`nombre`) values (8,'IYM - INGENIERIA Y MARKETING');
-insert  into `empresas`(`empresaId`,`nombre`) values (9,'REV - REVESTIMIENTOS ANTICORROSIVOS INDUSTRIALES S.L.');
-insert  into `empresas`(`empresaId`,`nombre`) values (10,'GDWD - GDES WIND');
-insert  into `empresas`(`empresaId`,`nombre`) values (11,'TIT - Ofertas de TITANIA');
-insert  into `empresas`(`empresaId`,`nombre`) values (12,'T4S - Ofertas de T4S');
-insert  into `empresas`(`empresaId`,`nombre`) values (13,'INN - Ofertas de INNOMERICS');
+insert  into `empresas`(`empresaId`,`nombre`) values 
+(1,'GDEA - GDES erba SAS'),
+(2,'GDES - GD ENERGY SERVICES SAU'),
+(3,'GDFR - GD ENERGY SERVICES SARL '),
+(4,'GDLC - LAINSA CORPORATE'),
+(5,'GDUK - GD ENERGY SERVICES LTD '),
+(6,'GDMX - GD ENERGY SERVICES NUCLEAR SA DE CV '),
+(7,'GDPA - GDES JC LINEMAN SRL'),
+(8,'IYM - INGENIERIA Y MARKETING'),
+(9,'REV - REVESTIMIENTOS ANTICORROSIVOS INDUSTRIALES S.L.'),
+(10,'GDWD - GDES WIND'),
+(11,'TIT - Ofertas de TITANIA'),
+(12,'T4S - Ofertas de T4S'),
+(13,'INN - Ofertas de INNOMERICS');
 
 /*Table structure for table `estados` */
 
@@ -95,15 +130,16 @@ CREATE TABLE `estados` (
 
 /*Data for the table `estados` */
 
-insert  into `estados`(`estadoId`,`nombre`) values (1,'EN PROCESO');
-insert  into `estados`(`estadoId`,`nombre`) values (2,'PRESENTADA');
-insert  into `estados`(`estadoId`,`nombre`) values (3,'NO PRESENTADA');
-insert  into `estados`(`estadoId`,`nombre`) values (4,'ADJUDICADA');
-insert  into `estados`(`estadoId`,`nombre`) values (5,'PERDIDA');
-insert  into `estados`(`estadoId`,`nombre`) values (6,'COMPROMISO');
-insert  into `estados`(`estadoId`,`nombre`) values (7,'OTROS');
-insert  into `estados`(`estadoId`,`nombre`) values (8,'INVITADOS');
-insert  into `estados`(`estadoId`,`nombre`) values (9,'NO INVITADOS');
+insert  into `estados`(`estadoId`,`nombre`) values 
+(1,'EN PROCESO'),
+(2,'PRESENTADA'),
+(3,'NO PRESENTADA'),
+(4,'ADJUDICADA'),
+(5,'PERDIDA'),
+(6,'COMPROMISO'),
+(7,'OTROS'),
+(8,'INVITADOS'),
+(9,'NO INVITADOS');
 
 /*Table structure for table `grupos_actividades` */
 
@@ -117,35 +153,36 @@ CREATE TABLE `grupos_actividades` (
 
 /*Data for the table `grupos_actividades` */
 
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (23,'ACONDICIONAMIENTO RESIDUOS RADIACTIVOS');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (24,'ANDAMIOS');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (25,'APLICACIÓN DE REVESTIMIENTOS');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (26,'APOYO A OPERACIÓN PR');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (27,'APOYO A OPERACIÓN QUÍMICA');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (28,'ASISTÉNCIA TÉCNICA Y FORMACIÓN PR');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (29,'DESCONTAMINACIÓN');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (30,'DESMANTELAMIENTO');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (31,'EMERGENCIAS RADIOLÓGICAS');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (32,'GESTIÓN DE ALMACENES Y TRANSPORTE');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (33,'GESTIÓN RESIDUOS (GENERAL) RP/RNP');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (34,'INGENIERÍA');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (35,'LIMPIEZA INDUSTRIAL');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (36,'LIMPIEZA QUÍMICA');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (37,'LIMPIEZA Y MANT. EN TERMOSOLARES');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (38,'MANTENIMIENTO DE PALAS EÓLICAS');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (39,'MANTENIMIENTO DE REDES ELÉCTRICAS');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (40,'MANTENIMIENTO PREVENTIVO/PREDITIVO');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (41,'METALIZACIÓN');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (42,'PREPARACIÓN DE SUPERFICIES');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (43,'PROTECCIÓN RADIOLÓGICA');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (44,'PROYECTOS I+D+I');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (45,'REPARACIÓN DE HORMIGONES Y REFUERZOS ');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (46,'SELLADO, PROTECCIONES PASIVAS Y AISLAMIENTO TÉRMICO');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (47,'TRATAMIENTO DE LODOS Y EFLUENTES');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (48,'CONSTRUCCIÓN DE SUBESTACIONES');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (49,'ÓRDENES Y SERVICIOS');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (50,'OTROS');
-insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values (51,'NUEVOS SUMINISTROS');
+insert  into `grupos_actividades`(`grupoActividadId`,`nombre`) values 
+(23,'ACONDICIONAMIENTO RESIDUOS RADIACTIVOS'),
+(24,'ANDAMIOS'),
+(25,'APLICACIÓN DE REVESTIMIENTOS'),
+(26,'APOYO A OPERACIÓN PR'),
+(27,'APOYO A OPERACIÓN QUÍMICA'),
+(28,'ASISTÉNCIA TÉCNICA Y FORMACIÓN PR'),
+(29,'DESCONTAMINACIÓN'),
+(30,'DESMANTELAMIENTO'),
+(31,'EMERGENCIAS RADIOLÓGICAS'),
+(32,'GESTIÓN DE ALMACENES Y TRANSPORTE'),
+(33,'GESTIÓN RESIDUOS (GENERAL) RP/RNP'),
+(34,'INGENIERÍA'),
+(35,'LIMPIEZA INDUSTRIAL'),
+(36,'LIMPIEZA QUÍMICA'),
+(37,'LIMPIEZA Y MANT. EN TERMOSOLARES'),
+(38,'MANTENIMIENTO DE PALAS EÓLICAS'),
+(39,'MANTENIMIENTO DE REDES ELÉCTRICAS'),
+(40,'MANTENIMIENTO PREVENTIVO/PREDITIVO'),
+(41,'METALIZACIÓN'),
+(42,'PREPARACIÓN DE SUPERFICIES'),
+(43,'PROTECCIÓN RADIOLÓGICA'),
+(44,'PROYECTOS I+D+I'),
+(45,'REPARACIÓN DE HORMIGONES Y REFUERZOS '),
+(46,'SELLADO, PROTECCIONES PASIVAS Y AISLAMIENTO TÉRMICO'),
+(47,'TRATAMIENTO DE LODOS Y EFLUENTES'),
+(48,'CONSTRUCCIÓN DE SUBESTACIONES'),
+(49,'ÓRDENES Y SERVICIOS'),
+(50,'OTROS'),
+(51,'NUEVOS SUMINISTROS');
 
 /*Table structure for table `grupos_usuarios` */
 
@@ -159,8 +196,9 @@ CREATE TABLE `grupos_usuarios` (
 
 /*Data for the table `grupos_usuarios` */
 
-insert  into `grupos_usuarios`(`grupoUsuarioId`,`nombre`) values (1,'Administradores');
-insert  into `grupos_usuarios`(`grupoUsuarioId`,`nombre`) values (2,'Grupo 1');
+insert  into `grupos_usuarios`(`grupoUsuarioId`,`nombre`) values 
+(1,'Administradores'),
+(2,'Grupo 1');
 
 /*Table structure for table `ofertas` */
 
@@ -194,6 +232,14 @@ CREATE TABLE `ofertas` (
   `centroId` int(11) DEFAULT NULL COMMENT 'Centro relacionado',
   `tipoOfertaId` int(11) DEFAULT NULL COMMENT 'Tipo de oferta',
   `ofertaSingular` tinyint(1) DEFAULT '0' COMMENT 'Caracteriza esta oferta como singular',
+  `periodo` varchar(255) DEFAULT NULL COMMENT 'Periodo de la oferta',
+  `fechaEntrega` date DEFAULT NULL COMMENT 'Fecha de entrega de la oferta',
+  `colaboradores` text COMMENT 'Asociaciones / colaboradores que participan en la oferta',
+  `margenContribucion` decimal(5,2) DEFAULT NULL COMMENT 'Porcentaje de margen de contribución',
+  `importeContribucion` decimal(12,2) DEFAULT NULL COMMENT 'Importe contribución',
+  `centroEstablecidoId` int(11) DEFAULT NULL COMMENT 'Relacion con el centro establecido',
+  `divisaId` int(11) DEFAULT NULL COMMENT 'Relacion con la divisa',
+  `numeroLicitacion` varchar(255) DEFAULT NULL COMMENT 'Numero de licitacion',
   PRIMARY KEY (`ofertaId`),
   KEY `oft_proyecto` (`proyectoId`),
   KEY `oft_area` (`areaId`),
@@ -205,8 +251,12 @@ CREATE TABLE `ofertas` (
   KEY `oft_centros` (`centroId`),
   KEY `oft_empresa` (`empresaId`),
   KEY `oft_tipo_oferta` (`tipoOfertaId`),
+  KEY `oft_centroEstablecido` (`centroEstablecidoId`),
+  KEY `oft_divisas` (`divisaId`),
   CONSTRAINT `oft_area` FOREIGN KEY (`areaId`) REFERENCES `areas` (`areaId`),
+  CONSTRAINT `oft_centroEstablecido` FOREIGN KEY (`centroEstablecidoId`) REFERENCES `centros_establecidos` (`centroEstablecidoId`),
   CONSTRAINT `oft_centros` FOREIGN KEY (`centroId`) REFERENCES `centros` (`centroId`),
+  CONSTRAINT `oft_divisas` FOREIGN KEY (`divisaId`) REFERENCES `divisas` (`divisaId`),
   CONSTRAINT `oft_empresa` FOREIGN KEY (`empresaId`) REFERENCES `empresas` (`empresaId`),
   CONSTRAINT `oft_estado` FOREIGN KEY (`estadoId`) REFERENCES `estados` (`estadoId`),
   CONSTRAINT `oft_pais` FOREIGN KEY (`paisId`) REFERENCES `paises` (`paisId`),
@@ -219,9 +269,10 @@ CREATE TABLE `ofertas` (
 
 /*Data for the table `ofertas` */
 
-insert  into `ofertas`(`ofertaId`,`numeroOferta`,`fechaOferta`,`fechaLimiteProyecto`,`fechaUltimoEstado`,`importePresupuesto`,`importePresupuestoDivisa`,`codigoDivisa`,`importeInversion`,`importeRetorno`,`descripcion`,`observaciones`,`tiempoEmpleado`,`autorizaciones`,`numeroPedido`,`personaContacto`,`empresaId`,`proyectoId`,`areaId`,`tipoActividadId`,`paisId`,`estadoId`,`tipoSoporteId`,`responsableId`,`centroId`,`tipoOfertaId`,`ofertaSingular`) values (1,'78555','2017-02-01','2017-02-01','2017-02-01',10.00,20.00,'30',40.00,50.00,'lkjklj','lkjklj',60,'lkjkljkl','48555','lkjklj',1,2,1,NULL,1,1,1,2,0,1,1);
-insert  into `ofertas`(`ofertaId`,`numeroOferta`,`fechaOferta`,`fechaLimiteProyecto`,`fechaUltimoEstado`,`importePresupuesto`,`importePresupuestoDivisa`,`codigoDivisa`,`importeInversion`,`importeRetorno`,`descripcion`,`observaciones`,`tiempoEmpleado`,`autorizaciones`,`numeroPedido`,`personaContacto`,`empresaId`,`proyectoId`,`areaId`,`tipoActividadId`,`paisId`,`estadoId`,`tipoSoporteId`,`responsableId`,`centroId`,`tipoOfertaId`,`ofertaSingular`) values (2,'78999','2017-02-02','2017-12-31','2017-02-02',1596.00,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,2,1,NULL,1,1,NULL,1,1,2,0);
-insert  into `ofertas`(`ofertaId`,`numeroOferta`,`fechaOferta`,`fechaLimiteProyecto`,`fechaUltimoEstado`,`importePresupuesto`,`importePresupuestoDivisa`,`codigoDivisa`,`importeInversion`,`importeRetorno`,`descripcion`,`observaciones`,`tiempoEmpleado`,`autorizaciones`,`numeroPedido`,`personaContacto`,`empresaId`,`proyectoId`,`areaId`,`tipoActividadId`,`paisId`,`estadoId`,`tipoSoporteId`,`responsableId`,`centroId`,`tipoOfertaId`,`ofertaSingular`) values (3,'RYYYAUIU','2017-02-02','2017-02-01','2017-02-02',1253.37,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,2,1,NULL,1,1,NULL,3,1,2,0);
+insert  into `ofertas`(`ofertaId`,`numeroOferta`,`fechaOferta`,`fechaLimiteProyecto`,`fechaUltimoEstado`,`importePresupuesto`,`importePresupuestoDivisa`,`codigoDivisa`,`importeInversion`,`importeRetorno`,`descripcion`,`observaciones`,`tiempoEmpleado`,`autorizaciones`,`numeroPedido`,`personaContacto`,`empresaId`,`proyectoId`,`areaId`,`tipoActividadId`,`paisId`,`estadoId`,`tipoSoporteId`,`responsableId`,`centroId`,`tipoOfertaId`,`ofertaSingular`,`periodo`,`fechaEntrega`,`colaboradores`,`margenContribucion`,`importeContribucion`,`centroEstablecidoId`,`divisaId`,`numeroLicitacion`) values 
+(1,'78555','2017-02-01','2017-02-01','2017-02-01',10.00,20.00,'30',40.00,50.00,'lkjklj','lkjklj',60,'lkjkljkl','48555','lkjklj',1,2,1,NULL,1,1,1,2,0,1,1,'01-01 AL 02-02',NULL,NULL,NULL,NULL,NULL,NULL,'798546'),
+(2,'78999','2017-02-02','2017-12-31','2017-02-02',1596.00,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,2,1,NULL,1,1,NULL,1,1,2,0,'10**02**','2017-02-10','Estas son las asociaciones',12.00,13.00,NULL,NULL,NULL),
+(3,'RYYYAUIU','2017-02-02','2017-02-01','2017-02-02',1253.37,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,2,1,NULL,1,1,NULL,3,1,2,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 
 /*Table structure for table `paises` */
 
@@ -236,14 +287,15 @@ CREATE TABLE `paises` (
 
 /*Data for the table `paises` */
 
-insert  into `paises`(`paisId`,`nombre`,`codPais`) values (1,'ESPAÑA','ES');
-insert  into `paises`(`paisId`,`nombre`,`codPais`) values (2,'FRANCIA','FR');
-insert  into `paises`(`paisId`,`nombre`,`codPais`) values (3,'MÉXICO','MX');
-insert  into `paises`(`paisId`,`nombre`,`codPais`) values (4,'PANAMÁ','PA');
-insert  into `paises`(`paisId`,`nombre`,`codPais`) values (5,'UK','UK');
-insert  into `paises`(`paisId`,`nombre`,`codPais`) values (6,'USA','US');
-insert  into `paises`(`paisId`,`nombre`,`codPais`) values (7,'BRASIL','BR');
-insert  into `paises`(`paisId`,`nombre`,`codPais`) values (8,'OTROS','OT');
+insert  into `paises`(`paisId`,`nombre`,`codPais`) values 
+(1,'ESPAÑA','ES'),
+(2,'FRANCIA','FR'),
+(3,'MÉXICO','MX'),
+(4,'PANAMÁ','PA'),
+(5,'UK','UK'),
+(6,'USA','US'),
+(7,'BRASIL','BR'),
+(8,'OTROS','OT');
 
 /*Table structure for table `proyectos` */
 
@@ -259,8 +311,9 @@ CREATE TABLE `proyectos` (
 
 /*Data for the table `proyectos` */
 
-insert  into `proyectos`(`proyectoId`,`nombre`,`referencia`,`numeroProyecto`) values (2,'Proyecto 1','RFP1','NR1');
-insert  into `proyectos`(`proyectoId`,`nombre`,`referencia`,`numeroProyecto`) values (3,'Proyecto 2',NULL,NULL);
+insert  into `proyectos`(`proyectoId`,`nombre`,`referencia`,`numeroProyecto`) values 
+(2,'Proyecto 1','RFP1','NR1'),
+(3,'Proyecto 2',NULL,NULL);
 
 /*Table structure for table `responsables` */
 
@@ -277,23 +330,24 @@ CREATE TABLE `responsables` (
 
 /*Data for the table `responsables` */
 
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (1,1,'Administrador RESP');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (2,2,'Antonio Martinez');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (3,3,'Marceliano Curiel');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (4,4,'Antonio Andrés');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (5,5,'Fernando de Pablo');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (6,6,'Jose Tomás Ruiz');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (7,7,'Joan Romeu');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (8,8,'Ivan Maqueda');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (9,9,'Fernando Lázaro');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (10,10,'André Martínez');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (11,11,'Patrice Guerra');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (12,12,'Jorge Luis Uzcátegui');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (13,13,'Fernando Fernandez');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (14,14,'Vassil Gueorguiev Hristov Georgiev');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (15,15,'Ramses Anguizola');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (16,16,'Ramón Almoguera');
-insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values (21,18,'Nelia Martínez');
+insert  into `responsables`(`responsableId`,`usuarioId`,`nombre`) values 
+(1,1,'Administrador RESP'),
+(2,2,'Antonio Martinez'),
+(3,3,'Marceliano Curiel'),
+(4,4,'Antonio Andrés'),
+(5,5,'Fernando de Pablo'),
+(6,6,'Jose Tomás Ruiz'),
+(7,7,'Joan Romeu'),
+(8,8,'Ivan Maqueda'),
+(9,9,'Fernando Lázaro'),
+(10,10,'André Martínez'),
+(11,11,'Patrice Guerra'),
+(12,12,'Jorge Luis Uzcátegui'),
+(13,13,'Fernando Fernandez'),
+(14,14,'Vassil Gueorguiev Hristov Georgiev'),
+(15,15,'Ramses Anguizola'),
+(16,16,'Ramón Almoguera'),
+(21,18,'Nelia Martínez');
 
 /*Table structure for table `tipos_actividades` */
 
@@ -322,10 +376,11 @@ CREATE TABLE `tipos_oferta` (
 
 /*Data for the table `tipos_oferta` */
 
-insert  into `tipos_oferta`(`tipoOfertaId`,`nombre`) values (1,'Oportunidad negocio');
-insert  into `tipos_oferta`(`tipoOfertaId`,`nombre`) values (2,'Precalificación');
-insert  into `tipos_oferta`(`tipoOfertaId`,`nombre`) values (3,'Oferta contrato');
-insert  into `tipos_oferta`(`tipoOfertaId`,`nombre`) values (4,'Oferta diversificación');
+insert  into `tipos_oferta`(`tipoOfertaId`,`nombre`) values 
+(1,'Oportunidad negocio'),
+(2,'Precalificación'),
+(3,'Oferta contrato'),
+(4,'Oferta diversificación');
 
 /*Table structure for table `tipos_soporte` */
 
@@ -339,11 +394,12 @@ CREATE TABLE `tipos_soporte` (
 
 /*Data for the table `tipos_soporte` */
 
-insert  into `tipos_soporte`(`tipoSoporteId`,`nombre`) values (1,'Documental');
-insert  into `tipos_soporte`(`tipoSoporteId`,`nombre`) values (2,'Of. Técnica');
-insert  into `tipos_soporte`(`tipoSoporteId`,`nombre`) values (3,'Completo');
-insert  into `tipos_soporte`(`tipoSoporteId`,`nombre`) values (4,'Of. Económica');
-insert  into `tipos_soporte`(`tipoSoporteId`,`nombre`) values (5,'Of. Eco y Docs');
+insert  into `tipos_soporte`(`tipoSoporteId`,`nombre`) values 
+(1,'Documental'),
+(2,'Of. Técnica'),
+(3,'Completo'),
+(4,'Of. Económica'),
+(5,'Of. Eco y Docs');
 
 /*Table structure for table `usuarios` */
 
@@ -380,23 +436,24 @@ CREATE TABLE `usuarios` (
 
 /*Data for the table `usuarios` */
 
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (1,1,'Administrador','es','admin','admin','2017-02-02 17:15:09','2017-02-02 22:15:09','0QSKm',1,1,1,1,1,1);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (2,2,'Antonio Martinez','es','a.martinez@gdes.com','1234','2017-02-02 17:15:47','2017-02-02 22:15:47','mp0yu',NULL,NULL,NULL,NULL,0,1);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (3,2,'Marceliano Curiel','es','m.curiel@gdes.com','1234','2017-02-02 17:14:22','2017-02-02 22:14:22','36B2D',NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (4,1,'Antonio Andrés','es','a.andres@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (5,1,'Fernando de Pablo','es','f.pablo@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (6,1,'Jose Tomás Ruiz','es','j.ruiz@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (7,1,'Joan Romeu','es','j.romeu@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (8,1,'Ivan Maqueda','es','i.maqueda@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (9,1,'Fernando Lázaro','es','f.lazaro@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (10,1,'André Martínez','es','an.martinez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (11,1,'Patrice Guerra','es','p.guerra@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (12,1,'Jorge Luis Uzcátegui','es','j.uzcategui@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (13,1,'Fernando Fernandez','es','f.fernandez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (14,1,'Vassil Gueorguiev Hristov Georgiev','es','v.hristov@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (15,1,'Ramses Anguizola','es','r.anguizola@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (16,1,'Ramón Almoguera','es','r.almoguera_ext@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (18,1,'Nelia Martínez','es','n.martinez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values 
+(1,1,'Administrador','es','admin','admin','2017-02-03 01:05:05','2017-02-03 06:05:05','VZW6p',1,1,1,1,1,1),
+(2,2,'Antonio Martinez','es','a.martinez@gdes.com','1234','2017-02-02 17:15:47','2017-02-02 22:15:47','mp0yu',NULL,NULL,NULL,NULL,0,1),
+(3,2,'Marceliano Curiel','es','m.curiel@gdes.com','1234','2017-02-02 17:14:22','2017-02-02 22:14:22','36B2D',NULL,NULL,NULL,NULL,0,0),
+(4,1,'Antonio Andrés','es','a.andres@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(5,1,'Fernando de Pablo','es','f.pablo@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(6,1,'Jose Tomás Ruiz','es','j.ruiz@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(7,1,'Joan Romeu','es','j.romeu@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(8,1,'Ivan Maqueda','es','i.maqueda@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(9,1,'Fernando Lázaro','es','f.lazaro@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(10,1,'André Martínez','es','an.martinez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(11,1,'Patrice Guerra','es','p.guerra@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(12,1,'Jorge Luis Uzcátegui','es','j.uzcategui@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(13,1,'Fernando Fernandez','es','f.fernandez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(14,1,'Vassil Gueorguiev Hristov Georgiev','es','v.hristov@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(15,1,'Ramses Anguizola','es','r.anguizola@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(16,1,'Ramón Almoguera','es','r.almoguera_ext@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
+(18,1,'Nelia Martínez','es','n.martinez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

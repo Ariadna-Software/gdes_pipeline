@@ -101,6 +101,7 @@ var apiPaginaOfertasDetalle = {
         vm.colaboradores(data.colaboradores);
         vm.margenContribucion(data.margenContribucion);
         vm.importeContribucion(data.importeContribucion);
+        vm.numeroLicitacion(data.numeroLicitacion);
     },
     datosPagina: function () {
         var self = this;
@@ -125,6 +126,7 @@ var apiPaginaOfertasDetalle = {
         self.colaboradores = ko.observable();
         self.margenContribucion = ko.observable();
         self.importeContribucion = ko.observable();
+        self.numeroLicitacion = ko.observable();
 
         self.optionsTipoOfertas = ko.observableArray([]);
         self.selectedTipoOfertas = ko.observableArray([]);
@@ -172,10 +174,6 @@ var apiPaginaOfertasDetalle = {
         var data = {
             ofertaId: vm.ofertaId(),
             numeroOferta: vm.numeroOferta(),
-            fechaOferta: moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso')),
-            fechaUltimoEstado: moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso')),
-            fechaLimiteProyecto: moment(vm.fechaLimiteProyecto(), i18n.t('util.date_format')).format(i18n.t('util.date_iso')),
-            fechaEntrega: moment(vm.fechaEntrega(), i18n.t('util.date_format')).format(i18n.t('util.date_iso')),
             tipoOfertaId: vm.sTipoOferta(),
             responsableId: vm.sResponsable(),
             paisId: vm.sPais(),
@@ -201,8 +199,13 @@ var apiPaginaOfertasDetalle = {
             periodo: vm.periodo(),
             colaboradores: vm.colaboradores(),
             margenContribucion: vm.margenContribucion(),
-            importeContribucion: vm.importeContribucion()
+            importeContribucion: vm.importeContribucion(),
+            numeroLicitacion: vm.numeroLicitacion()
         };
+        if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.fechaLimiteProyecto()) data.fechaLimiteProyecto = moment(vm.fechaLimiteProyecto(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.fechaEntrega()) data.fechaEntrega = moment(vm.fechaEntrega(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         var verb = "PUT";
         if (vm.ofertaId() == 0) verb = "POST";
         apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
@@ -321,7 +324,7 @@ var apiPaginaOfertasDetalle = {
             $("#cmbTipoSoportes").val([id]).trigger('change');
         });
     },
-    lanzarMensajeAyuda: function(mensaje){
+    lanzarMensajeAyuda: function (mensaje) {
         apiComunNotificaciones.mensajeAyuda(mensaje);
     }
 }
