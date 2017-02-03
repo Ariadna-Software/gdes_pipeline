@@ -208,6 +208,10 @@
         "margenContribucion": "Margen contribución",
         "importeContribucion": "Importe contribución",
         "numeroLicitacion": "Número licitación",
+        "codigoGdes": "Código GDES",
+        "importeInversionDivisa": "Inversión divisa",
+        "divisa": "DIVISA",
+        "centrosEstablecidos": "Centros establecidos",
         "ayudaTipoOferta": [
             "SINGULARES <br>",
             "*Oportunidad Estratégica <br/>",

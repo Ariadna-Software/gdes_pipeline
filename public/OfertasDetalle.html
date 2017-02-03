@@ -412,7 +412,31 @@
                                                 <label class="input">
                                                     <input id="txtNumeroLicitacion" name="txtNumeroLicitacion" data-bind="value: numeroLicitacion">
                                                 </label>
-                                            </section>                                            
+                                            </section>      
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.codigoGdes">NLIC:</label>
+                                                <label class="input">
+                                                    <input id="txtCodigoGdes" name="txtCodigoGDES" data-bind="value: codigoGdes">
+                                                </label>
+                                            </section>
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.importeInversionDivisa">NLIC:</label>
+                                                <label class="input">
+                                                    <input id="txtImporteImversionDivisa" name="txtImporteImversionDivisa" data-bind="value: importeInversionDivisa">
+                                                </label>
+                                            </section>    
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.divisa">DIVISA:</label>
+                                                <select class="aswselect2" id="cmbDivisas" name="cmbDivisas" data-bind="options: optionsDivisas, optionsText: 'nombre', optionsValue: 'divisaId', 
+                                                    value: sDivisa, valueAllowUnset: true, selectedOptions: selectedDivisas, selected2:{}">
+                                                </select>
+                                            </section>           
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="ofertas.centrosEstablecidos">DIVISA:</label>
+                                                <select class="aswselect2" id="cmbCentroEstablecidos" name="cmbCentroEstablecidos" data-bind="options: optionsCentroEstablecidos, optionsText: 'nombre', optionsValue: 'centroEstablecidoId', 
+                                                    value: sCentroEstablecido, valueAllowUnset: true, selectedOptions: selectedCentroEstablecidos, selected2:{}">
+                                                </select>
+                                            </section>                                                                                                                                                                                                        
                                         </div>
                                         <div class="row">
                                             <section class="col col-md-12">

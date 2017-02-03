@@ -29,11 +29,6 @@ var apiPaginaOfertasGeneral = {
                 if (data) return moment(data).format('DD/MM/YYYY');
             }
         },{
-            data: "fechaLimiteProyecto",
-            render: function (data, type, row) {
-                if (data) return moment(data).format('DD/MM/YYYY');
-            }
-        },{
             data: "fechaUltimoEstado",
             render: function (data, type, row) {
                 if (data) return moment(data).format('DD/MM/YYYY');

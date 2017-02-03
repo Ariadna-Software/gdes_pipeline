@@ -11,6 +11,7 @@ ALTER TABLE `gdes_pipeline`.`ofertas`
 ALTER TABLE `gdes_pipeline`.`ofertas`   
   ADD COLUMN `margenContribucion` DECIMAL(5,2) NULL COMMENT 'Porcentaje de margen de contribución' AFTER `colaboradores`,
   ADD COLUMN `importeContribucion` DECIMAL(12,2) NULL COMMENT 'Importe contribución' AFTER `margenContribucion`;  
+
 CREATE TABLE `gdes_pipeline`.`centros_establecidos`(  
   `centroEstablecidoId` INT(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de centro establecido',
   `nombre` VARCHAR(255) COMMENT 'Nombre de centro establecido',
@@ -26,4 +27,9 @@ ALTER TABLE `gdes_pipeline`.`ofertas`
   ADD COLUMN `divisaId` INT(11) NULL COMMENT 'Relacion con la divisa' AFTER `centroEstablecidoId`,
   ADD CONSTRAINT `oft_centroEstablecido` FOREIGN KEY (`centroEstablecidoId`) REFERENCES `gdes_pipeline`.`centros_establecidos`(`centroEstablecidoId`),
   ADD CONSTRAINT `oft_divisas` FOREIGN KEY (`divisaId`) REFERENCES `gdes_pipeline`.`divisas`(`divisaId`);
-  
+ALTER TABLE `gdes_pipeline`.`ofertas`   
+  ADD COLUMN `numeroLicitacion` DECIMAL(12,2) NULL COMMENT 'Numero licitacion';  
+ALTER TABLE `gdes_pipeline`.`ofertas`   
+  ADD COLUMN `codigoGdes` DECIMAL(12,2) NULL COMMENT 'Código de oferta GDES';  
+ALTER TABLE `gdes_pipeline`.`ofertas`   
+  ADD COLUMN `importeInversionDivisa` DECIMAL(12,2) NULL COMMENT 'Importe de inversión en la divisa' AFTER `codigoGdes`;

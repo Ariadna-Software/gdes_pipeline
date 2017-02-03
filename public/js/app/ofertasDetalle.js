@@ -43,9 +43,14 @@ var apiPaginaOfertasDetalle = {
         $('#cmbTipoSoportes').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarTipoSoportes();
 
-        ofertaId = apiComunGeneral.gup("id");
+        $('#cmbDivisas').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarDivisas();        
+        $('#cmbCentroEstablecidos').select2(select2_languages[usuario.codigoIdioma]);        
+        apiPaginaOfertasDetalle.cargarCentroEstablecidos();
 
+        ofertaId = apiComunGeneral.gup("id");
         if (ofertaId == 0) {
+
             vm.ofertaId(0);
             vm.fechaOferta(moment(new Date()).format("DD/MM/YYYY"));
             vm.fechaUltimoEstado(moment(new Date()).format("DD/MM/YYYY"));
@@ -86,6 +91,9 @@ var apiPaginaOfertasDetalle = {
         apiPaginaOfertasDetalle.cargarProyectos(data.proyectoId);
         apiPaginaOfertasDetalle.cargarTipoSoportes(data.tipoSoporteId);
         apiPaginaOfertasDetalle.cargarTipoActividads(data.tipoActividadId);
+
+        apiPaginaOfertasDetalle.cargarDivisas(data.divisaId);
+        apiPaginaOfertasDetalle.cargarCentroEstablecidos(data.centroEstablecidoId);
         vm.importePresupuesto(data.importePresupuesto);
         vm.importePresupuestoDivisa(data.importePresupuestoDivisa);
         vm.codigoDivisa(data.codigoDivisa);
@@ -102,6 +110,8 @@ var apiPaginaOfertasDetalle = {
         vm.margenContribucion(data.margenContribucion);
         vm.importeContribucion(data.importeContribucion);
         vm.numeroLicitacion(data.numeroLicitacion);
+        vm.codigoGdes(data.codigoGdes);
+        vm.importeInversionDivisa(data.importeInversionDivisa);
     },
     datosPagina: function () {
         var self = this;
@@ -127,6 +137,8 @@ var apiPaginaOfertasDetalle = {
         self.margenContribucion = ko.observable();
         self.importeContribucion = ko.observable();
         self.numeroLicitacion = ko.observable();
+        self.codigoGdes = ko.observable();
+        self.importeInversionDivisa = ko.observable();
 
         self.optionsTipoOfertas = ko.observableArray([]);
         self.selectedTipoOfertas = ko.observableArray([]);
@@ -168,6 +180,14 @@ var apiPaginaOfertasDetalle = {
         self.optionsTipoSoportes = ko.observableArray([]);
         self.selectedTipoSoportes = ko.observableArray([]);
         self.sTipoSoporte = ko.observable();
+
+        self.optionsDivisas = ko.observableArray([]);
+        self.selectedDivisas = ko.observableArray([]);
+        self.sDivisa = ko.observable();
+
+        self.optionsCentroEstablecidos = ko.observableArray([]);
+        self.selectedCentroEstablecidos = ko.observableArray([]);
+        self.sCentroEstablecido = ko.observable();        
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -200,7 +220,11 @@ var apiPaginaOfertasDetalle = {
             colaboradores: vm.colaboradores(),
             margenContribucion: vm.margenContribucion(),
             importeContribucion: vm.importeContribucion(),
-            numeroLicitacion: vm.numeroLicitacion()
+            numeroLicitacion: vm.numeroLicitacion(),
+            codigoGdes: vm.codigoGdes(),
+            importeInversionDivisa: vm.importeInversionDivisa(),
+            divisaId: vm.sDivisa(),
+            centroEstablecidoId: vm.sCentroEstablecido()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -324,6 +348,22 @@ var apiPaginaOfertasDetalle = {
             $("#cmbTipoSoportes").val([id]).trigger('change');
         });
     },
+    cargarDivisas: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/divisas", null, function (err, data) {
+            if (err) return;
+            var options = [{ divisaId: 0, nombre: " " }].concat(data);
+            vm.optionsDivisas(options);
+            $("#cmbDivisas").val([id]).trigger('change');
+        });
+    },
+    cargarCentroEstablecidos: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/centrosEstablecidos", null, function (err, data) {
+            if (err) return;
+            var options = [{ centroEstablecidoId: 0, nombre: " " }].concat(data);
+            vm.optionsCentroEstablecidos(options);
+            $("#cmbCentroEstablecidos").val([id]).trigger('change');
+        });
+    },        
     lanzarMensajeAyuda: function (mensaje) {
         apiComunNotificaciones.mensajeAyuda(mensaje);
     }
