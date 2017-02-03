@@ -34,7 +34,9 @@
             "tiposActividades": "Tipos actividades",
             "tiposSoporte": "Tipos soporte",
             "tiposOferta": "Tipos oferta",
-            "proyectos": "Proyectos"
+            "proyectos": "Proyectos",
+            "centrosEstablecidos": "Centros establecidos",
+            "divisas": "Divisas"
         },
         "gestion": {
             "cab": "Gestión",
@@ -200,6 +202,11 @@
         "tipoOferta": "Tipo oferta",
         "tiempoEmpleado": "Tiempo empleado",
         "ofertaSingular": "Oferta singular",
+        "periodo": "Periodo",
+        "fechaEntrega": "Fecha de entrega",
+        "colaboradores": "Asociaciones / colaboraciones",
+        "margenContribucion": "Margen contribución",
+        "importeContribucion": "Importe contribución",
         "ayudaTipoOferta": [
             "SINGULARES <br>",
             "*Oportunidad Estratégica <br/>",
@@ -220,8 +227,8 @@
             "</ul>"
         ],
         "ayudaEstado":[
-            "PRUEBA DE AYUDA COMPLEJA <br/>",
-            "<a href='OfertasGeneral.html' target='_new' style='color:white;'>Haz clic aquí y te vas a Ofertas General</a>"
+            "Esta será la ayuda de los estados <br/>",
+            "....."
         ]
     },
     "proyectos": {

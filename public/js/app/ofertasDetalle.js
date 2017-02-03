@@ -70,8 +70,9 @@ var apiPaginaOfertasDetalle = {
         vm.ofertaId(data.ofertaId);
         vm.numeroOferta(data.numeroOferta);
         vm.fechaOferta(moment(data.fechaOferta).format(i18n.t('util.date_format')));
-        vm.fechaUltimoEstado(moment(data.fechaUltimoEstado).format(i18n.t('util.date_format')));
-        vm.fechaLimiteProyecto(moment(data.fechaLimiteProyecto).format(i18n.t('util.date_format')));
+        if (data.fechaUltimoEstado) vm.fechaUltimoEstado(moment(data.fechaUltimoEstado).format(i18n.t('util.date_format')));
+        if (data.fechaLimiteProyecto) vm.fechaLimiteProyecto(moment(data.fechaLimiteProyecto).format(i18n.t('util.date_format')));
+        if (data.fechaEntrega) vm.fechaEntrega(moment(data.fechaEntrega).format(i18n.t('util.date_format')));
         vm.numeroPedido(data.numeroPedido);
         apiPaginaOfertasDetalle.cargarTipoOfertas(data.tipoOfertaId);
         apiPaginaOfertasDetalle.cargarResponsables(data.responsableId);
@@ -96,6 +97,10 @@ var apiPaginaOfertasDetalle = {
         vm.observaciones(data.observaciones);
         vm.autorizaciones(data.autorizaciones);
         vm.ofertaSingular(data.ofertaSingular);
+        vm.periodo(data.periodo);
+        vm.colaboradores(data.colaboradores);
+        vm.margenContribucion(data.margenContribucion);
+        vm.importeContribucion(data.importeContribucion);
     },
     datosPagina: function () {
         var self = this;
@@ -115,6 +120,11 @@ var apiPaginaOfertasDetalle = {
         self.descripcion = ko.observable();
         self.observaciones = ko.observable();
         self.autorizaciones = ko.observable();
+        self.periodo = ko.observable();
+        self.fechaEntrega = ko.observable();
+        self.colaboradores = ko.observable();
+        self.margenContribucion = ko.observable();
+        self.importeContribucion = ko.observable();
 
         self.optionsTipoOfertas = ko.observableArray([]);
         self.selectedTipoOfertas = ko.observableArray([]);
@@ -165,6 +175,7 @@ var apiPaginaOfertasDetalle = {
             fechaOferta: moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso')),
             fechaUltimoEstado: moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso')),
             fechaLimiteProyecto: moment(vm.fechaLimiteProyecto(), i18n.t('util.date_format')).format(i18n.t('util.date_iso')),
+            fechaEntrega: moment(vm.fechaEntrega(), i18n.t('util.date_format')).format(i18n.t('util.date_iso')),
             tipoOfertaId: vm.sTipoOferta(),
             responsableId: vm.sResponsable(),
             paisId: vm.sPais(),
@@ -186,7 +197,11 @@ var apiPaginaOfertasDetalle = {
             descripcion: vm.descripcion(),
             observaciones: vm.observaciones(),
             autorizaciones: vm.autorizaciones(),
-            ofertaSingular: vm.ofertaSingular()
+            ofertaSingular: vm.ofertaSingular(),
+            periodo: vm.periodo(),
+            colaboradores: vm.colaboradores(),
+            margenContribucion: vm.margenContribucion(),
+            importeContribucion: vm.importeContribucion()
         };
         var verb = "PUT";
         if (vm.ofertaId() == 0) verb = "POST";

@@ -171,6 +171,16 @@
                                 <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.proyectos">Proyectos</span>
                             </a>
                         </li>
+                        <li id="centrosEstablecidos">
+                            <a href="CentrosEstablecidosGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.centrosEstablecidos">CentrosEstablecidos</span>
+                            </a>
+                        </li>
+                        <li id="divisas">
+                            <a href="DivisasGeneral.html">
+                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.divisas">Divisas</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li id="gestion">
@@ -364,6 +374,38 @@
                                                 </label>
                                             </section>                                             
                                         </div>             
+                                        <div class="row">
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.periodo">Periodo:</label>
+                                                <label class="input">
+                                                    <input id="txtPeriodo" name="txtPeriodo" data-bind="value: periodo">
+                                                </label>
+                                            </section>   
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.fechaEntrega">Fecha entrega:</label>
+                                                <label class="input">
+                                                    <input id="txtFechaEntrega" name="txtFechaEntrega" data-bind="value: fechaEntrega" class="datepicker" data-dateformat="dd/mm/yy">
+                                                </label>
+                                            </section>   
+                                            <section class="col col-md-4">
+                                                <label class="label" data-i18n="ofertas.colaboradores">Colaboradores:</label>
+                                                <label class="textarea textarea-resizable">
+                                                    <textarea id="txtColaboradores" rows="3" class="custom-scroll" data-bind="value:colaboradores"></textarea>
+                                                </label>
+                                            </section>      
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.margenContribucion">Margen:</label>
+                                                <label class="input">
+                                                    <input id="txtMargenContribucion" name="txtMargenContribucion" data-bind="value: margenContribucion">
+                                                </label>
+                                            </section> 
+                                            <section class="col col-md-2">
+                                                <label class="label" data-i18n="ofertas.importeContribucion">Contribucion:</label>
+                                                <label class="input">
+                                                    <input id="txtImporteContribucion" name="txtImporteContribucion" data-bind="value: importeContribucion">
+                                                </label>
+                                            </section>                                                                                                                                                                                                                  
+                                        </div>
                                         <div class="row">
                                             <section class="col col-md-12">
                                                 <label class="label" data-i18n="ofertas.personaContacto">PersonaContacto:</label>
