@@ -33,3 +33,10 @@ ALTER TABLE `gdes_pipeline`.`ofertas`
   ADD COLUMN `codigoGdes` DECIMAL(12,2) NULL COMMENT 'Código de oferta GDES';  
 ALTER TABLE `gdes_pipeline`.`ofertas`   
   ADD COLUMN `importeInversionDivisa` DECIMAL(12,2) NULL COMMENT 'Importe de inversión en la divisa' AFTER `codigoGdes`;
+
+ALTER TABLE `gdes_pipeline`.`ofertas`   
+  ADD COLUMN `nombreCorto` VARCHAR(255) NULL COMMENT 'Nombre corto para la oferta' AFTER `importeInversionDivisa`;
+ALTER TABLE `gdes_pipeline`.`ofertas`   
+  ADD COLUMN `cliente` VARCHAR(255) NULL COMMENT 'Nombre del cliente' AFTER `numeroLicitacion`;
+ALTER TABLE `gdes_pipeline`.`ofertas`   
+  ADD COLUMN `fechaDivisa` DATE NULL COMMENT 'Fecha en la que se aplicó la última conversión de divisa' AFTER `cliente`;

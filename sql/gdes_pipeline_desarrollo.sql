@@ -65,9 +65,12 @@ CREATE TABLE `centros_establecidos` (
   `centroEstablecidoId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de centro establecido',
   `nombre` varchar(255) DEFAULT NULL COMMENT 'Nombre de centro establecido',
   PRIMARY KEY (`centroEstablecidoId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `centros_establecidos` */
+
+insert  into `centros_establecidos`(`centroEstablecidoId`,`nombre`) values (1,'CES1');
+insert  into `centros_establecidos`(`centroEstablecidoId`,`nombre`) values (2,'CES2');
 
 /*Table structure for table `divisas` */
 
@@ -77,9 +80,12 @@ CREATE TABLE `divisas` (
   `divisaId` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de divisa',
   `nombre` varchar(255) DEFAULT NULL COMMENT 'Nombre de divisa',
   PRIMARY KEY (`divisaId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `divisas` */
+
+insert  into `divisas`(`divisaId`,`nombre`) values (1,'USD');
+insert  into `divisas`(`divisaId`,`nombre`) values (2,'YEN');
 
 /*Table structure for table `empresas` */
 
@@ -226,6 +232,9 @@ CREATE TABLE `ofertas` (
   `divisaId` int(11) DEFAULT NULL COMMENT 'Relacion con la divisa',
   `codigoGdes` varchar(255) DEFAULT NULL COMMENT 'Codigo interno de GDES para esta oferta',
   `importeInversionDivisa` decimal(12,2) DEFAULT NULL COMMENT 'Importe de inversión en la divisa',
+  `nombreCorto` varchar(255) DEFAULT NULL COMMENT 'Nombre corto para la oferta',
+  `numeroLicitacion` decimal(12,2) DEFAULT NULL COMMENT 'Numero licitacion',
+  `cliente` varchar(255) DEFAULT NULL COMMENT 'Nombre del cliente',
   PRIMARY KEY (`ofertaId`),
   KEY `oft_proyecto` (`proyectoId`),
   KEY `oft_area` (`areaId`),
@@ -251,9 +260,11 @@ CREATE TABLE `ofertas` (
   CONSTRAINT `oft_tipo_actividad` FOREIGN KEY (`tipoActividadId`) REFERENCES `tipos_actividades` (`tipoActividadId`),
   CONSTRAINT `oft_tipo_oferta` FOREIGN KEY (`tipoOfertaId`) REFERENCES `tipos_oferta` (`tipoOfertaId`),
   CONSTRAINT `oft_tipo_soporte` FOREIGN KEY (`tipoSoporteId`) REFERENCES `tipos_soporte` (`tipoSoporteId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabla general de ofertas';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Tabla general de ofertas';
 
 /*Data for the table `ofertas` */
+
+insert  into `ofertas`(`ofertaId`,`numeroOferta`,`fechaOferta`,`fechaLimiteProyecto`,`fechaUltimoEstado`,`importePresupuesto`,`importePresupuestoDivisa`,`codigoDivisa`,`importeInversion`,`importeRetorno`,`descripcion`,`observaciones`,`tiempoEmpleado`,`autorizaciones`,`numeroPedido`,`personaContacto`,`empresaId`,`proyectoId`,`areaId`,`tipoActividadId`,`paisId`,`estadoId`,`tipoSoporteId`,`responsableId`,`centroId`,`tipoOfertaId`,`ofertaSingular`,`periodo`,`fechaEntrega`,`colaboradores`,`margenContribucion`,`importeContribucion`,`centroEstablecidoId`,`divisaId`,`codigoGdes`,`importeInversionDivisa`,`nombreCorto`,`numeroLicitacion`,`cliente`) values (1,'78888','2017-02-03',NULL,'2017-02-03',1200.00,54.00,'5454',5454.00,5454.00,'','sas',5454,'asas','78999','sasas',1,1,2,NULL,1,1,2,1,0,3,1,'454','2017-02-03','5454',10.00,54545.00,1,1,'87897',987897.00,'NOMBRE corto',798.00,NULL);
 
 /*Table structure for table `paises` */
 
@@ -287,9 +298,11 @@ CREATE TABLE `proyectos` (
   `referencia` varchar(255) DEFAULT NULL COMMENT 'Referencia de proyecto',
   `numeroProyecto` varchar(255) DEFAULT NULL COMMENT 'Número de proyecto en GDES',
   PRIMARY KEY (`proyectoId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Proyectos a los que pertenecen las ofertas';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Proyectos a los que pertenecen las ofertas';
 
 /*Data for the table `proyectos` */
+
+insert  into `proyectos`(`proyectoId`,`nombre`,`referencia`,`numeroProyecto`) values (1,'Proyecto 1','RF1','N1');
 
 /*Table structure for table `responsables` */
 
@@ -409,7 +422,7 @@ CREATE TABLE `usuarios` (
 
 /*Data for the table `usuarios` */
 
-insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (1,1,'Administrador','es','admin','admin','2017-02-03 08:45:42','2017-02-03 13:45:42','pTbjk',NULL,NULL,NULL,NULL,0,0);
+insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (1,1,'Administrador','es','admin','admin','2017-02-03 08:58:14','2017-02-03 13:58:14','nIgw4',NULL,NULL,NULL,NULL,1,0);
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (2,1,'Antonio Martinez','es','a.martinez@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (3,1,'Marceliano Curiel','es','m.curiel@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values (4,1,'Antonio Andrés','es','a.andres@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0);

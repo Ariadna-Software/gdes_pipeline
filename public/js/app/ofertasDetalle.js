@@ -78,6 +78,7 @@ var apiPaginaOfertasDetalle = {
         if (data.fechaUltimoEstado) vm.fechaUltimoEstado(moment(data.fechaUltimoEstado).format(i18n.t('util.date_format')));
         if (data.fechaLimiteProyecto) vm.fechaLimiteProyecto(moment(data.fechaLimiteProyecto).format(i18n.t('util.date_format')));
         if (data.fechaEntrega) vm.fechaEntrega(moment(data.fechaEntrega).format(i18n.t('util.date_format')));
+        if (data.fechaDivisa) vm.fechaDivisa(moment(data.fechaEntrega).format(i18n.t('util.date_format')));
         vm.numeroPedido(data.numeroPedido);
         apiPaginaOfertasDetalle.cargarTipoOfertas(data.tipoOfertaId);
         apiPaginaOfertasDetalle.cargarResponsables(data.responsableId);
@@ -112,6 +113,8 @@ var apiPaginaOfertasDetalle = {
         vm.numeroLicitacion(data.numeroLicitacion);
         vm.codigoGdes(data.codigoGdes);
         vm.importeInversionDivisa(data.importeInversionDivisa);
+        vm.nombreCorto(data.nombreCorto);
+        vm.cliente(data.cliente);
     },
     datosPagina: function () {
         var self = this;
@@ -139,11 +142,15 @@ var apiPaginaOfertasDetalle = {
         self.numeroLicitacion = ko.observable();
         self.codigoGdes = ko.observable();
         self.importeInversionDivisa = ko.observable();
+        self.cliente = ko.observable();
+        self.multiplicador = ko.observable();
+        self.fechaDivisa = ko.observable();
 
         self.optionsTipoOfertas = ko.observableArray([]);
         self.selectedTipoOfertas = ko.observableArray([]);
         self.sTipoOferta = ko.observable();
         self.ofertaSingular = ko.observable();
+        self.nombreCorto = ko.observable();
 
         self.optionsResponsables = ko.observableArray([]);
         self.selectedResponsables = ko.observableArray([]);
@@ -224,12 +231,15 @@ var apiPaginaOfertasDetalle = {
             codigoGdes: vm.codigoGdes(),
             importeInversionDivisa: vm.importeInversionDivisa(),
             divisaId: vm.sDivisa(),
-            centroEstablecidoId: vm.sCentroEstablecido()
+            centroEstablecidoId: vm.sCentroEstablecido(),
+            nombreCorto: vm.nombreCorto(),
+            cliente: vm.cliente()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaLimiteProyecto()) data.fechaLimiteProyecto = moment(vm.fechaLimiteProyecto(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaEntrega()) data.fechaEntrega = moment(vm.fechaEntrega(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.fechaDivisa()) data.fechaDivisa = moment(vm.fechaDivisa(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         var verb = "PUT";
         if (vm.ofertaId() == 0) verb = "POST";
         apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
