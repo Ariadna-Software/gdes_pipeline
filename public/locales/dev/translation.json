@@ -6,6 +6,8 @@
     "eliminar_pregunta": "¿Desea realmente eliminar este registro?",
     "aceptar": "Aceptar",
     "salir": "Salir",
+    "si": "SI",
+    "no": "NO",
     "ayuda": "<div>AYUDA</div>",
     "cerrar": "Haga clic aquí para cerrar el recuadro",
     "error": {
@@ -220,6 +222,7 @@
         "datosEstadoSituacion": "DATOS ESTADO Y SITUACION",
         "multiplicador": "Factor",
         "fechaDivisa": "Fecha divisa",
+        "version": "Revisión",
         "ayudaTipoOferta": [
             "<strong>OPORTUNIDAD NEGOCIO:</strong><br/>",
             "Oportunidad de negocio en fase de desarrollo sin petición expresa del cliente<br/>",

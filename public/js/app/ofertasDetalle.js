@@ -12,6 +12,7 @@ var apiPaginaOfertasDetalle = {
     ini: function () {
         apiComunGeneral.initPage(usuario);
         apiComunAjax.establecerClave(usuario.apiKey);
+        apiPaginaOfertasDetalle.controDeCamposEditables();
 
         vm = new apiPaginaOfertasDetalle.datosPagina();
         ko.applyBindings(vm);
@@ -44,14 +45,14 @@ var apiPaginaOfertasDetalle = {
         apiPaginaOfertasDetalle.cargarTipoSoportes();
 
         $('#cmbDivisas').select2(select2_languages[usuario.codigoIdioma]);
-        apiPaginaOfertasDetalle.cargarDivisas();        
-        $('#cmbCentroEstablecidos').select2(select2_languages[usuario.codigoIdioma]);        
+        apiPaginaOfertasDetalle.cargarDivisas();
+        $('#cmbCentroEstablecidos').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarCentroEstablecidos();
 
         ofertaId = apiComunGeneral.gup("id");
         if (ofertaId == 0) {
-
             vm.ofertaId(0);
+            vm.version(0);
             vm.fechaOferta(moment(new Date()).format("DD/MM/YYYY"));
             vm.fechaUltimoEstado(moment(new Date()).format("DD/MM/YYYY"));
             apiPaginaOfertasDetalle.cargarEstados(1);
@@ -115,6 +116,8 @@ var apiPaginaOfertasDetalle = {
         vm.importeInversionDivisa(data.importeInversionDivisa);
         vm.nombreCorto(data.nombreCorto);
         vm.cliente(data.cliente);
+        vm.version(data.version);
+        vm.multiplicador(data.multiplicador);
     },
     datosPagina: function () {
         var self = this;
@@ -151,6 +154,7 @@ var apiPaginaOfertasDetalle = {
         self.sTipoOferta = ko.observable();
         self.ofertaSingular = ko.observable();
         self.nombreCorto = ko.observable();
+        self.version = ko.observable();
 
         self.optionsResponsables = ko.observableArray([]);
         self.selectedResponsables = ko.observableArray([]);
@@ -194,7 +198,7 @@ var apiPaginaOfertasDetalle = {
 
         self.optionsCentroEstablecidos = ko.observableArray([]);
         self.selectedCentroEstablecidos = ko.observableArray([]);
-        self.sCentroEstablecido = ko.observable();        
+        self.sCentroEstablecido = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -233,7 +237,9 @@ var apiPaginaOfertasDetalle = {
             divisaId: vm.sDivisa(),
             centroEstablecidoId: vm.sCentroEstablecido(),
             nombreCorto: vm.nombreCorto(),
-            cliente: vm.cliente()
+            cliente: vm.cliente(),
+            version: vm.version(),
+            multiplicador: vm.multiplicador()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -241,7 +247,11 @@ var apiPaginaOfertasDetalle = {
         if (vm.fechaEntrega()) data.fechaEntrega = moment(vm.fechaEntrega(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaDivisa()) data.fechaDivisa = moment(vm.fechaDivisa(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         var verb = "PUT";
-        if (vm.ofertaId() == 0) verb = "POST";
+        data.version += 1;
+        if (vm.ofertaId() == 0){
+            verb = "POST";
+            data.version = 0;
+        } 
         apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
             if (err) return;
             apiPaginaOfertasDetalle.salir();
@@ -251,7 +261,7 @@ var apiPaginaOfertasDetalle = {
         $('#oferta-form').validate({
             rules: {
                 txtNumeroOferta: { required: true },
-                txtFechaOferta: { required: true },
+                txtFechaEntrega: { required: true },
                 cmbTipoOfertas: { required: true },
                 cmbResponsables: { required: true },
                 cmbEstados: { required: true },
@@ -260,8 +270,15 @@ var apiPaginaOfertasDetalle = {
                 cmbAreas: { required: true },
                 cmbCentros: { required: true },
                 cmbProyectos: { required: true },
-                txtImportePresupuesto: { required: true },
-                txtDescripcion: { required: true }
+                txtImportePresupuesto: { required: true, number: true },
+                txtDescripcion: { required: true },
+                txtMultiplicador: { number: true },
+                txtImportePresupuestoDivisa: { number: true },
+                txtMargenContribucion: { number: true },
+                txtImporteContribucion: { number: true },
+                txtImporteInversion: { number: true },
+                txtImporteImversionDivisa: {number: true},
+                txtImporteRetorno: {number: true}
             },
             errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length) {
@@ -373,9 +390,15 @@ var apiPaginaOfertasDetalle = {
             vm.optionsCentroEstablecidos(options);
             $("#cmbCentroEstablecidos").val([id]).trigger('change');
         });
-    },        
+    },
     lanzarMensajeAyuda: function (mensaje) {
         apiComunNotificaciones.mensajeAyuda(mensaje);
+    },
+    controDeCamposEditables: function () {
+        if (!usuario.esAdministrador) {
+            $("#cmbTipoSoportes").attr('disabled', 'disabled');
+            $("#txtTiempoEmpleado").attr('disabled', 'disabled');
+        }
     }
 }
 

@@ -22,55 +22,105 @@ var apiPaginaOfertasGeneral = {
         options.columns = [{
             data: "ofertaId"
         }, {
-            data: "numeroOferta"
-        },{
-            data: "fechaOferta",
-            render: function (data, type, row) {
-                if (data) return moment(data).format('DD/MM/YYYY');
-            }
-        },{
-            data: "fechaUltimoEstado",
-            render: function (data, type, row) {
-                if (data) return moment(data).format('DD/MM/YYYY');
-            }
-        },{
-            data: "importePresupuesto"
-        },{
-            data: "importePresupuestoDivisa"
-        },{
-            data: "codigoDivisa"
-        },{
-            data: "importeInversion"
-        },{
-            data: "importeRetorno"
-        },{
-            data: "descripcion"
-        },{
-            data: "observaciones"
-        },{
-            data: "autorizaciones"
-        },{
-            data: "numeroPedido"
-        },{
-            data: "personaContacto"
-        },{
-            data: "empresa"
-        },{
-            data: "proyecto"
-        },{
+            data: "tipoOferta"
+        }, {
             data: "area"
-        },{
-            data: "tipoActividad"
-        },{
+        }, {
             data: "pais"
-        },{
+        }, {
+            data: "nombreCorto"
+        }, {
+            data: "importePresupuesto",
+            render: function (data) {
+                return numeral(data).format('0,0.00');
+            }
+        }, {
+            data: "margenContribucion",
+            render: function (data) {
+                return numeral(data).format('0,0.00');
+            }
+        }, {
             data: "estado"
-        },{
-            data: "tipoSoporte"
-        },{
-            data: "responsable"
-        },{
+        }, {
             data: "centro"
+        }, {
+            data: "cliente"
+        }, {
+            data: "autorizaciones"
+        }, {
+            data: "observaciones"
+        }, {
+            data: "responsable"
+        }, {
+            data: "empresa"
+        }, {
+            data: "centroEstablecido"
+        }, {
+            data: "tipoActividad"
+        }, {
+            data: "numeroOferta"
+        }, {
+            data: "codigoGdes"
+        }, {
+            data: "descripcion"
+        }, {
+            data: "fechaUltimoEstado",
+            render: function (data) {
+                return moment(data).format('DD/MM/YYYY');
+            }
+        }, {
+            data: "importeInversion",
+            render: function (data) {
+                return numeral(data).format('0,0.00');
+            }
+        }, {
+            data: "importeRetorno",
+            render: function (data) {
+                return numeral(data).format('0,0.00');
+            }
+        }, {
+            data: "divisa"
+        }, {
+            data: "importePresupuestoDivisa",
+            render: function (data) {
+                return numeral(data).format('0,0.00');
+            }
+        }, {
+            data: "multiplicador",
+            render: function (data) {
+                return numeral(data).format('0,0.00');
+            }
+        }, {
+            data: "fechaDivisa",
+            render: function (data) {
+                return moment(data).format('DD/MM/YYYY');
+            }
+        }, {
+            data: "periodo"
+        }, {
+            data: "fechaEntrega",
+            render: function (data) {
+                return moment(data).format('DD/MM/YYYY');
+            }
+        }, {
+            data: "version"
+        }, {
+            data: "numeroLicitacion"
+        }, {
+            data: "periodo"
+        }, {
+            data: "ofertaSingular",
+            render: function (data) {
+                var html = i18n.t('no');
+                if (data == 1) html = i18n.t('si');
+                return html;
+            }
+        }, {
+            data: "colaboradores"
+        }, {
+            data: "numeroPedido"
+        }, {
+            data: "proyecto"
         }, {
             data: "ofertaId",
             render: function (data, type, row) {
@@ -82,18 +132,9 @@ var apiPaginaOfertasGeneral = {
         }];
         var tabla = $('#dt_ofertas').DataTable(options);
         tabla.columns(0).visible(false);
-        tabla.columns(10).visible(false);
-        tabla.columns(11).visible(false);
-        tabla.columns(12).visible(false);
-        tabla.columns(13).visible(false);
-        tabla.columns(14).visible(false);
-        tabla.columns(15).visible(false);
-        tabla.columns(16).visible(false);
-        tabla.columns(17).visible(false);
-        tabla.columns(18).visible(false);
-        tabla.columns(19).visible(false);
-        tabla.columns(20).visible(false);
-        tabla.columns(21).visible(false);
+        for (var i = 11; i < 35; i++) {
+            tabla.columns(i).visible(false);
+        }
     },
     cargarOfertas: function () {
         var url = myconfig.apiUrl + "/api/ofertas/responsable/" + usuario.responsableId;
@@ -110,19 +151,19 @@ var apiPaginaOfertasGeneral = {
         if (data.length > 0) dt.fnAddData(data);
         dt.fnDraw();
     },
-    nuevo: function(){
+    nuevo: function () {
         window.open(sprintf('OfertasDetalle.html?id=%s', 0), '_new');
     },
-    editar: function(id){
+    editar: function (id) {
         window.open(sprintf('OfertasDetalle.html?id=%s', id), '_new');
     },
-    eliminar: function(id){
-        apiComunNotificaciones.mensajeAceptarCancelar(i18n.t("eliminar_pregunta"),function(){
-            apiComunAjax.llamadaGeneral("DELETE", myconfig.apiUrl + "/api/ofertas/" + id, null, function(err){
+    eliminar: function (id) {
+        apiComunNotificaciones.mensajeAceptarCancelar(i18n.t("eliminar_pregunta"), function () {
+            apiComunAjax.llamadaGeneral("DELETE", myconfig.apiUrl + "/api/ofertas/" + id, null, function (err) {
                 if (err) return;
                 apiPaginaOfertasGeneral.cargarOfertas();
             })
-        }, function(){})
+        }, function () { })
     }
 }
 

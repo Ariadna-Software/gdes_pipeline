@@ -257,7 +257,7 @@
                                                     </select>                                                    
                                                 </div>
                                                 <div class="col col-md-2">
-                                                    <label class="label" data-i18n="ofertas.centrosEstablecidos">DIVISA:</label>
+                                                    <label class="label" data-i18n="ofertas.centrosEstablecidos">CES:</label>
                                                     <select class="aswselect2" id="cmbCentroEstablecidos" name="cmbCentroEstablecidos" data-bind="options: optionsCentroEstablecidos, optionsText: 'nombre', optionsValue: 'centroEstablecidoId', 
                                                         value: sCentroEstablecido, valueAllowUnset: true, selectedOptions: selectedCentroEstablecidos, selected2:{}">
                                                     </select>                                                    
@@ -304,10 +304,10 @@
                                                     </label>
                                                 </section>  
                                                <section class="col col-md-2">
-                                                    <label class="label" data-i18n="ofertas.fechaOferta">Fecha oferta:</label>
+                                                    <label class="label" data-i18n="ofertas.fechaEntrega">Fecha entrega:</label>
                                                     <label class="input">
-                                                        <input id="txtFechaOferta" name="txtFechaOferta" data-bind="value: fechaOferta" class="datepicker" data-dateformat="dd/mm/yy">
-                                                    </label>
+                                                        <input id="txtFechaEntrega" name="txtFechaEntrega" data-bind="value: fechaEntrega" class="datepicker" data-dateformat="dd/mm/yy">
+                                                    </label>                                                   
                                                 </section> 
                                                 <section class="col col-md-3">
                                                     <label class="label" data-i18n="ofertas.centro">Centroa:</label>
@@ -323,6 +323,12 @@
                                                         <input id="txtNumeroOferta" name="txtNumeroOferta" data-bind="value: numeroOferta">
                                                     </label>
                                                 </section>
+                                                <section class="col col-md-1">
+                                                    <label class="label" data-i18n="ofertas.version">VRS:</label>
+                                                    <label class="input">
+                                                        <input id="txtVersion" name="txtVersion" data-bind="value: version" disabled>
+                                                    </label>
+                                                </section>                                                
                                                 <section class="col col-md-2">
                                                     <label class="label" data-i18n="ofertas.codigoGdes">CGES:</label>
                                                     <label class="input">
@@ -335,7 +341,7 @@
                                                         <input id="txtNumeroLicitacion" name="txtNumeroLicitacion" data-bind="value: numeroLicitacion">
                                                     </label>
                                                 </section> 
-                                                <section class="col col-md-6">
+                                                <section class="col col-md-5">
                                                     <label class="label" data-i18n="ofertas.tipoSoporte">TipoSoporte:</label>
                                                     <select class="aswselect2" id="cmbTipoSoportes" name="cmbTipoSoportes" data-bind="options: optionsTipoSoportes, optionsText: 'nombre', optionsValue: 'tipoSoporteId', 
                                                         value: sTipoSoporte, valueAllowUnset: true, selectedOptions: selectedTipoSoportes, selected2:{}">
@@ -403,7 +409,7 @@
                                                         <input id="txtMultiplicador" name="txtMultiplicador" data-bind="value: multiplicador">
                                                     </label>
                                                 </section>   
-                                                <section class="col col-md-1">
+                                                <section class="col col-md-2">
                                                     <label class="label" data-i18n="ofertas.divisa">DIVISA:</label>
                                                     <select class="aswselect2" id="cmbDivisas" name="cmbDivisas" data-bind="options: optionsDivisas, optionsText: 'nombre', optionsValue: 'divisaId', 
                                                         value: sDivisa, valueAllowUnset: true, selectedOptions: selectedDivisas, selected2:{}">
@@ -415,7 +421,7 @@
                                                         <input id="txtImportePresupuestoDivisa" name="txtImportePresupuestoDivisa" data-bind="value: importePresupuestoDivisa">
                                                     </label>
                                                 </section>     
-                                                <section class="col col-md-3">
+                                                <section class="col col-md-2">
                                                     <div></div>
                                                 </section>
                                                 <section class="col col-md-2">
@@ -494,10 +500,12 @@
                                                     </label>
                                                 </section>                                                                                                 
                                                 <section class="col col-md-2">
-                                                    <label class="label" data-i18n="ofertas.fechaEntrega">Fecha entrega:</label>
+                                                    <!-- Provisonalmente solo queda la fechaEntrega
+                                                    <label class="label" data-i18n="ofertas.fechaOferta">Fecha oferta:</label>
                                                     <label class="input">
-                                                        <input id="txtFechaEntrega" name="txtFechaEntrega" data-bind="value: fechaEntrega" class="datepicker" data-dateformat="dd/mm/yy">
+                                                        <input id="txtFechaOferta" name="txtFechaOferta" data-bind="value: fechaOferta" class="datepicker" data-dateformat="dd/mm/yy">
                                                     </label>
+                                                    -->
                                                 </section>
                                                 <section class="col col-md-2">
                                                     <label class="label" data-i18n="ofertas.numeroPedido">N.Pedido:</label>
