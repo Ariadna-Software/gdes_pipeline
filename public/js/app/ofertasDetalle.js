@@ -7,6 +7,7 @@ var usuario = apiComunGeneral.obtenerUsuario();
 var data = null;
 var ofertaId = 0;
 var vm;
+var anteriorMultiplicador = 0;
 
 var apiPaginaOfertasDetalle = {
     ini: function () {
@@ -51,6 +52,10 @@ var apiPaginaOfertasDetalle = {
 
         $('#txtImportePresupuesto').on('blur', apiPaginaOfertasDetalle.cambioImporte);
         $('#txtMargenContribucion').on('blur', apiPaginaOfertasDetalle.cambioMargen);
+        $('#txtMultiplicador').on('blur', apiPaginaOfertasDetalle.cambioMultiplicador);
+        $('#txtImportePresupuestoDivisa').on('blur', apiPaginaOfertasDetalle.calcularImporteDesdeDivisa);
+        $('#txtImporteInversion').on('blur', apiPaginaOfertasDetalle.calcularDivisaDesdeInversion);
+        $('#txtImporteInversionDivisa').on('blur', apiPaginaOfertasDetalle.calcularInversionDesdeDivisa);
 
         ofertaId = apiComunGeneral.gup("id");
         if (ofertaId == 0) {
@@ -121,6 +126,7 @@ var apiPaginaOfertasDetalle = {
         vm.cliente(data.cliente);
         vm.version(data.version);
         vm.multiplicador(data.multiplicador);
+        anteriorMultiplicador = vm.multiplicador();
     },
     datosPagina: function () {
         var self = this;
@@ -411,6 +417,7 @@ var apiPaginaOfertasDetalle = {
         apiPaginaOfertasDetalle.textoAutorizacion();
     },
     cambioImporte: function () {
+        apiPaginaOfertasDetalle.calcularDivisaDesdeImporte();
         apiPaginaOfertasDetalle.textoAutorizacion();
     },
     textoAutorizacion: function () {
@@ -449,6 +456,48 @@ var apiPaginaOfertasDetalle = {
         var importeContribucion = (vm.importePresupuesto() * vm.margenContribucion()) / 100;
         importeContribucion = apiComunGeneral.redondeo2Decimales(importeContribucion);
         vm.importeContribucion(importeContribucion);
+    },
+    calcularDivisaDesdeImporte: function () {
+        if (vm.importePresupuesto() && vm.importePresupuesto() != 0) {
+            if (vm.multiplicador()) {
+                var importeDivisa = vm.importePresupuesto() * vm.multiplicador();
+                vm.importePresupuestoDivisa(apiComunGeneral.redondeo2Decimales(importeDivisa));
+                apiPaginaOfertasDetalle.actualizarFechaDivisa();
+            }
+        }
+    },
+    calcularDivisaDesdeInversion: function () {
+        if (vm.importeInversion() && vm.importeInversion() != 0) {
+            if (vm.multiplicador()) {
+                var importeDivisa = vm.importeInversion() * vm.multiplicador();
+                vm.importeInversionDivisa(apiComunGeneral.redondeo2Decimales(importeDivisa));
+                apiPaginaOfertasDetalle.actualizarFechaDivisa();
+            }
+        }
+    },
+    calcularImporteDesdeDivisa: function () {
+        if (vm.multiplicador() && vm.importePresupuestoDivisa()) {
+            var importe = vm.importePresupuestoDivisa() / vm.multiplicador();
+            vm.importePresupuesto(apiComunGeneral.redondeo2Decimales(importe));
+            apiPaginaOfertasDetalle.textoAutorizacion();
+            apiPaginaOfertasDetalle.actualizarFechaDivisa();
+        }
+    },
+    calcularInversionDesdeDivisa: function () {
+        if (vm.importeInversionDivisa() && vm.importeInversionDivisa() != 0) {
+            if (vm.multiplicador()) {
+                var importe = vm.importeInversionDivisa() / vm.multiplicador();
+                vm.importeInversion(apiComunGeneral.redondeo2Decimales(importe));
+                apiPaginaOfertasDetalle.actualizarFechaDivisa();
+            }
+        }
+    },
+    actualizarFechaDivisa: function () {
+        if (anteriorMultiplicador != vm.multiplicador()) vm.fechaDivisa(moment(new Date()).format('DD/MM/YYYY'));
+    },
+    cambioMultiplicador: function () {
+        apiPaginaOfertasDetalle.calcularDivisaDesdeImporte();
+        apiPaginaOfertasDetalle.calcularDivisaDesdeInversion();
     }
 }
 
