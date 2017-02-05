@@ -8,6 +8,7 @@ var data = null;
 var ofertaId = 0;
 var vm;
 var anteriorMultiplicador = 0;
+var anteriorEstado = "";
 
 var apiPaginaOfertasDetalle = {
     ini: function () {
@@ -38,6 +39,12 @@ var apiPaginaOfertasDetalle = {
 
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEstados();
+        $("#cmbEstados").select2().on('change', function (e) {
+            if (e.added && (e.added.id != anteriorEstado)){
+                vm.fechaUltimoEstado(moment(new Date()).format('DD/MM/YYYY'));
+            }
+        });
+
         $('#cmbProyectos').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarProyectos();
         $('#cmbTipoActividads').select2(select2_languages[usuario.codigoIdioma]);
@@ -127,6 +134,7 @@ var apiPaginaOfertasDetalle = {
         vm.version(data.version);
         vm.multiplicador(data.multiplicador);
         anteriorMultiplicador = vm.multiplicador();
+        anteriorEstado = vm.sEstado();
     },
     datosPagina: function () {
         var self = this;
@@ -263,6 +271,15 @@ var apiPaginaOfertasDetalle = {
         }
         apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
             if (err) return;
+            if (vm.sEstado() != anteriorEstado) {
+                var data = {
+                    asunto: "Cambio estado OFERTA: " + vm.nombreCorto(),
+                    texto: "La oferta cambió el " + vm.fechaUltimoEstado() + " a " + $('#cmbEstados').select2('data').text
+                };
+                apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/api/correoElectronico", data, function (err) {
+                    return;
+                });
+            }
             apiPaginaOfertasDetalle.salir();
         });
     },

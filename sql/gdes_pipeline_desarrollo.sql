@@ -271,13 +271,14 @@ CREATE TABLE `ofertas` (
   CONSTRAINT `oft_tipo_actividad` FOREIGN KEY (`tipoActividadId`) REFERENCES `tipos_actividades` (`tipoActividadId`),
   CONSTRAINT `oft_tipo_oferta` FOREIGN KEY (`tipoOfertaId`) REFERENCES `tipos_oferta` (`tipoOfertaId`),
   CONSTRAINT `oft_tipo_soporte` FOREIGN KEY (`tipoSoporteId`) REFERENCES `tipos_soporte` (`tipoSoporteId`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Tabla general de ofertas';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Tabla general de ofertas';
 
 /*Data for the table `ofertas` */
 
 insert  into `ofertas`(`ofertaId`,`numeroOferta`,`fechaOferta`,`fechaLimiteProyecto`,`fechaUltimoEstado`,`importePresupuesto`,`importePresupuestoDivisa`,`codigoDivisa`,`importeInversion`,`importeRetorno`,`descripcion`,`observaciones`,`tiempoEmpleado`,`autorizaciones`,`numeroPedido`,`personaContacto`,`empresaId`,`proyectoId`,`areaId`,`tipoActividadId`,`paisId`,`estadoId`,`tipoSoporteId`,`responsableId`,`centroId`,`tipoOfertaId`,`ofertaSingular`,`periodo`,`fechaEntrega`,`colaboradores`,`margenContribucion`,`importeContribucion`,`centroEstablecidoId`,`divisaId`,`codigoGdes`,`importeInversionDivisa`,`nombreCorto`,`numeroLicitacion`,`cliente`,`version`,`multiplicador`,`fechaDivisa`) values 
-(1,'NUMOEFRAT','2017-02-03',NULL,'2017-02-03',100.00,101.00,'5454',30.00,50.00,'DESCRIPCION OFERTA','OBSERVACIONES',4000,'AUTORIZACIONES','PEDIDONR','PERCONTACTO',2,1,1,NULL,1,1,1,1,0,3,0,'PERIODO','2017-01-01','COLABORADORES',10.00,20.00,1,1,'CODGDES',40.00,'NOMBRE OFERTA','NLICITA','CLIENTE OFERTA',3,1.00,'2017-02-01'),
-(2,'7878','2017-02-05',NULL,'2017-02-05',1200.00,NULL,NULL,NULL,NULL,'Esto es la des',NULL,NULL,NULL,NULL,NULL,3,1,1,NULL,1,1,2,2,1,1,1,NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,'OFERTS11',NULL,NULL,NULL,NULL,NULL);
+(1,'NUMOEFRAT','2017-02-03',NULL,'2017-02-05',151.76,258.00,'5454',47.06,50.00,'DESCRIPCION OFERTA','OBSERVACIONES',4000,'Debe solicitar autorización por correo electrónico\nDebe rellenar el documento \'Proposal report\' (PPR). Vea la ayuda','PEDIDONR','PERCONTACTO',2,1,1,NULL,1,4,1,2,0,1,1,'PERIODO','2017-01-01','COLABORADORES',50.00,75.88,1,1,'CODGDES',80.00,'NOMBRE OFERTA','NLICITA','CLIENTE OFERTA',9,1.70,'2017-01-01'),
+(2,'7878','2017-02-05',NULL,'2017-02-05',1200.00,NULL,NULL,NULL,NULL,'Esto es la des',NULL,NULL,NULL,NULL,NULL,3,1,1,NULL,1,1,2,2,1,1,1,NULL,NULL,NULL,NULL,NULL,1,NULL,NULL,NULL,'OFERTS11',NULL,NULL,NULL,NULL,NULL),
+(3,'78996','2017-02-05',NULL,'2017-02-05',250000.00,337500.00,NULL,1500.00,NULL,'Este proyecto es muy chulo',NULL,NULL,'Debe solicitar autorización por correo electrónico\nDebe rellenar el documento \'Proposal report\' (PPR). Vea la ayuda',NULL,NULL,1,1,1,NULL,2,2,NULL,2,0,1,1,'3 meses desde 1','2017-02-05',NULL,10.00,25000.00,1,1,'GDES78899',2025.00,'CHULO',NULL,'Cliente del chulo',1,1.35,'2017-02-05');
 
 /*Table structure for table `paises` */
 
@@ -442,7 +443,7 @@ CREATE TABLE `usuarios` (
 
 insert  into `usuarios`(`usuarioId`,`grupoUsuarioId`,`nombre`,`codigoIdioma`,`login`,`password`,`getKeyTime`,`expKeyTime`,`apiKey`,`paisId`,`empresaId`,`areaId`,`centroId`,`esAdministrador`,`verOfertasGrupo`) values 
 (1,1,'Administrador','es','admin','admin','2017-02-05 16:34:51','2017-02-05 21:34:51','ZfKaN',NULL,NULL,NULL,NULL,1,0),
-(2,1,'Antonio Martinez','es','a.martinez@gdes.com','1234','2017-02-05 11:27:13','2017-02-05 16:27:13','6932C',NULL,NULL,NULL,NULL,0,0),
+(2,1,'Antonio Martinez','es','a.martinez@gdes.com','1234','2017-02-05 18:24:09','2017-02-05 23:24:09','rJou3',NULL,NULL,NULL,NULL,0,0),
 (3,1,'Marceliano Curiel','es','m.curiel@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
 (4,1,'Antonio Andrés','es','a.andres@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),
 (5,1,'Fernando de Pablo','es','f.pablo@gdes.com','1234',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0),

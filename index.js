@@ -78,6 +78,7 @@ app.use('/api/tipos-oferta', require('./lib/tipos-oferta/tipos-oferta.controller
 app.use('/api/proyectos', require('./lib/proyectos/proyectos.controller'));
 app.use('/api/divisas', require('./lib/divisas/divisas.controller'));
 app.use('/api/centrosEstablecidos', require('./lib/centrosEstablecidos/centrosEstablecidos.controller'));
+app.use('/api/correoElectronico', require('./lib/correoElectronico/correoElectronico.controller'));
 
 // -- start server
 app.listen(config.apiPort);
