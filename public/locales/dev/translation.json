@@ -268,7 +268,21 @@
             "Para Precalificaciones; Cuando hemos sido finalmente invitados a ofertas.<br/>",
             "<strong>NO INVITADOS:</strong><br/>",
             "Para Precalificaciones; Cuando no hemos sido finalmente invitados a ofertas.<br/>"
-        ]
+        ],
+        "ayudaAutorizaciones": [
+            "<strong>AUTORIZACIÓN:</strong><br/>",
+            "En función del tipo de oferta y su cuantía puede precisar de autorizaciones adicionales o no.<br/>",
+            "En el apartado 'Autorizaciones' encontrará un detalle de las que se necesitan.<br/>",
+            "Puede que necesite cumplimentar algún documento adicional. Los puede descargar haciendo clic en el tipo de documento, dentro de esta misma ayuda<br/>",
+            "<strong>DOCUMENTOS RELACIONADOS:</strong><br/>",
+            "<a href='/ficheros/documentos/BNB.dotx'>(BNB) Bid / No bid</a>.<br/>",
+            "<a href='/ficheros/documentos/PPR.docx'>(PPR) Proposal report</a>.<br/>"
+        ],
+        "autorizacionX": "Faltan datos para determinar la autorización necesaria",
+        "autorizacion0": "No se precisa ninguna autorización adicional",
+        "autorizacion1": "Debe solicitar autorización por correo electrónico",
+        "autorizacion2": "Debe rellenar el documento 'Bid no Bid' (BNB). Vea la ayuda",
+        "autorizacion3": "Debe rellenar el documento 'Proposal report' (PPR). Vea la ayuda"
     },
     "proyectos": {
         "titulo": "Proyectos",

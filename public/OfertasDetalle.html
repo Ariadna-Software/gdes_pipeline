@@ -441,7 +441,7 @@
                                                 <section class="col col-md-2">
                                                     <label class="label" data-i18n="ofertas.importeContribucion">Contribucion:</label>
                                                     <label class="input">
-                                                        <input id="txtImporteContribucion" name="txtImporteContribucion" data-bind="value: importeContribucion">
+                                                        <input id="txtImporteContribucion" name="txtImporteContribucion" data-bind="value: importeContribucion" disabled>
                                                     </label>
                                                 </section>
                                                 <section class="col col-md-2">
@@ -468,7 +468,12 @@
                                             </div>  
                                             <div class="row">
                                                 <section class="col col-md-12">
-                                                    <label class="label" data-i18n="ofertas.autorizaciones">Autorizaciones:</label>
+                                                    <label class="label">
+                                                        <span  data-i18n="ofertas.autorizaciones">Autorizaciones:</span>
+                                                        <a href="javascript:void(0);" rel="popover" data-placement="top" data-original-title="<i class='fa fa-lg fa-info-circle'></i>" data-i18n="[data-content]ofertas.ayudaAutorizaciones" data-html="true">
+                                                            <i class='fa fa-lg fa-info-circle'></i>
+                                                        </a>
+                                                    </label>
                                                     <label class="textarea textarea-resizable">
                                                         <textarea id="txtAutorizaciones" rows="3" class="custom-scroll" data-bind="value:autorizaciones"></textarea>
                                                     </label>

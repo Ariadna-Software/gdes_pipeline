@@ -15,7 +15,7 @@ var breakpointDefinition = {
 };
 
 var apiComunGeneral = {
-    obtenerUsuario: function(){
+    obtenerUsuario: function () {
         var usuario = apiComunGeneral.getCookie('usuario');
         if (!usuario) return null;
         return JSON.parse(usuario);
@@ -31,7 +31,7 @@ var apiComunGeneral = {
         if (ahora > expTime) window.open('login.html', '_self');
 
         pageSetUp();
-        
+
         var lg = i18n.lng();
         if (usuario.codigoIdioma) lg = usuario.codigoIdioma;
 
@@ -169,9 +169,12 @@ var apiComunGeneral = {
         else
             return results[1];
     },
-    controlPermisos: function(usuario){
-        if (!usuario.esAdministrador){
+    controlPermisos: function (usuario) {
+        if (!usuario.esAdministrador) {
             $("#administracion").hide();
         }
+    },
+    redondeo2Decimales: function (num) {
+        return +(Math.round(num + "e+2") + "e-2");
     }
 }

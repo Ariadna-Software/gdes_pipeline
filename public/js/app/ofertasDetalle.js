@@ -49,6 +49,9 @@ var apiPaginaOfertasDetalle = {
         $('#cmbCentroEstablecidos').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarCentroEstablecidos();
 
+        $('#txtImportePresupuesto').on('blur', apiPaginaOfertasDetalle.cambioImporte);
+        $('#txtMargenContribucion').on('blur', apiPaginaOfertasDetalle.cambioMargen);
+
         ofertaId = apiComunGeneral.gup("id");
         if (ofertaId == 0) {
             vm.ofertaId(0);
@@ -248,10 +251,10 @@ var apiPaginaOfertasDetalle = {
         if (vm.fechaDivisa()) data.fechaDivisa = moment(vm.fechaDivisa(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         var verb = "PUT";
         data.version += 1;
-        if (vm.ofertaId() == 0){
+        if (vm.ofertaId() == 0) {
             verb = "POST";
             data.version = 0;
-        } 
+        }
         apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
             if (err) return;
             apiPaginaOfertasDetalle.salir();
@@ -277,8 +280,8 @@ var apiPaginaOfertasDetalle = {
                 txtMargenContribucion: { number: true },
                 txtImporteContribucion: { number: true },
                 txtImporteInversion: { number: true },
-                txtImporteImversionDivisa: {number: true},
-                txtImporteRetorno: {number: true}
+                txtImporteImversionDivisa: { number: true },
+                txtImporteRetorno: { number: true }
             },
             errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length) {
@@ -398,7 +401,54 @@ var apiPaginaOfertasDetalle = {
         if (!usuario.esAdministrador) {
             $("#cmbTipoSoportes").attr('disabled', 'disabled');
             $("#txtTiempoEmpleado").attr('disabled', 'disabled');
+            $("#txtAutorizaciones").attr('disabled', 'disabled');
         }
+    },
+    cambioPais: function () {
+        apiPaginaOfertasDetalle.textoAutorizacion();
+    },
+    cambioTipoOferta: function () {
+        apiPaginaOfertasDetalle.textoAutorizacion();
+    },
+    cambioImporte: function () {
+        apiPaginaOfertasDetalle.textoAutorizacion();
+    },
+    textoAutorizacion: function () {
+        var text = i18n.t('ofertas.autorizacionX');
+        var tipoAutorizacion = apiPaginaOfertasDetalle.calculoAutorizacion();
+        if (tipoAutorizacion != null) {
+            text = i18n.t('ofertas.autorizacion' + tipoAutorizacion);
+            if (tipoAutorizacion == 4) {
+                text = i18n.t('ofertas.autorizacion1');
+                text += '\n';
+                text += i18n.t('ofertas.autorizacion3');
+            }
+        }
+        vm.autorizaciones(text);
+    },
+    calculoAutorizacion: function () {
+        if (!vm.importePresupuesto() || vm.importePresupuesto() == 0) return null;
+        var tAut = 0;
+        if (vm.importePresupuesto() > 150000) {
+            tAut = 1;
+        }
+        if (vm.importePresupuesto() > 300000) {
+            tAut = 2;
+            if (vm.sPais() != 1) tAut = 3;
+        }
+        if (vm.importePresupuesto() > 1000000) {
+            tAut = 3;
+        }
+        if (vm.ofertaSingular()) {
+            tAut = 3;
+            if (vm.sTipoOferta() == 1) tAut = 4;
+        }
+        return tAut;
+    },
+    cambioMargen: function () {
+        var importeContribucion = (vm.importePresupuesto() * vm.margenContribucion()) / 100;
+        importeContribucion = apiComunGeneral.redondeo2Decimales(importeContribucion);
+        vm.importeContribucion(importeContribucion);
     }
 }
 
