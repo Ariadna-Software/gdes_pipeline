@@ -3,7 +3,7 @@
  Funciones propias de la página index.html
 */
 
-var usuario = JSON.parse(apiComunGeneral.getCookie('usuario'));
+var usuario = apiComunGeneral.obtenerUsuario();
 
 var apiPaginaIndex = {
     ini: function(){

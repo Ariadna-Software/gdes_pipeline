@@ -15,12 +15,17 @@ var breakpointDefinition = {
 };
 
 var apiComunGeneral = {
+    obtenerUsuario: function(){
+        var usuario = apiComunGeneral.getCookie('usuario');
+        if (!usuario) return null;
+        return JSON.parse(usuario);
+    },
     iniLogin: function () {
         // Inicialización específica de la página de login
         apiComunIdiomas.iniIdiomas();
     },
     initPage: function (usuario) {
-        if (!usuario) window.open('login.html', '_self');
+        if (!usuario || usuario == null) window.open('login.html', '_self');
         var expTime = moment(usuario.expKeyTime);
         var ahora = moment(new Date());
         if (ahora > expTime) window.open('login.html', '_self');

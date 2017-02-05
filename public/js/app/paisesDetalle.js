@@ -3,7 +3,7 @@
  Funciones propias de la página Paises.html
 */
 
-var usuario = JSON.parse(apiComunGeneral.getCookie('usuario'));
+var usuario = apiComunGeneral.obtenerUsuario();
 var data = null;
 var paisId = 0;
 var vm;
