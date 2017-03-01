@@ -37,17 +37,20 @@ var apiPaginaAreasDetalle = {
     cargarDatosPagina: function(data){
         vm.areaId(data.areaId);
         vm.nombre(data.nombre);
+        vm.abreviatura(data.abreviatura);
     },
     datosPagina: function () {
         var self = this;
         self.areaId = ko.observable();
         self.nombre = ko.observable();
+        self.abreviatura = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaAreasDetalle.datosOk()) return;
         var data = {
             areaId: vm.areaId(),
-            nombre: vm.nombre()
+            nombre: vm.nombre(),
+            abreviatura: vm.abreviatura()
         };
         var verb = "PUT";
         if (vm.areaId() == 0) verb = "POST";
