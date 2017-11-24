@@ -44,6 +44,10 @@ var apiComunGeneral = {
                 flag = "flag flag-us";
                 lgn = "EN";
                 break;
+            case "fr":
+                flag = "flag flag-fr";
+                lgn = "FR";
+                break;
         };
         $('#language-flag').attr('class', flag);
         $('#language-abrv').text(lgn);
@@ -102,8 +106,8 @@ var apiComunGeneral = {
     initTableOptions: function (table, lang) {
         var options = {
             "sDom": "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l C T >r>" +
-            "t" +
-            "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
+                "t" +
+                "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>",
             "oColVis": {
                 "buttonText": "Mostrar / ocultar columnas"
             },

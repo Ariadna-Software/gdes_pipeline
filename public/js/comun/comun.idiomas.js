@@ -19,6 +19,10 @@ var apiComunIdiomas = {
                 flag = "flag flag-us";
                 lgn = "EN";
                 break;
+            case "fr":
+                flag = "flag flag-fr";
+                lgn = "FR";
+                break;
         };
         $('#language-flag').attr('class', flag);
         $('#language-abrv').text(lgn);
