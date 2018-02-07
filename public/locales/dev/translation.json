@@ -31,6 +31,7 @@
             "empresas": "Empresas",
             "paises": "Paises",
             "areas": "Áreas",
+            "dirAreas": "Directores de área",
             "centros": "Centros",
             "gruposActividades": "Grupos actividades",
             "tiposActividades": "Tipos actividades",
@@ -129,6 +130,15 @@
         "id": "ID",
         "editar": "Editar area",
         "eliminar": "Eliminar area"
+    },
+    "dirAreas": {
+        "titulo": "Directores de área",
+        "panel": "Directores de área",
+        "nuevo": "Nuevo director de área",
+        "nombre": "Nombre del director de área",
+        "id": "ID",
+        "editar": "Editar director de área",
+        "eliminar": "Eliminar dorector de área"
     },
     "centros": {
         "titulo": "Centros",

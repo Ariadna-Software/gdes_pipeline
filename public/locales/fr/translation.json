@@ -31,6 +31,7 @@
             "empresas": "Entreprises",
             "paises": "Pays",
             "areas": "Domaines",
+            "dirAreas": "Directeurs régionaux",
             "centros": "Centres",
             "gruposActividades": "Groupes activités",
             "tiposActividades": "Types activités",
@@ -129,6 +130,15 @@
         "id": "ID",
         "editar": "Éditer domaine",
         "eliminar": "Supprimer domaine"
+    },
+    "dirAreas": {
+        "titulo": "Directeur régional",
+        "panel": "Directeur régional",
+        "nuevo": "Nouveau directeur régional",
+        "nombre": "Nom du directeur régional",
+        "id": "ID",
+        "editar": "Éditer directeur régional",
+        "eliminar": "Supprimer directeur régional"
     },
     "centros": {
         "titulo": "Centres",

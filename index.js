@@ -69,6 +69,7 @@ app.use('/api/responsables', require('./lib/responsables/responsables.controller
 app.use('/api/empresas', require('./lib/empresas/empresas.controller'));
 app.use('/api/paises', require('./lib/paises/paises.controller'));
 app.use('/api/areas', require('./lib/areas/areas.controller'));
+app.use('/api/directores-areas', require('./lib/directores-areas/directores-areas.controller'));
 app.use('/api/centros', require('./lib/centros/centros.controller'));
 app.use('/api/grupos-actividades', require('./lib/grupos-actividades/grupos-actividades.controller'));
 app.use('/api/tipos-actividades', require('./lib/tipos-actividades/tipos-actividades.controller'));

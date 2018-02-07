@@ -31,6 +31,7 @@
             "empresas": "Companies",
             "paises": "Countries",
             "areas": "Business Areas",
+            "dirAreas": "Business area directors",
             "centros": "Centres",
             "gruposActividades": "Group of Activities",
             "tiposActividades": "Type of Activities",
@@ -129,6 +130,15 @@
         "id": "ID",
         "editar": "Edit Business Area",
         "eliminar": "Delete Business Area"
+    },
+    "dirAreas": {
+        "titulo": "Business area directors",
+        "panel": "Business area directors",
+        "nuevo": "New Business area director",
+        "nombre": "Name of the Business area director",
+        "id": "ID",
+        "editar": "Edit Business area director",
+        "eliminar": "Delete Business area director"
     },
     "centros": {
         "titulo": "Centres",
