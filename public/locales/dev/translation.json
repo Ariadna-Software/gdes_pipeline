@@ -37,6 +37,7 @@
             "tiposActividades": "Tipos actividades",
             "tiposSoporte": "Tipos soporte",
             "tiposOferta": "Tipos oferta",
+            "tiposProyecto": "Tipos proyecto",
             "proyectos": "Proyecto",
             "centrosEstablecidos": "Centros Establecidos",
             "divisas": "Divisas"
@@ -301,6 +302,16 @@
         "eliminar": "Eliminar proyecto",
         "referencia": "Referencia",
         "numeroProyecto": "Numero proyecto"
+    },
+    "tiposProyecto": {
+        "titulo": "Tipos de proyectos",
+        "panel": "Tipos de proyectos",
+        "nuevo": "Nuevo tipo proyecto",
+        "nombre": "Nombre tipo proyecto",
+        "id": "ID",
+        "editar": "Editar tipo proyecto",
+        "eliminar": "Eliminar tipo proyecto",
+        "valNombre": "Nombre necesario"
     },
     "tiposOferta": {
         "titulo": "Tipos oferta",

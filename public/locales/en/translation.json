@@ -37,6 +37,7 @@
             "tiposActividades": "Type of Activities",
             "tiposSoporte": "Type of support",
             "tiposOferta": "Offers Type",
+            "tiposProyecto": "projects Type",
             "proyectos": "Project",
             "centrosEstablecidos": "Centres",
             "divisas": "Currency"
@@ -301,6 +302,16 @@
         "eliminar": "Delete project",
         "referencia": "Reference",
         "numeroProyecto": "Project number"
+    },
+    "tiposProyecto": {
+        "titulo": "Projects Type",
+        "panel": "Projects Type",
+        "nuevo": "New project type",
+        "nombre": "Project type name",
+        "id": "ID",
+        "editar": "Edit project type",
+        "eliminar": "Delete project type",
+        "valNombre": "Necessary name"
     },
     "tiposOferta": {
         "titulo": "Offers Type",

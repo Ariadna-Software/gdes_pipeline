@@ -37,6 +37,7 @@
             "tiposActividades": "Types activités",
             "tiposSoporte": "Types soutien",
             "tiposOferta": "Types offre",
+            "tiposProyecto": "Types project",
             "proyectos": "Projets",
             "centrosEstablecidos": "Centres établis",
             "divisas": "Monnaie"
@@ -311,6 +312,16 @@
         "id": "ID",
         "editar": "Éditer type offre",
         "eliminar": "Supprimer type offre",
+        "valNombre": "Nom nécessaire"
+    },
+    "tiposProyecto": {
+        "titulo": "Types projets",
+        "panel": "Types projets",
+        "nuevo": "Nouveau type d'projet",
+        "nombre": "Nom type projet",
+        "id": "ID",
+        "editar": "Éditer type projet",
+        "eliminar": "Supprimer type projet",
         "valNombre": "Nom nécessaire"
     },
     "centrosEstablecidos": {
