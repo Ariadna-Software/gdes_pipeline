@@ -37,6 +37,7 @@
             "tiposActividades": "Type of Activities",
             "tiposSoporte": "Type of support",
             "tiposOferta": "Offers Type",
+            "tiposOportunidad": "Opportunity types",
             "tiposProyecto": "projects Type",
             "proyectos": "Project",
             "centrosEstablecidos": "Centres",
@@ -322,6 +323,16 @@
         "id": "ID",
         "editar": "Edit offer type",
         "eliminar": "Delete offer type",
+        "valNombre": "Necessary name"
+    },
+    "tiposOportunidad": {
+        "titulo": "Opportunities type",
+        "panel": "Opportunities type",
+        "nuevo": "New opportunity type",
+        "nombre": "Opportunity type name",
+        "id": "ID",
+        "editar": "Edit opportunity type",
+        "eliminar": "Delete opportunity type",
         "valNombre": "Necessary name"
     },
     "centrosEstablecidos": {

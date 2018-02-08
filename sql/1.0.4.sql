@@ -16,3 +16,10 @@ CREATE TABLE `ubicaciones`(
   PRIMARY KEY (`ubicacionId`)
 );
 
+CREATE TABLE `tipos_oportunidad`(  
+  `tipoOportunidadId` INT(11) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255),
+  PRIMARY KEY (`tipoOportunidadId`)
+);
+
+

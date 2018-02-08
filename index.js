@@ -76,6 +76,7 @@ app.use('/api/tipos-actividades', require('./lib/tipos-actividades/tipos-activid
 app.use('/api/tipos-soporte', require('./lib/tipos-soporte/tipos-soporte.controller'));
 app.use('/api/ofertas', require('./lib/ofertas/ofertas.controller'));
 app.use('/api/tipos-oferta', require('./lib/tipos-oferta/tipos-oferta.controller'));
+app.use('/api/tipos-oportunidad', require('./lib/tipos-oportunidad/tipos-oportunidad.controller'));
 app.use('/api/proyectos', require('./lib/proyectos/proyectos.controller'));
 app.use('/api/tipos-proyecto', require('./lib/tipos-proyecto/tipos-proyecto.controller'));
 app.use('/api/divisas', require('./lib/divisas/divisas.controller'));

@@ -37,6 +37,7 @@
             "tiposActividades": "Types activités",
             "tiposSoporte": "Types soutien",
             "tiposOferta": "Types offre",
+            "tiposOportunidad": "Types d'opportunités",
             "tiposProyecto": "Types project",
             "proyectos": "Projets",
             "centrosEstablecidos": "Centres établis",
@@ -323,6 +324,16 @@
         "id": "ID",
         "editar": "Éditer type projet",
         "eliminar": "Supprimer type projet",
+        "valNombre": "Nom nécessaire"
+    },
+    "tiposOportunidad": {
+        "titulo": "Types d'opportunités",
+        "panel": "Types d'opportunités",
+        "nuevo": "Nouveau Type d'opportunité",
+        "nombre": "Nom Type d'opportunité",
+        "id": "ID",
+        "editar": "Éditer Type d'opportunité",
+        "eliminar": "Supprimer Type d'opportunité",
         "valNombre": "Nom nécessaire"
     },
     "centrosEstablecidos": {

@@ -37,6 +37,7 @@
             "tiposActividades": "Tipos actividades",
             "tiposSoporte": "Tipos soporte",
             "tiposOferta": "Tipos oferta",
+            "tiposOportunidad": "Tipos oportunidad",
             "tiposProyecto": "Tipos proyecto",
             "proyectos": "Proyecto",
             "centrosEstablecidos": "Centros Establecidos",
@@ -322,6 +323,16 @@
         "id": "ID",
         "editar": "Editar tipo oferta",
         "eliminar": "Eliminar tipo oferta",
+        "valNombre": "Nombre necesario"
+    },
+    "tiposOportunidad": {
+        "titulo": "Tipos oportunidad",
+        "panel": "Tipos oportunidad",
+        "nuevo": "Nuevo tipo oportunidad",
+        "nombre": "Nombre tipo oportunidad",
+        "id": "ID",
+        "editar": "Editar tipo oportunidad",
+        "eliminar": "Eliminar tipo oportunidad",
         "valNombre": "Nombre necesario"
     },
     "centrosEstablecidos": {
