@@ -40,7 +40,8 @@
             "tiposProyecto": "Tipos proyecto",
             "proyectos": "Proyecto",
             "centrosEstablecidos": "Centros Establecidos",
-            "divisas": "Divisas"
+            "divisas": "Divisas",
+            "ubicaciones": "Ubicaciones"
         },
         "gestion": {
             "cab": "Gestión",
@@ -340,5 +341,14 @@
         "id": "ID",
         "editar": "Editar divisa",
         "eliminar": "Eliminar divisa"
+    },
+    "ubicaciones": {
+        "titulo": "Ubicaciones",
+        "panel": "Ubicaciones",
+        "nuevo": "Nueva ubicación",
+        "nombre": "Nombre ubicación",
+        "id": "ID",
+        "editar": "Editar ubicación",
+        "eliminar": "Eliminar ubicación"
     }
 }

@@ -81,6 +81,7 @@ app.use('/api/tipos-proyecto', require('./lib/tipos-proyecto/tipos-proyecto.cont
 app.use('/api/divisas', require('./lib/divisas/divisas.controller'));
 app.use('/api/centrosEstablecidos', require('./lib/centrosEstablecidos/centrosEstablecidos.controller'));
 app.use('/api/correoElectronico', require('./lib/correoElectronico/correoElectronico.controller'));
+app.use('/api/ubicaciones', require('./lib/ubicaciones/ubicaciones.controller'));
 
 // -- start server
 app.listen(config.apiPort);

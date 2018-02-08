@@ -10,3 +10,9 @@ CREATE TABLE `tipos_proyecto`(
   PRIMARY KEY (`tipoProyectoId`)
 );
 
+CREATE TABLE `ubicaciones`(  
+  `ubicacionId` INT(11) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255),
+  PRIMARY KEY (`ubicacionId`)
+);
+

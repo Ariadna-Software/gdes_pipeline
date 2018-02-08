@@ -40,7 +40,8 @@
             "tiposProyecto": "projects Type",
             "proyectos": "Project",
             "centrosEstablecidos": "Centres",
-            "divisas": "Currency"
+            "divisas": "Currency",
+            "ubicaciones": "Locations"
         },
         "gestion": {
             "cab": "Pool",
@@ -340,5 +341,14 @@
         "id": "ID",
         "editar": "Edit currency",
         "eliminar": "Delete currency"
+    },
+    "ubicaciones": {
+        "titulo": "Locations",
+        "panel": "Locations",
+        "nuevo": "New location",
+        "nombre": "Location name",
+        "id": "ID",
+        "editar": "Edit location",
+        "eliminar": "Delete location"
     }
 }

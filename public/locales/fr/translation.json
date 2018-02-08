@@ -40,7 +40,8 @@
             "tiposProyecto": "Types project",
             "proyectos": "Projets",
             "centrosEstablecidos": "Centres établis",
-            "divisas": "Monnaie"
+            "divisas": "Monnaie",
+            "ubicaciones": "Emplacements"
         },
         "gestion": {
             "cab": "Gestion",
@@ -341,5 +342,14 @@
         "id": "ID",
         "editar": "Éditer monnaie",
         "eliminar": "Supprimer monnaie"
+    },
+    "ubicaciones": {
+        "titulo": "Emplacements",
+        "panel": "Emplacements",
+        "nuevo": "Nouvelle emplacement",
+        "nombre": "Nom emplacement",
+        "id": "ID",
+        "editar": "Éditer emplacement",
+        "eliminar": "Supprimer emplacement"
     }
 }
