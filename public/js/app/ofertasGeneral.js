@@ -6,6 +6,10 @@
 var usuario = apiComunGeneral.obtenerUsuario();
 var data = null;
 
+var estado = [];
+estado = getCookie('confOferta'+usuario.nombre);
+var tabla;
+
 var apiPaginaOfertasGeneral = {
     ini: function () {
         apiComunGeneral.initPage(usuario);
@@ -15,6 +19,11 @@ var apiPaginaOfertasGeneral = {
         apiPaginaOfertasGeneral.iniOfertasTabla();
         apiPaginaOfertasGeneral.cargarOfertas();
         $('#btnNuevo').click(apiPaginaOfertasGeneral.nuevo);
+
+        //evento de guardado de configuración
+        $(window).unload(apiPaginaOfertasGeneral.guardarConfiguracion);
+        $('.ColVis').blur(apiPaginaOfertasGeneral.guardarConfiguracion)
+
     },
     iniOfertasTabla: function () {
         var options = apiComunGeneral.initTableOptions('dt_ofertas', usuario.codigoIdioma);
@@ -130,10 +139,23 @@ var apiPaginaOfertasGeneral = {
                 return html;
             }
         }];
-        var tabla = $('#dt_ofertas').DataTable(options);
+        tabla = $('#dt_ofertas').DataTable(options);
         tabla.columns(0).visible(false);
-        for (var i = 11; i < 35; i++) {
-            tabla.columns(i).visible(false);
+        if(!estado){
+            estado = [];
+            estado.push("true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true");
+            for (var i = 11; i < 35; i++) {
+                tabla.columns(i).visible(false);
+                estado.push(tabla.columns(i).visible()[0]);
+            }
+            estado.push("true");
+        }else{
+            var booleana = estado.split(",")
+            for (var j = 0; j < 36; j++){
+                if(booleana[j] == "true") booleana[j] = true;
+                else if (booleana[j] == "false") booleana[j] = false;
+                tabla.columns(j).visible(booleana[j]);
+            }
         }
     },
     cargarOfertas: function () {
@@ -164,7 +186,16 @@ var apiPaginaOfertasGeneral = {
                 apiPaginaOfertasGeneral.cargarOfertas();
             })
         }, function () { })
+    },
+
+    guardarConfiguracion: function() {
+        var conf = [];
+        for(var i = 0; i < 36; i++){
+            conf.push(tabla.columns(i).visible()[0]);
+        }
+        setCookieOfertas('confOferta'+usuario.nombre, conf, 2);
     }
+
 }
 
 
