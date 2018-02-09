@@ -31,6 +31,7 @@
             "empresas": "Empresas",
             "paises": "Paises",
             "areas": "Áreas",
+            "servicios": "Servicios",
             "dirAreas": "Directores de área",
             "centros": "Centros",
             "gruposActividades": "Grupos actividades",
@@ -133,6 +134,15 @@
         "id": "ID",
         "editar": "Editar area",
         "eliminar": "Eliminar area"
+    },
+    "servicios": {
+        "titulo": "Servicios",
+        "panel": "Servicios",
+        "nuevo": "Nueva servicio",
+        "nombre": "Nombre servicio",
+        "id": "ID",
+        "editar": "Editar servicio",
+        "eliminar": "Eliminar servicio"
     },
     "dirAreas": {
         "titulo": "Directores de área",
