@@ -31,6 +31,7 @@
             "empresas": "Companies",
             "paises": "Countries",
             "areas": "Business Areas",
+            "fasesOferta": "Offer phases",
             "servicios": "Services",
             "dirAreas": "Business area directors",
             "centros": "Centres",
@@ -134,6 +135,15 @@
         "id": "ID",
         "editar": "Edit Business Area",
         "eliminar": "Delete Business Area"
+    },
+    "fasesOferta": {
+        "titulo": "Offer phases",
+        "panel": "Offer phases",
+        "nuevo": "New offer phase",
+        "nombre": "Name of the Offer phase",
+        "id": "ID",
+        "editar": "Edit offer phase",
+        "eliminar": "Delete Offer phases"
     },
     "servicios": {
         "titulo": "Services",

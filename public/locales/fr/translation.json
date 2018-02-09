@@ -31,6 +31,7 @@
             "empresas": "Entreprises",
             "paises": "Pays",
             "areas": "Domaines",
+            "fasesOferta": "Phases d'offre",
             "servicios": "Services",
             "dirAreas": "Directeurs régionaux",
             "centros": "Centres",
@@ -134,6 +135,15 @@
         "id": "ID",
         "editar": "Éditer domaine",
         "eliminar": "Supprimer domaine"
+    },
+    "fasesOferta": {
+        "titulo": "Phases d'offre",
+        "panel": "Phases d'offre",
+        "nuevo": "Nouveau phase d'offre",
+        "nombre": "Nom phase d'offre",
+        "id": "ID",
+        "editar": "Éditer phase d'offre",
+        "eliminar": "Supprimer phase d'offre"
     },
     "servicios": {
         "titulo": "Services",

@@ -29,4 +29,11 @@ CREATE TABLE `servicios`(
   PRIMARY KEY (`servicioId`)
 );
 
+CREATE TABLE `gdes_pipeline`.`fases_oferta`(  
+  `faseOfertaId` INT(11) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255),
+  PRIMARY KEY (`faseOfertaId`)
+);
+
+
 
