@@ -137,11 +137,6 @@ function getCookie(c_name) {
     }
 }
 
-function setCookieOfertas(cname, cvalue) {
-    document.cookie = cname + "=" + cvalue;
-}
-
-
 function getVersionFooter() {
     $.ajax({
         type: "GET",

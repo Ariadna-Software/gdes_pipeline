@@ -193,7 +193,7 @@ var apiPaginaOfertasGeneral = {
         for(var i = 0; i < 36; i++){
             conf.push(tabla.columns(i).visible()[0]);
         }
-        setCookieOfertas('confOferta'+usuario.nombre, conf, 2);
+        setCookie('confOferta'+usuario.nombre, conf, 1000);
     }
 
 }
