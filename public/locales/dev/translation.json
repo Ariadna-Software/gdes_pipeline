@@ -31,20 +31,15 @@
             "empresas": "Empresas",
             "paises": "Paises",
             "areas": "Áreas",
-            "fasesOferta": "Fases oferta",
-            "servicios": "Servicios",
-            "dirAreas": "Directores de área",
             "centros": "Centros",
             "gruposActividades": "Grupos actividades",
             "tiposActividades": "Tipos actividades",
             "tiposSoporte": "Tipos soporte",
             "tiposOferta": "Tipos oferta",
-            "tiposOportunidad": "Tipos oportunidad",
-            "tiposProyecto": "Tipos proyecto",
             "proyectos": "Proyecto",
             "centrosEstablecidos": "Centros Establecidos",
             "divisas": "Divisas",
-            "ubicaciones": "Ubicaciones"
+            "unidadesNegocio": "Unidades negocio"
         },
         "gestion": {
             "cab": "Gestión",
@@ -136,33 +131,6 @@
         "editar": "Editar area",
         "eliminar": "Eliminar area"
     },
-    "fasesOferta": {
-        "titulo": "Fases oferta",
-        "panel": "Fases oferta",
-        "nuevo": "Nueva fase oferta",
-        "nombre": "Nombre fase oferta",
-        "id": "ID",
-        "editar": "Editar fase oferta",
-        "eliminar": "Eliminar fase oferta"
-    },
-    "servicios": {
-        "titulo": "Servicios",
-        "panel": "Servicios",
-        "nuevo": "Nueva servicio",
-        "nombre": "Nombre servicio",
-        "id": "ID",
-        "editar": "Editar servicio",
-        "eliminar": "Eliminar servicio"
-    },
-    "dirAreas": {
-        "titulo": "Directores de área",
-        "panel": "Directores de área",
-        "nuevo": "Nuevo director de área",
-        "nombre": "Nombre del director de área",
-        "id": "ID",
-        "editar": "Editar director de área",
-        "eliminar": "Eliminar dorector de área"
-    },
     "centros": {
         "titulo": "Centros",
         "panel": "Centros",
@@ -203,9 +171,28 @@
         "eliminar": "Eliminar tipo soporte",
         "valNombre": "Nombre necesario"
     },
+    "unidadesNegocio": {
+        "titulo": "Unidades de Negocio",
+        "panel": "Unidades de Negocio",
+        "nuevo": "Nueva unidad de negocio",
+        "nombre": "Nombre unidad",
+        "id": "ID",
+        "editar": "Editar unidad",
+        "eliminar": "Eliminar unidad",
+        "valNombre": "Nombre necesario"
+    },
     "ofertas": {
         "titulo": "Ofertas",
         "panel": "Ofertas",
+        "tab":{
+            "general": "Datos generales",
+            "adicional": "Datos adicionales",
+            "seguidores": "Seguidores",
+            "versiones": "Versiones"
+        },
+        "ubicacion": "Ubicación",
+        "paisUbicacion": "Pais (Ubicación)",
+        "unidadNegocio": "Unidad negocio",
         "nuevo": "Nuevo oferta",
         "nombre": "Nombre oferta",
         "id": "ID",
@@ -325,16 +312,6 @@
         "referencia": "Referencia",
         "numeroProyecto": "Numero proyecto"
     },
-    "tiposProyecto": {
-        "titulo": "Tipos de proyectos",
-        "panel": "Tipos de proyectos",
-        "nuevo": "Nuevo tipo proyecto",
-        "nombre": "Nombre tipo proyecto",
-        "id": "ID",
-        "editar": "Editar tipo proyecto",
-        "eliminar": "Eliminar tipo proyecto",
-        "valNombre": "Nombre necesario"
-    },
     "tiposOferta": {
         "titulo": "Tipos oferta",
         "panel": "Tipos oferta",
@@ -343,16 +320,6 @@
         "id": "ID",
         "editar": "Editar tipo oferta",
         "eliminar": "Eliminar tipo oferta",
-        "valNombre": "Nombre necesario"
-    },
-    "tiposOportunidad": {
-        "titulo": "Tipos oportunidad",
-        "panel": "Tipos oportunidad",
-        "nuevo": "Nuevo tipo oportunidad",
-        "nombre": "Nombre tipo oportunidad",
-        "id": "ID",
-        "editar": "Editar tipo oportunidad",
-        "eliminar": "Eliminar tipo oportunidad",
         "valNombre": "Nombre necesario"
     },
     "centrosEstablecidos": {
@@ -372,14 +339,5 @@
         "id": "ID",
         "editar": "Editar divisa",
         "eliminar": "Eliminar divisa"
-    },
-    "ubicaciones": {
-        "titulo": "Ubicaciones",
-        "panel": "Ubicaciones",
-        "nuevo": "Nueva ubicación",
-        "nombre": "Nombre ubicación",
-        "id": "ID",
-        "editar": "Editar ubicación",
-        "eliminar": "Eliminar ubicación"
     }
 }

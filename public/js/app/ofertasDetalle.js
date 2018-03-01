@@ -34,6 +34,8 @@ var apiPaginaOfertasDetalle = {
         apiPaginaOfertasDetalle.cargarEmpresas();
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarAreas();
+        $('#cmbUnidadNegocio').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarUnidadNegocio();        
         $('#cmbCentros').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarCentros();
 
@@ -135,6 +137,10 @@ var apiPaginaOfertasDetalle = {
         vm.multiplicador(data.multiplicador);
         anteriorMultiplicador = vm.multiplicador();
         anteriorEstado = vm.sEstado();
+        // vrs 2.0.1
+        vm.ubicacion(data.ubicacion);
+        vm.paisUbicacion(data.paisUbicacion);
+        apiPaginaOfertasDetalle.cargarUnidadNegocio(data.unidadNegocioId);
     },
     datosPagina: function () {
         var self = this;
@@ -216,6 +222,13 @@ var apiPaginaOfertasDetalle = {
         self.optionsCentroEstablecidos = ko.observableArray([]);
         self.selectedCentroEstablecidos = ko.observableArray([]);
         self.sCentroEstablecido = ko.observable();
+        // vrs 2.0.1
+        self.ubicacion = ko.observable();
+        self.paisUbicacion = ko.observable();
+
+        self.optionsUnidadNegocio = ko.observableArray([]);
+        self.selectedUnidadNegocio = ko.observableArray([]);
+        self.sUnidadNegocio = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -256,7 +269,10 @@ var apiPaginaOfertasDetalle = {
             nombreCorto: vm.nombreCorto(),
             cliente: vm.cliente(),
             version: vm.version(),
-            multiplicador: vm.multiplicador()
+            multiplicador: vm.multiplicador(),
+            ubicacion: vm.ubicacion(),
+            paisUbicacion: vm.paisUbicacion(),
+            unidadNegocioId: vm.sUnidadNegocio()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -417,6 +433,14 @@ var apiPaginaOfertasDetalle = {
             $("#cmbCentroEstablecidos").val([id]).trigger('change');
         });
     },
+    cargarUnidadNegocio: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/unidades-negocio", null, function (err, data) {
+            if (err) return;
+            var options = [{ unidadNegocioId: 0, nombre: " " }].concat(data);
+            vm.optionsUnidadNegocio(options);
+            $("#cmbUnidadNegocio").val([id]).trigger('change');
+        });
+    },    
     lanzarMensajeAyuda: function (mensaje) {
         apiComunNotificaciones.mensajeAyuda(mensaje);
     },

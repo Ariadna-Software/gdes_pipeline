@@ -31,20 +31,15 @@
             "empresas": "Entreprises",
             "paises": "Pays",
             "areas": "Domaines",
-            "fasesOferta": "Phases d'offre",
-            "servicios": "Services",
-            "dirAreas": "Directeurs régionaux",
             "centros": "Centres",
             "gruposActividades": "Groupes activités",
             "tiposActividades": "Types activités",
             "tiposSoporte": "Types soutien",
             "tiposOferta": "Types offre",
-            "tiposOportunidad": "Types d'opportunités",
-            "tiposProyecto": "Types project",
             "proyectos": "Projets",
             "centrosEstablecidos": "Centres établis",
             "divisas": "Monnaie",
-            "ubicaciones": "Emplacements"
+            "unidadesNegocio": "Unités d'affaires"
         },
         "gestion": {
             "cab": "Gestion",
@@ -136,33 +131,6 @@
         "editar": "Éditer domaine",
         "eliminar": "Supprimer domaine"
     },
-    "fasesOferta": {
-        "titulo": "Phases d'offre",
-        "panel": "Phases d'offre",
-        "nuevo": "Nouveau phase d'offre",
-        "nombre": "Nom phase d'offre",
-        "id": "ID",
-        "editar": "Éditer phase d'offre",
-        "eliminar": "Supprimer phase d'offre"
-    },
-    "servicios": {
-        "titulo": "Services",
-        "panel": "Services",
-        "nuevo": "Nouveau service",
-        "nombre": "Nom service",
-        "id": "ID",
-        "editar": "Éditer service",
-        "eliminar": "Supprimer service"
-    },
-    "dirAreas": {
-        "titulo": "Directeur régional",
-        "panel": "Directeur régional",
-        "nuevo": "Nouveau directeur régional",
-        "nombre": "Nom du directeur régional",
-        "id": "ID",
-        "editar": "Éditer directeur régional",
-        "eliminar": "Supprimer directeur régional"
-    },
     "centros": {
         "titulo": "Centres",
         "panel": "Centres",
@@ -203,9 +171,28 @@
         "eliminar": "Supprimer type soutien",
         "valNombre": "Nom nécesaire"
     },
+    "unidadesNegocio": {
+        "titulo": "Unités d'affaires",
+        "panel": "Unités d'affaires",
+        "nuevo": "Nouvelle unité",
+        "nombre": "Nom de l'unité",
+        "id": "ID",
+        "editar": "Modifier l'unité",
+        "eliminar": "Retirer l'unité",
+        "valNombre": "Nom nécessaire"
+    },    
     "ofertas": {
         "titulo": "Offres",
         "panel": "Offres",
+        "tab":{
+            "general": "Données générales",
+            "adicional": "Données supplémentaires",
+            "seguidores": "Abonnés",
+            "versiones": "Versions"
+        },   
+        "ubicacion": "Emplacement",
+        "paisUbicacion": "Pays (Lieu)",     
+        "unidadNegocio": "Unité d'affaires",
         "nuevo": "Nouvelle offre",
         "nombre": "Nom offre",
         "id": "ID",
@@ -336,26 +323,6 @@
         "eliminar": "Supprimer type offre",
         "valNombre": "Nom nécessaire"
     },
-    "tiposProyecto": {
-        "titulo": "Types projets",
-        "panel": "Types projets",
-        "nuevo": "Nouveau type d'projet",
-        "nombre": "Nom type projet",
-        "id": "ID",
-        "editar": "Éditer type projet",
-        "eliminar": "Supprimer type projet",
-        "valNombre": "Nom nécessaire"
-    },
-    "tiposOportunidad": {
-        "titulo": "Types d'opportunités",
-        "panel": "Types d'opportunités",
-        "nuevo": "Nouveau Type d'opportunité",
-        "nombre": "Nom Type d'opportunité",
-        "id": "ID",
-        "editar": "Éditer Type d'opportunité",
-        "eliminar": "Supprimer Type d'opportunité",
-        "valNombre": "Nom nécessaire"
-    },
     "centrosEstablecidos": {
         "titulo": "Centres établis",
         "panel": "Centres établis",
@@ -373,14 +340,5 @@
         "id": "ID",
         "editar": "Éditer monnaie",
         "eliminar": "Supprimer monnaie"
-    },
-    "ubicaciones": {
-        "titulo": "Emplacements",
-        "panel": "Emplacements",
-        "nuevo": "Nouvelle emplacement",
-        "nombre": "Nom emplacement",
-        "id": "ID",
-        "editar": "Éditer emplacement",
-        "eliminar": "Supprimer emplacement"
     }
 }

@@ -31,20 +31,15 @@
             "empresas": "Companies",
             "paises": "Countries",
             "areas": "Business Areas",
-            "fasesOferta": "Offer phases",
-            "servicios": "Services",
-            "dirAreas": "Business area directors",
             "centros": "Centres",
             "gruposActividades": "Group of Activities",
             "tiposActividades": "Type of Activities",
             "tiposSoporte": "Type of support",
             "tiposOferta": "Offers Type",
-            "tiposOportunidad": "Opportunity types",
-            "tiposProyecto": "projects Type",
             "proyectos": "Project",
             "centrosEstablecidos": "Centres",
             "divisas": "Currency",
-            "ubicaciones": "Locations"
+            "unidadesNegocio": "Business units"
         },
         "gestion": {
             "cab": "Pool",
@@ -136,33 +131,6 @@
         "editar": "Edit Business Area",
         "eliminar": "Delete Business Area"
     },
-    "fasesOferta": {
-        "titulo": "Offer phases",
-        "panel": "Offer phases",
-        "nuevo": "New offer phase",
-        "nombre": "Name of the Offer phase",
-        "id": "ID",
-        "editar": "Edit offer phase",
-        "eliminar": "Delete Offer phases"
-    },
-    "servicios": {
-        "titulo": "Services",
-        "panel": "Services",
-        "nuevo": "New service",
-        "nombre": "Name of the service",
-        "id": "ID",
-        "editar": "Edit service",
-        "eliminar": "Delete service"
-    },
-    "dirAreas": {
-        "titulo": "Business area directors",
-        "panel": "Business area directors",
-        "nuevo": "New Business area director",
-        "nombre": "Name of the Business area director",
-        "id": "ID",
-        "editar": "Edit Business area director",
-        "eliminar": "Delete Business area director"
-    },
     "centros": {
         "titulo": "Centres",
         "panel": "Centres",
@@ -203,9 +171,28 @@
         "eliminar": "Delete type of support",
         "valNombre": "Necessary name"
     },
+    "unidadesNegocio": {
+        "titulo": "Business' units",
+        "panel": "Business' units",
+        "nuevo": "New business unit",
+        "nombre": "Unit name",
+        "id": "ID",
+        "editar": "Edit unit",
+        "eliminar": "Remove unit",
+        "valNombre": "Name needed"
+    },
     "ofertas": {
         "titulo": "Offers",
         "panel": "Offers",
+        "tab":{
+            "general": "General data",
+            "adicional": "Addition data",
+            "seguidores": "Followers",
+            "versiones": "Versions"
+        },
+        "ubicacion": "Location",
+        "paisUbicacion": "Country (Location)",
+        "unidadNegocio": "Business unit",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",
@@ -325,16 +312,6 @@
         "referencia": "Reference",
         "numeroProyecto": "Project number"
     },
-    "tiposProyecto": {
-        "titulo": "Projects Type",
-        "panel": "Projects Type",
-        "nuevo": "New project type",
-        "nombre": "Project type name",
-        "id": "ID",
-        "editar": "Edit project type",
-        "eliminar": "Delete project type",
-        "valNombre": "Necessary name"
-    },
     "tiposOferta": {
         "titulo": "Offers Type",
         "panel": "Offers Type",
@@ -343,16 +320,6 @@
         "id": "ID",
         "editar": "Edit offer type",
         "eliminar": "Delete offer type",
-        "valNombre": "Necessary name"
-    },
-    "tiposOportunidad": {
-        "titulo": "Opportunities type",
-        "panel": "Opportunities type",
-        "nuevo": "New opportunity type",
-        "nombre": "Opportunity type name",
-        "id": "ID",
-        "editar": "Edit opportunity type",
-        "eliminar": "Delete opportunity type",
         "valNombre": "Necessary name"
     },
     "centrosEstablecidos": {
@@ -372,14 +339,5 @@
         "id": "ID",
         "editar": "Edit currency",
         "eliminar": "Delete currency"
-    },
-    "ubicaciones": {
-        "titulo": "Locations",
-        "panel": "Locations",
-        "nuevo": "New location",
-        "nombre": "Location name",
-        "id": "ID",
-        "editar": "Edit location",
-        "eliminar": "Delete location"
     }
 }
