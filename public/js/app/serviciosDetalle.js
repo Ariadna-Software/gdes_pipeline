@@ -18,6 +18,10 @@ var apiPaginaServiciosDetalle = {
 
         $('#servicios').attr('class', 'active');
         $('#servicio-form').submit(function () { return false; });
+
+        $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaServiciosDetalle.cargarAreas();
+
         $('#btnAceptar').click(apiPaginaServiciosDetalle.aceptar);
         $('#btnSalir').click(apiPaginaServiciosDetalle.salir);
 
@@ -37,17 +41,23 @@ var apiPaginaServiciosDetalle = {
     cargarDatosPagina: function(data){
         vm.servicioId(data.servicioId);
         vm.nombre(data.nombre);
+        apiPaginaServiciosDetalle.cargarAreas(data.areaId);
     },
     datosPagina: function () {
         var self = this;
         self.servicioId = ko.observable();
         self.nombre = ko.observable();
+
+        self.optionsAreas = ko.observableArray([]);
+        self.selectedAreas = ko.observableArray([]);
+        self.sArea = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaServiciosDetalle.datosOk()) return;
         var data = {
             servicioId: vm.servicioId(),
-            nombre: vm.nombre()
+            nombre: vm.nombre(),
+            areaId: vm.sArea()
         };
         var verb = "PUT";
         if (vm.servicioId() == 0) verb = "POST";
@@ -67,6 +77,14 @@ var apiPaginaServiciosDetalle = {
         });
         return $('#servicio-form').valid();
     },
+    cargarAreas: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/areas", null, function (err, data) {
+            if (err) return;
+            var options = [{ areaId: 0, nombre: " " }].concat(data);
+            vm.optionsAreas(options);
+            $("#cmbAreas").val([id]).trigger('change');
+        });
+    },    
     salir: function () {
         window.open(sprintf('ServiciosGeneral.html'), '_self');
     }
