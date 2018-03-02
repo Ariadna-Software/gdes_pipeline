@@ -39,7 +39,8 @@
             "proyectos": "Projets",
             "centrosEstablecidos": "Centres établis",
             "divisas": "Monnaie",
-            "unidadesNegocio": "Unités d'affaires"
+            "unidadesNegocio": "Unités d'affaires",
+            "servicios": "Services"
         },
         "gestion": {
             "cab": "Gestion",
@@ -205,6 +206,10 @@
         "ubicacion": "Emplacement",
         "paisUbicacion": "Pays (Lieu)",     
         "unidadNegocio": "Unité d'affaires",
+        "fechaCreacion": "Date de création",
+        "fechaAdjudicacion": "Date d'attribution",
+        "fechaInicioContrato": "Début du contract",
+        "fechaFinContrato": "Fin du contract",          
         "nuevo": "Nouvelle offre",
         "nombre": "Nom offre",
         "id": "ID",

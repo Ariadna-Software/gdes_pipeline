@@ -39,7 +39,8 @@
             "proyectos": "Project",
             "centrosEstablecidos": "Centres",
             "divisas": "Currency",
-            "unidadesNegocio": "Business units"
+            "unidadesNegocio": "Business units",
+            "servicios": "Services"
         },
         "gestion": {
             "cab": "Pool",
@@ -205,6 +206,10 @@
         "ubicacion": "Location",
         "paisUbicacion": "Country (Location)",
         "unidadNegocio": "Business unit",
+        "fechaCreacion": "Creation date",
+        "fechaAdjudicacion": "Award date",
+        "fechaInicioContrato": "Contract start date",
+        "fechaFinContrato": "Contract end date",        
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",

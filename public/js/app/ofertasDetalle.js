@@ -30,14 +30,25 @@ var apiPaginaOfertasDetalle = {
 
         $('#cmbPaiss').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarPaiss();
+        
         $('#cmbEmpresas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEmpresas();
+        
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarAreas();
+        $("#cmbAreas").select2().on('change', function (e) {
+            apiPaginaOfertasDetalle.cargarServicioArea(e.added);
+        });
+
         $('#cmbUnidadNegocio').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarUnidadNegocio();        
+        
         $('#cmbCentros').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarCentros();
+
+        $('#cmbServicio').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarServicio();  
+
 
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEstados();
@@ -72,6 +83,7 @@ var apiPaginaOfertasDetalle = {
             vm.version(0);
             vm.fechaOferta(moment(new Date()).format("DD/MM/YYYY"));
             vm.fechaUltimoEstado(moment(new Date()).format("DD/MM/YYYY"));
+            vm.fechaCreacion(moment(new Date()).format("DD/MM/YYYY"));
             apiPaginaOfertasDetalle.cargarEstados(1);
 
             apiPaginaOfertasDetalle.cargarPaiss(usuario.paisId);
@@ -96,7 +108,7 @@ var apiPaginaOfertasDetalle = {
         if (data.fechaUltimoEstado) vm.fechaUltimoEstado(moment(data.fechaUltimoEstado).format(i18n.t('util.date_format')));
         if (data.fechaLimiteProyecto) vm.fechaLimiteProyecto(moment(data.fechaLimiteProyecto).format(i18n.t('util.date_format')));
         if (data.fechaEntrega) vm.fechaEntrega(moment(data.fechaEntrega).format(i18n.t('util.date_format')));
-        if (data.fechaDivisa) vm.fechaDivisa(moment(data.fechaEntrega).format(i18n.t('util.date_format')));
+        if (data.fechaDivisa) vm.fechaDivisa(moment(data.fechaDivisa).format(i18n.t('util.date_format')));
         vm.numeroPedido(data.numeroPedido);
         apiPaginaOfertasDetalle.cargarTipoOfertas(data.tipoOfertaId);
         apiPaginaOfertasDetalle.cargarResponsables(data.responsableId);
@@ -141,6 +153,11 @@ var apiPaginaOfertasDetalle = {
         vm.ubicacion(data.ubicacion);
         vm.paisUbicacion(data.paisUbicacion);
         apiPaginaOfertasDetalle.cargarUnidadNegocio(data.unidadNegocioId);
+        apiPaginaOfertasDetalle.cargarServicio(data.servicioId);
+        if (data.fechaCreacion) vm.fechaCreacion(moment(data.fechaCreacion).format(i18n.t('util.date_format')));
+        if (data.fechaAdjudicacion) vm.fechaAdjudicacion(moment(data.fechaAdjudicacion).format(i18n.t('util.date_format')));
+        if (data.fechaInicioContrato) vm.fechaInicioContrato(moment(data.fechaInicioContrato).format(i18n.t('util.date_format')));
+        if (data.fechaFinContrato) vm.fechaFinContrato(moment(data.fechaFinContrato).format(i18n.t('util.date_format')));
     },
     datosPagina: function () {
         var self = this;
@@ -229,6 +246,15 @@ var apiPaginaOfertasDetalle = {
         self.optionsUnidadNegocio = ko.observableArray([]);
         self.selectedUnidadNegocio = ko.observableArray([]);
         self.sUnidadNegocio = ko.observable();
+
+        self.optionsServicio = ko.observableArray([]);
+        self.selectedServicio = ko.observableArray([]);
+        self.sServicio = ko.observable();
+
+        self.fechaCreacion = ko.observable();
+        self.fechaAdjudicacion = ko.observable();
+        self.fechaInicioContrato = ko.observable();
+        self.fechaFinContrato = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -272,13 +298,18 @@ var apiPaginaOfertasDetalle = {
             multiplicador: vm.multiplicador(),
             ubicacion: vm.ubicacion(),
             paisUbicacion: vm.paisUbicacion(),
-            unidadNegocioId: vm.sUnidadNegocio()
+            unidadNegocioId: vm.sUnidadNegocio(),
+            servicioId: vm.sServicio()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaLimiteProyecto()) data.fechaLimiteProyecto = moment(vm.fechaLimiteProyecto(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaEntrega()) data.fechaEntrega = moment(vm.fechaEntrega(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaDivisa()) data.fechaDivisa = moment(vm.fechaDivisa(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.fechaCreacion()) data.fechaCreacion = moment(vm.fechaCreacion(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.fechaAdjudicacion()) data.fechaAdjudicacion = moment(vm.fechaAdjudicacion(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.fechaInicioContrato()) data.fechaInicioContrato = moment(vm.fechaInicioContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.fechaFinContrato()) data.fechaFinContrato = moment(vm.fechaFinContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         var verb = "PUT";
         data.version += 1;
         if (vm.ofertaId() == 0) {
@@ -441,6 +472,24 @@ var apiPaginaOfertasDetalle = {
             $("#cmbUnidadNegocio").val([id]).trigger('change');
         });
     },    
+    cargarServicio: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/servicios", null, function (err, data) {
+            if (err) return;
+            var options = [{ servicioId: 0, nombre: " " }].concat(data);
+            vm.optionsServicio(options);
+            $("#cmbServicio").val([id]).trigger('change');
+        });
+    },    
+    cargarServicioArea: function (data) {
+        if (!data) return;
+        var id = data.id;
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/servicios/area/" + id, null, function (err, data) {
+            if (err) return;
+            var options = [{ servicioId: 0, nombre: " " }].concat(data);
+            vm.optionsServicio(options);
+            $("#cmbServicio").val([id]).trigger('change');
+        });
+    },     
     lanzarMensajeAyuda: function (mensaje) {
         apiComunNotificaciones.mensajeAyuda(mensaje);
     },

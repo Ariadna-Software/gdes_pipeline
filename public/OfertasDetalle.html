@@ -411,7 +411,10 @@
                                                         </div>
                                                         <div class="row">
                                                             <section class="col col-md-12">
-                                                                CD2 - 3 -1 (SERVICIO)
+                                                                <label class="label" data-i18n="ofertas.servicio">Servicio:</label>
+                                                                <select class="aswselect2" id="cmbServicio" name="cmbServicio" data-bind="options: optionsServicio, optionsText: 'nombre', optionsValue: 'servicioId', 
+                                                                                value: sServicio, valueAllowUnset: true, selectedOptions: selectedServicio, selected2:{}">
+                                                                </select>
                                                             </section>
                                                         </div>
                                                     </div>
@@ -424,24 +427,38 @@
                                                     <div id="cd3" class="recoferta">
                                                         <div class="row">
                                                             <section class="col col-md-4">
+                                                                <label class="label" data-i18n="ofertas.fechaCreacion">Fecha entrega:</label>
+                                                                <label class="input">
+                                                                    <input id="txtFechaCreacion" name="txtFechaCreacion" data-bind="value: fechaCreacion" class="datepicker" data-dateformat="dd/mm/yy">
+                                                                </label>
+                                                            </section>
+                                                            <section class="col col-md-4">
                                                                 <label class="label" data-i18n="ofertas.fechaEntrega">Fecha entrega:</label>
                                                                 <label class="input">
                                                                     <input id="txtFechaEntrega" name="txtFechaEntrega" data-bind="value: fechaEntrega" class="datepicker" data-dateformat="dd/mm/yy">
                                                                 </label>
                                                             </section>
                                                             <section class="col col-md-4">
-                                                                CD3 - 1 - 2 (FECHA ADJUDICACION)
+                                                                <label class="label" data-i18n="ofertas.fechaAdjudicacion">Fecha adj:</label>
+                                                                <label class="input">
+                                                                    <input id="txtFechaAdjudicacion" name="txtFechaAdjudicacion" data-bind="value: fechaAdjudicacion" class="datepicker" data-dateformat="dd/mm/yy">
+                                                                </label>
                                                             </section>
-                                                            <section class="col col-md-4">
 
-                                                            </section>
                                                         </div>
                                                         <div class="row">
                                                             <section class="col col-md-4">
-                                                                CD3 - 2 - 1 (FECHA COMIENZO CONTRATO)
+                                                                <label class="label" data-i18n="ofertas.fechaInicioContrato">Fecha entrega:</label>
+                                                                <label class="input">
+                                                                    <input id="txtFechaInicioContrato" name="txtFechaInicioContrato" data-bind="value: fechaInicioContrato" class="datepicker"
+                                                                        data-dateformat="dd/mm/yy">
+                                                                </label>
                                                             </section>
                                                             <section class="col col-md-4">
-                                                                CD3 - 2 - 2 (FECHA FIN CONTRATO)
+                                                                <label class="label" data-i18n="ofertas.fechaFinContrato">Fecha entrega:</label>
+                                                                <label class="input">
+                                                                    <input id="txtFechaFinContrato" name="txtFechaFinContrato" data-bind="value: fechaFinContrato" class="datepicker" data-dateformat="dd/mm/yy">
+                                                                </label>
                                                             </section>
                                                             <section class="col col-md-4">
                                                                 CD3 - 2 - 3 (DURACION)

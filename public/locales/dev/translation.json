@@ -39,7 +39,8 @@
             "proyectos": "Proyecto",
             "centrosEstablecidos": "Centros Establecidos",
             "divisas": "Divisas",
-            "unidadesNegocio": "Unidades negocio"
+            "unidadesNegocio": "Unidades negocio",
+            "servicios": "Servicios"
         },
         "gestion": {
             "cab": "Gestión",
@@ -205,6 +206,10 @@
         "ubicacion": "Ubicación",
         "paisUbicacion": "Pais (Ubicación)",
         "unidadNegocio": "Unidad negocio",
+        "fechaCreacion": "Fecha creación",
+        "fechaAdjudicacion": "Fecha adjudicación",
+        "fechaInicioContrato": "Fecha inicio contr.",
+        "fechaFinContrato": "Fecha fin contr.",
         "nuevo": "Nuevo oferta",
         "nombre": "Nombre oferta",
         "id": "ID",
