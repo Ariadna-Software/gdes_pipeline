@@ -181,6 +181,18 @@
         "eliminar": "Remove unit",
         "valNombre": "Name needed"
     },
+    "servicios": {
+        "titulo": "Services",
+        "panel": "Services",
+        "nuevo": "New service",
+        "nombre": "Service's name",
+        "id": "ID",
+        "editar": "Edit service",
+        "eliminar": "Remove service",
+        "valNombre": "Name needed",
+        "area": "Area",
+        "valArea": "Area needed"
+    },    
     "ofertas": {
         "titulo": "Offers",
         "panel": "Offers",

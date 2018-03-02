@@ -181,6 +181,18 @@
         "eliminar": "Eliminar unidad",
         "valNombre": "Nombre necesario"
     },
+    "servicios": {
+        "titulo": "Servicios",
+        "panel": "Servicios",
+        "nuevo": "Nuevo servicio",
+        "nombre": "Nombre servicio",
+        "id": "ID",
+        "editar": "Editar servicio",
+        "eliminar": "Eliminar servicio",
+        "valNombre": "Nombre necesario",
+        "area": "Area a la que pertenece",
+        "valArea": "Area necesaria"
+    },    
     "ofertas": {
         "titulo": "Ofertas",
         "panel": "Ofertas",

@@ -180,7 +180,19 @@
         "editar": "Modifier l'unité",
         "eliminar": "Retirer l'unité",
         "valNombre": "Nom nécessaire"
-    },    
+    },
+    "servicios": {
+        "titulo": "Services",
+        "panel": "Services",
+        "nuevo": "Nouveau service",
+        "nombre": "Nom service",
+        "id": "ID",
+        "editar": "Modifier le service",
+        "eliminar": "Supprimer le service",
+        "valNombre": "Nom requis",
+        "area": "Zone",
+        "valArea": "Zone requise"
+    },        
     "ofertas": {
         "titulo": "Offres",
         "panel": "Offres",
