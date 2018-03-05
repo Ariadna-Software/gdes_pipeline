@@ -41,7 +41,8 @@
             "divisas": "Divisas",
             "unidadesNegocio": "Unidades negocio",
             "servicios": "Servicios",
-            "fasesOferta": "Fases de oferta"
+            "fasesOferta": "Fases de oferta",
+            "tiposOportunidad": "Tipos de oportunidad"
         },
         "gestion": {
             "cab": "Gestión",
@@ -205,6 +206,16 @@
         "eliminar": "Eliminar fase",
         "valNombre": "Nombre necesario"
     }, 
+    "tiposOportunidad": {
+        "titulo": "Tipos oportunidad",
+        "panel": "Tipos oportunidad",
+        "nuevo": "Nuevo tipo",
+        "nombre": "Nombre tipo",
+        "id": "ID",
+        "editar": "Editar tipo",
+        "eliminar": "Eliminar tipo",
+        "valNombre": "Nombre necesario"
+    },    
     "ofertas": {
         "titulo": "Ofertas",
         "panel": "Ofertas",
@@ -228,6 +239,7 @@
         "nombre": "Nombre oferta",
         "id": "ID",
         "fasesOferta": "Fases de oferta",
+        "tiposOportunidad": "Tipo oportunidad",
         "editar": "Editar oferta",
         "eliminar": "Eliminar oferta",
         "numeroOferta": "Numero oferta",

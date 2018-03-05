@@ -10,3 +10,7 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `faseOfertaId` INT(11) NULL AFTER `notasPlanning`,
   ADD CONSTRAINT `oft_fase_oferta` FOREIGN KEY (`faseOfertaId`) REFERENCES `fases_oferta`(`faseOfertaId`);
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `tipoOportunidadId` INT(11) NULL AFTER `faseOfertaId`,
+  ADD CONSTRAINT `oft_tipos_oportunidad` FOREIGN KEY (`tipoOportunidadId`) REFERENCES `tipos_oportunidad`(`tipoOportunidadId`);

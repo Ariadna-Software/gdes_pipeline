@@ -41,7 +41,8 @@
             "divisas": "Monnaie",
             "unidadesNegocio": "Unités d'affaires",
             "servicios": "Services",
-            "fasesOferta": "Phases d'Offre"
+            "fasesOferta": "Phases d'Offre",
+            "tiposOportunidad": "Types d'opportunités"
         },
         "gestion": {
             "cab": "Gestion",
@@ -204,7 +205,17 @@
         "editar": "Modifier la phase",
         "eliminar": "Supprimer la phase",
         "valNombre": "Nom nécessaire"
-    },     
+    },  
+    "tiposOportunidad": {
+        "titulo": "Types d'opportunités",
+        "panel": "Types d'opportunitéss",
+        "nuevo": "Nuveau type",
+        "nombre": "Nom du type",
+        "id": "ID",
+        "editar": "Modiffier le type",
+        "eliminar": "Supprimer le type",
+        "valNombre": "Nom nécessarie"
+    },        
     "ofertas": {
         "titulo": "Offres",
         "panel": "Offres",
@@ -225,6 +236,7 @@
         "probabilidad": "Chance de succès",
         "notasPlanning": "Notes Planning",
         "fasesOferta": "Phases d'offre",
+        "tiposOportunidad": "Type d'opportunité",
         "nuevo": "Nouvelle offre",
         "nombre": "Nom offre",
         "id": "ID",

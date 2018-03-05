@@ -52,6 +52,9 @@ var apiPaginaOfertasDetalle = {
         $('#cmbFasesOferta').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarFasesOferta();  
 
+        $('#cmbTiposOportunidad').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarTiposOportunidad();  
+        
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEstados();
         $("#cmbEstados").select2().on('change', function (e) {
@@ -164,6 +167,7 @@ var apiPaginaOfertasDetalle = {
         vm.probabilidad(data.probabilidad);
         vm.notasPlanning(data.notasPlanning);
         apiPaginaOfertasDetalle.cargarFasesOferta(data.faseOfertaId);
+        apiPaginaOfertasDetalle.cargarTiposOportunidad(data.tipoOportunidadId);
     },
     datosPagina: function () {
         var self = this;
@@ -267,7 +271,11 @@ var apiPaginaOfertasDetalle = {
 
         self.optionsFasesOferta = ko.observableArray([]);
         self.selectedFasesOferta = ko.observableArray([]);
-        self.sFasesOferta = ko.observable();        
+        self.sFasesOferta = ko.observable();       
+
+        self.optionsTiposOportunidad = ko.observableArray([]);
+        self.selectedTiposOportunidad = ko.observableArray([]);
+        self.sTiposOportunidad = ko.observable();  
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -316,7 +324,8 @@ var apiPaginaOfertasDetalle = {
             duracion: vm.duracion(),
             probabilidad: vm.probabilidad(),
             notasPlanning: vm.notasPlanning(),
-            faseOfertaId: vm.sFasesOferta()
+            faseOfertaId: vm.sFasesOferta(),
+            tipoOportunidadId: vm.sTiposOportunidad()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -505,6 +514,14 @@ var apiPaginaOfertasDetalle = {
             $("#cmbFasesOferta").val([id]).trigger('change');
         });
     },      
+    cargarTiposOportunidad: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-oportunidad", null, function (err, data) {
+            if (err) return;
+            var options = [{ tipoOportunidadId: 0, nombre: " " }].concat(data);
+            vm.optionsTiposOportunidad(options);
+            $("#cmbTiposOportunidad").val([id]).trigger('change');
+        });
+    },     
     cargarServicioArea: function (data) {
         if (!data) return;
         var id = data.id;

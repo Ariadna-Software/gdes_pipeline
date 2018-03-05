@@ -41,7 +41,8 @@
             "divisas": "Currency",
             "unidadesNegocio": "Business units",
             "servicios": "Services",
-            "fasesOferta": "Offer phases"
+            "fasesOferta": "Offer phases",
+            "tiposOportunidad": "Opportunity types"
         },
         "gestion": {
             "cab": "Pool",
@@ -204,7 +205,17 @@
         "editar": "Edit phase",
         "eliminar": "Remove phase",
         "valNombre": "Name needed"
-    },     
+    },    
+    "tiposOportunidad": {
+        "titulo": "Opportunity types",
+        "panel": "Opportunity types",
+        "nuevo": "New type",
+        "nombre": "Type's name",
+        "id": "ID",
+        "editar": "Edit type",
+        "eliminar": "Remove type",
+        "valNombre": "Name needed"
+    },      
     "ofertas": {
         "titulo": "Offers",
         "panel": "Offers",
@@ -225,6 +236,7 @@
         "probabilidad": "Chance of success",
         "notasPlanning": "Planning notes",
         "fasesOferta": "Offer phases",
+        "tiposOportunidad": "Opportunity's type",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",
