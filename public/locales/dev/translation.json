@@ -40,7 +40,8 @@
             "centrosEstablecidos": "Centros Establecidos",
             "divisas": "Divisas",
             "unidadesNegocio": "Unidades negocio",
-            "servicios": "Servicios"
+            "servicios": "Servicios",
+            "fasesOferta": "Fases de oferta"
         },
         "gestion": {
             "cab": "Gestión",
@@ -193,7 +194,17 @@
         "valNombre": "Nombre necesario",
         "area": "Area a la que pertenece",
         "valArea": "Area necesaria"
-    },    
+    },   
+    "fasesOferta": {
+        "titulo": "Fases oferta",
+        "panel": "Fases oferta",
+        "nuevo": "NUeva fase oferta",
+        "nombre": "Nombre fase",
+        "id": "ID",
+        "editar": "Editar fase",
+        "eliminar": "Eliminar fase",
+        "valNombre": "Nombre necesario"
+    }, 
     "ofertas": {
         "titulo": "Ofertas",
         "panel": "Ofertas",
@@ -216,6 +227,7 @@
         "nuevo": "Nuevo oferta",
         "nombre": "Nombre oferta",
         "id": "ID",
+        "fasesOferta": "Fases de oferta",
         "editar": "Editar oferta",
         "eliminar": "Eliminar oferta",
         "numeroOferta": "Numero oferta",

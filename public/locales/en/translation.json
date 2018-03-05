@@ -40,7 +40,8 @@
             "centrosEstablecidos": "Centres",
             "divisas": "Currency",
             "unidadesNegocio": "Business units",
-            "servicios": "Services"
+            "servicios": "Services",
+            "fasesOferta": "Offer phases"
         },
         "gestion": {
             "cab": "Pool",
@@ -194,6 +195,16 @@
         "area": "Area",
         "valArea": "Area needed"
     },    
+    "fasesOferta": {
+        "titulo": "Offer phases",
+        "panel": "Offer phases",
+        "nuevo": "New phase",
+        "nombre": "Phase's name ",
+        "id": "ID",
+        "editar": "Edit phase",
+        "eliminar": "Remove phase",
+        "valNombre": "Name needed"
+    },     
     "ofertas": {
         "titulo": "Offers",
         "panel": "Offers",
@@ -213,6 +224,7 @@
         "duracion": "Duration",
         "probabilidad": "Chance of success",
         "notasPlanning": "Planning notes",
+        "fasesOferta": "Offer phases",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",

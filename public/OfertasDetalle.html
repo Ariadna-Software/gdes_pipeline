@@ -500,7 +500,10 @@
                                                     <div id="cd2" class="recoferta">
                                                         <div class="row">
                                                             <section class="col col-md-4">
-                                                                CD4 - 1 - 1 (ID)
+                                                                <label class="label" data-i18n="ofertas.id">Dur:</label>
+                                                                <label class="input">
+                                                                    <input id="txtOfertaId" name="txtOfertaId" data-bind="value: ofertaId" disabled>
+                                                                </label>
                                                             </section>
                                                             <section class="col col-md-4">
                                                                 <label class="label" data-i18n="ofertas.numeroOferta">N.Oferta:</label>
@@ -525,7 +528,10 @@
                                                         </div>
                                                         <div class="row">
                                                             <section class="col col-md-4">
-                                                                CD4 - 2 - 1 (FASE OFERTA)
+                                                                <label class="label" data-i18n="ofertas.fasesOferta">Servicio:</label>
+                                                                <select class="aswselect2" id="cmbFasesOferta" name="cmbFasesOferta" data-bind="options: optionsFasesOferta, optionsText: 'nombre', optionsValue: 'faseOfertaId', 
+                                                                                value: sFasesOferta, valueAllowUnset: true, selectedOptions: selectedFasesOferta, selected2:{}">
+                                                                </select>
                                                             </section>
                                                             <section class="col col-md-4">
                                                                 CD4 - 2 - 2 (TIPO OPORTUNIDAD)

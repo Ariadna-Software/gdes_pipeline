@@ -40,7 +40,8 @@
             "centrosEstablecidos": "Centres établis",
             "divisas": "Monnaie",
             "unidadesNegocio": "Unités d'affaires",
-            "servicios": "Services"
+            "servicios": "Services",
+            "fasesOferta": "Phases d'Offre"
         },
         "gestion": {
             "cab": "Gestion",
@@ -193,7 +194,17 @@
         "valNombre": "Nom requis",
         "area": "Zone",
         "valArea": "Zone requise"
-    },        
+    },  
+    "fasesOferta": {
+        "titulo": "Phases d'offre",
+        "panel": "Phases d'offre",
+        "nuevo": "Nuveau phase",
+        "nombre": "Nom de phase ",
+        "id": "ID",
+        "editar": "Modifier la phase",
+        "eliminar": "Supprimer la phase",
+        "valNombre": "Nom nécessaire"
+    },     
     "ofertas": {
         "titulo": "Offres",
         "panel": "Offres",
@@ -213,6 +224,7 @@
         "duracion": "Durée",        
         "probabilidad": "Chance de succès",
         "notasPlanning": "Notes Planning",
+        "fasesOferta": "Phases d'offre",
         "nuevo": "Nouvelle offre",
         "nombre": "Nom offre",
         "id": "ID",

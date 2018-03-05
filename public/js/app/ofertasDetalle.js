@@ -49,6 +49,8 @@ var apiPaginaOfertasDetalle = {
         $('#cmbServicio').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarServicio();  
 
+        $('#cmbFasesOferta').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarFasesOferta();  
 
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEstados();
@@ -161,6 +163,7 @@ var apiPaginaOfertasDetalle = {
         vm.duracion(data.duracion);
         vm.probabilidad(data.probabilidad);
         vm.notasPlanning(data.notasPlanning);
+        apiPaginaOfertasDetalle.cargarFasesOferta(data.faseOfertaId);
     },
     datosPagina: function () {
         var self = this;
@@ -261,6 +264,10 @@ var apiPaginaOfertasDetalle = {
         self.duracion = ko.observable();
         self.probabilidad = ko.observable();
         self.notasPlanning = ko.observable();
+
+        self.optionsFasesOferta = ko.observableArray([]);
+        self.selectedFasesOferta = ko.observableArray([]);
+        self.sFasesOferta = ko.observable();        
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -308,7 +315,8 @@ var apiPaginaOfertasDetalle = {
             servicioId: vm.sServicio(),
             duracion: vm.duracion(),
             probabilidad: vm.probabilidad(),
-            notasPlanning: vm.notasPlanning()
+            notasPlanning: vm.notasPlanning(),
+            faseOfertaId: vm.sFasesOferta()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -489,6 +497,14 @@ var apiPaginaOfertasDetalle = {
             $("#cmbServicio").val([id]).trigger('change');
         });
     },    
+    cargarFasesOferta: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/fases-oferta", null, function (err, data) {
+            if (err) return;
+            var options = [{ faseOfertaId: 0, nombre: " " }].concat(data);
+            vm.optionsFasesOferta(options);
+            $("#cmbFasesOferta").val([id]).trigger('change');
+        });
+    },      
     cargarServicioArea: function (data) {
         if (!data) return;
         var id = data.id;
