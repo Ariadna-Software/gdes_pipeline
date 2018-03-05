@@ -52,3 +52,7 @@ ALTER TABLE `ofertas`
 
 ALTER TABLE `ofertas`   
   ADD COLUMN `uteSN` BOOL NULL AFTER `subrogacionNum`;
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `gdesPor` DECIMAL(4,2) NULL AFTER `uteSN`;
+

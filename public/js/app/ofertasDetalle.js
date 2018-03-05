@@ -183,6 +183,7 @@ var apiPaginaOfertasDetalle = {
         vm.subrogacionNum(data.subrogacionNum);
         vm.uteSN(data.uteSN);
         vm.uteTXT(data.uteTXT);
+        vm.gdesPor(data.gdesPor);
     },
     datosPagina: function () {
         var self = this;
@@ -307,6 +308,7 @@ var apiPaginaOfertasDetalle = {
         self.subrogacionNum = ko.observable();
         self.uteSN = ko.observable();
         self.uteTXT = ko.observable();
+        self.gdesPor = ko.observable()
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -365,7 +367,8 @@ var apiPaginaOfertasDetalle = {
             subrogacionTXT: vm.subrogacionTXT(),
             subrogacionNum: vm.subrogacionNum(),
             uteSN: vm.uteSN(),
-            uteTXT: vm.uteTXT()
+            uteTXT: vm.uteTXT(),
+            gdesPor: vm.gdesPor()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
