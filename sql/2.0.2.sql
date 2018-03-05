@@ -37,3 +37,6 @@ ALTER TABLE `ofertas`
 
 ALTER TABLE `ofertas`   
   ADD COLUMN `notasEstado` TEXT NULL AFTER `razonPerdidaId`;
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `codigoOferta` VARCHAR(255) NULL AFTER `notasEstado`;

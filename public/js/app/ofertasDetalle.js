@@ -177,6 +177,7 @@ var apiPaginaOfertasDetalle = {
         apiPaginaOfertasDetalle.cargarTiposContrato(data.tipoContratoId);
         apiPaginaOfertasDetalle.cargarRazonPerdida(data.razonPerdidaId);
         vm.notasEstado(data.notasEstado);
+        vm.codigoOferta(data.codigoOferta);
     },
     datosPagina: function () {
         var self = this;
@@ -295,6 +296,7 @@ var apiPaginaOfertasDetalle = {
         self.sRazonPerdida = ko.observable();     
         
         self.notasEstado = ko.observable();
+        self.codigoOferta = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -347,7 +349,8 @@ var apiPaginaOfertasDetalle = {
             tipoOportunidadId: vm.sTiposOportunidad(),
             tipoContratoId: vm.sTiposContrato(),
             razonPerdidaId: vm.sRazonPerdida(),
-            notasEstado: vm.notasEstado()
+            notasEstado: vm.notasEstado(),
+            codigoOferta: vm.codigoOferta()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
