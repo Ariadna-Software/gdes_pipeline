@@ -261,6 +261,7 @@
         "tiposOportunidad": "Opportunity's type",
         "tiposContrato": "Types of contracts",
         "razonPerdida": "Reason loss",
+        "notasEstado": "Description",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",

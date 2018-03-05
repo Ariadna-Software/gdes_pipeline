@@ -31,7 +31,9 @@ CREATE TABLE `razon_perdida`(
   PRIMARY KEY (`razonPerdidaId`)
 );
 
-
 ALTER TABLE `ofertas`   
   ADD COLUMN `razonPerdidaId` INT NULL AFTER `tipoContratoId`,
   ADD CONSTRAINT `oft_razon_perdida` FOREIGN KEY (`razonPerdidaId`) REFERENCES `razon_perdida`(`razonPerdidaId`);
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `notasEstado` TEXT NULL AFTER `razonPerdidaId`;
