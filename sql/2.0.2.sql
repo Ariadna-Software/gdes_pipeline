@@ -54,5 +54,12 @@ ALTER TABLE `ofertas`
   ADD COLUMN `uteSN` BOOL NULL AFTER `subrogacionNum`;
 
 ALTER TABLE `ofertas`   
-  ADD COLUMN `gdesPor` DECIMAL(4,2) NULL AFTER `uteSN`;
+  ADD COLUMN `uteTXT` TEXT NULL AFTER `uteSN`;
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `gdesPor` DECIMAL(4,2) NULL AFTER `uteTXT`;
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `subcontrataSN` BOOLEAN NULL AFTER `gdesPor`;
+
 
