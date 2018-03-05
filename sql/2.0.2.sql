@@ -47,3 +47,5 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `subrogacionTXT` TEXT NULL AFTER `subrogacionSN`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `subrogacionNum` INT(11) NULL AFTER `subrogacionTXT`;
