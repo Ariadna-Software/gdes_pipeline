@@ -42,7 +42,8 @@
             "unidadesNegocio": "Unidades negocio",
             "servicios": "Servicios",
             "fasesOferta": "Fases de oferta",
-            "tiposOportunidad": "Tipos de oportunidad"
+            "tiposOportunidad": "Tipos de oportunidad",
+            "tiposContrato": "Tipos de contrato"
         },
         "gestion": {
             "cab": "Gestión",
@@ -215,7 +216,17 @@
         "editar": "Editar tipo",
         "eliminar": "Eliminar tipo",
         "valNombre": "Nombre necesario"
-    },    
+    },   
+    "tiposContrato": {
+        "titulo": "Tipos contrato",
+        "panel": "Tipos contrato",
+        "nuevo": "Nuevo tipo",
+        "nombre": "Nombre tipo",
+        "id": "ID",
+        "editar": "Editar tipo",
+        "eliminar": "Eliminar tipo",
+        "valNombre": "Nombre necesario"
+    },      
     "ofertas": {
         "titulo": "Ofertas",
         "panel": "Ofertas",
@@ -240,6 +251,7 @@
         "id": "ID",
         "fasesOferta": "Fases de oferta",
         "tiposOportunidad": "Tipo oportunidad",
+        "tiposContrato": "Tipo contrato",
         "editar": "Editar oferta",
         "eliminar": "Eliminar oferta",
         "numeroOferta": "Numero oferta",

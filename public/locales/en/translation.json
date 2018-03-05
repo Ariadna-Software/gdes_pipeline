@@ -42,7 +42,8 @@
             "unidadesNegocio": "Business units",
             "servicios": "Services",
             "fasesOferta": "Offer phases",
-            "tiposOportunidad": "Opportunity types"
+            "tiposOportunidad": "Opportunity types",
+            "tiposContrato": "Contract types"
         },
         "gestion": {
             "cab": "Pool",
@@ -215,7 +216,17 @@
         "editar": "Edit type",
         "eliminar": "Remove type",
         "valNombre": "Name needed"
-    },      
+    },    
+    "tiposContrato": {
+        "titulo": "Types of contract",
+        "panel": "Types of contract",
+        "nuevo": "New type",
+        "nombre": "Type's name",
+        "id": "ID",
+        "editar": "Edit type",
+        "eliminar": "Remove type",
+        "valNombre": "Name needed"
+    },       
     "ofertas": {
         "titulo": "Offers",
         "panel": "Offers",
@@ -237,6 +248,7 @@
         "notasPlanning": "Planning notes",
         "fasesOferta": "Offer phases",
         "tiposOportunidad": "Opportunity's type",
+        "tiposContrato": "Types of contracts",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",

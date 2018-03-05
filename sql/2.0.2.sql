@@ -14,3 +14,13 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `tipoOportunidadId` INT(11) NULL AFTER `faseOfertaId`,
   ADD CONSTRAINT `oft_tipos_oportunidad` FOREIGN KEY (`tipoOportunidadId`) REFERENCES `tipos_oportunidad`(`tipoOportunidadId`);
+
+CREATE TABLE `tipos_contrato`(  
+  `tipoContratoId` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255),
+  PRIMARY KEY (`tipoContratoId`)
+);
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `tipoContratoId` INT(11) NULL AFTER `tipoOportunidadId`,
+  ADD CONSTRAINT `oft_tipo_contrato` FOREIGN KEY (`tipoContratoId`) REFERENCES `tipos_contrato`(`tipoContratoId`);

@@ -55,6 +55,9 @@ var apiPaginaOfertasDetalle = {
         $('#cmbTiposOportunidad').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarTiposOportunidad();  
         
+        $('#cmbTiposContrato').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarTiposContrato(); 
+
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEstados();
         $("#cmbEstados").select2().on('change', function (e) {
@@ -168,6 +171,7 @@ var apiPaginaOfertasDetalle = {
         vm.notasPlanning(data.notasPlanning);
         apiPaginaOfertasDetalle.cargarFasesOferta(data.faseOfertaId);
         apiPaginaOfertasDetalle.cargarTiposOportunidad(data.tipoOportunidadId);
+        apiPaginaOfertasDetalle.cargarTiposContrato(data.tipoContratoId);
     },
     datosPagina: function () {
         var self = this;
@@ -276,6 +280,10 @@ var apiPaginaOfertasDetalle = {
         self.optionsTiposOportunidad = ko.observableArray([]);
         self.selectedTiposOportunidad = ko.observableArray([]);
         self.sTiposOportunidad = ko.observable();  
+
+        self.optionsTiposContrato = ko.observableArray([]);
+        self.selectedTiposContrato = ko.observableArray([]);
+        self.sTiposContrato = ko.observable();  
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -325,7 +333,8 @@ var apiPaginaOfertasDetalle = {
             probabilidad: vm.probabilidad(),
             notasPlanning: vm.notasPlanning(),
             faseOfertaId: vm.sFasesOferta(),
-            tipoOportunidadId: vm.sTiposOportunidad()
+            tipoOportunidadId: vm.sTiposOportunidad(),
+            tipoContratoId: vm.sTiposContrato()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -522,6 +531,14 @@ var apiPaginaOfertasDetalle = {
             $("#cmbTiposOportunidad").val([id]).trigger('change');
         });
     },     
+    cargarTiposContrato: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-contrato", null, function (err, data) {
+            if (err) return;
+            var options = [{ tipoContratoId: 0, nombre: " " }].concat(data);
+            vm.optionsTiposContrato(options);
+            $("#cmbTiposContrato").val([id]).trigger('change');
+        });
+    },    
     cargarServicioArea: function (data) {
         if (!data) return;
         var id = data.id;

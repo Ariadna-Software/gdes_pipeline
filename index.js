@@ -86,6 +86,7 @@ app.use('/api/centrosEstablecidos', require('./lib/centrosEstablecidos/centrosEs
 app.use('/api/correoElectronico', require('./lib/correoElectronico/correoElectronico.controller'));
 app.use('/api/ubicaciones', require('./lib/ubicaciones/ubicaciones.controller'));
 app.use('/api/unidades-negocio', require('./lib/unidades-negocio/unidades-negocio.controller'));
+app.use('/api/tipos-contrato', require('./lib/tipos-contrato/tipos-contrato.controller'));
 
 // -- start server
 app.listen(config.apiPort);

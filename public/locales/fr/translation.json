@@ -42,7 +42,8 @@
             "unidadesNegocio": "Unités d'affaires",
             "servicios": "Services",
             "fasesOferta": "Phases d'Offre",
-            "tiposOportunidad": "Types d'opportunités"
+            "tiposOportunidad": "Types d'opportunités",
+            "tiposContrato": "Types de contract"
         },
         "gestion": {
             "cab": "Gestion",
@@ -215,7 +216,17 @@
         "editar": "Modiffier le type",
         "eliminar": "Supprimer le type",
         "valNombre": "Nom nécessarie"
-    },        
+    },   
+    "tiposContrato": {
+        "titulo": "Types of contrat",
+        "panel": "Types of contrat",
+        "nuevo": "Nuveau type",
+        "nombre": "Nom du type",
+        "id": "ID",
+        "editar": "Modiffier le type",
+        "eliminar": "Supprimer le type",
+        "valNombre": "Nom nécessarie"
+    },          
     "ofertas": {
         "titulo": "Offres",
         "panel": "Offres",
@@ -237,6 +248,7 @@
         "notasPlanning": "Notes Planning",
         "fasesOferta": "Phases d'offre",
         "tiposOportunidad": "Type d'opportunité",
+        "tiposContrato": "Type de contrat",
         "nuevo": "Nouvelle offre",
         "nombre": "Nom offre",
         "id": "ID",
