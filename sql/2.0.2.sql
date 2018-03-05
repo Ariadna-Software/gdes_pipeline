@@ -40,3 +40,6 @@ ALTER TABLE `ofertas`
 
 ALTER TABLE `ofertas`   
   ADD COLUMN `codigoOferta` VARCHAR(255) NULL AFTER `notasEstado`;
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `subrogacionSN` BOOLEAN NULL AFTER `codigoOferta`;
