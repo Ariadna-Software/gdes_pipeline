@@ -278,6 +278,7 @@
         "notasEstado": "Description",
         "codigoOferta": "Offer code",
         "subrogacionSN": "Subrogation",
+        "subrogacionTXT": "Subrogation comments",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",

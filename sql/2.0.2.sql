@@ -43,3 +43,7 @@ ALTER TABLE `ofertas`
 
 ALTER TABLE `ofertas`   
   ADD COLUMN `subrogacionSN` BOOLEAN NULL AFTER `codigoOferta`;
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `subrogacionTXT` TEXT NULL AFTER `subrogacionSN`;
+
