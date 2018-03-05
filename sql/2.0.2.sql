@@ -62,4 +62,6 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `subcontrataSN` BOOLEAN NULL AFTER `gdesPor`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `subcontrataTXT` TEXT NULL AFTER `subcontrataSN`;
 
