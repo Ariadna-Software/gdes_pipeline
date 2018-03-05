@@ -43,7 +43,8 @@
             "servicios": "Servicios",
             "fasesOferta": "Fases de oferta",
             "tiposOportunidad": "Tipos de oportunidad",
-            "tiposContrato": "Tipos de contrato"
+            "tiposContrato": "Tipos de contrato",
+            "razonPerdida": "Razones perdida / no presentación"
         },
         "gestion": {
             "cab": "Gestión",
@@ -226,7 +227,17 @@
         "editar": "Editar tipo",
         "eliminar": "Eliminar tipo",
         "valNombre": "Nombre necesario"
-    },      
+    },   
+    "razonPerdida": {
+        "titulo": "Razones perdida / no presentación",
+        "panel": "Razones perdida / no presentación",
+        "nuevo": "Nueva razón",
+        "nombre": "Nombre razón",
+        "id": "ID",
+        "editar": "Editar razón",
+        "eliminar": "Eliminar razón",
+        "valNombre": "Nombre necesario"
+    },    
     "ofertas": {
         "titulo": "Ofertas",
         "panel": "Ofertas",
@@ -252,6 +263,7 @@
         "fasesOferta": "Fases de oferta",
         "tiposOportunidad": "Tipo oportunidad",
         "tiposContrato": "Tipo contrato",
+        "razonPerdida": "Razón perdida",
         "editar": "Editar oferta",
         "eliminar": "Eliminar oferta",
         "numeroOferta": "Numero oferta",

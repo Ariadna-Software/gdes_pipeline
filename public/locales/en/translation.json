@@ -43,7 +43,8 @@
             "servicios": "Services",
             "fasesOferta": "Offer phases",
             "tiposOportunidad": "Opportunity types",
-            "tiposContrato": "Contract types"
+            "tiposContrato": "Contract types",
+            "razonPerdida": "Reasons loss / no submit"
         },
         "gestion": {
             "cab": "Pool",
@@ -226,7 +227,17 @@
         "editar": "Edit type",
         "eliminar": "Remove type",
         "valNombre": "Name needed"
-    },       
+    },    
+    "razonPerdida": {
+        "titulo": "Reasons for loose / no submit",
+        "panel": "Reasons for loose / no submit",
+        "nuevo": "New reason",
+        "nombre": "Reason's name",
+        "id": "ID",
+        "editar": "Edit reason",
+        "eliminar": "Remove reason",
+        "valNombre": "Name needed"
+    },        
     "ofertas": {
         "titulo": "Offers",
         "panel": "Offers",
@@ -249,6 +260,7 @@
         "fasesOferta": "Offer phases",
         "tiposOportunidad": "Opportunity's type",
         "tiposContrato": "Types of contracts",
+        "razonPerdida": "Reason loss",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",

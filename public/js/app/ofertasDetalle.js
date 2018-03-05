@@ -58,6 +58,9 @@ var apiPaginaOfertasDetalle = {
         $('#cmbTiposContrato').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarTiposContrato(); 
 
+        $('#cmbRazonPerdida').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarRazonPerdida(); 
+
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEstados();
         $("#cmbEstados").select2().on('change', function (e) {
@@ -172,6 +175,7 @@ var apiPaginaOfertasDetalle = {
         apiPaginaOfertasDetalle.cargarFasesOferta(data.faseOfertaId);
         apiPaginaOfertasDetalle.cargarTiposOportunidad(data.tipoOportunidadId);
         apiPaginaOfertasDetalle.cargarTiposContrato(data.tipoContratoId);
+        apiPaginaOfertasDetalle.cargarRazonPerdida(data.razonPerdidaId);
     },
     datosPagina: function () {
         var self = this;
@@ -284,6 +288,10 @@ var apiPaginaOfertasDetalle = {
         self.optionsTiposContrato = ko.observableArray([]);
         self.selectedTiposContrato = ko.observableArray([]);
         self.sTiposContrato = ko.observable();  
+
+        self.optionsRazonPerdida = ko.observableArray([]);
+        self.selectedRazonPerdida = ko.observableArray([]);
+        self.sRazonPerdida = ko.observable();          
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -334,7 +342,8 @@ var apiPaginaOfertasDetalle = {
             notasPlanning: vm.notasPlanning(),
             faseOfertaId: vm.sFasesOferta(),
             tipoOportunidadId: vm.sTiposOportunidad(),
-            tipoContratoId: vm.sTiposContrato()
+            tipoContratoId: vm.sTiposContrato(),
+            razonPerdidaId: vm.sRazonPerdida()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -539,6 +548,14 @@ var apiPaginaOfertasDetalle = {
             $("#cmbTiposContrato").val([id]).trigger('change');
         });
     },    
+    cargarRazonPerdida: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/razon-perdida", null, function (err, data) {
+            if (err) return;
+            var options = [{ razonPerdidaId: 0, nombre: " " }].concat(data);
+            vm.optionsRazonPerdida(options);
+            $("#cmbRazonPerdida").val([id]).trigger('change');
+        });
+    },     
     cargarServicioArea: function (data) {
         if (!data) return;
         var id = data.id;

@@ -87,6 +87,7 @@ app.use('/api/correoElectronico', require('./lib/correoElectronico/correoElectro
 app.use('/api/ubicaciones', require('./lib/ubicaciones/ubicaciones.controller'));
 app.use('/api/unidades-negocio', require('./lib/unidades-negocio/unidades-negocio.controller'));
 app.use('/api/tipos-contrato', require('./lib/tipos-contrato/tipos-contrato.controller'));
+app.use('/api/razon-perdida', require('./lib/razon-perdida/razon-perdida.controller'));
 
 // -- start server
 app.listen(config.apiPort);

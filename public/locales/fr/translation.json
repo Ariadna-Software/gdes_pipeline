@@ -43,7 +43,8 @@
             "servicios": "Services",
             "fasesOferta": "Phases d'Offre",
             "tiposOportunidad": "Types d'opportunités",
-            "tiposContrato": "Types de contract"
+            "tiposContrato": "Types de contract",
+            "razonPerdida": "Raisons pert / non-présentation"
         },
         "gestion": {
             "cab": "Gestion",
@@ -226,7 +227,17 @@
         "editar": "Modiffier le type",
         "eliminar": "Supprimer le type",
         "valNombre": "Nom nécessarie"
-    },          
+    },      
+    "razonPerdida": {
+        "titulo": "Raisons de la perte / non-présentation",
+        "panel": "Raisons de la perte / non-présentation",
+        "nuevo": "Nuveau raison",
+        "nombre": "Nom de la raison",
+        "id": "ID",
+        "editar": "Modiffier raison",
+        "eliminar": "Supprimer raison",
+        "valNombre": "Nom nécessarie"
+    },         
     "ofertas": {
         "titulo": "Offres",
         "panel": "Offres",
@@ -249,6 +260,7 @@
         "fasesOferta": "Phases d'offre",
         "tiposOportunidad": "Type d'opportunité",
         "tiposContrato": "Type de contrat",
+        "razonPerdida": "Raison pertre",
         "nuevo": "Nouvelle offre",
         "nombre": "Nom offre",
         "id": "ID",

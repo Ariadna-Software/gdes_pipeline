@@ -24,3 +24,14 @@ CREATE TABLE `tipos_contrato`(
 ALTER TABLE `ofertas`   
   ADD COLUMN `tipoContratoId` INT(11) NULL AFTER `tipoOportunidadId`,
   ADD CONSTRAINT `oft_tipo_contrato` FOREIGN KEY (`tipoContratoId`) REFERENCES `tipos_contrato`(`tipoContratoId`);
+
+CREATE TABLE `razon_perdida`(  
+  `razonPerdidaId` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255),
+  PRIMARY KEY (`razonPerdidaId`)
+);
+
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `razonPerdidaId` INT NULL AFTER `tipoContratoId`,
+  ADD CONSTRAINT `oft_razon_perdida` FOREIGN KEY (`razonPerdidaId`) REFERENCES `razon_perdida`(`razonPerdidaId`);
