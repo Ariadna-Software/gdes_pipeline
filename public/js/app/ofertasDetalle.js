@@ -158,6 +158,9 @@ var apiPaginaOfertasDetalle = {
         if (data.fechaAdjudicacion) vm.fechaAdjudicacion(moment(data.fechaAdjudicacion).format(i18n.t('util.date_format')));
         if (data.fechaInicioContrato) vm.fechaInicioContrato(moment(data.fechaInicioContrato).format(i18n.t('util.date_format')));
         if (data.fechaFinContrato) vm.fechaFinContrato(moment(data.fechaFinContrato).format(i18n.t('util.date_format')));
+        vm.duracion(data.duracion);
+        vm.probabilidad(data.probabilidad);
+        vm.notasPlanning(data.notasPlanning);
     },
     datosPagina: function () {
         var self = this;
@@ -255,6 +258,9 @@ var apiPaginaOfertasDetalle = {
         self.fechaAdjudicacion = ko.observable();
         self.fechaInicioContrato = ko.observable();
         self.fechaFinContrato = ko.observable();
+        self.duracion = ko.observable();
+        self.probabilidad = ko.observable();
+        self.notasPlanning = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -299,7 +305,10 @@ var apiPaginaOfertasDetalle = {
             ubicacion: vm.ubicacion(),
             paisUbicacion: vm.paisUbicacion(),
             unidadNegocioId: vm.sUnidadNegocio(),
-            servicioId: vm.sServicio()
+            servicioId: vm.sServicio(),
+            duracion: vm.duracion(),
+            probabilidad: vm.probabilidad(),
+            notasPlanning: vm.notasPlanning()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
