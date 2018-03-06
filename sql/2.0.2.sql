@@ -107,5 +107,8 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `garantiasEspecialesSN` BOOLEAN NULL AFTER `condicionesEstandarTXT`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `garantiasEspecialesTXT` TEXT NULL AFTER `garantiasEspecialesSN`;
+
 
 
