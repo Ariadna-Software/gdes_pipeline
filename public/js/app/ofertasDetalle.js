@@ -218,6 +218,7 @@ var apiPaginaOfertasDetalle = {
         vm.condicionesEstandarTXT(data.condicionesEstandarTXT);
         vm.garantiasEspecialesSN(data.garantiasEspecialesSN);
         vm.garantiasEspecialesTXT(data.garantiasEspecialesTXT);
+        vm.segurosSN(data.segurosSN);
     },
     datosPagina: function () {
         var self = this;
@@ -363,6 +364,7 @@ var apiPaginaOfertasDetalle = {
         self.condicionesEstandarTXT = ko.observable();
         self.garantiasEspecialesSN = ko.observable();
         self.garantiasEspecialesTXT = ko.observable();
+        self.segurosSN = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -441,7 +443,8 @@ var apiPaginaOfertasDetalle = {
             condicionesEstandarSN: vm.condicionesEstandarSN(),
             condicionesEstandarTXT: vm.condicionesEstandarTXT(),
             garantiasEspecialesSN: vm.garantiasEspecialesSN(),
-            garantiasEspecialesTXT: vm.garantiasEspecialesTXT()
+            garantiasEspecialesTXT: vm.garantiasEspecialesTXT(),
+            segurosSN: vm.segurosSN()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
