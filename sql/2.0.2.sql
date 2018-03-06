@@ -95,4 +95,7 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `requerimientos` TEXT NULL AFTER `alcance`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `puntosRelevantes` TEXT NULL AFTER `requerimientos`;
+
 
