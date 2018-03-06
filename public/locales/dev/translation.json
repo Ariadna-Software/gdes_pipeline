@@ -302,6 +302,7 @@
         "riesgos": "Riesgos",
         "proveedorActual": "Proveedor actual",
         "competidores": "Competidores",
+        "principalCompetidor": "Principal competidor",
         "nuevo": "Nuevo oferta",
         "nombre": "Nombre oferta",
         "id": "ID",

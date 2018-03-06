@@ -128,4 +128,7 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `competidores` VARCHAR(255) NULL AFTER `proveedorActual`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `principalCompetidor` VARCHAR(255) NULL AFTER `competidores`;
+
 
