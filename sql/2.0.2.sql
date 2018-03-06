@@ -71,3 +71,13 @@ ALTER TABLE `ofertas`
 
 ALTER TABLE `ofertas`   
   ADD COLUMN `importeContribucionDivisa` DECIMAL(12,2) NULL AFTER `importeUTEDivisa`;
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `importeAnual` DECIMAL(12,2) NULL AFTER `importeContribucionDivisa`,
+  ADD COLUMN `importeAnualDivisa` DECIMAL(12,2) NULL AFTER `importeAnual`;
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `importePrimerAno` DECIMAL(12,2) NULL AFTER `importeAnualDivisa`,
+  ADD COLUMN `importePrimerAnoDivisa` DECIMAL(12,2) NULL AFTER `importePrimerAno`;
+
+
