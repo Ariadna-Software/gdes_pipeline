@@ -131,4 +131,8 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `principalCompetidor` VARCHAR(255) NULL AFTER `competidores`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `criteriosEvaluacion` TEXT NULL AFTER `principalCompetidor`;
+
+
 
