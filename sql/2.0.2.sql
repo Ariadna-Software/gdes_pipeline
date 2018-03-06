@@ -116,6 +116,9 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `segurosTXT` TEXT NULL AFTER `segurosSN`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `penalizaciones` TEXT NULL AFTER `segurosTXT`;
+
 
 
 
