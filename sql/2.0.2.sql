@@ -80,4 +80,8 @@ ALTER TABLE `ofertas`
   ADD COLUMN `importePrimerAno` DECIMAL(12,2) NULL AFTER `importeAnualDivisa`,
   ADD COLUMN `importePrimerAnoDivisa` DECIMAL(12,2) NULL AFTER `importePrimerAno`;
 
+ALTER TABLE `gdes_pipeline_test`.`ofertas`   
+  ADD COLUMN `descripcionInversion` TEXT NULL AFTER `importePrimerAnoDivisa`;
+  
+
 

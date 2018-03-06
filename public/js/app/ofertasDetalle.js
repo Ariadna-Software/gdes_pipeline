@@ -202,6 +202,7 @@ var apiPaginaOfertasDetalle = {
         vm.importeAnualDivisa(data.importeAnualDivisa);
         vm.importePrimerAno(data.importePrimerAno);
         vm.importePrimerAnoDivisa(data.importePrimerAnoDivisa);
+        vm.descripcionInversion(data.descripcionInversion);
     },
     datosPagina: function () {
         var self = this;
@@ -337,6 +338,7 @@ var apiPaginaOfertasDetalle = {
         self.importeAnualDivisa = ko.observable();
         self.importePrimerAno = ko.observable();
         self.importePrimerAnoDivisa = ko.observable();
+        self.descripcionInversion = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -405,7 +407,8 @@ var apiPaginaOfertasDetalle = {
             importeAnual: vm.importeAnual(),
             importeAnualDivisa: vm.importeAnualDivisa(),
             importePrimerAno: vm.importePrimerAno(),
-            importePrimerAnoDivisa: vm.importePrimerAnoDivisa()
+            importePrimerAnoDivisa: vm.importePrimerAnoDivisa(),
+            descripcionInversion: vm.descripcionInversion()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));

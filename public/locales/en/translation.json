@@ -291,6 +291,7 @@
         "importeAnualDivisa": "Anual Amount (Currency)",
         "importePrimerAno": "Amount first year",
         "importePrimerAnoDivisa": "Amount first year (Currency)",
+        "descripcionInversion": "Description of the investment",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",
