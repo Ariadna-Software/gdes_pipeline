@@ -611,14 +611,8 @@
                                                     </section>
                                                     <!-- CD4 -->
                                                     <section class="col col-md-6">
-                                                        <h4>CUADRO 4</h4>
+                                                        <h4 data-i18n="ofertas.c4">CUADRO 4</h4>
                                                         <div id="cd2" class="recoferta">
-                                                            <div class="row">
-                                                                <section class="col col-md-4">
-
-                                                                </section>
-                                                            </div>
-
                                                             <div class="row">
                                                                 <section class="col col-md-4">
                                                                     <label class="label">
@@ -629,7 +623,17 @@
                                                                         </a>
                                                                     </label>
                                                                     <select class="aswselect2" id="cmbEstados" name="cmbEstados" data-bind="options: optionsEstados, optionsText: 'nombre', optionsValue: 'estadoId', 
-                                                                                    value: sEstado, valueAllowUnset: true, selectedOptions: selectedEstados, selected2:{}">
+                                                                                            value: sEstado, valueAllowUnset: true, selectedOptions: selectedEstados, selected2:{}">
+                                                                    </select>
+                                                                </section>
+                                                                <section class="col col-md-8"></section>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <section class="col col-md-8">
+                                                                    <label class="label" data-i18n="ofertas.razonPerdida">RPERD:</label>
+                                                                    <select class="aswselect2" id="cmbRazonPerdida" name="cmbRazonPerdida" data-bind="options: optionsRazonPerdida, optionsText: 'nombre', optionsValue: 'razonPerdidaId', 
+                                                                                    value: sRazonPerdida, valueAllowUnset: true, selectedOptions: selectedRazonPerdida, selected2:{}">
                                                                     </select>
                                                                 </section>
                                                                 <section class="col col-md-4">
@@ -637,12 +641,6 @@
                                                                     <label class="input">
                                                                         <input id="txtNumeroPedido" name="txtNumeroPedido" data-bind="value: numeroPedido">
                                                                     </label>
-                                                                </section>
-                                                                <section class="col col-md-4">
-                                                                    <label class="label" data-i18n="ofertas.razonPerdida">RPERD:</label>
-                                                                    <select class="aswselect2" id="cmbRazonPerdida" name="cmbRazonPerdida" data-bind="options: optionsRazonPerdida, optionsText: 'nombre', optionsValue: 'razonPerdidaId', 
-                                                                                value: sRazonPerdida, valueAllowUnset: true, selectedOptions: selectedRazonPerdida, selected2:{}">
-                                                                    </select>
                                                                 </section>
                                                             </div>
                                                             <div class="row">
