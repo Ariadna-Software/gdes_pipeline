@@ -280,6 +280,8 @@
         "gdesPor": "GDES Porcentaje",
         "subcontrataSN": "Subcontrata",
         "subcontrataTXT": "Comentario subcontrata",
+        "importeUTE": "Importe UTE",
+        "importeUTEDivisa": "Importe UTE (Divisa)",
         "nuevo": "Nuevo oferta",
         "nombre": "Nombre oferta",
         "id": "ID",

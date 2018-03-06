@@ -279,6 +279,8 @@
         "codigoOferta": "Code d'offre",
         "subrogacionSN": "Subrogation",
         "subrogacionTXT": "Commentaire subrogation",
+        "importeUTE": "Montant UTE",
+        "importeUTEDivisa": "Montant UTE (Monnaie)",
         "subrogacionNum": "Quantité de personnel",
         "uteSN": "UTE",
         "uteTXT": "Commentaire UTE",

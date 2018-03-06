@@ -285,6 +285,8 @@
         "gdesPor": "GDES Percentage",
         "subcontrataSN": "Subcontract",
         "subcontrataTXT": "Comments subcontract",
+        "importeUTE": "UTE Amount",
+        "importeUTEDivisa": "UTE Amount (Currency)",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",

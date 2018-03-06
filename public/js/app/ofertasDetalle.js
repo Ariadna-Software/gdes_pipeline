@@ -23,7 +23,9 @@ var apiPaginaOfertasDetalle = {
         $('#oferta-form').submit(function () { return false; });
         $('#oferta-form2').submit(function () { return false; });
         $('#btnAceptar').click(apiPaginaOfertasDetalle.aceptar);
+        $('#btnAceptar2').click(apiPaginaOfertasDetalle.aceptar);
         $('#btnSalir').click(apiPaginaOfertasDetalle.salir);
+        $('#btnSalir2').click(apiPaginaOfertasDetalle.salir);
         $('#cmbTipoOfertas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarTipoOfertas();
         $('#cmbResponsables').select2(select2_languages[usuario.codigoIdioma]);
@@ -88,6 +90,8 @@ var apiPaginaOfertasDetalle = {
         $('#txtImportePresupuestoDivisa').on('blur', apiPaginaOfertasDetalle.calcularImporteDesdeDivisa);
         $('#txtImporteInversion').on('blur', apiPaginaOfertasDetalle.calcularDivisaDesdeInversion);
         $('#txtImporteInversionDivisa').on('blur', apiPaginaOfertasDetalle.calcularInversionDesdeDivisa);
+        $('#txtImporteUTE').on('blur', apiPaginaOfertasDetalle.calcularDivisaDesdeUTE);
+        $('#txtImporteUTEDivisa').on('blur', apiPaginaOfertasDetalle.calcularUTEDesdeDivisa);        
 
         ofertaId = apiComunGeneral.gup("id");
         if (ofertaId == 0) {
@@ -187,6 +191,8 @@ var apiPaginaOfertasDetalle = {
         vm.gdesPor(data.gdesPor);
         vm.subcontrataSN(data.subcontrataSN);
         vm.subcontrataTXT(data.subcontrataTXT);
+        vm.importeUTE(data.importeUTE);
+        vm.importeUTEDivisa(data.importeUTEDivisa);
     },
     datosPagina: function () {
         var self = this;
@@ -314,6 +320,9 @@ var apiPaginaOfertasDetalle = {
         self.gdesPor = ko.observable()
         self.subcontrataSN = ko.observable();
         self.subcontrataTXT = ko.observable();
+
+        self.importeUTE = ko.observable();
+        self.importeUTEDivisa = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -375,7 +384,9 @@ var apiPaginaOfertasDetalle = {
             uteTXT: vm.uteTXT(),
             gdesPor: vm.gdesPor(),
             subcontrataSN: vm.subcontrataSN(),
-            subcontrataTXT: vm.subcontrataTXT()
+            subcontrataTXT: vm.subcontrataTXT(),
+            importeUTE: vm.importeUTE(),
+            importeUTEDivisa: vm.importeUTEDivisa()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -427,7 +438,9 @@ var apiPaginaOfertasDetalle = {
                 txtImporteContribucion: { number: true },
                 txtImporteInversion: { number: true },
                 txtImporteImversionDivisa: { number: true },
-                txtImporteRetorno: { number: true }
+                txtImporteRetorno: { number: true },
+                txtImporteUTE: {number: true},
+                txtImporteUTEDivisa: {number: true}
             },
             errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length) {
@@ -673,6 +686,15 @@ var apiPaginaOfertasDetalle = {
             }
         }
     },
+    calcularDivisaDesdeUTE: function () {
+        if (vm.importeUTE() && vm.importeUTE() != 0) {
+            if (vm.multiplicador()) {
+                var importeDivisa = vm.importeUTE() * vm.multiplicador();
+                vm.importeUTEDivisa(apiComunGeneral.redondeo2Decimales(importeDivisa));
+                apiPaginaOfertasDetalle.actualizarFechaDivisa();
+            }
+        }
+    },
     calcularImporteDesdeDivisa: function () {
         if (vm.multiplicador() && vm.importePresupuestoDivisa()) {
             var importe = vm.importePresupuestoDivisa() / vm.multiplicador();
@@ -681,6 +703,14 @@ var apiPaginaOfertasDetalle = {
             apiPaginaOfertasDetalle.actualizarFechaDivisa();
         }
     },
+    calcularUTEDesdeDivisa: function () {
+        if (vm.multiplicador() && vm.importeUTEDivisa()) {
+            var importe = vm.importeUTEDivisa() / vm.multiplicador();
+            vm.importeUTE(apiComunGeneral.redondeo2Decimales(importe));
+            apiPaginaOfertasDetalle.textoAutorizacion();
+            apiPaginaOfertasDetalle.actualizarFechaDivisa();
+        }
+    },    
     calcularInversionDesdeDivisa: function () {
         if (vm.importeInversionDivisa() && vm.importeInversionDivisa() != 0) {
             if (vm.multiplicador()) {
@@ -696,6 +726,7 @@ var apiPaginaOfertasDetalle = {
     cambioMultiplicador: function () {
         apiPaginaOfertasDetalle.calcularDivisaDesdeImporte();
         apiPaginaOfertasDetalle.calcularDivisaDesdeInversion();
+        apiPaginaOfertasDetalle.calcularDivisaDesdeImporteUTE();
     }
 }
 
