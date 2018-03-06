@@ -288,6 +288,7 @@
         "descripcionInversion": "Description de l'investissement",  
         "condicionesPago": "Conditions de paiement",  
         "consideracionesEconomicas": "Considérations économiques",  
+        "alcance": "Portée du projet",
         "subrogacionNum": "Quantité de personnel",
         "uteSN": "UTE",
         "uteTXT": "Commentaire UTE",
