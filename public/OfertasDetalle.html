@@ -654,11 +654,34 @@
                                                         </div>
                                                     </section>
                                                 </div>
+                                                <fieldset>
+                                                    <div class="pull-right">
+                                                        <button id="btnAceptar" data-i18n="[title]aceptar" class="btn btn-success btn-circle btn-lg">
+                                                            <i class="fa fa-lg fa-check"></i>
+                                                        </button>
+                                                        <button id="btnSalir" data-i18n="[title]salir" class="btn btn-warning btn-circle btn-lg">
+                                                            <i class="fa fa-lg fa-sign-out"></i>
+                                                        </button>
+                                                    </div>
+                                                </fieldset>
+                                        </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="s2">
+                                    <div class="jarviswidget" id="wid-id-1" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                                        <header>
+                                            <span class="widget-icon">
+                                                <i class="fa fa-edit"></i>
+                                            </span>
+                                            <h2 data-i18n="ofertas.panel"> Panel</h2>
+                                        </header>
+                                        <div class="row">
+                                            <form id="oferta-form2" class="smart-form">
                                                 <div class="row">
-                                                    <!-- CD5 -->
                                                     <section class="col col-md-6">
-                                                        <h4>CUADRO 5</h4>
-                                                        <div id="cd3" class="recoferta">
+                                                        <h4 data-i18n="ofertas.c5">CUADRO 5</h4>
+                                                        <div id="cd6" class="recoferta">
                                                             <div class="row">
                                                                 <section class="col col-md-4">
                                                                     <label class="label" data-i18n="ofertas.importePresupuesto">Presupuesto:</label>
@@ -667,10 +690,10 @@
                                                                     </label>
                                                                 </section>
                                                                 <section class="col col-md-4">
-                                                                    CD5 - 1 - 2 (IMPORTE PROYECTO)
+
                                                                 </section>
                                                                 <section class="col col-md-4">
-                                                                    CD5 - 1 - 3 (IMPORTE TOTAL UTE)
+                                                                    IMPORTE UTE --
                                                                 </section>
                                                             </div>
                                                             <div class="row">
@@ -681,52 +704,47 @@
                                                                     </label>
                                                                 </section>
                                                                 <section class="col col-md-4">
+                                                                    <label class="label" data-i18n="ofertas.importeContribucion">Margen:</label>
+                                                                    <label class="input">
+                                                                        <input id="txtImporteContribucion" name="txtImporteContribucion" data-bind="value: importeContribucion">
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-md-4">
+                                                                    -- IMP ANUAL --
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                    -- IMP PRIMER AMO --
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-md-4">
                                                                     <label class="label" data-i18n="ofertas.importeInversion">Inversion:</label>
                                                                     <label class="input">
                                                                         <input id="txtImporteInversion" name="txtImporteInversion" data-bind="value: importeInversion">
                                                                     </label>
                                                                 </section>
-                                                                >
+                                                                <section class="col col-md-4">
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                </section>
                                                             </div>
+
                                                         </div>
                                                     </section>
-                                                    <!-- CD5 -->
                                                     <section class="col col-md-6">
-                                                        <h4>CUADRO 6</h4>
+                                                        <h4 data-i18n="ofertas.c6">CUADRO 6</h4>
                                                         <div id="cd6" class="recoferta">
-                                                            <div class="row">
-                                                                <section class="col col-md-4">
-                                                                    <label class="label" data-i18n="ofertas.importePresupuestoDivisa">Imp Divisa:</label>
-                                                                    <label class="input">
-                                                                        <input id="txtImportePresupuestoDivisa" name="txtImportePresupuestoDivisa" data-bind="value: importePresupuestoDivisa">
-                                                                    </label>
-                                                                </section>
-                                                                <section class="col col-md-4">
-                                                                    CD6 - 1 - 2 (IMPORTE PROYECTO [DIVISA])
-                                                                </section>
-                                                                <section class="col col-md-4">
-                                                                    CD6 - 1 - 3 (IMPORTE UTE [DIVISA])
-                                                                </section>
-                                                            </div>
-                                                            <div class="row">
-                                                                <section class="col col-md-4">
-
-                                                                </section>
-                                                                <section class="col col-md-4">
-                                                                    <label class="label" data-i18n="ofertas.importeInversionDivisa">NLIC:</label>
-                                                                    <label class="input">
-                                                                        <input id="txtImporteInversionDivisa" name="txtImporteInversionDivisa" data-bind="value: importeInversionDivisa">
-                                                                    </label>
-                                                                </section>
-                                                                <section class="col col-md-4">
-
-                                                                </section>
-                                                            </div>
                                                             <div class="row">
                                                                 <section class="col col-md-4">
                                                                     <label class="label" data-i18n="ofertas.divisa">DIVISA:</label>
                                                                     <select class="aswselect2" id="cmbDivisas" name="cmbDivisas" data-bind="options: optionsDivisas, optionsText: 'nombre', optionsValue: 'divisaId', 
-                                                                                value: sDivisa, valueAllowUnset: true, selectedOptions: selectedDivisas, selected2:{}">
+                                                                                        value: sDivisa, valueAllowUnset: true, selectedOptions: selectedDivisas, selected2:{}">
                                                                     </select>
                                                                 </section>
                                                                 <section class="col col-md-2">
@@ -746,6 +764,83 @@
                                                                     </label>
                                                                 </section>
                                                             </div>
+                                                            <div class="row">
+                                                                <section class="col col-md-4">
+                                                                    <label class="label" data-i18n="ofertas.importePresupuestoDivisa">NLIC:</label>
+                                                                    <label class="input">
+                                                                        <input id="txtImportePresupuestoDivisa" name="txtImportePresupuestoDivisa" data-bind="value: importePresupuestoDivisa">
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-md-4">
+
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                    IMPORET UTE DIVISA ---
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-md-4">
+                                                                    <label class="label" data-i18n="ofertas.margenContribucion">Margen:</label>
+                                                                    <label class="input">
+                                                                        <input id="txtMargenContribucion2" name="txtMargenContribucion2" data-bind="value: margenContribucion" disabled>
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                    IMPORTE CONTRIBUCION DIVISA --
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-md-4">
+                                                                    -- IMP ANUAL DIV --
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                    -- IMP PRIMER AMO DIV --
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                </section>
+                                                            </div>
+                                                            <div class="row">
+                                                                <section class="col col-md-4">
+                                                                    <label class="label" data-i18n="ofertas.importeInversionDivisa">Inversion:</label>
+                                                                    <label class="input">
+                                                                        <input id="txtImporteInversionDivisa" name="txtImporteInversionDivisa" data-bind="value: importeInversionDivisa">
+                                                                    </label>
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                </section>
+                                                                <section class="col col-md-4">
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-md-12">
+                                                        <h4 data-i18n="ofertas.c7">CUADRO 7</h4>
+                                                        <div id="cd6" class="recoferta">
+                                                            <div class="row">
+                                                                <section class="col col-md-6">
+                                                                    <div class="row">
+                                                                        <section class="col col-md-12">
+                                                                            --DESCRIP INV---
+                                                                        </section>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <section class="col col-md-12">
+                                                                            --CONDICIONES PAGO---
+                                                                        </section>
+                                                                    </div>
+                                                                </section>
+                                                                <section class="col col-md-6">
+                                                                    <div class="row">
+                                                                        <section class="col col-md-12">
+                                                                            --CONSIDERACIONES ECONO---
+                                                                        </section>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
                                                         </div>
                                                     </section>
                                                 </div>
@@ -759,11 +854,14 @@
                                                         </button>
                                                     </div>
                                                 </fieldset>
-                                        </form>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="s2">
+                                <div class="tab-pane fade" id="s3">
+
+                                </div>
+                                <div class="tab-pane fade" id="s4">
                                     <div class="jarviswidget" id="wid-id-1" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
                                         <header>
                                             <span class="widget-icon">
@@ -794,7 +892,7 @@
                                                             <div class="col col-md-2">
                                                                 <label class="label" data-i18n="ofertas.centrosEstablecidos">CES:</label>
                                                                 <select class="aswselect2" id="cmbCentroEstablecidos" name="cmbCentroEstablecidos" data-bind="options: optionsCentroEstablecidos, optionsText: 'nombre', optionsValue: 'centroEstablecidoId', 
-                                                                        value: sCentroEstablecido, valueAllowUnset: true, selectedOptions: selectedCentroEstablecidos, selected2:{}">
+                                                                                value: sCentroEstablecido, valueAllowUnset: true, selectedOptions: selectedCentroEstablecidos, selected2:{}">
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -812,7 +910,7 @@
                                                             <div class="col col-md-4">
                                                                 <label class="label" data-i18n="ofertas.proyecto">Proyecto:</label>
                                                                 <select class="aswselect2" id="cmbProyectos" name="cmbProyectos" data-bind="options: optionsProyectos, optionsText: 'nombre', optionsValue: 'proyectoId', 
-                                                                        value: sProyecto, valueAllowUnset: true, selectedOptions: selectedProyectos, selected2:{}">
+                                                                                value: sProyecto, valueAllowUnset: true, selectedOptions: selectedProyectos, selected2:{}">
                                                                 </select>
                                                             </div>
                                                         </div>
@@ -832,7 +930,7 @@
                                                             <section class="col col-md-3">
                                                                 <label class="label" data-i18n="ofertas.centro">Centroa:</label>
                                                                 <select class="aswselect2" id="cmbCentros" name="cmbCentros" data-bind="options: optionsCentros, optionsText: 'nombre', optionsValue: 'centroId', 
-                                                                        value: sCentro, valueAllowUnset: true, selectedOptions: selectedCentros, selected2:{}">
+                                                                                value: sCentro, valueAllowUnset: true, selectedOptions: selectedCentros, selected2:{}">
                                                                 </select>
                                                             </section>
                                                         </div>
@@ -858,7 +956,7 @@
                                                             <section class="col col-md-5">
                                                                 <label class="label" data-i18n="ofertas.tipoSoporte">TipoSoporte:</label>
                                                                 <select class="aswselect2" id="cmbTipoSoportes" name="cmbTipoSoportes" data-bind="options: optionsTipoSoportes, optionsText: 'nombre', optionsValue: 'tipoSoporteId', 
-                                                                        value: sTipoSoporte, valueAllowUnset: true, selectedOptions: selectedTipoSoportes, selected2:{}">
+                                                                                value: sTipoSoporte, valueAllowUnset: true, selectedOptions: selectedTipoSoportes, selected2:{}">
                                                                 </select>
                                                             </section>
                                                         </div>
@@ -872,7 +970,7 @@
                                                                     </a>
                                                                 </label>
                                                                 <select class="aswselect2" id="cmbTipoOfertas" name="cmbTipoOfertas" data-bind="options: optionsTipoOfertas, optionsText: 'nombre', optionsValue: 'tipoOfertaId', 
-                                                                        value: sTipoOferta, valueAllowUnset: true, selectedOptions: selectedTipoOfertas, selected2:{}">
+                                                                                value: sTipoOferta, valueAllowUnset: true, selectedOptions: selectedTipoOfertas, selected2:{}">
                                                                 </select>
                                                             </section>
                                                             <section class="col col-md-4">
@@ -881,7 +979,7 @@
                                                             <section class="col col-md-4">
                                                                 <label class="label" data-i18n="ofertas.tipoActividad">TipoActividad:</label>
                                                                 <select class="aswselect2" id="cmbTipoActividads" name="cmbTipoActividads" data-bind="options: optionsTipoActividads, optionsText: 'nombre', optionsValue: 'tipoActividadId', 
-                                                                        value: sTipoActividad, valueAllowUnset: true, selectedOptions: selectedTipoActividads, selected2:{}">
+                                                                                value: sTipoActividad, valueAllowUnset: true, selectedOptions: selectedTipoActividads, selected2:{}">
                                                                 </select>
                                                             </section>
                                                         </div>
@@ -973,11 +1071,11 @@
                                                             </section>
                                                             <section class="col col-md-2">
                                                                 <!-- Provisonalmente solo queda la fechaEntrega
-                                                                    <label class="label" data-i18n="ofertas.fechaOferta">Fecha oferta:</label>
-                                                                    <label class="input">
-                                                                        <input id="txtFechaOferta" name="txtFechaOferta" data-bind="value: fechaOferta" class="datepicker" data-dateformat="dd/mm/yy">
-                                                                    </label>
-                                                                    -->
+                                                                            <label class="label" data-i18n="ofertas.fechaOferta">Fecha oferta:</label>
+                                                                            <label class="input">
+                                                                                <input id="txtFechaOferta" name="txtFechaOferta" data-bind="value: fechaOferta" class="datepicker" data-dateformat="dd/mm/yy">
+                                                                            </label>
+                                                                            -->
                                                             </section>
                                                             <section class="col col-md-2">
 
@@ -1018,12 +1116,6 @@
                                             </form>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade" id="s3">
-
-                                </div>
-                                <div class="tab-pane fade" id="s4">
-
                                 </div>
                             </div>
                     </article>

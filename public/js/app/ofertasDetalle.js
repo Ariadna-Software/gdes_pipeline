@@ -21,6 +21,7 @@ var apiPaginaOfertasDetalle = {
 
         $('#ofertas').attr('class', 'active');
         $('#oferta-form').submit(function () { return false; });
+        $('#oferta-form2').submit(function () { return false; });
         $('#btnAceptar').click(apiPaginaOfertasDetalle.aceptar);
         $('#btnSalir').click(apiPaginaOfertasDetalle.salir);
         $('#cmbTipoOfertas').select2(select2_languages[usuario.codigoIdioma]);
