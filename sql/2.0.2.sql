@@ -142,6 +142,9 @@ ALTER TABLE `ofertas`
   ADD COLUMN `diferencialGDES` TEXT NULL AFTER `datosComerciales`,
   ADD COLUMN `estrategiaGDES` TEXT NULL AFTER `diferencialGDES`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `sinergias` TEXT NULL AFTER `estrategiaGDES`;
+
 
 
 
