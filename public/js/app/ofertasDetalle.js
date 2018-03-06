@@ -22,10 +22,16 @@ var apiPaginaOfertasDetalle = {
         $('#ofertas').attr('class', 'active');
         $('#oferta-form').submit(function () { return false; });
         $('#oferta-form2').submit(function () { return false; });
+        $('#oferta-form3').submit(function () { return false; });
+        $('#oferta-form4').submit(function () { return false; });
         $('#btnAceptar').click(apiPaginaOfertasDetalle.aceptar);
         $('#btnAceptar2').click(apiPaginaOfertasDetalle.aceptar);
+        $('#btnAceptar3').click(apiPaginaOfertasDetalle.aceptar);
+        $('#btnAceptar4').click(apiPaginaOfertasDetalle.aceptar);
         $('#btnSalir').click(apiPaginaOfertasDetalle.salir);
         $('#btnSalir2').click(apiPaginaOfertasDetalle.salir);
+        $('#btnSalir3').click(apiPaginaOfertasDetalle.salir);
+        $('#btnSalir4').click(apiPaginaOfertasDetalle.salir);
         $('#cmbTipoOfertas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarTipoOfertas();
         $('#cmbResponsables').select2(select2_languages[usuario.codigoIdioma]);
