@@ -68,3 +68,6 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `importeUTE` DECIMAL(12,2) NULL AFTER `subcontrataTXT`,
   ADD COLUMN `importeUTEDivisa` DECIMAL(12,2) NULL AFTER `importeUTE`;
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `importeContribucionDivisa` DECIMAL(12,2) NULL AFTER `importeUTEDivisa`;

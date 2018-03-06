@@ -323,6 +323,7 @@
         "colaboradores": "Associations / collaborations",
         "margenContribucion": "Marge de contribution",
         "importeContribucion": "Montant de contribution",
+        "importeContribucionDivisa": "Montant contribution (Monnaie)",
         "numeroLicitacion": "Numéro d'appel d'offre",
         "codigoGdes": "Code GDES",
         "importeInversionDivisa": "Investissement monnaie",

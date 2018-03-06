@@ -323,6 +323,7 @@
         "colaboradores": "Joint Venture / Subcontractors",
         "margenContribucion": "Contribution Margin",
         "importeContribucion": "Margin Amount",
+        "importeContribucionDivisa": "Margin Amount (Currency)",
         "numeroLicitacion": "Tender No",
         "codigoGdes": "GD Offer Code",
         "importeInversionDivisa": "Investment Amount other Currency",

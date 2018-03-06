@@ -193,6 +193,7 @@ var apiPaginaOfertasDetalle = {
         vm.subcontrataTXT(data.subcontrataTXT);
         vm.importeUTE(data.importeUTE);
         vm.importeUTEDivisa(data.importeUTEDivisa);
+        vm.importeContribucionDivisa(data.importeContribucionDivisa);
     },
     datosPagina: function () {
         var self = this;
@@ -323,6 +324,7 @@ var apiPaginaOfertasDetalle = {
 
         self.importeUTE = ko.observable();
         self.importeUTEDivisa = ko.observable();
+        self.importeContribucionDivisa = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -386,7 +388,8 @@ var apiPaginaOfertasDetalle = {
             subcontrataSN: vm.subcontrataSN(),
             subcontrataTXT: vm.subcontrataTXT(),
             importeUTE: vm.importeUTE(),
-            importeUTEDivisa: vm.importeUTEDivisa()
+            importeUTEDivisa: vm.importeUTEDivisa(),
+            importeContribucionDivisa: vm.importeContribucionDivisa()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -667,7 +670,16 @@ var apiPaginaOfertasDetalle = {
         var importeContribucion = (vm.importePresupuesto() * vm.margenContribucion()) / 100;
         importeContribucion = apiComunGeneral.redondeo2Decimales(importeContribucion);
         vm.importeContribucion(importeContribucion);
+        apiPaginaOfertasDetalle.calcularDivisaDesdeContribucion();
     },
+    calcularDivisaDesdeContribucion: function () {
+        if (vm.importeContribucion() && vm.importeContribucion() != 0) {
+            if (vm.multiplicador()) {
+                var importeDivisa = vm.importeContribucion() * vm.multiplicador();
+                vm.importeContribucionDivisa(apiComunGeneral.redondeo2Decimales(importeDivisa));
+            }
+        }
+    },    
     calcularDivisaDesdeImporte: function () {
         if (vm.importePresupuesto() && vm.importePresupuesto() != 0) {
             if (vm.multiplicador()) {
@@ -727,6 +739,7 @@ var apiPaginaOfertasDetalle = {
         apiPaginaOfertasDetalle.calcularDivisaDesdeImporte();
         apiPaginaOfertasDetalle.calcularDivisaDesdeInversion();
         apiPaginaOfertasDetalle.calcularDivisaDesdeImporteUTE();
+        apiPaginaOfertasDetalle.calcularDivisaDesdeContribucion();
     }
 }
 
