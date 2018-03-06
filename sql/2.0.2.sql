@@ -113,6 +113,10 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `segurosSN` BOOLEAN NULL AFTER `garantiasEspecialesTXT`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `segurosTXT` TEXT NULL AFTER `segurosSN`;
+
+
 
 
 

@@ -302,6 +302,7 @@
         "garantiasEspecialesSN": "Special guarantees",
         "garantiasEspecialesTXT": "Guarantee comment",
         "segurosSN": "Specific insurance",
+        "segurosTXT": "Commments insurance",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",
