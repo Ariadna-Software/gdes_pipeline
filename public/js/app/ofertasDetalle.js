@@ -227,6 +227,8 @@ var apiPaginaOfertasDetalle = {
         vm.principalCompetidor(data.principalCompetidor);
         vm.criteriosEvaluacion(data.criteriosEvaluacion);
         vm.datosComerciales(data.datosComerciales);
+        vm.diferencialGDES(data.diferencialGDES);
+        vm.estrategiaGDES(data.estrategiaGDES);
     },
     datosPagina: function () {
         var self = this;
@@ -381,6 +383,8 @@ var apiPaginaOfertasDetalle = {
         self.principalCompetidor = ko.observable();
         self.criteriosEvaluacion = ko.observable();
         self.datosComerciales = ko.observable();
+        self.diferencialGDES = ko.observable();
+        self.estrategiaGDES = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -468,7 +472,9 @@ var apiPaginaOfertasDetalle = {
             competidores: vm.competidores(),
             principalCompetidor: vm.principalCompetidor(),
             criteriosEvaluacion: vm.criteriosEvaluacion(),
-            datosComerciales: vm.datosComerciales()
+            datosComerciales: vm.datosComerciales(),
+            diferencialGDES: vm.diferencialGDES(),
+            estrategiaGDES: vm.estrategiaGDES()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));

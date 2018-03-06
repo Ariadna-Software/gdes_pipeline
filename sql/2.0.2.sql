@@ -138,4 +138,10 @@ ALTER TABLE `ofertas`
   ADD COLUMN `datosComerciales` TEXT NULL AFTER `criteriosEvaluacion`;
 
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `diferencialGDES` TEXT NULL AFTER `datosComerciales`,
+  ADD COLUMN `estrategiaGDES` TEXT NULL AFTER `diferencialGDES`;
+
+
+
 
