@@ -305,6 +305,7 @@
         "segurosTXT": "Commments insurance",
         "penalizaciones": "Penalties",
         "riesgos": "Risks",
+        "proveedorActual": "Current provider",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",

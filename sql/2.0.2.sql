@@ -122,5 +122,8 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `riesgos` TEXT NULL AFTER `penalizaciones`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `proveedorActual` VARCHAR(255) NULL AFTER `riesgos`;
+
 
 

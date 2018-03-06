@@ -222,6 +222,7 @@ var apiPaginaOfertasDetalle = {
         vm.segurosTXT(data.segurosTXT);
         vm.penalizaciones(data.penalizaciones);
         vm.riesgos(data.riesgos);
+        vm.proveedorActual(data.proveedorActual);
     },
     datosPagina: function () {
         var self = this;
@@ -371,6 +372,7 @@ var apiPaginaOfertasDetalle = {
         self.segurosTXT = ko.observable();
         self.penalizaciones = ko.observable();
         self.riesgos = ko.observable();
+        self.proveedorActual = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -453,7 +455,8 @@ var apiPaginaOfertasDetalle = {
             segurosSN: vm.segurosSN(),
             segurosTXT: vm.segurosTXT(),
             penalizaciones: vm.penalizaciones(),
-            riesgos: vm.riesgos()
+            riesgos: vm.riesgos(),
+            proveedorActual: vm.proveedorActual()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
