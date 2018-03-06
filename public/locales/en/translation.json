@@ -298,6 +298,7 @@
         "requerimientos": "Specific requirements Technicians / Staff",
         "puntosRelevantes": "Relevant points",
         "condicionesEstandarSN": "Standard conditions?",
+        "condicionesEstandarTXT": "Conditions comments",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",

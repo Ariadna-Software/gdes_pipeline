@@ -101,4 +101,7 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `condicionesEstandarSN` BOOLEAN NULL AFTER `puntosRelevantes`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `condicionesEstandarTXT` TEXT NULL AFTER `condicionesEstandarSN`;
+
 
