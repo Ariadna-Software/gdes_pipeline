@@ -86,4 +86,8 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `condicionesPago` TEXT NULL AFTER `descripcionInversion`;
 
+ALTER TABLE `ofertas`   
+  ADD COLUMN `consideracionesEconomicas` TEXT NULL AFTER `condicionesPago`;
+
+
 

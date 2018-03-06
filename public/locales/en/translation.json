@@ -293,6 +293,7 @@
         "importePrimerAnoDivisa": "Amount first year (Currency)",
         "descripcionInversion": "Description of the investment",
         "condicionesPago": "Payment conditions",
+        "consideracionesEconomicas": "Economic considerations",
         "nuevo": "New Offer",
         "nombre": "Name of the Offer",
         "id": "ID",
