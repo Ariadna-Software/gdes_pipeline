@@ -212,6 +212,7 @@ var apiPaginaOfertasDetalle = {
         vm.condicionesPago(data.condicionesPago);
         vm.consideracionesEconomicas(data.consideracionesEconomicas);
         vm.alcance(data.alcance);
+        vm.requerimientos(data.requerimientos);
     },
     datosPagina: function () {
         var self = this;
@@ -351,6 +352,7 @@ var apiPaginaOfertasDetalle = {
         self.condicionesPago = ko.observable();
         self.consideracionesEconomicas = ko.observable();
         self.alcance = ko.observable();
+        self.requerimientos = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -423,7 +425,8 @@ var apiPaginaOfertasDetalle = {
             descripcionInversion: vm.descripcionInversion(),
             condicionesPago: vm.condicionesPago(),
             consideracionesEconomicas: vm.consideracionesEconomicas(),
-            alcance: vm.alcance()
+            alcance: vm.alcance(),
+            requerimientos: vm.requerimientos()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
