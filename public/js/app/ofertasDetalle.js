@@ -92,6 +92,7 @@ var apiPaginaOfertasDetalle = {
 
         $('#txtImportePresupuesto').on('blur', apiPaginaOfertasDetalle.cambioImporte);
         $('#txtMargenContribucion').on('blur', apiPaginaOfertasDetalle.cambioMargen);
+        $('#txtMargenContribucion2').on('blur', apiPaginaOfertasDetalle.cambioMargen);
         $('#txtMultiplicador').on('blur', apiPaginaOfertasDetalle.cambioMultiplicador);
         $('#txtImportePresupuestoDivisa').on('blur', apiPaginaOfertasDetalle.calcularImporteDesdeDivisa);
         $('#txtImporteInversion').on('blur', apiPaginaOfertasDetalle.calcularDivisaDesdeInversion);
