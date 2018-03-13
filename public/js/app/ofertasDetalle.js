@@ -537,6 +537,7 @@ var apiPaginaOfertasDetalle = {
                 txtMultiplicador: { number: true },
                 txtImportePresupuestoDivisa: { number: true },
                 txtMargenContribucion: { number: true },
+                txtMargenContribucion2: { number: true },
                 txtImporteContribucion: { number: true },
                 txtImporteInversion: { number: true },
                 txtImporteImversionDivisa: { number: true },
