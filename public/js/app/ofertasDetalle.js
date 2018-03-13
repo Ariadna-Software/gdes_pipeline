@@ -531,7 +531,21 @@ var apiPaginaOfertasDetalle = {
                 cmbEmpresas: { required: true },
                 cmbAreas: { required: true },
                 cmbCentros: { required: true },
-                cmbProyectos: { required: true },
+                cmbProyectos: { required: true }
+            },
+            errorPlacement: function (error, element) {
+                if (element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());      // radio/checkbox?
+                } else if (element.hasClass('aswselect2')) {
+                    error.insertAfter(element);  // select2
+                } else {
+                    error.insertAfter(element.parent());               // default
+                }
+            }
+        });
+        var ofe1 = $('#oferta-form').valid();
+        $('#oferta-form2').validate({
+            rules: {
                 txtImportePresupuesto: { required: true, number: true },
                 txtDescripcion: { required: true },
                 txtMultiplicador: { number: true },
@@ -547,7 +561,7 @@ var apiPaginaOfertasDetalle = {
                 txtImporteAnual: { number: true },
                 txtImporteAnualDivisa: { number: true },
                 txtImportePrimerAno: { number: true },
-                txtImportePrimerAnoDivisa: { number: true },
+                txtImportePrimerAnoDivisa: { number: true }
             },
             errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length) {
@@ -559,7 +573,9 @@ var apiPaginaOfertasDetalle = {
                 }
             }
         });
-        return $('#oferta-form').valid();
+        var ofe2 = $('#oferta-form2').valid();
+
+        return ofe1 && ofe2;
     },
     salir: function () {
         window.open(sprintf('OfertasGeneral.html'), '_self');
