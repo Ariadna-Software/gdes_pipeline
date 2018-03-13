@@ -230,6 +230,8 @@ var apiPaginaOfertasDetalle = {
         vm.diferencialGDES(data.diferencialGDES);
         vm.estrategiaGDES(data.estrategiaGDES);
         vm.sinergias(data.sinergias);
+        // vm.importeTotal(data.importeTotal);
+        // vm.importeTotalDivisa(data.importeTotalDivisa);
     },
     datosPagina: function () {
         var self = this;
@@ -387,6 +389,12 @@ var apiPaginaOfertasDetalle = {
         self.diferencialGDES = ko.observable();
         self.estrategiaGDES = ko.observable();
         self.sinergias = ko.observable();
+        self.importeTotal = ko.computed(function () {
+            return (self.importePresupuesto() * 1) + (self.importeUTE() * 1);
+        })
+        self.importeTotalDivisa = ko.computed(function () {
+            return (self.importePresupuestoDivisa() * 1) + (self.importeUTEDivisa() * 1);
+        });
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -477,7 +485,9 @@ var apiPaginaOfertasDetalle = {
             datosComerciales: vm.datosComerciales(),
             diferencialGDES: vm.diferencialGDES(),
             estrategiaGDES: vm.estrategiaGDES(),
-            sinergias: vm.sinergias()
+            sinergias: vm.sinergias(),
+            importeTotal: vm.importeTotal(),
+            importeTotalDivisa: vm.importeTotalDivisa()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -534,8 +544,8 @@ var apiPaginaOfertasDetalle = {
                 txtImporteUTEDivisa: { number: true },
                 txtImporteAnual: { number: true },
                 txtImporteAnualDivisa: { number: true },
-                txtImportePrimerAno: {number: true},
-                txtImportePrimerAnoDivisa: {number: true}
+                txtImportePrimerAno: { number: true },
+                txtImportePrimerAnoDivisa: { number: true },
             },
             errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length) {
@@ -807,7 +817,7 @@ var apiPaginaOfertasDetalle = {
                 apiPaginaOfertasDetalle.actualizarFechaDivisa();
             }
         }
-    },    
+    },
     calcularDivisaDesdePrimerAno: function () {
         if (vm.importePrimerAno() && vm.importePrimerAno() != 0) {
             if (vm.multiplicador()) {
@@ -815,7 +825,7 @@ var apiPaginaOfertasDetalle = {
                 vm.importePrimerAnoDivisa(apiComunGeneral.redondeo2Decimales(importeDivisa));
             }
         }
-    }, 
+    },
     calcularImporteDesdeDivisa: function () {
         if (vm.multiplicador() && vm.importePresupuestoDivisa()) {
             var importe = vm.importePresupuestoDivisa() / vm.multiplicador();
