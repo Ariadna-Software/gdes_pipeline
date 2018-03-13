@@ -41,12 +41,12 @@ var apiPaginaOfertasGeneral = {
         }, {
             data: "importePresupuesto",
             render: function (data) {
-                return numeral(data).format('0,0.00');
+                return numeral(data).format('0,0');
             }
         }, {
             data: "margenContribucion",
             render: function (data) {
-                return numeral(data).format('0,0.00');
+                return numeral(data).format('0,0');
             }
         }, {
             data: "estado"
@@ -80,24 +80,24 @@ var apiPaginaOfertasGeneral = {
         }, {
             data: "importeInversion",
             render: function (data) {
-                return numeral(data).format('0,0.00');
+                return numeral(data).format('0,0');
             }
         }, {
             data: "importeRetorno",
             render: function (data) {
-                return numeral(data).format('0,0.00');
+                return numeral(data).format('0,0');
             }
         }, {
             data: "divisa"
         }, {
             data: "importePresupuestoDivisa",
             render: function (data) {
-                return numeral(data).format('0,0.00');
+                return numeral(data).format('0,0');
             }
         }, {
             data: "multiplicador",
             render: function (data) {
-                return numeral(data).format('0,0.00');
+                return numeral(data).format('0,0');
             }
         }, {
             data: "fechaDivisa",
