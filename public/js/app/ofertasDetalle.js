@@ -43,6 +43,9 @@ var apiPaginaOfertasDetalle = {
         $('#cmbEmpresas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEmpresas();
 
+        $('#cmbProbabilidad').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarProbabilidad();
+
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarAreas();
         $("#cmbAreas").select2().on('change', function (e) {
@@ -186,7 +189,7 @@ var apiPaginaOfertasDetalle = {
         if (data.fechaInicioContrato) vm.fechaInicioContrato(moment(data.fechaInicioContrato).format(i18n.t('util.date_format')));
         if (data.fechaFinContrato) vm.fechaFinContrato(moment(data.fechaFinContrato).format(i18n.t('util.date_format')));
         vm.duracion(data.duracion);
-        vm.probabilidad(data.probabilidad);
+        apiPaginaOfertasDetalle.cargarProbabilidad(data.probabilidad);
         vm.notasPlanning(data.notasPlanning);
         apiPaginaOfertasDetalle.cargarFasesOferta(data.faseOfertaId);
         apiPaginaOfertasDetalle.cargarTiposOportunidad(data.tipoOportunidadId);
@@ -396,6 +399,10 @@ var apiPaginaOfertasDetalle = {
         self.importeTotalDivisa = ko.computed(function () {
             return (self.importePresupuestoDivisa() * 1) + (self.importeUTEDivisa() * 1);
         });
+
+        self.optionsProbabilidad = ko.observableArray([]);
+        self.selectedProbabilidad = ko.observableArray([]);
+        self.sProbabilidad = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -442,7 +449,7 @@ var apiPaginaOfertasDetalle = {
             unidadNegocioId: vm.sUnidadNegocio(),
             servicioId: vm.sServicio(),
             duracion: vm.duracion(),
-            probabilidad: vm.probabilidad(),
+            probabilidad: vm.sProbabilidad(),
             notasPlanning: vm.notasPlanning(),
             faseOfertaId: vm.sFasesOferta(),
             tipoOportunidadId: vm.sTiposOportunidad(),
@@ -531,7 +538,8 @@ var apiPaginaOfertasDetalle = {
                 cmbEmpresas: { required: true },
                 cmbAreas: { required: true },
                 cmbCentros: { required: true },
-                cmbProyectos: { required: true }
+                cmbProyectos: { required: true },
+                cmbProbabilidad: { required: true }
             },
             errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length) {
@@ -699,6 +707,16 @@ var apiPaginaOfertasDetalle = {
             vm.optionsFasesOferta(options);
             $("#cmbFasesOferta").val([id]).trigger('change');
         });
+    },
+    cargarProbabilidad: function (id) {
+            var options = [
+                { id: 20, nombre: "20%" },
+                { id: 50, nombre: "50%" },
+                { id: 80, nombre: "80%" }
+            ];
+            vm.optionsProbabilidad(options);
+            $("#cmbProbabilidad").val([id]).trigger('change');
+
     },
     cargarTiposOportunidad: function (id) {
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-oportunidad", null, function (err, data) {
