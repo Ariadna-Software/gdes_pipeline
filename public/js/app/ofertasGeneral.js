@@ -28,6 +28,7 @@ var apiPaginaOfertasGeneral = {
     iniOfertasTabla: function () {
         var options = apiComunGeneral.initTableOptions('dt_ofertas', usuario.codigoIdioma);
         options.data = data;
+        options.order = ['0', 'desc']
         options.columns = [{
             data: "ofertaId"
         }, {
