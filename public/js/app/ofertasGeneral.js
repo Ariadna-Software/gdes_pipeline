@@ -7,7 +7,7 @@ var usuario = apiComunGeneral.obtenerUsuario();
 var data = null;
 
 var estado = [];
-estado = getCookie('confOferta'+usuario.nombre);
+estado = getCookie('confOferta' + usuario.nombre);
 var tabla;
 
 var apiPaginaOfertasGeneral = {
@@ -32,105 +32,73 @@ var apiPaginaOfertasGeneral = {
         options.columns = [{
             data: "ofertaId"
         }, {
-            data: "tipoOferta"
-        }, {
-            data: "area"
+            data: "faseOferta"
         }, {
             data: "pais"
         }, {
+            data: "nomArea"
+        }, {
+            data: "ubicacion"
+        }, {
+            data: "cliente"
+        }, {
+            data: "descripcion"
+        }, {
+            data: "estado"
+        }, {
+            data: "importeTotal",
+            render: function (data) {
+                return numeral(data).format('0,0');
+            }
+        }, {
             data: "nombreCorto"
+        }, {
+            data: "paisUbicacion"
+        }, {
+            data: "nomUnidadNegocio"
+        }, {
+            data: "nomEmpresa"
+        }, {
+            data: "fechaAdjudicacion",
+            render: function (data) {
+                if (!data) return "";
+                return moment(data).format('DD/MM/YYYY');
+            }
+        }, {
+            data: "fechaInicioContrato",
+            render: function (data) {
+                if (!data) return "";
+                return moment(data).format('DD/MM/YYYY');
+            }
+        }, {
+            data: "fechaFinContrato",
+            render: function (data) {
+                if (!data) return "";
+                return moment(data).format('DD/MM/YYYY');
+            }
+        }, {
+            data: "duracion"
+        }, {
+            data: "probabilidad"
+        }, {
+            data: "numeroOferta"
+        }, {
+            data: "tipoOportunidad"
+        }, {
+            data: "numeroPedido"
+        }, {
+            data: "razonPerdida"
+        }, {
+            data: "divisa"
         }, {
             data: "importePresupuesto",
             render: function (data) {
                 return numeral(data).format('0,0');
             }
         }, {
-            data: "margenContribucion",
-            render: function (data) {
-                return numeral(data).format('0,0');
-            }
-        }, {
-            data: "estado"
-        }, {
-            data: "centro"
-        }, {
-            data: "cliente"
-        }, {
             data: "autorizaciones"
         }, {
-            data: "observaciones"
-        }, {
-            data: "responsable"
-        }, {
-            data: "empresa"
-        }, {
-            data: "centroEstablecido"
-        }, {
-            data: "tipoActividad"
-        }, {
-            data: "numeroOferta"
-        }, {
-            data: "codigoGdes"
-        }, {
-            data: "descripcion"
-        }, {
-            data: "fechaUltimoEstado",
-            render: function (data) {
-                return moment(data).format('DD/MM/YYYY');
-            }
-        }, {
-            data: "importeInversion",
-            render: function (data) {
-                return numeral(data).format('0,0');
-            }
-        }, {
-            data: "importeRetorno",
-            render: function (data) {
-                return numeral(data).format('0,0');
-            }
-        }, {
             data: "divisa"
-        }, {
-            data: "importePresupuestoDivisa",
-            render: function (data) {
-                return numeral(data).format('0,0');
-            }
-        }, {
-            data: "multiplicador",
-            render: function (data) {
-                return numeral(data).format('0,0');
-            }
-        }, {
-            data: "fechaDivisa",
-            render: function (data) {
-                return moment(data).format('DD/MM/YYYY');
-            }
-        }, {
-            data: "periodo"
-        }, {
-            data: "fechaEntrega",
-            render: function (data) {
-                return moment(data).format('DD/MM/YYYY');
-            }
-        }, {
-            data: "version"
-        }, {
-            data: "numeroLicitacion"
-        }, {
-            data: "periodo"
-        }, {
-            data: "ofertaSingular",
-            render: function (data) {
-                var html = i18n.t('no');
-                if (data == 1) html = i18n.t('si');
-                return html;
-            }
-        }, {
-            data: "colaboradores"
-        }, {
-            data: "numeroPedido"
-        }, {
-            data: "proyecto"
         }, {
             data: "ofertaId",
             render: function (data, type, row) {
@@ -141,19 +109,18 @@ var apiPaginaOfertasGeneral = {
             }
         }];
         tabla = $('#dt_ofertas').DataTable(options);
-        tabla.columns(0).visible(false);
-        if(!estado){
+        if (!estado) {
             estado = [];
-            estado.push("true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true");
-            for (var i = 11; i < 35; i++) {
+            estado.push("true", "true", "true", "true", "true", "true", "true", "true");
+            for (var i = 8; i < 26; i++) {
                 tabla.columns(i).visible(false);
                 estado.push(tabla.columns(i).visible()[0]);
             }
             estado.push("true");
-        }else{
+        } else {
             var booleana = estado.split(",")
-            for (var j = 0; j < 36; j++){
-                if(booleana[j] == "true") booleana[j] = true;
+            for (var j = 0; j < 26; j++) {
+                if (booleana[j] == "true") booleana[j] = true;
                 else if (booleana[j] == "false") booleana[j] = false;
                 tabla.columns(j).visible(booleana[j]);
             }
@@ -189,12 +156,12 @@ var apiPaginaOfertasGeneral = {
         }, function () { })
     },
 
-    guardarConfiguracion: function() {
+    guardarConfiguracion: function () {
         var conf = [];
-        for(var i = 0; i < 36; i++){
+        for (var i = 0; i < 26; i++) {
             conf.push(tabla.columns(i).visible()[0]);
         }
-        setCookie('confOferta'+usuario.nombre, conf, 10000);
+        setCookie('confOferta' + usuario.nombre, conf, 10000);
     }
 
 }
