@@ -109,6 +109,16 @@ var apiPaginaOfertasGeneral = {
             }
         }];
         tabla = $('#dt_ofertas').DataTable(options);
+        
+        // Apply the filter
+        $("#dt_ofertas thead th input[type=text]").on('keyup change', function () {
+            tabla
+                .column($(this).parent().index() + ':visible')
+                .search(this.value)
+                .draw();
+        });
+
+
         if (!estado) {
             estado = [];
             estado.push("true", "true", "true", "true", "true", "true", "true", "true");
