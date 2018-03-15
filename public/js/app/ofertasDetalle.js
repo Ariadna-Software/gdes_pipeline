@@ -777,11 +777,6 @@ var apiPaginaOfertasDetalle = {
         var tipoAutorizacion = apiPaginaOfertasDetalle.calculoAutorizacion();
         if (tipoAutorizacion != null) {
             text = i18n.t('ofertas.autorizacion' + tipoAutorizacion);
-            if (tipoAutorizacion == 4) {
-                text = i18n.t('ofertas.autorizacion1');
-                text += '\n';
-                text += i18n.t('ofertas.autorizacion3');
-            }
         }
         vm.autorizaciones(text);
     },
@@ -793,14 +788,12 @@ var apiPaginaOfertasDetalle = {
         }
         if (vm.importePresupuesto() > 300000) {
             tAut = 2;
-            if (vm.sPais() != 1) tAut = 3;
         }
         if (vm.importePresupuesto() > 1000000) {
             tAut = 3;
         }
         if (vm.ofertaSingular()) {
             tAut = 3;
-            if (vm.sTipoOferta() == 1) tAut = 4;
         }
         return tAut;
     },

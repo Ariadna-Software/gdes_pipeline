@@ -419,10 +419,10 @@
             "<a href='/ficheros/documentos/PPR.docx'>(PPR) Proposal report</a>.<br/>"
         ],
         "autorizacionX": "Faltan datos para determinar la autorización necesaria. Ponerse en contacto con el Departamento de Apoyo a Ofertas",
-        "autorizacion0": "No se precisa ninguna autorización",
-        "autorizacion1": "Autoriza el Dir. de Área de Negocio (si aplica). Comunicar al Departamento de Apoyo a Ofertas. No requiere registro documental",
-        "autorizacion2": "Se requiere: Bid no Bid(BNB). Autoriza el Dir. de Operaciones. Descargue el formato en AYUDA",
-        "autorizacion3": "Se requiere: Proposal Report (PPR). Autoriza el Comité de Ofertas. Descargue el formato en AYUDA"
+        "autorizacion0": "Aprueba: Responsable de oferta",
+        "autorizacion1": "Aprueba el director del área de servicio",
+        "autorizacion2": "Requiere PPR y autorización conjunta de CM y director de BU",
+        "autorizacion3": "Requiere PPR y comité de ofertas. Aprueba CEO"
     },
     "proyectos": {
         "titulo": "Proyectos",

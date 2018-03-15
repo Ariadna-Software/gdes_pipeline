@@ -420,10 +420,10 @@
             "<a href='/ficheros/documentos/PPR.docx'>(PPR) Proposal report</a>.<br/>"
         ],
         "autorizacionX": "Données manquantes pour déterminer l'autorisation nécessaire. Communiquez avec le service d'assistance offres",
-        "autorizacion0": "Aucune autorisation est requise",
-        "autorizacion1": "Autorise le directeur régional des affaires (le cas échéant). Informer le Département de soutien aux offres. Pas nécessaire de dossier documentaire",
-        "autorizacion2": "Il est nécessaire: Bid no Bid(BNB). Autorise le directeur d'Operations. Téléchargez le format dans AIDE",
-        "autorizacion3": "Il est nécessaire: Proposal Report (PPR). Autorise le Comité d'Offres. Téléchargez le format dans AIDE"
+        "autorizacion0": "Approuver: Responsable de l'offre",
+        "autorizacion1": "Approuve le directeur de la zone de service",
+        "autorizacion2": "Requiert PPR et l'autorisation conjointe du CM et du directeur de BU",
+        "autorizacion3": "Nécessite PPR et le comité de candidature. Approuver le PDG"
     },
     "proyectos": {
         "titulo": "Projets",
