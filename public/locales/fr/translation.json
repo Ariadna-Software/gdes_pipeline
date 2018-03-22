@@ -461,5 +461,13 @@
         "id": "ID",
         "editar": "Éditer monnaie",
         "eliminar": "Supprimer monnaie"
+    },
+    "seguidores": {
+        "nuevo": "Neuf suiveur",
+        "usuario": "Suiveur",
+        "titulo": "Maintenance de suiveurs ",
+        "ok": "Accepter",
+        "cancel": "Annuler",
+        "noOferta": "Vous devez créer l'offre avant d'affecter des abonnés"
     }
 }

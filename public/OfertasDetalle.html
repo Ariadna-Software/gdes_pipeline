@@ -302,6 +302,9 @@
                             <li>
                                 <a data-toggle="tab" href="#s4" data-i18n="ofertas.tab.anotaciones">PARTE</a>
                             </li>
+                            <li>
+                                <a data-toggle="tab" href="#s5" data-i18n="ofertas.tab.seguidores">PARTE</a>
+                            </li>
                         </ul>
                         <div class="tab-content padding-10" id="oferta_GT1">
                             <div class="tab-pane fade in active" id="s1">
@@ -759,7 +762,7 @@
                                                                 <section class="col col-md-4">
                                                                     <label class="label" data-i18n="ofertas.divisa">DIVISA:</label>
                                                                     <select class="aswselect2" id="cmbDivisas" name="cmbDivisas" data-bind="options: optionsDivisas, optionsText: 'nombre', optionsValue: 'divisaId', 
-                                                                                        value: sDivisa, valueAllowUnset: true, selectedOptions: selectedDivisas, selected2:{}">
+                                                                                    value: sDivisa, valueAllowUnset: true, selectedOptions: selectedDivisas, selected2:{}">
                                                                     </select>
                                                                 </section>
                                                                 <section class="col col-md-2">
@@ -899,7 +902,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="s3">
-                                    <div class="jarviswidget" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                                    <div class="jarviswidget" id="wid-id-3" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
                                         <header>
                                             <span class="widget-icon">
                                                 <i class="fa fa-edit"></i>
@@ -1106,7 +1109,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="s4">
-                                    <div class="jarviswidget" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                                    <div class="jarviswidget" id="wid-id-4" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
                                         <header>
                                             <span class="widget-icon">
                                                 <i class="fa fa-edit"></i>
@@ -1143,6 +1146,43 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="tab-pane fade" id="s5">
+                                    <div class="jarviswidget" id="wid-id-5" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                                        <header>
+                                            <span class="widget-icon">
+                                                <i class="fa fa-edit"></i>
+                                            </span>
+                                        </header>
+                                        <div class="row">
+                                            <form id="seguidores-form" class="smart-form">
+                                                <fieldset>
+                                                    <div class="pull-right">
+                                                        <button id="btnNuevoSeguidor" data-i18n="[title]seguidores.nuevo" class="btn btn-success btn-circle btn-lg" data-toggle="modal" data-target="#modalSeguidores">
+                                                            <i class="fa fa-lg fa-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="row">
+                                            <div id="tb_seguidores">
+                                                <table id="dt_seguidores" class="table table-striped table-bordered table-hover" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th data-hide="expand">
+                                                                <i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i>
+                                                                <span data-i18n="seguidores.usuario">ID</span>
+                                                            </th>
+                                                            <th style="text-align: center;" width="8%">
+                                                                <i class="fa fa-fw fa-cogs text-muted hidden-md hidden-sm hidden-xs"></i>
+                                                            </th>                                                            
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                     </article>
                     </div>
@@ -1150,6 +1190,51 @@
             </div>
         </div>
         <!-- END MAIN PANEL -->
+        <!-- MODAL FORMS -->
+        <div class="modal fade" id="modalSeguidores" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title">
+                                <i class="fa fa-male"></i>
+                                <span data-i18n="seguidores.titulo">SEGG</span>
+                            </h4>
+                        </div>
+                        <div class="modal-body no-padding">
+                            <form id="modalSeguidores-form" class="smart-form">
+                                <fieldset>
+                                    <section>
+                                        <div class="row">
+                                            <section class="col col-md-12">
+                                                <label class="label" data-i18n="seguidores.usuario">SSGG:</label>
+                                                <label style="width:100%;">
+                                                    <select style="width:100%" id="cmbUsuarios" name="cmbUsuarios" data-bind="options: optionsUsuarios, optionsText: 'nombre', optionsValue: 'usuarioId', value: sUsuario, valueAllowUnset: true, selectedOptions: selectedUsuarios, selected2:{}">
+                                                    </select>
+                                                    <i></i>
+                                                </label>
+                                            </section>
+                                        </div>
+                                    </section>
+                                </fieldset>
+                                <footer>
+                                    <button id="btnGuardarSeguidor" class="btn btn-primary">
+                                        <span data-i18n="seguidores.ok">A</span>
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                                        <span data-i18n="seguidores.cancel">C</span>
+                                    </button>
+                                </footer>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>        
+        <!-- END MODAL FORMS -->
         <!-- PAGE FOOTER -->
         <div class="page-footer">
             <div class="row">
@@ -1211,6 +1296,7 @@
         <script src="js/comun/comun.ajax.js"></script>
         <script src="js/comun/comun.general.js"></script>
         <!-- Funciones propias de esta página -->
+        <script src="js/app/seguidores.js"></script>
         <script src="js/app/ofertasDetalle.js"></script>
         <script type="text/javascript">
             (function ($) {

@@ -460,5 +460,13 @@
         "id": "ID",
         "editar": "Editar divisa",
         "eliminar": "Eliminar divisa"
+    },
+    "seguidores": {
+        "nuevo": "Nuevo seguidor",
+        "usuario": "Seguidor",
+        "titulo": "Mantenimiento seguidores",
+        "ok": "Aceptar",
+        "cancel": "Cancelar",
+        "noOferta": "Debe crear la oferta antes de asignar seguidores"
     }
 }

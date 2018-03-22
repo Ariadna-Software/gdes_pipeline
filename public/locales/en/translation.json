@@ -460,5 +460,13 @@
         "id": "ID",
         "editar": "Edit currency",
         "eliminar": "Delete currency"
+    },
+    "seguidores": {
+        "nuevo": "New follower",
+        "usuario": "Follower",
+        "titulo": "Maintenance followers",
+        "ok": "Accept",
+        "cancel": "Cancel",
+        "noOferta": "You must create the offer before assigning followers"
     }
 }

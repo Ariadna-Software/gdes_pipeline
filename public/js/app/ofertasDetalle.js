@@ -106,6 +106,7 @@ var apiPaginaOfertasDetalle = {
         $('#txtImporteAnualDivisa').on('blur', apiPaginaOfertasDetalle.calcularAnualDesdeDivisa);
         $('#txtImportePrimerAno').on('blur', apiPaginaOfertasDetalle.calcularDivisaDesdePrimerAno);
         $('#txtImportePrimerAnoDivisa').on('blur', apiPaginaOfertasDetalle.calcularPrimerAnoDesdeDivisa);
+        apiSeguidores.init();
 
         ofertaId = apiComunGeneral.gup("id");
         if (ofertaId == 0) {
@@ -123,6 +124,7 @@ var apiPaginaOfertasDetalle = {
             apiPaginaOfertasDetalle.cargarResponsables(usuario.responsableId);
         } else {
             apiPaginaOfertasDetalle.cargarOferta(ofertaId);
+            apiSeguidores.cargarSeguidores(ofertaId);
         }
     },
     cargarOferta: function (id) {
@@ -403,6 +405,10 @@ var apiPaginaOfertasDetalle = {
         self.optionsProbabilidad = ko.observableArray([]);
         self.selectedProbabilidad = ko.observableArray([]);
         self.sProbabilidad = ko.observable();
+
+        self.optionsUsuarios = ko.observableArray([]);
+        self.selectedUsuarios = ko.observableArray([]);
+        self.sUsuario = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaOfertasDetalle.datosOk()) return;
