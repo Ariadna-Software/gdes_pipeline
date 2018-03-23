@@ -469,5 +469,29 @@
         "ok": "Accepter",
         "cancel": "Annuler",
         "noOferta": "Vous devez créer l'offre avant d'affecter des abonnés"
+    },
+    "versiones": {
+        "pregunta": "Un changement de conditions économiques a été détecté. Voulez-vous sauvegarder la version précédente?",
+        "version": "Version",
+        "usuario": "Utilisateur",
+        "fechaCambio": "Date de changement",
+        "importePresupuesto": "Montant GDES",
+        "importeUTE": "Montant du SEI",
+        "importeTotal": "Total",
+        "margenContribucion": "Marge de contribution",
+        "importeContribucion": "Montant contribution",
+        "importeAnual": "Montant annuel",
+        "importePrimerAno": "Montant première année",
+        "importeInversion": "Valeur d'investissement",
+        "divisa": "MONNAIE",
+        "multiplicador":"Multiplicateur",
+        "fechaDivisa": "Date monnaie",
+        "importePresupuestoDivisa": "Montant GDES (MONNAIE)",
+        "importeUTEDivisa": "Montant SIE  (MONNAIE)",
+        "importeTotalDivisa": "Total (MONNAIE)",
+        "importeContribucionDivisa": "Montant contribution (MONNAIE)",
+        "importeAnualDivisa": "Montant annuel (MONNAIE)",
+        "importePrimerAnoDivisa": "Montant première année (MONNAIE)",
+        "importeInversionDivisa": "Valeur d'investissement (MONNAIE)"
     }
 }

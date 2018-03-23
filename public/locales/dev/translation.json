@@ -468,5 +468,29 @@
         "ok": "Aceptar",
         "cancel": "Cancelar",
         "noOferta": "Debe crear la oferta antes de asignar seguidores"
+    },
+    "versiones": {
+        "pregunta": "Se ha detectado un cambio en las condiciones económicas ¿Quiere guardar la versión anterior?",
+        "version": "Version",
+        "usuario": "Usuario",
+        "fechaCambio": "Fecha cambio",
+        "importePresupuesto": "Importe GDES",
+        "importeUTE": "Importe UTE",
+        "importeTotal": "Total",
+        "margenContribucion": "Margen contribución",
+        "importeContribucion": "Importe contribución",
+        "importeAnual": "Importe Anual",
+        "importePrimerAno": "Importe primer año",
+        "importeInversion": "Valor inversion",
+        "divisa": "DIVISA",
+        "multiplicador":"Factor",
+        "fechaDivisa": "Fecha divisa",
+        "importePresupuestoDivisa": "Importe GDES (DIVISA)",
+        "importeUTEDivisa": "Importe UTE  (DIVISA)",
+        "importeTotalDivisa": "Total (DIVISA)",
+        "importeContribucionDivisa": "Importe contribución (DIVISA)",
+        "importeAnualDivisa": "Importe Anual (DIVISA)",
+        "importePrimerAnoDivisa": "Importe primer año (DIVISA)",
+        "importeInversionDivisa": "Valor inversion (DIVISA)"
     }
 }

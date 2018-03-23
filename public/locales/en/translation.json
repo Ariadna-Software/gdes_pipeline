@@ -197,7 +197,7 @@
         "valNombre": "Name needed",
         "area": "Area",
         "valArea": "Area needed"
-    },    
+    },
     "fasesOferta": {
         "titulo": "Offer phases",
         "panel": "Offer phases",
@@ -207,7 +207,7 @@
         "editar": "Edit phase",
         "eliminar": "Remove phase",
         "valNombre": "Name needed"
-    },    
+    },
     "tiposOportunidad": {
         "titulo": "Opportunity types",
         "panel": "Opportunity types",
@@ -217,7 +217,7 @@
         "editar": "Edit type",
         "eliminar": "Remove type",
         "valNombre": "Name needed"
-    },    
+    },
     "tiposContrato": {
         "titulo": "Types of contract",
         "panel": "Types of contract",
@@ -227,7 +227,7 @@
         "editar": "Edit type",
         "eliminar": "Remove type",
         "valNombre": "Name needed"
-    },    
+    },
     "razonPerdida": {
         "titulo": "Reasons for loose / no submit",
         "panel": "Reasons for loose / no submit",
@@ -237,11 +237,11 @@
         "editar": "Edit reason",
         "eliminar": "Remove reason",
         "valNombre": "Name needed"
-    },        
+    },
     "ofertas": {
         "titulo": "Offers",
         "panel": "Offers",
-        "tab":{
+        "tab": {
             "oportunidad": "OPPORTUNITY DATA",
             "economicos": "ECONOMIC DATA",
             "ppr": "COMPLEMENTARY DATA (PPR)",
@@ -267,7 +267,7 @@
         "fechaCreacion": "Creation date",
         "fechaAdjudicacion": "Award date",
         "fechaInicioContrato": "Contract start date",
-        "fechaFinContrato": "Contract end date",        
+        "fechaFinContrato": "Contract end date",
         "duracion": "Duration",
         "probabilidad": "Chance of success (%)",
         "notasPlanning": "Planning notes",
@@ -468,5 +468,29 @@
         "ok": "Accept",
         "cancel": "Cancel",
         "noOferta": "You must create the offer before assigning followers"
+    },
+    "versiones": {
+        "pregunta": "A change in economic conditions has been detected. Do you want to save the previous version?",
+        "version": "Version",
+        "usuario": "User",
+        "fechaCambio": "Date of change",
+        "importePresupuesto": "Amount GDES",
+        "importeUTE": "UTE amount",
+        "importeTotal": "Total",
+        "margenContribucion": "Contribution margin",
+        "importeContribucion": "Contribution amount",
+        "importeAnual": "Annual amount",
+        "importePrimerAno": "First year amount",
+        "importeInversion": "Investment value",
+        "divisa": "CURRENCY",
+        "multiplicador": "Multiplier",
+        "fechaDivisa": "Currency date",
+        "importePresupuestoDivisa": "Amount GDES (CURRENCY)",
+        "importeUTEDivisa": "Amount UTE  (CURRENCY)",
+        "importeTotalDivisa": "Total (CURRENCY)",
+        "importeContribucionDivisa": "Contribution amount (CURRENCY)",
+        "importeAnualDivisa": "Annual amount (CURRENCY)",
+        "importePrimerAnoDivisa": "First year amount (CURRENCY)",
+        "importeInversionDivisa": "Investment value (CURRENCY)"
     }
 }
