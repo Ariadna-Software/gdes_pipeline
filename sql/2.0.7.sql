@@ -21,8 +21,7 @@ CREATE TABLE `versiones`(
   `divisaId` INT,
   `multiplicador` DECIMAL(10,2),
   `fechaDivisa` DATE,
-  PRIMARY KEY (`versionId`),
-  CONSTRAINT `ref_version_oferta` FOREIGN KEY (`ofertaId`) REFERENCES `gdespa_test`.`faccarga2`(`invoiceId`)
+  PRIMARY KEY (`versionId`)
 );
 
 ALTER TABLE `versiones`  
