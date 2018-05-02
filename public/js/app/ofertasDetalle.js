@@ -598,17 +598,21 @@ var apiPaginaOfertasDetalle = {
     datosOk: function () {
         $('#oferta-form').validate({
             rules: {
-                txtNumeroOferta: { required: true },
-                txtFechaEntrega: { required: true },
                 cmbTipoOfertas: { required: true },
-                cmbResponsables: { required: true },
-                cmbEstados: { required: true },
+                cmbFasesOferta: { required: true },
+                cmbTipoOfertas: { required: true },
                 cmbPaiss: { required: true },
                 cmbEmpresas: { required: true },
                 cmbAreas: { required: true },
-                cmbCentros: { required: true },
-                cmbProyectos: { required: true },
-                cmbProbabilidad: { required: true }
+                txtUbicacion: { required: true },
+                txtCliente: { required: true },
+                txtNombreCorto: { required: true },
+                cmbEstados: { required: true },
+                txtFechaAdjudicacion: { required: true },
+                txtFechaInicioContrato: { required: true },
+                txtDuracion: { required: true },
+                cmbRazonPerdida: {required: true},
+                cmbProbabilidad: {required: true}
             },
             errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length) {
