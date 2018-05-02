@@ -22,6 +22,8 @@ var apiPaginaUsuariosDetalle = {
         $('#btnSalir').click(apiPaginaUsuariosDetalle.salir);
         $('#cmbGrupos').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaUsuariosDetalle.cargarGrupos();
+        $('#cmbResponsables').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaUsuariosDetalle.cargarResponsables();
 
         $('#cmbPaiss').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaUsuariosDetalle.cargarPaiss();
@@ -47,6 +49,14 @@ var apiPaginaUsuariosDetalle = {
             $("#cmbGrupos").val([id]).trigger('change');
         });
     },
+    cargarResponsables: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/usuarios", null, function (err, data) {
+            if (err) return;
+            var options = [{ usuarioId: 0, nombre: " " }].concat(data);
+            vm.optionsResponsables(options);
+            $("#cmbResponsables").val([id]).trigger('change');
+        });
+    },    
     cargarUsuario: function (id) {
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/usuarios/" + id, null, function (err, data) {
             if (err) return;
@@ -60,6 +70,7 @@ var apiPaginaUsuariosDetalle = {
         vm.esAdministrador(data.esAdministrador);
         vm.verOfertasGrupo(data.verOfertasGrupo);
         apiPaginaUsuariosDetalle.cargarGrupos(data.grupoUsuarioId);
+        apiPaginaUsuariosDetalle.cargarResponsables(data.responsableId);
 
         apiPaginaUsuariosDetalle.cargarPaiss(data.paisId);
         apiPaginaUsuariosDetalle.cargarEmpresas(data.empresaId);
@@ -77,6 +88,10 @@ var apiPaginaUsuariosDetalle = {
         self.optionsGrupos = ko.observableArray([]);
         self.selectedGrupos = ko.observableArray([]);
         self.sGrupo = ko.observable();
+
+        self.optionsResponsables = ko.observableArray([]);
+        self.selectedResponsables = ko.observableArray([]);
+        self.sResponsable = ko.observable();
 
         self.optionsPaiss = ko.observableArray([]);
         self.selectedPaiss = ko.observableArray([]);
@@ -106,7 +121,8 @@ var apiPaginaUsuariosDetalle = {
             paisId: vm.sPais(),
             empresaId: vm.sEmpresa(),
             areaId: vm.sArea(),
-            centroId: vm.sCentro()
+            centroId: vm.sCentro(),
+            responsableId: vm.sResponsable()
         };
         var verb = "PUT";
         if (vm.usuarioId() == 0) verb = "POST";

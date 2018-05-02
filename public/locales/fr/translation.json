@@ -96,7 +96,8 @@
         "centro": "Centre par défaut",
         "codigoIdioma": "Code langue",
         "esAdministrador": "Cet utilisateur est administrateur",
-        "verOfertasGrupo": "Cet utilisateur peut voir des offres des responsables de son groupe d'utilisateurs"
+        "verOfertasGrupo": "Cet utilisateur peut voir des offres des responsables de son groupe d'utilisateurs",
+        "responsable": "Utilisateur responsable"
     },
     "responsables": {
         "titulo": "Responsables",

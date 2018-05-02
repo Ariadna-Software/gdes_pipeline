@@ -39,7 +39,11 @@ UPDATE fases_oferta SET nombreEN = nombre, nombreFR = nombre;
 UPDATE tipos_oportunidad SET nombreEN = nombre, nombreFR = nombre;
 UPDATE tipos_contrato SET nombreEN = nombre, nombreFR = nombre;
 
-UPDATE `gdes_pipeline_test`.`estados` SET `nombreEN` = 'OPEN' , `nombreFR` = 'OUVERTE' WHERE `estadoId` = '1'; 
-UPDATE `gdes_pipeline_test`.`estados` SET `nombreEN` = 'WON' , `nombreFR` = 'GAGNÉ' WHERE `estadoId` = '2'; 
-UPDATE `gdes_pipeline_test`.`estados` SET `nombreEN` = 'NOT PURSUED' , `nombreFR` = 'NON PREÉSENTÉ' WHERE `estadoId` = '3'; 
-UPDATE `gdes_pipeline_test`.`estados` SET `nombreEN` = 'LOST' , `nombreFR` = 'PERDUE' WHERE `estadoId` = '5';
+UPDATE `estados` SET `nombreEN` = 'OPEN' , `nombreFR` = 'OUVERTE' WHERE `estadoId` = '1'; 
+UPDATE `estados` SET `nombreEN` = 'WON' , `nombreFR` = 'GAGNÉ' WHERE `estadoId` = '2'; 
+UPDATE `estados` SET `nombreEN` = 'NOT PURSUED' , `nombreFR` = 'NON PREÉSENTÉ' WHERE `estadoId` = '3'; 
+UPDATE `estados` SET `nombreEN` = 'LOST' , `nombreFR` = 'PERDUE' WHERE `estadoId` = '5';
+
+ALTER TABLE `usuarios`   
+  ADD COLUMN `responsableId` INT(11) NULL AFTER `verOfertasGrupo`,
+  ADD CONSTRAINT `usuarios_responsables` FOREIGN KEY (`responsableId`) REFERENCES ``usuarios`(`usuarioId`);

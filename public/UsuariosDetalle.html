@@ -292,13 +292,13 @@
                                                         <i></i><span data-i18n="usuarios.esAdministrador">ESD</span>
                                                     </label>                                               
                                             </section>
-                                            <section class="col col-md-6">
-                                                <!--
-                                                    <label class="checkbox">
-                                                        <input id="chkVerOfertasGrupo" type="checkbox" name="chkVerOfertasGrupo" data-bind="checked: verOfertasGrupo">
-                                                        <i></i><span data-i18n="usuarios.verOfertasGrupo">VOG</span>
-                                                    </label>                                               
-                                                -->
+                                            <section class="col col-md-2">
+                                            </section>
+                                            <section class="col col-md-4">
+                                                <label class="label" data-i18n="usuarios.responsable">Responsable:</label>
+                                                <select style="width:100%;" id="cmbResponsables" name="cmbResponsables" data-bind="options: optionsResponsables, optionsText: 'nombre', optionsValue: 'usuarioId', 
+                                                    value: sResponsable, valueAllowUnset: true, selectedOptions: selectedResponsables, selected2:{}">
+                                                </select>
                                             </section>
                                         </div>
                                         <div class="row">

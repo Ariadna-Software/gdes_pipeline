@@ -96,7 +96,8 @@
         "centro": "Automatically Centre",
         "codigoIdioma": "Language code",
         "esAdministrador": "This users is Administrator",
-        "verOfertasGrupo": "Este usuario puede ver ofertas de los responsables de su grupo de usuarios"
+        "verOfertasGrupo": "Este usuario puede ver ofertas de los responsables de su grupo de usuarios",
+        "responsable": "User responsable"
     },
     "responsables": {
         "titulo": "Responsibles",
