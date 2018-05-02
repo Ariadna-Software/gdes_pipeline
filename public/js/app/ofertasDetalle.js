@@ -710,7 +710,11 @@ var apiPaginaOfertasDetalle = {
         });
     },
     cargarEstados: function (id) {
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/estados", null, function (err, data) {
+        var url = myconfig.apiUrl + "/api/estados";
+        if (usuario.codigoIdioma != "es") {
+            url = myconfig.apiUrl + "/api/estados/multi/" + usuario.codigoIdioma;
+        }
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;
             var options = [{ estadoId: 0, nombre: " " }].concat(data);
             vm.optionsEstados(options);

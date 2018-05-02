@@ -38,3 +38,8 @@ UPDATE servicios SET nombreEN = nombre, nombreFR = nombre;
 UPDATE fases_oferta SET nombreEN = nombre, nombreFR = nombre;
 UPDATE tipos_oportunidad SET nombreEN = nombre, nombreFR = nombre;
 UPDATE tipos_contrato SET nombreEN = nombre, nombreFR = nombre;
+
+UPDATE `gdes_pipeline_test`.`estados` SET `nombreEN` = 'OPEN' , `nombreFR` = 'OUVERTE' WHERE `estadoId` = '1'; 
+UPDATE `gdes_pipeline_test`.`estados` SET `nombreEN` = 'WON' , `nombreFR` = 'GAGNÉ' WHERE `estadoId` = '2'; 
+UPDATE `gdes_pipeline_test`.`estados` SET `nombreEN` = 'NOT PURSUED' , `nombreFR` = 'NON PREÉSENTÉ' WHERE `estadoId` = '3'; 
+UPDATE `gdes_pipeline_test`.`estados` SET `nombreEN` = 'LOST' , `nombreFR` = 'PERDUE' WHERE `estadoId` = '5';
