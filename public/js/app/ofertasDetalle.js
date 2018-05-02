@@ -820,7 +820,11 @@ var apiPaginaOfertasDetalle = {
         });
     },
     cargarTiposContrato: function (id) {
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-contrato", null, function (err, data) {
+        var url = myconfig.apiUrl + "/api/tipos-contrato";
+        if (usuario.codigoIdioma != "es") {
+            url = myconfig.apiUrl + "/api/tipos-contrato/multi/" + usuario.codigoIdioma;
+        }
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;
             var options = [{ tipoContratoId: 0, nombre: " " }].concat(data);
             vm.optionsTiposContrato(options);

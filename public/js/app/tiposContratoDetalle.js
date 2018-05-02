@@ -37,17 +37,23 @@ var apiPaginaTipoContratoDetalle = {
     cargarDatosPagina: function(data){
         vm.tipoContratoId(data.tipoContratoId);
         vm.nombre(data.nombre);
+        vm.nombreEN(data.nombreEN);
+        vm.nombreFR(data.nombreFR);
     },
     datosPagina: function () {
         var self = this;
         self.tipoContratoId = ko.observable();
         self.nombre = ko.observable();
+        self.nombreEN = ko.observable();
+        self.nombreFR = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaTipoContratoDetalle.datosOk()) return;
         var data = {
             tipoContratoId: vm.tipoContratoId(),
-            nombre: vm.nombre()
+            nombre: vm.nombre(),
+            nombreEN: vm.nombreEN(),
+            nombreFR: vm.nombreFR()
         };
         var verb = "PUT";
         if (vm.tipoContratoId() == 0) verb = "POST";

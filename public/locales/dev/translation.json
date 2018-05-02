@@ -233,6 +233,8 @@
         "panel": "Tipos contrato",
         "nuevo": "Nuevo tipo",
         "nombre": "Nombre tipo",
+        "nombreEN": "Nombre tipo (INGLÉS)",
+        "nombreFR": "Nombre tipo (FRANCÉS)",
         "id": "ID",
         "editar": "Editar tipo",
         "eliminar": "Eliminar tipo",
