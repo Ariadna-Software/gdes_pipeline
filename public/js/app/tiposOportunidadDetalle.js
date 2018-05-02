@@ -22,41 +22,47 @@ var apiPaginaTiposOportunidadesDetalle = {
         $('#btnSalir').click(apiPaginaTiposOportunidadesDetalle.salir);
 
         tipoOportunidadId = apiComunGeneral.gup("id");
-        if (tipoOportunidadId == 0){
+        if (tipoOportunidadId == 0) {
             vm.tipoOportunidadId(0);
-        }else{
+        } else {
             apiPaginaTiposOportunidadesDetalle.cargarTipoOportunidad(tipoOportunidadId);
         }
     },
-    cargarTipoOportunidad: function(id){
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-oportunidad/" + id, null, function(err, data){
+    cargarTipoOportunidad: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-oportunidad/" + id, null, function (err, data) {
             if (err) return;
             apiPaginaTiposOportunidadesDetalle.cargarDatosPagina(data);
         });
     },
-    cargarDatosPagina: function(data){
+    cargarDatosPagina: function (data) {
         vm.tipoOportunidadId(data.tipoOportunidadId);
         vm.nombre(data.nombre);
+        vm.nombreEN(data.nombreEN);
+        vm.nombreFR(data.nombreFR);
     },
     datosPagina: function () {
         var self = this;
         self.tipoOportunidadId = ko.observable();
         self.nombre = ko.observable();
+        self.nombreEN = ko.observable();
+        self.nombreFR = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaTiposOportunidadesDetalle.datosOk()) return;
         var data = {
             tipoOportunidadId: vm.tipoOportunidadId(),
-            nombre: vm.nombre()
+            nombre: vm.nombre(),
+            nombreEN: vm.nombreEN(),
+            nombreFR: vm.nombreFR()
         };
         var verb = "PUT";
         if (vm.tipoOportunidadId() == 0) verb = "POST";
-        apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/tipos-oportunidad", data, function(err, data){
+        apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/tipos-oportunidad", data, function (err, data) {
             if (err) return;
             apiPaginaTiposOportunidadesDetalle.salir();
         });
     },
-    datosOk: function(){
+    datosOk: function () {
         $('#tipoOportunidad-form').validate({
             rules: {
                 txtNombre: { required: true }

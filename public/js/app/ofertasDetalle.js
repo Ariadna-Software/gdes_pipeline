@@ -786,9 +786,9 @@ var apiPaginaOfertasDetalle = {
         });
     },
     cargarFasesOferta: function (id) {
-        var url =  myconfig.apiUrl + "/api/fases-oferta";
+        var url = myconfig.apiUrl + "/api/fases-oferta";
         if (usuario.codigoIdioma != "es") {
-            url =  myconfig.apiUrl + "/api/fases-oferta/multi/" + usuario.codigoIdioma;
+            url = myconfig.apiUrl + "/api/fases-oferta/multi/" + usuario.codigoIdioma;
         }
         apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;
@@ -808,8 +808,11 @@ var apiPaginaOfertasDetalle = {
 
     },
     cargarTiposOportunidad: function (id) {
-
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-oportunidad", null, function (err, data) {
+        var url = myconfig.apiUrl + "/api/tipos-oportunidad";
+        if (usuario.codigoIdioma != "es") {
+            url = myconfig.apiUrl + "/api/tipos-oportunidad/multi/" + usuario.codigoIdioma;
+        }
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;
             var options = [{ tipoOportunidadId: 0, nombre: " " }].concat(data);
             vm.optionsTiposOportunidad(options);
@@ -827,7 +830,7 @@ var apiPaginaOfertasDetalle = {
     cargarRazonPerdida: function (id) {
         var url = myconfig.apiUrl + "/api/razon-perdida";
         if (usuario.codigoIdioma != "es") {
-            url =  myconfig.apiUrl + "/api/razon-perdida/multi/" + usuario.codigoIdioma;
+            url = myconfig.apiUrl + "/api/razon-perdida/multi/" + usuario.codigoIdioma;
         }
 
         apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
