@@ -690,7 +690,11 @@ var apiPaginaOfertasDetalle = {
         });
     },
     cargarAreas: function (id) {
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/areas", null, function (err, data) {
+        var url = myconfig.apiUrl + "/api/areas";
+        if (usuario.codigoIdioma != "es") {
+            url = myconfig.apiUrl + "/api/areas/multi/" + usuario.codigoIdioma;
+        }
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;
             var options = [{ areaId: 0, nombre: " " }].concat(data);
             vm.optionsAreas(options);
@@ -754,7 +758,11 @@ var apiPaginaOfertasDetalle = {
         });
     },
     cargarUnidadNegocio: function (id) {
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/unidades-negocio", null, function (err, data) {
+        var url = myconfig.apiUrl + "/api/unidades-negocio"
+        if (usuario.codigoIdioma != "es") {
+            url = myconfig.apiUrl + "/api/unidades-negocio/multi/" + usuario.codigoIdioma;
+        }
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;
             var options = [{ unidadNegocioId: 0, nombre: " " }].concat(data);
             vm.optionsUnidadNegocio(options);
@@ -788,6 +796,7 @@ var apiPaginaOfertasDetalle = {
 
     },
     cargarTiposOportunidad: function (id) {
+
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-oportunidad", null, function (err, data) {
             if (err) return;
             var options = [{ tipoOportunidadId: 0, nombre: " " }].concat(data);

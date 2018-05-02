@@ -37,17 +37,23 @@ var apiPaginaUnidadesNegocioDetalle = {
     cargarDatosPagina: function(data){
         vm.unidadNegocioId(data.unidadNegocioId);
         vm.nombre(data.nombre);
+        vm.nombreEN(data.nombreEN);
+        vm.nombreFR(data.nombreFR);
     },
     datosPagina: function () {
         var self = this;
         self.unidadNegocioId = ko.observable();
         self.nombre = ko.observable();
+        self.nombreEN = ko.observable();
+        self.nombreFR = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaUnidadesNegocioDetalle.datosOk()) return;
         var data = {
             unidadNegocioId: vm.unidadNegocioId(),
-            nombre: vm.nombre()
+            nombre: vm.nombre(),
+            nombreEN: vm.nombreEN(),
+            nombreFR: vm.nombreFR()
         };
         var verb = "PUT";
         if (vm.unidadNegocioId() == 0) verb = "POST";

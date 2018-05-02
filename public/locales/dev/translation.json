@@ -132,6 +132,8 @@
         "panel": "Areas",
         "nuevo": "Nueva area",
         "nombre": "Nombre area",
+        "nombreEN": "Nombre area (INGLÉS)",
+        "nombreFR": "Nombre area (FRANCÉS)",
         "id": "ID",
         "editar": "Editar area",
         "eliminar": "Eliminar area"
@@ -181,6 +183,8 @@
         "panel": "Unidades de Negocio",
         "nuevo": "Nueva unidad de negocio",
         "nombre": "Nombre unidad",
+        "nombreEN": "Nombre unidad (INGLÉS)",
+        "nombreFR": "Nombre unidad (FRANCÉS)",
         "id": "ID",
         "editar": "Editar unidad",
         "eliminar": "Eliminar unidad",

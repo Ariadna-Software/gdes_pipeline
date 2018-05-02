@@ -37,17 +37,23 @@ var apiPaginaAreasDetalle = {
     cargarDatosPagina: function(data){
         vm.areaId(data.areaId);
         vm.nombre(data.nombre);
+        vm.nombreEN(data.nombreEN);
+        vm.nombreFR(data.nombreFR);
     },
     datosPagina: function () {
         var self = this;
         self.areaId = ko.observable();
         self.nombre = ko.observable();
+        self.nombreEN = ko.observable();
+        self.nombreFR = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaAreasDetalle.datosOk()) return;
         var data = {
             areaId: vm.areaId(),
-            nombre: vm.nombre()
+            nombre: vm.nombre(),
+            nombreEN: vm.nombreEN(),
+            nombreFR: vm.nombreFR()
         };
         var verb = "PUT";
         if (vm.areaId() == 0) verb = "POST";
