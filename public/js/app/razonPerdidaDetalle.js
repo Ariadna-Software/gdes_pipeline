@@ -37,17 +37,23 @@ var apiPaginaRazonPerdidaDetalle = {
     cargarDatosPagina: function(data){
         vm.razonPerdidaId(data.razonPerdidaId);
         vm.nombre(data.nombre);
+        vm.nombreEN(data.nombreEN);
+        vm.nombreFR(data.nombreFR);
     },
     datosPagina: function () {
         var self = this;
         self.razonPerdidaId = ko.observable();
         self.nombre = ko.observable();
+        self.nombreEN = ko.observable();
+        self.nombreFR = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaRazonPerdidaDetalle.datosOk()) return;
         var data = {
             razonPerdidaId: vm.razonPerdidaId(),
-            nombre: vm.nombre()
+            nombre: vm.nombre(),
+            nombreEN: vm.nombreEN(),
+            nombreFR: vm.nombreFR()
         };
         var verb = "PUT";
         if (vm.razonPerdidaId() == 0) verb = "POST";

@@ -237,6 +237,8 @@
         "panel": "Razones perdida / no presentación",
         "nuevo": "Nueva razón",
         "nombre": "Nombre razón",
+        "nombreEN": "Nombre razón (INGLÉS)",
+        "nombreFR": "Nombre razón (FRANCÉS)",
         "id": "ID",
         "editar": "Editar razón",
         "eliminar": "Eliminar razón",
