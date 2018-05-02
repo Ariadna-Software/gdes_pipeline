@@ -596,6 +596,8 @@ var apiPaginaOfertasDetalle = {
         }
     },
     datosOk: function () {
+        var descript = apiPaginaOfertasDetalle.cargarDescriptoresError();
+        var lerrors = i18n.t('lerrors1') + "<br>";
         $('#oferta-form').validate({
             rules: {
                 cmbTipoOfertas: { required: true },
@@ -611,8 +613,8 @@ var apiPaginaOfertasDetalle = {
                 txtFechaAdjudicacion: { required: true },
                 txtFechaInicioContrato: { required: true },
                 txtDuracion: { required: true },
-                cmbRazonPerdida: {required: true},
-                cmbProbabilidad: {required: true}
+                cmbRazonPerdida: { required: true },
+                cmbProbabilidad: { required: true }
             },
             errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length) {
@@ -622,14 +624,20 @@ var apiPaginaOfertasDetalle = {
                 } else {
                     error.insertAfter(element.parent());               // default
                 }
+            },
+            invalidHandler: function (e, validator) {
+                for (var i in validator.errorMap) {
+                    console.log(i, ":", validator.errorMap[i]);
+                    lerrors += descript[i] + "<br>";
+                }
             }
         });
         var ofe1 = $('#oferta-form').valid();
         $('#oferta-form2').validate({
             rules: {
-                txtImportePresupuesto: { required: true, number: true },
-                txtDescripcion: { required: true },
-                txtMultiplicador: { number: true },
+                txtImportePresupuesto:"",
+                txtDescripcion: "",
+                txtMultiplicador: "",
                 txtImportePresupuestoDivisa: { number: true },
                 txtMargenContribucion: { number: true },
                 txtMargenContribucion2: { number: true },
@@ -652,11 +660,22 @@ var apiPaginaOfertasDetalle = {
                 } else {
                     error.insertAfter(element.parent());               // default
                 }
+            },
+            invalidHandler: function (e, validator) {
+                for (var i in validator.errorMap) {
+                    console.log(i, ":", validator.errorMap[i]);
+                    lerrors += descript[i] + "<br>";
+                }
             }
         });
         var ofe2 = $('#oferta-form2').valid();
-
-        return ofe1 && ofe2;
+        var validos = ofe1 && ofe2;
+        if (!validos) {
+            lerrors += i18n.t('lerrors2');
+            apiComunNotificaciones.mensajeAdvertencia(lerrors);
+            $('html,body').scrollTop(0);
+        }
+        return validos;
     },
     salir: function () {
         window.open(sprintf('OfertasGeneral.html'), '_self');
@@ -1070,6 +1089,40 @@ var apiPaginaOfertasDetalle = {
         apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/api/versiones", data, function (err, data) {
             if (err) return;
         });
+    },
+    cargarDescriptoresError: function () {
+        var descript = {
+            cmbFasesOferta: i18n.t('ofertas.fasesOferta'),
+            cmbPaiss: i18n.t('ofertas.pais'),
+            cmbEmpresas: i18n.t('ofertas.empresa'),
+            cmbAreas: i18n.t('ofertas.area'),
+            txtUbicacion: i18n.t('ofertas.ubicacion'),
+            txtCliente: i18n.t('ofertas.cliente'),
+            txtNombreCorto: i18n.t('ofertas.nombreCorto'),
+            cmbEstados: i18n.t('ofertas.estado'),
+            txtFechaAdjudicacion: i18n.t('ofertas.fechaAdjudicacion'),
+            txtFechaInicioContrato: i18n.t('ofertas.fechaInicioContrato'),
+            txtDuracion: i18n.t('ofertas.duracion'),
+            cmbRazonPerdida: i18n.t('ofertas.razonPerdida'),
+            cmbProbabilidad: i18n.t('ofertas.probabilidad'),
+            txtImportePresupuesto:i18n.t('ofertas.importePresupuesto'),
+            txtDescripcion: i18n.t('ofertas.descripcion'),
+            txtMultiplicador: i18n.t('ofertas.multiplicador'),
+            txtImportePresupuestoDivisa: i18n.t('ofertas.importePresupuestoDivisa'),
+            txtMargenContribucion: i18n.t('ofertas.margenContribucion'),
+            txtMargenContribucion2: i18n.t('ofertas.margenContribucion2'),
+            txtImporteContribucion: i18n.t('ofertas.importeContribucion'),
+            txtImporteInversion: i18n.t('ofertas.importeInversion'),
+            txtImporteImversionDivisa: i18n.t('ofertas.importeInversionDivisa'),
+            txtImporteRetorno: i18n.t('ofertas.importeRetorno'),
+            txtImporteUTE: i18n.t('ofertas.importeUTE'),
+            txtImporteUTEDivisa: i18n.t('ofertas.importeUTEDivisa'),
+            txtImporteAnual: i18n.t('ofertas.importeAnual'),
+            txtImporteAnualDivisa: i18n.t('ofertas.importeAnualDivisa'),
+            txtImportePrimerAno: i18n.t('ofertas.importePrimerAno'),
+            txtImportePrimerAnoDivisa: i18n.t('ofertas.importePrimerAnoDivisa')
+        }
+        return descript;
     }
 
 }

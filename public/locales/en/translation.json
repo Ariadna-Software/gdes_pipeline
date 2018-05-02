@@ -10,6 +10,8 @@
     "no": "NO",
     "ayuda": "<div>HELP</div>",
     "cerrar": "Press here to close the window",
+    "lerrors1": "THE FOLLOWING FIELDS:",
+    "lerrors2": "THEY HAVE PROBLEMS",
     "error": {
         "general": "Error",
         "ajax_general": "Error transmited",

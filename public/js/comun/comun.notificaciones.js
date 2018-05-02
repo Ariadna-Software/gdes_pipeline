@@ -50,5 +50,17 @@ var apiComunNotificaciones = {
             color: "#006666",
             iconSmall: "fa fa-info-circle bounce animated",
         });
+    },
+    mensajeAdvertencia: function (mensaje) {
+        html = "<hr/>";
+        html += i18n.t(mensaje);
+        html += "<hr/>";
+        html += "<br/>" + i18n.t('cerrar');
+        $.smallBox({
+            title: i18n.t('ayuda'),
+            content: html,
+            color: "orange",
+            iconSmall: "fa fa-info-circle bounce animated",
+        });
     }
 }

@@ -10,6 +10,8 @@
     "no": "NON",
     "ayuda": "<div>AIDE</div>",
     "cerrar": "Cliquez ici pour fermer l'encadré",
+    "lerrors1": "LES CHAMPS SUIVANTS:",
+    "lerrors2": "ILS ONT DES PROBLEMES",
     "error": {
         "general": "Erreur",
         "ajax_general": "Erreur signalé",

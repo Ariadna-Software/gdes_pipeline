@@ -10,6 +10,8 @@
     "no": "NO",
     "ayuda": "<div>AYUDA</div>",
     "cerrar": "Haga clic aquí para cerrar el recuadro",
+    "lerrors1": "LOS SIGUIENTES CAMPOS:",
+    "lerrors2": "TIENEN PROBLEMAS",
     "error": {
         "general": "Error",
         "ajax_general": "Error comunicado",
