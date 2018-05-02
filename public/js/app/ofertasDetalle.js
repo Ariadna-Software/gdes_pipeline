@@ -774,7 +774,11 @@ var apiPaginaOfertasDetalle = {
         });
     },
     cargarServicio: function (id) {
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/servicios", null, function (err, data) {
+        var url = myconfig.apiUrl + "/api/servicios";
+        if (usuario.codigoIdioma != "es") {
+            url = myconfig.apiUrl + "/api/servicios/multi/" + usuario.codigoIdioma;
+        }
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;
             var options = [{ servicioId: 0, nombre: " " }].concat(data);
             vm.optionsServicio(options);

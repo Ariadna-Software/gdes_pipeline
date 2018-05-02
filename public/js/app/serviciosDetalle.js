@@ -41,12 +41,16 @@ var apiPaginaServiciosDetalle = {
     cargarDatosPagina: function(data){
         vm.servicioId(data.servicioId);
         vm.nombre(data.nombre);
+        vm.nombreEN(data.nombreEN);
+        vm.nombreFR(data.nombreFR);
         apiPaginaServiciosDetalle.cargarAreas(data.areaId);
     },
     datosPagina: function () {
         var self = this;
         self.servicioId = ko.observable();
         self.nombre = ko.observable();
+        self.nombreEN = ko.observable();
+        self.nombreFR = ko.observable();
 
         self.optionsAreas = ko.observableArray([]);
         self.selectedAreas = ko.observableArray([]);
@@ -57,6 +61,8 @@ var apiPaginaServiciosDetalle = {
         var data = {
             servicioId: vm.servicioId(),
             nombre: vm.nombre(),
+            nombreEN: vm.nombreEN(),
+            nombreFR: vm.nombreFR(),
             areaId: vm.sArea()
         };
         var verb = "PUT";
