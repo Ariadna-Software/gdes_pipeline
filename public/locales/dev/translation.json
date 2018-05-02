@@ -209,6 +209,8 @@
         "panel": "Fases oferta",
         "nuevo": "NUeva fase oferta",
         "nombre": "Nombre fase",
+        "nombreEN": "Nombre fase (INGLÉS)",
+        "nombreFR": "Nombre fase (FRANCÉS)",
         "id": "ID",
         "editar": "Editar fase",
         "eliminar": "Eliminar fase",

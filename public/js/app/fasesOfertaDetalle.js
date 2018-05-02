@@ -37,17 +37,23 @@ var apiPaginaFasesOfertaDetalle = {
     cargarDatosPagina: function(data){
         vm.faseOfertaId(data.faseOfertaId);
         vm.nombre(data.nombre);
+        vm.nombreEN(data.nombreEN);
+        vm.nombreFR(data.nombreFR);
     },
     datosPagina: function () {
         var self = this;
         self.faseOfertaId = ko.observable();
         self.nombre = ko.observable();
+        self.nombreEN = ko.observable();
+        self.nombreFR = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaFasesOfertaDetalle.datosOk()) return;
         var data = {
             faseOfertaId: vm.faseOfertaId(),
-            nombre: vm.nombre()
+            nombre: vm.nombre(),
+            nombreEN:  vm.nombreEN(),
+            nombreFR: vm.nombreFR()
         };
         var verb = "PUT";
         if (vm.faseOfertaId() == 0) verb = "POST";
