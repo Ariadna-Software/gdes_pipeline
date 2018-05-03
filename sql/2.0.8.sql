@@ -65,3 +65,13 @@ ALTER TABLE `ofertas`
 ALTER TABLE `ofertas`   
   ADD COLUMN `usuarioId` INT(11) NULL AFTER `importeTotalDivisa`,
   ADD CONSTRAINT `oft_usuario` FOREIGN KEY (`usuarioId`) REFERENCES `usuarios`(`usuarioId`);
+
+ALTER TABLE `usuarios`   
+  DROP COLUMN `centroId`, 
+  DROP INDEX `usuarios_centros`,
+  DROP FOREIGN KEY `usuarios_centros`;
+
+ALTER TABLE `usuarios`   
+  ADD COLUMN `ubicacion` VARCHAR(255) NULL AFTER `responsableId`,
+  ADD COLUMN `unidadNegocioId` INT(11) NULL AFTER `ubicacion`,
+  ADD CONSTRAINT `usuarios_unidades_negocio` FOREIGN KEY (`unidadNegocioId`) REFERENCES `unidades_negocio`(`unidadNegocioId`);

@@ -145,9 +145,10 @@ var apiPaginaOfertasDetalle = {
             apiPaginaOfertasDetalle.cargarPaiss(usuario.paisId);
             apiPaginaOfertasDetalle.cargarEmpresas(usuario.empresaId);
             apiPaginaOfertasDetalle.cargarAreas(usuario.areaId);
-            apiPaginaOfertasDetalle.cargarCentros(usuario.centroId);
+            apiPaginaOfertasDetalle.cargarUnidadNegocio(usuario.unidadNegocioId);
             apiPaginaOfertasDetalle.cargarResponsables(usuario.responsableId);
             apiPaginaOfertasDetalle.cargarUsuarios(usuario.usuarioId);
+            vm.ubicacion(usuario.ubicacion);
         } else {
             apiPaginaOfertasDetalle.cargarOferta(ofertaId);
             apiSeguidores.cargarSeguidores(ofertaId);
@@ -538,7 +539,7 @@ var apiPaginaOfertasDetalle = {
             sinergias: vm.sinergias(),
             importeTotal: vm.importeTotal(),
             importeTotalDivisa: vm.importeTotalDivisa(),
-            usuarioId: sUsuario()
+            usuarioId: vm.sUsuario()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -553,6 +554,19 @@ var apiPaginaOfertasDetalle = {
         if (vm.ofertaId() == 0) {
             verb = "POST";
             data.version = 0;
+            apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
+                if (err) return;
+                if (vm.sEstado() != anteriorEstado) {
+                    var data = {
+                        asunto: "Cambio estado OFERTA: " + vm.nombreCorto(),
+                        texto: "La oferta cambió el " + vm.fechaUltimoEstado() + " a " + $('#cmbEstados').select2('data').text
+                    };
+                    apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/api/correoElectronico", data, function (err) {
+                        return;
+                    });
+                }
+                apiPaginaOfertasDetalle.salir();
+            });
         } else {
             var verb = "PUT";
             if (apiPaginaOfertasDetalle.comprobarCambioDeImportes()) {
@@ -645,7 +659,7 @@ var apiPaginaOfertasDetalle = {
         var ofe1 = $('#oferta-form').valid();
         $('#oferta-form2').validate({
             rules: {
-                txtImportePresupuesto:{ required: true, number: true },
+                txtImportePresupuesto: { required: true, number: true },
                 txtMultiplicador: { number: true },
                 txtImportePresupuestoDivisa: { number: true },
                 txtMargenContribucion: { required: true, number: true },
@@ -1122,7 +1136,7 @@ var apiPaginaOfertasDetalle = {
             txtDuracion: i18n.t('ofertas.duracion'),
             cmbRazonPerdida: i18n.t('ofertas.razonPerdida'),
             cmbProbabilidad: i18n.t('ofertas.probabilidad'),
-            txtImportePresupuesto:i18n.t('ofertas.importePresupuesto'),
+            txtImportePresupuesto: i18n.t('ofertas.importePresupuesto'),
             txtDescripcion: i18n.t('ofertas.descripcion'),
             txtMultiplicador: i18n.t('ofertas.multiplicador'),
             txtImportePresupuestoDivisa: i18n.t('ofertas.importePresupuestoDivisa'),
@@ -1190,7 +1204,7 @@ var apiPaginaOfertasDetalle = {
         var lerrors = i18n.t('lerrors1') + "<br>";
         var validator = $('#oferta-form2').validate({
             rules: {
-                txtImportePresupuesto:{ required: true, number: true },
+                txtImportePresupuesto: { required: true, number: true },
                 txtMultiplicador: { number: true },
                 txtImportePresupuestoDivisa: { number: true },
                 txtMargenContribucion: { required: true, number: true },

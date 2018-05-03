@@ -97,7 +97,9 @@
         "codigoIdioma": "Code langue",
         "esAdministrador": "Cet utilisateur est administrateur",
         "verOfertasGrupo": "Cet utilisateur peut voir des offres des responsables de son groupe d'utilisateurs",
-        "responsable": "Utilisateur responsable"
+        "responsable": "Utilisateur responsable",
+        "ubicacion": "Ubication",
+        "unidadNegocio": "Unité d'affaires"
     },
     "responsables": {
         "titulo": "Responsables",

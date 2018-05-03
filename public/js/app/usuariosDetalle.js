@@ -31,8 +31,8 @@ var apiPaginaUsuariosDetalle = {
         apiPaginaUsuariosDetalle.cargarEmpresas();
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaUsuariosDetalle.cargarAreas();
-        $('#cmbCentros').select2(select2_languages[usuario.codigoIdioma]);
-        apiPaginaUsuariosDetalle.cargarCentros();
+        $('#cmbUnidadesNegocio').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaUsuariosDetalle.cargarUnidadesNegocio();
 
         usuarioId = apiComunGeneral.gup("id");
         if (usuarioId == 0) {
@@ -75,7 +75,8 @@ var apiPaginaUsuariosDetalle = {
         apiPaginaUsuariosDetalle.cargarPaiss(data.paisId);
         apiPaginaUsuariosDetalle.cargarEmpresas(data.empresaId);
         apiPaginaUsuariosDetalle.cargarAreas(data.areaId);
-        apiPaginaUsuariosDetalle.cargarCentros(data.centroId);
+        apiPaginaUsuariosDetalle.cargarUnidadesNegocio(data.unidadNegocioId);
+        vm.ubicacion(data.ubicacion);
     },
     datosPagina: function () {
         var self = this;
@@ -105,9 +106,11 @@ var apiPaginaUsuariosDetalle = {
         self.selectedAreas = ko.observableArray([]);
         self.sArea = ko.observable();
 
-        self.optionsCentros = ko.observableArray([]);
-        self.selectedCentros = ko.observableArray([]);
-        self.sCentro = ko.observable();
+        self.optionsUnidadesNegocio = ko.observableArray([]);
+        self.selectedUnidadesNegocio = ko.observableArray([]);
+        self.sUnidadNegocio = ko.observable();
+
+        self.ubicacion = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaUsuariosDetalle.datosOk()) return;
@@ -121,8 +124,9 @@ var apiPaginaUsuariosDetalle = {
             paisId: vm.sPais(),
             empresaId: vm.sEmpresa(),
             areaId: vm.sArea(),
-            centroId: vm.sCentro(),
-            responsableId: vm.sResponsable()
+            unidadNegocioId: vm.sUnidadNegocio(),
+            responsableId: vm.sResponsable(),
+            ubicacion: vm.ubicacion()
         };
         var verb = "PUT";
         if (vm.usuarioId() == 0) verb = "POST";
@@ -170,12 +174,12 @@ var apiPaginaUsuariosDetalle = {
             $("#cmbAreas").val([id]).trigger('change');
         });
     },
-    cargarCentros: function (id) {
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/centros", null, function (err, data) {
+    cargarUnidadesNegocio: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/unidades-negocio", null, function (err, data) {
             if (err) return;
-            var options = [{ centroId: 0, nombre: " " }].concat(data);
-            vm.optionsCentros(options);
-            $("#cmbCentros").val([id]).trigger('change');
+            var options = [{ unidadNegocioId: 0, nombre: " " }].concat(data);
+            vm.optionsUnidadesNegocio(options);
+            $("#cmbUnidadesNegocio").val([id]).trigger('change');
         });
     }
 }
