@@ -47,3 +47,21 @@ UPDATE `estados` SET `nombreEN` = 'LOST' , `nombreFR` = 'PERDUE' WHERE `estadoId
 ALTER TABLE `usuarios`   
   ADD COLUMN `responsableId` INT(11) NULL AFTER `verOfertasGrupo`,
   ADD CONSTRAINT `usuarios_responsables` FOREIGN KEY (`responsableId`) REFERENCES ``usuarios`(`usuarioId`);
+
+ALTER TABLE `ofertas`  
+  DROP FOREIGN KEY `oft_responsable`;
+
+
+UPDATE ofertas AS o,
+(SELECT r.responsableId, r.nombre, u.usuarioId, u.nombre AS n2 FROM
+responsables AS r
+LEFT JOIN usuarios AS u ON u.nombre = r.nombre) AS x1
+SET o.responsableId = x1.usuarioId
+WHERE o.responsableId = x1.responsableId;
+
+ALTER TABLE `ofertas`  
+  ADD CONSTRAINT `oft_responsable` FOREIGN KEY (`responsableId`) REFERENCES `usuarios`(`usuarioId`);
+
+ALTER TABLE `ofertas`   
+  ADD COLUMN `usuarioId` INT(11) NULL AFTER `importeTotalDivisa`,
+  ADD CONSTRAINT `oft_usuario` FOREIGN KEY (`usuarioId`) REFERENCES `usuarios`(`usuarioId`);

@@ -258,6 +258,7 @@
     "ofertas": {
         "titulo": "Ofertas",
         "panel": "Ofertas",
+        "usuario": "Usuario",
         "tab":{
             "oportunidad": "DATOS OPORTUNIDAD",
             "economicos": "DATOS ECONÓMICOS",

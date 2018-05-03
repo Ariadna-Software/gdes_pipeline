@@ -244,6 +244,7 @@
     "ofertas": {
         "titulo": "Offres",
         "panel": "Offres",
+        "usuario": "Utilisateur",
         "tab":{
             "oportunidad": "DONNÉES D'OCCASION",
             "economicos": "DONNÉES ÉCONOMIQUES",

@@ -59,6 +59,9 @@ var apiPaginaOfertasDetalle = {
         $('#cmbResponsables').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarResponsables();
 
+        $('#cmbUsuarios').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarUsuarios();
+
         $('#cmbPaiss').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarPaiss();
 
@@ -144,6 +147,7 @@ var apiPaginaOfertasDetalle = {
             apiPaginaOfertasDetalle.cargarAreas(usuario.areaId);
             apiPaginaOfertasDetalle.cargarCentros(usuario.centroId);
             apiPaginaOfertasDetalle.cargarResponsables(usuario.responsableId);
+            apiPaginaOfertasDetalle.cargarUsuarios(usuario.usuarioId);
         } else {
             apiPaginaOfertasDetalle.cargarOferta(ofertaId);
             apiSeguidores.cargarSeguidores(ofertaId);
@@ -167,6 +171,7 @@ var apiPaginaOfertasDetalle = {
         vm.numeroPedido(data.numeroPedido);
         apiPaginaOfertasDetalle.cargarTipoOfertas(data.tipoOfertaId);
         apiPaginaOfertasDetalle.cargarResponsables(data.responsableId);
+        apiPaginaOfertasDetalle.cargarUsuarios(data.usuarioId);
 
         apiPaginaOfertasDetalle.cargarPaiss(data.paisId);
         apiPaginaOfertasDetalle.cargarEmpresas(data.empresaId);
@@ -305,6 +310,10 @@ var apiPaginaOfertasDetalle = {
         self.selectedResponsables = ko.observableArray([]);
         self.sResponsable = ko.observable();
 
+        self.optionsUsuarios = ko.observableArray([]);
+        self.selectedUsuarios = ko.observableArray([]);
+        self.sUsuario = ko.observable();
+
         self.optionsPaiss = ko.observableArray([]);
         self.selectedPaiss = ko.observableArray([]);
         self.sPais = ko.observable();
@@ -436,7 +445,9 @@ var apiPaginaOfertasDetalle = {
         self.sUsuario = ko.observable();
     },
     aceptar: function () {
-        if (!apiPaginaOfertasDetalle.datosOk()) return;
+        // if (!apiPaginaOfertasDetalle.datosOk()) return;
+        if (!apiPaginaOfertasDetalle.datosOk1()) return;
+        if (!apiPaginaOfertasDetalle.datosOk2()) return;
         var data = {
             ofertaId: vm.ofertaId(),
             numeroOferta: vm.numeroOferta(),
@@ -526,7 +537,8 @@ var apiPaginaOfertasDetalle = {
             estrategiaGDES: vm.estrategiaGDES(),
             sinergias: vm.sinergias(),
             importeTotal: vm.importeTotal(),
-            importeTotalDivisa: vm.importeTotalDivisa()
+            importeTotalDivisa: vm.importeTotalDivisa(),
+            usuarioId: sUsuario()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -600,9 +612,7 @@ var apiPaginaOfertasDetalle = {
         var lerrors = i18n.t('lerrors1') + "<br>";
         $('#oferta-form').validate({
             rules: {
-                cmbTipoOfertas: { required: true },
                 cmbFasesOferta: { required: true },
-                cmbTipoOfertas: { required: true },
                 cmbPaiss: { required: true },
                 cmbEmpresas: { required: true },
                 cmbAreas: { required: true },
@@ -635,21 +645,20 @@ var apiPaginaOfertasDetalle = {
         var ofe1 = $('#oferta-form').valid();
         $('#oferta-form2').validate({
             rules: {
-                txtImportePresupuesto:"",
-                txtDescripcion: "",
-                txtMultiplicador: "",
+                txtImportePresupuesto:{ required: true, number: true },
+                txtMultiplicador: { number: true },
                 txtImportePresupuestoDivisa: { number: true },
-                txtMargenContribucion: { number: true },
+                txtMargenContribucion: { required: true, number: true },
                 txtMargenContribucion2: { number: true },
                 txtImporteContribucion: { number: true },
-                txtImporteInversion: { number: true },
-                txtImporteImversionDivisa: { number: true },
+                txtImporteInversion: { required: true, number: true },
+                txtImporteInversionDivisa: { number: true },
                 txtImporteRetorno: { number: true },
                 txtImporteUTE: { number: true },
                 txtImporteUTEDivisa: { number: true },
                 txtImporteAnual: { number: true },
                 txtImporteAnualDivisa: { number: true },
-                txtImportePrimerAno: { number: true },
+                txtImportePrimerAno: { required: true, number: true },
                 txtImportePrimerAnoDivisa: { number: true }
             },
             errorPlacement: function (error, element) {
@@ -689,11 +698,19 @@ var apiPaginaOfertasDetalle = {
         });
     },
     cargarResponsables: function (id) {
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/responsables", null, function (err, data) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/usuarios", null, function (err, data) {
             if (err) return;
-            var options = [{ responsableId: 0, nombre: " " }].concat(data);
+            var options = [{ usuarioId: 0, nombre: " " }].concat(data);
             vm.optionsResponsables(options);
             $("#cmbResponsables").val([id]).trigger('change');
+        });
+    },
+    cargarUsuarios: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/usuarios", null, function (err, data) {
+            if (err) return;
+            var options = [{ usuarioId: 0, nombre: " " }].concat(data);
+            vm.optionsUsuarios(options);
+            $("#cmbUsuarios").val([id]).trigger('change');
         });
     },
     cargarPaiss: function (id) {
@@ -1123,6 +1140,97 @@ var apiPaginaOfertasDetalle = {
             txtImportePrimerAnoDivisa: i18n.t('ofertas.importePrimerAnoDivisa')
         }
         return descript;
+    },
+    datosOk1: function () {
+        var descript = apiPaginaOfertasDetalle.cargarDescriptoresError();
+        var lerrors = i18n.t('lerrors1') + "<br>";
+        var validator = $('#oferta-form').validate({
+            rules: {
+                cmbFasesOferta: { required: true },
+                cmbPaiss: { required: true },
+                cmbEmpresas: { required: true },
+                cmbAreas: { required: true },
+                txtUbicacion: { required: true },
+                txtCliente: { required: true },
+                txtNombreCorto: { required: true },
+                cmbEstados: { required: true },
+                txtFechaAdjudicacion: { required: true },
+                txtFechaInicioContrato: { required: true },
+                txtDuracion: { required: true },
+                cmbProbabilidad: { required: true }
+            },
+            errorPlacement: function (error, element) {
+                if (element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());      // radio/checkbox?
+                } else if (element.hasClass('aswselect2')) {
+                    error.insertAfter(element);  // select2
+                } else {
+                    error.insertAfter(element.parent());               // default
+                }
+            },
+            invalidHandler: function (e, validator) {
+                for (var i in validator.errorMap) {
+                    console.log(i, ":", validator.errorMap[i]);
+                    lerrors += descript[i] + "<br>";
+                }
+            }
+        });
+        //var ofe1 = $('#oferta-form').valid();
+        var ofe1 = validator.form();
+        var validos = ofe1;
+        if (!validos) {
+            lerrors += i18n.t('lerrors2');
+            apiComunNotificaciones.mensajeAdvertencia(lerrors);
+            $('html,body').scrollTop(0);
+        }
+        return validos;
+    },
+    datosOk2: function () {
+        var descript = apiPaginaOfertasDetalle.cargarDescriptoresError();
+        var lerrors = i18n.t('lerrors1') + "<br>";
+        var validator = $('#oferta-form2').validate({
+            rules: {
+                txtImportePresupuesto:{ required: true, number: true },
+                txtMultiplicador: { number: true },
+                txtImportePresupuestoDivisa: { number: true },
+                txtMargenContribucion: { required: true, number: true },
+                txtMargenContribucion2: { number: true },
+                txtImporteContribucion: { number: true },
+                txtImporteInversion: { required: true, number: true },
+                txtImporteInversionDivisa: { number: true },
+                txtImporteRetorno: { number: true },
+                txtImporteUTE: { number: true },
+                txtImporteUTEDivisa: { number: true },
+                txtImporteAnual: { number: true },
+                txtImporteAnualDivisa: { number: true },
+                txtImportePrimerAno: { required: true, number: true },
+                txtImportePrimerAnoDivisa: { number: true }
+            },
+            errorPlacement: function (error, element) {
+                if (element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());      // radio/checkbox?
+                } else if (element.hasClass('aswselect2')) {
+                    error.insertAfter(element);  // select2
+                } else {
+                    error.insertAfter(element.parent());               // default
+                }
+            },
+            invalidHandler: function (e, validator) {
+                for (var i in validator.errorMap) {
+                    console.log(i, ":", validator.errorMap[i]);
+                    lerrors += descript[i] + "<br>";
+                }
+            }
+        });
+        // var ofe2 = $('#oferta-form2').valid();
+        var ofe2 = validator.form();
+        var validos = ofe2;
+        if (!validos) {
+            lerrors += i18n.t('lerrors2');
+            apiComunNotificaciones.mensajeAdvertencia(lerrors);
+            $('html,body').scrollTop(0);
+        }
+        return validos;
     }
 
 }

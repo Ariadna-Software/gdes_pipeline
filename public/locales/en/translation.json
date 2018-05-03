@@ -244,6 +244,7 @@
     "ofertas": {
         "titulo": "Offers",
         "panel": "Offers",
+        "usuario": "User",
         "tab": {
             "oportunidad": "OPPORTUNITY DATA",
             "economicos": "ECONOMIC DATA",
