@@ -8,6 +8,7 @@
     "salir": "Salir",
     "si": "SI",
     "no": "NO",
+    "copiar": "Copiar",
     "ayuda": "<div>AYUDA</div>",
     "cerrar": "Haga clic aquí para cerrar el recuadro",
     "lerrors1": "LOS SIGUIENTES CAMPOS:",
@@ -261,6 +262,7 @@
         "titulo": "Ofertas",
         "panel": "Ofertas",
         "usuario": "Usuario",
+        "copiar": "¿Quiere copiar esta oferta?",
         "tab":{
             "oportunidad": "DATOS OPORTUNIDAD",
             "economicos": "DATOS ECONÓMICOS",

@@ -8,6 +8,7 @@
     "salir": "Sortir",
     "si": "OUI",
     "no": "NON",
+    "copiar": "Copier",
     "ayuda": "<div>AIDE</div>",
     "cerrar": "Cliquez ici pour fermer l'encadré",
     "lerrors1": "LES CHAMPS SUIVANTS:",
@@ -247,6 +248,7 @@
         "titulo": "Offres",
         "panel": "Offres",
         "usuario": "Utilisateur",
+        "copiar": "Vous voulez copier cette offre?",
         "tab":{
             "oportunidad": "DONNÉES D'OCCASION",
             "economicos": "DONNÉES ÉCONOMIQUES",

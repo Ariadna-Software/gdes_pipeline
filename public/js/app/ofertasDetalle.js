@@ -54,6 +54,7 @@ var apiPaginaOfertasDetalle = {
         $('#btnSalir2').click(apiPaginaOfertasDetalle.salir);
         $('#btnSalir3').click(apiPaginaOfertasDetalle.salir);
         $('#btnSalir4').click(apiPaginaOfertasDetalle.salir);
+        $('#btnCopiar').click(apiPaginaOfertasDetalle.copiar);
         $('#cmbTipoOfertas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarTipoOfertas();
         $('#cmbResponsables').select2(select2_languages[usuario.codigoIdioma]);
@@ -1245,6 +1246,95 @@ var apiPaginaOfertasDetalle = {
             $('html,body').scrollTop(0);
         }
         return validos;
+    },
+    copiar: function () {
+        apiComunNotificaciones.mensajeAceptarCancelar(i18n.t("ofertas.copiar"), function () {
+            if (!apiPaginaOfertasDetalle.datosOk1()) return;
+            if (!apiPaginaOfertasDetalle.datosOk2()) return;
+            var data = {
+                ofertaId: 0,
+                tipoOfertaId: vm.sTipoOferta(),
+                responsableId: vm.sResponsable(),
+                paisId: vm.sPais(),
+                empresaId: vm.sEmpresa(),
+                areaId: vm.sArea(),
+                centroId: vm.sCentro(),
+                estadoId: vm.sEstado(),
+                proyectoId: vm.sProyecto(),
+                tipoActividadId: vm.sTipoActividad(),
+                tipoSoporteId: vm.sTipoSoporte(),
+                tiempoEmpleado: vm.tiempoEmpleado(),
+                personaContacto: vm.personaContacto(),
+                descripcion: vm.descripcion(),
+                observaciones: vm.observaciones(),
+                autorizaciones: vm.autorizaciones(),
+                ofertaSingular: vm.ofertaSingular(),
+                periodo: vm.periodo(),
+                colaboradores: vm.colaboradores(),
+                centroEstablecidoId: vm.sCentroEstablecido(),
+                nombreCorto: vm.nombreCorto(),
+                cliente: vm.cliente(),
+                version: 0,
+                ubicacion: vm.ubicacion(),
+                paisUbicacion: vm.paisUbicacion(),
+                unidadNegocioId: vm.sUnidadNegocio(),
+                servicioId: vm.sServicio(),
+                duracion: vm.duracion(),
+                probabilidad: vm.sProbabilidad(),
+                notasPlanning: vm.notasPlanning(),
+                faseOfertaId: vm.sFasesOferta(),
+                tipoOportunidadId: vm.sTiposOportunidad(),
+                tipoContratoId: vm.sTiposContrato(),
+                notasEstado: vm.notasEstado(),
+                codigoOferta: vm.codigoOferta(),
+                subrogacionSN: vm.subrogacionSN(),
+                subrogacionTXT: vm.subrogacionTXT(),
+                subrogacionNum: vm.subrogacionNum(),
+                uteSN: vm.uteSN(),
+                uteTXT: vm.uteTXT(),
+                gdesPor: vm.gdesPor(),
+                subcontrataSN: vm.subcontrataSN(),
+                subcontrataTXT: vm.subcontrataTXT(),
+                condicionesPago: vm.condicionesPago(),
+                alcance: vm.alcance(),
+                requerimientos: vm.requerimientos(),
+                puntosRelevantes: vm.puntosRelevantes(),
+                condicionesEstandarSN: vm.condicionesEstandarSN(),
+                condicionesEstandarTXT: vm.condicionesEstandarTXT(),
+                garantiasEspecialesSN: vm.garantiasEspecialesSN(),
+                garantiasEspecialesTXT: vm.garantiasEspecialesTXT(),
+                segurosSN: vm.segurosSN(),
+                segurosTXT: vm.segurosTXT(),
+                penalizaciones: vm.penalizaciones(),
+                riesgos: vm.riesgos(),
+                proveedorActual: vm.proveedorActual(),
+                competidores: vm.competidores(),
+                principalCompetidor: vm.principalCompetidor(),
+                criteriosEvaluacion: vm.criteriosEvaluacion(),
+                datosComerciales: vm.datosComerciales(),
+                diferencialGDES: vm.diferencialGDES(),
+                estrategiaGDES: vm.estrategiaGDES(),
+                sinergias: vm.sinergias(),
+                usuarioId: vm.sUsuario()
+            };
+            if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            if (vm.fechaLimiteProyecto()) data.fechaLimiteProyecto = moment(vm.fechaLimiteProyecto(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            if (vm.fechaEntrega()) data.fechaEntrega = moment(vm.fechaEntrega(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            if (vm.fechaDivisa()) data.fechaDivisa = moment(vm.fechaDivisa(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            if (vm.fechaCreacion()) data.fechaCreacion = moment(vm.fechaCreacion(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            if (vm.fechaAdjudicacion()) data.fechaAdjudicacion = moment(vm.fechaAdjudicacion(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            if (vm.fechaInicioContrato()) data.fechaInicioContrato = moment(vm.fechaInicioContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            if (vm.fechaFinContrato()) data.fechaFinContrato = moment(vm.fechaFinContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            verb = "POST";
+            data.version = 0;
+            apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
+                if (err) return;
+                window.open('OfertasDetalle.html?id=' + data.ofertaId, '_blank');
+            });
+        }, function () {
+
+        })
     }
 
 }

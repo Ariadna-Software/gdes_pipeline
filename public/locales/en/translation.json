@@ -8,6 +8,7 @@
     "salir": "Quit",
     "si": "YES",
     "no": "NO",
+    "copiar": "Copy",
     "ayuda": "<div>HELP</div>",
     "cerrar": "Press here to close the window",
     "lerrors1": "THE FOLLOWING FIELDS:",
@@ -247,6 +248,7 @@
         "titulo": "Offers",
         "panel": "Offers",
         "usuario": "User",
+        "copiar": "Do you want to copy this offer?",
         "tab": {
             "oportunidad": "OPPORTUNITY DATA",
             "economicos": "ECONOMIC DATA",
