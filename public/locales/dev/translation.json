@@ -209,7 +209,7 @@
         "valNombre": "Nombre necesario",
         "area": "Area a la que pertenece",
         "valArea": "Area necesaria"
-    },   
+    },
     "fasesOferta": {
         "titulo": "Fases oferta",
         "panel": "Fases oferta",
@@ -221,7 +221,7 @@
         "editar": "Editar fase",
         "eliminar": "Eliminar fase",
         "valNombre": "Nombre necesario"
-    }, 
+    },
     "tiposOportunidad": {
         "titulo": "Tipos oportunidad",
         "panel": "Tipos oportunidad",
@@ -233,7 +233,7 @@
         "editar": "Editar tipo",
         "eliminar": "Eliminar tipo",
         "valNombre": "Nombre necesario"
-    },   
+    },
     "tiposContrato": {
         "titulo": "Tipos contrato",
         "panel": "Tipos contrato",
@@ -245,7 +245,7 @@
         "editar": "Editar tipo",
         "eliminar": "Eliminar tipo",
         "valNombre": "Nombre necesario"
-    },   
+    },
     "razonPerdida": {
         "titulo": "Razones perdida / no presentación",
         "panel": "Razones perdida / no presentación",
@@ -257,13 +257,13 @@
         "editar": "Editar razón",
         "eliminar": "Eliminar razón",
         "valNombre": "Nombre necesario"
-    },    
+    },
     "ofertas": {
         "titulo": "Ofertas",
         "panel": "Ofertas",
         "usuario": "Usuario",
         "copiar": "¿Quiere copiar esta oferta?",
-        "tab":{
+        "tab": {
             "oportunidad": "DATOS OPORTUNIDAD",
             "economicos": "DATOS ECONÓMICOS",
             "ppr": "DATOS COMPLEMENTARIOS (PPR)",
@@ -283,6 +283,20 @@
         "c10": "CONCURRENCIA Y SITUACIÓN DE MERCADO",
         "c11": "GDES VALOR Y ESTRATEGIA",
         "c12": "NOTAS",
+        "c13": "OPORTUNIDADES",
+        "c14": "PROYECTOS",
+        "c15": "RECLAMACIONES",
+        "actividadesRealizadas": "Actividades realizadas",
+        "actividadesPlanificadas": "Actividades planificadas",
+        "situacionProyecto": "Situación del proyecto",
+        "importeReclamacion1": "Importe reclamación (1)",
+        "importeReclamacion2": "Importe reclamación (2)",
+        "importeReclamacion3": "Importe reclamación (3)",
+        "importeReclamacion4": "Importe reclamación (4)",
+        "razonReclamacion1": "Razón reclamación (1)",
+        "razonReclamacion2": "Razón reclamación (2)",
+        "razonReclamacion3": "Razón reclamación (3)",
+        "razonReclamacion4": "Razón reclamación (4)",
         "ubicacion": "Ubicación",
         "paisUbicacion": "Pais (Ubicación)",
         "unidadNegocio": "Unidad negocio",
@@ -409,7 +423,7 @@
             "- Inversión Relevante (> 10% al presupuesto) <br/>",
             "- Aval > 15% <br/>",
             "- Forma de Pago > 60 días <br/>",
-            "- Con cashflow negativo durante > 3 meses <br/>"
+            "- Con cashflow negativo durante > 4 meses <br/>"
         ],
         "ayudaEstado": [
             "<strong>EN PROCESO:</strong><br/>",
@@ -505,7 +519,7 @@
         "importePrimerAno": "Importe primer año",
         "importeInversion": "Valor inversion",
         "divisa": "DIVISA",
-        "multiplicador":"Factor",
+        "multiplicador": "Factor",
         "fechaDivisa": "Fecha divisa",
         "importePresupuestoDivisa": "Importe GDES (DIVISA)",
         "importeUTEDivisa": "Importe UTE  (DIVISA)",

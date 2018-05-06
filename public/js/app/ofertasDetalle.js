@@ -273,6 +273,18 @@ var apiPaginaOfertasDetalle = {
         // vm.importeTotalDivisa(data.importeTotalDivisa);
         vm.sDivisa(data.divisaId);
         apiPaginaOfertasDetalle.cargarAntiguosValores();
+
+        vm.actividadesRealizadas(data.actividadesRealizadas);
+        vm.actividadesPlanificadas(data.actividadesPlanificadas);
+        vm.situacionProyecto(data.situacionProyecto);
+        vm.importeReclamacion1(data.importeReclamacion1);
+        vm.importeReclamacion2(data.importeReclamacion2);
+        vm.importeReclamacion3(data.importeReclamacion3);
+        vm.importeReclamacion4(data.importeReclamacion4);
+        vm.razonReclamacion1(data.razonReclamacion1);
+        vm.razonReclamacion2(data.razonReclamacion2);
+        vm.razonReclamacion3(data.razonReclamacion3);
+        vm.razonReclamacion4(data.razonReclamacion4);
     },
     datosPagina: function () {
         var self = this;
@@ -448,6 +460,18 @@ var apiPaginaOfertasDetalle = {
         self.optionsUsuarios = ko.observableArray([]);
         self.selectedUsuarios = ko.observableArray([]);
         self.sUsuario = ko.observable();
+
+        self.actividadesRealizadas = ko.observable();
+        self.actividadesPlanificadas = ko.observable();
+        self.situacionProyecto = ko.observable();
+        self.importeReclamacion1 = ko.observable();
+        self.importeReclamacion2 = ko.observable();
+        self.importeReclamacion3 = ko.observable();
+        self.importeReclamacion4 = ko.observable();
+        self.razonReclamacion1 = ko.observable();
+        self.razonReclamacion2 = ko.observable();
+        self.razonReclamacion3 = ko.observable();
+        self.razonReclamacion4 = ko.observable();
     },
     aceptar: function () {
         // if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -543,7 +567,18 @@ var apiPaginaOfertasDetalle = {
             sinergias: vm.sinergias(),
             importeTotal: vm.importeTotal(),
             importeTotalDivisa: vm.importeTotalDivisa(),
-            usuarioId: vm.sUsuario()
+            usuarioId: vm.sUsuario(),
+            actividadesRealizadas: vm.actividadesRealizadas(),
+            actividadesPlanificadas: vm.actividadesPlanificadas(),
+            situacionProyecto: vm.situacionProyecto(),
+            importeReclamacion1: vm.importeReclamacion1(),
+            importeReclamacion2: vm.importeReclamacion2(),
+            importeReclamacion3: vm.importeReclamacion3(),
+            importeReclamacion4: vm.importeReclamacion4(),
+            razonReclamacion1: vm.razonReclamacion1(),
+            razonReclamacion2: vm.razonReclamacion2(),
+            razonReclamacion3: vm.razonReclamacion3(),
+            razonReclamacion4: vm.razonReclamacion3()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
