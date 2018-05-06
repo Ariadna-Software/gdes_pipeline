@@ -68,6 +68,9 @@ var apiPaginaOfertasDetalle = {
 
         $('#cmbEmpresas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEmpresas();
+        $("#cmbEmpresas").select2().on('change', function (e) {
+            apiPaginaOfertasDetalle.cargarEmpresaPais(e.added);
+        });
 
         $('#cmbProbabilidad').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarProbabilidad();
@@ -907,6 +910,18 @@ var apiPaginaOfertasDetalle = {
             var options = [{ servicioId: 0, nombre: " " }].concat(data);
             vm.optionsServicio(options);
             $("#cmbServicio").val([id]).trigger('change');
+        });
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/areas/" + id, null, function (err, data) {
+            if (err) return;
+            apiPaginaOfertasDetalle.cargarUnidadNegocio(data.unidadNegocioId);
+        });
+    },
+    cargarEmpresaPais: function (data) {
+        if (!data) return;
+        var id = data.id;
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/paises/" + id, null, function (err, data) {
+            if (err) return;
+            apiPaginaOfertasDetalle.cargarPaiss(id);
         });
     },
     lanzarMensajeAyuda: function (mensaje) {

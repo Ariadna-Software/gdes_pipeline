@@ -21,6 +21,9 @@ var apiPaginaAreasDetalle = {
         $('#btnAceptar').click(apiPaginaAreasDetalle.aceptar);
         $('#btnSalir').click(apiPaginaAreasDetalle.salir);
 
+        $('#cmbUnidadNegocio').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaAreasDetalle.cargarUnidadNegocio();
+        
         areaId = apiComunGeneral.gup("id");
         if (areaId == 0){
             vm.areaId(0);
@@ -39,6 +42,7 @@ var apiPaginaAreasDetalle = {
         vm.nombre(data.nombre);
         vm.nombreEN(data.nombreEN);
         vm.nombreFR(data.nombreFR);
+        apiPaginaAreasDetalle.cargarUnidadNegocio(data.unidadNegocioId);
     },
     datosPagina: function () {
         var self = this;
@@ -46,6 +50,9 @@ var apiPaginaAreasDetalle = {
         self.nombre = ko.observable();
         self.nombreEN = ko.observable();
         self.nombreFR = ko.observable();
+        self.optionsUnidadNegocio = ko.observableArray([]);
+        self.selectedUnidadNegocio = ko.observableArray([]);
+        self.sUnidadNegocio = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaAreasDetalle.datosOk()) return;
@@ -53,7 +60,8 @@ var apiPaginaAreasDetalle = {
             areaId: vm.areaId(),
             nombre: vm.nombre(),
             nombreEN: vm.nombreEN(),
-            nombreFR: vm.nombreFR()
+            nombreFR: vm.nombreFR(),
+            unidadNegocioId: vm.sUnidadNegocio()
         };
         var verb = "PUT";
         if (vm.areaId() == 0) verb = "POST";
@@ -75,7 +83,19 @@ var apiPaginaAreasDetalle = {
     },
     salir: function () {
         window.open(sprintf('AreasGeneral.html'), '_self');
-    }
+    },
+    cargarUnidadNegocio: function (id) {
+        var url = myconfig.apiUrl + "/api/unidades-negocio"
+        if (usuario.codigoIdioma != "es") {
+            url = myconfig.apiUrl + "/api/unidades-negocio/multi/" + usuario.codigoIdioma;
+        }
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
+            if (err) return;
+            var options = [{ unidadNegocioId: 0, nombre: " " }].concat(data);
+            vm.optionsUnidadNegocio(options);
+            $("#cmbUnidadNegocio").val([id]).trigger('change');
+        });
+    },
 }
 
 

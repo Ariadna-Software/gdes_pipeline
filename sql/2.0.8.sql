@@ -75,3 +75,11 @@ ALTER TABLE `usuarios`
   ADD COLUMN `ubicacion` VARCHAR(255) NULL AFTER `responsableId`,
   ADD COLUMN `unidadNegocioId` INT(11) NULL AFTER `ubicacion`,
   ADD CONSTRAINT `usuarios_unidades_negocio` FOREIGN KEY (`unidadNegocioId`) REFERENCES `unidades_negocio`(`unidadNegocioId`);
+
+ALTER TABLE `empresas`   
+  ADD COLUMN `paisId` INT(11) NULL AFTER `nombre`,
+  ADD CONSTRAINT `empresa_pias` FOREIGN KEY (`paisId`) REFERENCES `paises`(`paisId`);
+
+ALTER TABLE `areas`   
+  ADD COLUMN `unidadNegocioId` INT(11) NULL AFTER `nombreFR`,
+  ADD CONSTRAINT `area_unidadnegocio` FOREIGN KEY (`unidadNegocioId`) REFERENCES `unidades_negocio`(`unidadNegocioId`);

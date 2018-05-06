@@ -20,6 +20,9 @@ var apiPaginaEmpresasDetalle = {
         $('#empresa-form').submit(function () { return false; });
         $('#btnAceptar').click(apiPaginaEmpresasDetalle.aceptar);
         $('#btnSalir').click(apiPaginaEmpresasDetalle.salir);
+        
+        $('#cmbPaiss').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaEmpresasDetalle.cargarPaiss();
 
         empresaId = apiComunGeneral.gup("id");
         if (empresaId == 0){
@@ -37,17 +40,23 @@ var apiPaginaEmpresasDetalle = {
     cargarDatosPagina: function(data){
         vm.empresaId(data.empresaId);
         vm.nombre(data.nombre);
+        apiPaginaEmpresasDetalle.cargarPaiss(data.paisId);
     },
     datosPagina: function () {
         var self = this;
         self.empresaId = ko.observable();
         self.nombre = ko.observable();
+
+        self.optionsPaiss = ko.observableArray([]);
+        self.selectedPaiss = ko.observableArray([]);
+        self.sPais = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaEmpresasDetalle.datosOk()) return;
         var data = {
             empresaId: vm.empresaId(),
-            nombre: vm.nombre()
+            nombre: vm.nombre(),
+            paisId: vm.sPais()
         };
         var verb = "PUT";
         if (vm.empresaId() == 0) verb = "POST";
@@ -69,6 +78,14 @@ var apiPaginaEmpresasDetalle = {
     },
     salir: function () {
         window.open(sprintf('EmpresasGeneral.html'), '_self');
+    },
+    cargarPaiss: function (id) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/paises", null, function (err, data) {
+            if (err) return;
+            var options = [{ paisId: 0, nombre: " " }].concat(data);
+            vm.optionsPaiss(options);
+            $("#cmbPaiss").val([id]).trigger('change');
+        });
     }
 }
 

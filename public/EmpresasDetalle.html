@@ -266,12 +266,18 @@
                                 <form id="empresa-form" class="smart-form">
                                     <fieldset>
                                         <div class="row">
-                                            <section class="col col-md-12">
+                                            <section class="col col-md-8">
                                                 <label class="label" data-i18n="empresas.nombre">Nombre:</label>
                                                 <label class="input">
                                                     <input id="txtNombre" name="txtNombre" data-bind="value: nombre">
                                                 </label>
                                             </section>
+                                            <section class="col col-md-4">
+                                                <label class="label" data-i18n="usuarios.pais">Pais:</label>
+                                                <select class="aswselect2" id="cmbPaiss" name="cmbPaiss" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
+                                                    value: sPais, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
+                                                </select>
+                                            </section>                                            
                                         </div>
                                     </fieldset>
                                     <fieldset>
@@ -328,6 +334,7 @@
     <script src="js/plugin/datatables/dataTables.tableTools.min.js"></script>
     <script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
     <script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
+    <script src="js/plugin/select2/select2.min.js"></script>
     <!-- Idiomas -->
     <script src="js/libs/i18next/i18next-1.9.0.js"></script>
     <script src="locales/validator-languages.js"></script>
