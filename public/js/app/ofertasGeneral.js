@@ -32,32 +32,73 @@ var apiPaginaOfertasGeneral = {
         options.columns = [{
             data: "ofertaId"
         }, {
-            data: "faseOferta"
+            data: "numeroOferta"
         }, {
             data: "pais"
+        }, {
+            data: "nomEmpresa"
+        }, {
+            data: "faseOferta"
+        }, {
+            data: "tipoOportunidad"
+        }, {
+            data: "tipoContrato"
+        }, {
+            data: "nomUnidadNegocio"
         }, {
             data: "nomArea"
         }, {
             data: "ubicacion"
         }, {
+            data: "paisUbicacion"
+        }, {
             data: "cliente"
         }, {
-            data: "descripcion"
+            data: "nombreCorto"
+        }, {
+            data: "servicio"
         }, {
             data: "estado"
         }, {
-            data: "importeTotal",
+            data: "importePresupuesto",
             render: function (data) {
                 return numeral(data).format('0,0');
             }
         }, {
-            data: "nombreCorto"
+            data: "divisa"
         }, {
-            data: "paisUbicacion"
+            data: "margenContribucion",
+            render: function (data) {
+                return numeral(data).format('0,0');
+            }
         }, {
-            data: "nomUnidadNegocio"
+            data: "importePrimerAno",
+            render: function (data) {
+                return numeral(data).format('0,0');
+            }
         }, {
-            data: "nomEmpresa"
+            data: "fechaEntrega",
+            render: function (data) {
+                if (!data) return "";
+                return moment(data).format('DD/MM/YYYY');
+            }
+        }, {
+            data: "responsable"
+        }, {
+            data: "autorizaciones"
+        }, {
+            data: "uteSN"
+        }, {
+            data: "importeUTE",
+            render: function (data) {
+                return numeral(data).format('0,0');
+            }
+        }, {
+            data: "numeroPedido"
+        }, {
+            data: "competidores"
+        }, {
+            data: "probabilidad"
         }, {
             data: "fechaAdjudicacion",
             render: function (data) {
@@ -79,26 +120,7 @@ var apiPaginaOfertasGeneral = {
         }, {
             data: "duracion"
         }, {
-            data: "probabilidad"
-        }, {
-            data: "numeroOferta"
-        }, {
-            data: "tipoOportunidad"
-        }, {
-            data: "numeroPedido"
-        }, {
             data: "razonPerdida"
-        }, {
-            data: "divisa"
-        }, {
-            data: "importePresupuesto",
-            render: function (data) {
-                return numeral(data).format('0,0');
-            }
-        }, {
-            data: "autorizaciones"
-        }, {
-            data: "divisa"
         }, {
             data: "ofertaId",
             render: function (data, type, row) {
@@ -109,7 +131,7 @@ var apiPaginaOfertasGeneral = {
             }
         }];
         tabla = $('#dt_ofertas').DataTable(options);
-        
+
         // Apply the filter
         $("#dt_ofertas thead th input[type=text]").on('keyup change', function () {
             tabla
@@ -122,14 +144,14 @@ var apiPaginaOfertasGeneral = {
         if (!estado) {
             estado = [];
             estado.push("true", "true", "true", "true", "true", "true", "true", "true");
-            for (var i = 8; i < 26; i++) {
+            for (var i = 8; i < 31; i++) {
                 tabla.columns(i).visible(false);
                 estado.push(tabla.columns(i).visible()[0]);
             }
             estado.push("true");
         } else {
             var booleana = estado.split(",")
-            for (var j = 0; j < 26; j++) {
+            for (var j = 0; j < 31; j++) {
                 if (booleana[j] == "true") booleana[j] = true;
                 else if (booleana[j] == "false") booleana[j] = false;
                 tabla.columns(j).visible(booleana[j]);
