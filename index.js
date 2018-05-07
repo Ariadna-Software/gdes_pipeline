@@ -90,7 +90,7 @@ app.use('/api/tipos-contrato', require('./lib/tipos-contrato/tipos-contrato.cont
 app.use('/api/razon-perdida', require('./lib/razon-perdida/razon-perdida.controller'));
 app.use('/api/seguidores', require('./lib/seguidores/seguidores.controller'));
 app.use('/api/versiones', require('./lib/versiones/versiones.controller'));
-app.use('/api/streport', require('./report-controller/reportdb'));
+app.use('/streport', require('./report-controller/reportdb'));
 
 // -- start server
 app.listen(config.apiPort);

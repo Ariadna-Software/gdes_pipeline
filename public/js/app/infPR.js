@@ -29,5 +29,33 @@ var apiInfPR = {
         options.appearance.scrollbarsMode = true;
         options.appearance.fullScreenMode = true;
         options.toolbar.showSendEmailButton = true;
+        // llamar al informe 
+        apiInfPR.obtainReport();
+    },
+    obtainReport: function() {
+        StiOptions.WebServer.url = "/streport";
+        var file = "reports/proposal_report.mrt";
+        // Create a new report instance
+        var report = new Stimulsoft.Report.StiReport();
+        report.loadFile(file);
+
+        var connectionString = "Server=" + myconfig.report.host + ";";
+        connectionString += "Port=" + myconfig.report.port + ";"
+        connectionString += "Database=" + myconfig.report.database + ";"
+        connectionString += "UserId=" + myconfig.report.user + ";"
+        connectionString += "Pwd=" + myconfig.report.password + ";";
+        report.dictionary.databases.list[0].connectionString = connectionString;
+
+        // Parámetros
+        // report.dictionary.variables.items[0].val = vm.dFecha();
+        // report.dictionary.variables.items[1].val = vm.hFecha();
+        // report.dictionary.variables.items[2].val = moment(vm.dFecha()).format("DD/MM/YYYY");
+        // report.dictionary.variables.items[3].val = moment(vm.hFecha()).format("DD/MM/YYYY");
+        // var sql = report.dataSources.items[0].sqlCommand;
+        // report.dataSources.items[0].sqlCommand = rptHousDetail(sql);
+
+        // Assign report to the viewer, the report will be built automatically after rendering the viewer
+        viewer.report = report;
+        viewer.renderHtml("report_viewer");
     }
 }
