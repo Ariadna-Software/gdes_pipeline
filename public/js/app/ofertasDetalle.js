@@ -55,6 +55,7 @@ var apiPaginaOfertasDetalle = {
         $('#btnSalir3').click(apiPaginaOfertasDetalle.salir);
         $('#btnSalir4').click(apiPaginaOfertasDetalle.salir);
         $('#btnCopiar').click(apiPaginaOfertasDetalle.copiar);
+        $('#btnProposal').click(apiPaginaOfertasDetalle.proposalReport);
         $('#cmbTipoOfertas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarTipoOfertas();
         $('#cmbResponsables').select2(select2_languages[usuario.codigoIdioma]);
@@ -1385,6 +1386,10 @@ var apiPaginaOfertasDetalle = {
         }, function () {
 
         })
+    },
+    proposalReport: function() {
+        var url = "infPR.html?ofertaId=" + vm.ofertaId();
+        window.open(url, '_blank');
     }
 
 }

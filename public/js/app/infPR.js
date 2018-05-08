@@ -10,6 +10,7 @@ var vm;
 
 var viewer;
 var options;
+var ofertaId = 211;
 
 var apiInfPR = {
     ini: function () {
@@ -29,6 +30,8 @@ var apiInfPR = {
         options.appearance.scrollbarsMode = true;
         options.appearance.fullScreenMode = true;
         options.toolbar.showSendEmailButton = true;
+        // parámetros 
+        ofertaId = apiComunGeneral.gup("ofertaId");
         // llamar al informe 
         apiInfPR.obtainReport();
     },
@@ -47,12 +50,8 @@ var apiInfPR = {
         report.dictionary.databases.list[0].connectionString = connectionString;
 
         // Parámetros
-        // report.dictionary.variables.items[0].val = vm.dFecha();
-        // report.dictionary.variables.items[1].val = vm.hFecha();
-        // report.dictionary.variables.items[2].val = moment(vm.dFecha()).format("DD/MM/YYYY");
-        // report.dictionary.variables.items[3].val = moment(vm.hFecha()).format("DD/MM/YYYY");
-        // var sql = report.dataSources.items[0].sqlCommand;
-        // report.dataSources.items[0].sqlCommand = rptHousDetail(sql);
+        report.dictionary.variables.items[0].val = ofertaId;
+
 
         // Assign report to the viewer, the report will be built automatically after rendering the viewer
         viewer.report = report;
