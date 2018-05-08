@@ -91,6 +91,7 @@ app.use('/api/razon-perdida', require('./lib/razon-perdida/razon-perdida.control
 app.use('/api/seguidores', require('./lib/seguidores/seguidores.controller'));
 app.use('/api/versiones', require('./lib/versiones/versiones.controller'));
 app.use('/streport', require('./report-controller/reportdb'));
+app.use('/upload', require('./lib/uploads/upload'));
 
 // -- start server
 app.listen(config.apiPort);

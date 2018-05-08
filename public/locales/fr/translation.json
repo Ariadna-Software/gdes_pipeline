@@ -52,6 +52,10 @@
         "gestion": {
             "cab": "Gestion",
             "ofertas": "Offres"
+        },
+        "importacion": {
+            "cab": "Importer des données",
+            "excel": "Importer depuis Excel"
         }
     },
     "login": {
@@ -113,6 +117,10 @@
         "valNombre": "Nom nécesaire",
         "usuario": "Utilisateur"
     },
+    "importacion": {
+        "titulo": "Importer depuis Excel",
+        "panel": "Importer depuis Excel"
+    }, 
     "empresas": {
         "titulo": "Entreprises",
         "panel": "Entreprises",

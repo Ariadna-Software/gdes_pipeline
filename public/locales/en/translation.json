@@ -52,6 +52,10 @@
         "gestion": {
             "cab": "Pool",
             "ofertas": "Offers"
+        },
+        "importacion": {
+            "cab": "Import data",
+            "excel": "Import from Excel"
         }
     },
     "login": {
@@ -113,6 +117,10 @@
         "valNombre": "Necessary name",
         "usuario": "User"
     },
+    "importacion": {
+        "titulo": "Import from Excel",
+        "panel": "Import from Excel"
+    }, 
     "empresas": {
         "titulo": "Companies",
         "panel": "Companies",
