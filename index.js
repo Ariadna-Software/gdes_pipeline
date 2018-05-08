@@ -92,6 +92,7 @@ app.use('/api/seguidores', require('./lib/seguidores/seguidores.controller'));
 app.use('/api/versiones', require('./lib/versiones/versiones.controller'));
 app.use('/streport', require('./report-controller/reportdb'));
 app.use('/upload', require('./lib/uploads/upload'));
+app.use('/importacion', require('./lib/importacion/importacion.controller'));
 
 // -- start server
 app.listen(config.apiPort);

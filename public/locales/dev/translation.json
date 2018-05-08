@@ -122,7 +122,8 @@
         "panel": "Importar desde excel",
         "paso1": "PASO1: Seleccione el fichero Excel a importar y haga clic en el botón de aceptar para verificar los datos",
         "paso2": "PASO2: Compruebe los mensajes de verificación del fichero y si todo es correcto haga clic en importar. Si no, corrija el fichero y vuelva a seleccionarlo en el PASO1",
-        "soloExcel": "Solo se admiten ficheros Excel"
+        "soloExcel": "Solo se admiten ficheros Excel",
+        "elijaFichero": "Debe elegir previamente un fichero"
     },    
     "empresas": {
         "titulo": "Empresas",

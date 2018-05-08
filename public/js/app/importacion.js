@@ -31,6 +31,7 @@ var apiImportacion = {
                     var file = files[i];
                     var ext = file.name.split('.').pop().toLowerCase();
                     if (allowedFileExtensions.indexOf(ext) == -1) {
+                        filename = "";
                         apiComunNotificaciones.mensajeAdvertencia(i18n.t('importacion.soloExcel'));
                         return;
                     }
@@ -71,7 +72,14 @@ var apiImportacion = {
         });
     },
     verificarFichero: function () {
-
+        if (filename == "") {
+            apiComunNotificaciones.mensajeAdvertencia(i18n.t('importacion.elijaFichero'));
+            return;
+        }
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/importacion/" + filename, null, function(err, data){
+            if (err) return;
+            apiPaginaAreasDetalle.salir();
+        });
     },
     cargarOfertas: function () {
 
