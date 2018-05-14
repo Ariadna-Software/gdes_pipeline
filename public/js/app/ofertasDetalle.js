@@ -736,7 +736,6 @@ var apiPaginaOfertasDetalle = {
         if (!validos) {
             lerrors += i18n.t('lerrors2');
             apiComunNotificaciones.mensajeAdvertencia(lerrors);
-            $('html,body').scrollTop(0);
         }
         return validos;
     },

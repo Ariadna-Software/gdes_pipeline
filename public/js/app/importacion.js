@@ -7,6 +7,7 @@ var usuario = apiComunGeneral.obtenerUsuario();
 var allowedFileExtensions = ['xls', 'xlsx'];
 var invoicesUp = [];
 var filename = "";
+var ofertasDb = [];
 
 var apiImportacion = {
     ini: function () {
@@ -82,12 +83,21 @@ var apiImportacion = {
             var mensaje = "";
             data.forEach(function(v){
                 mensaje += v.mensaje + "<br>";
+                v.ofertaDb.usuarioId = usuario.usuarioId;
+                ofertasDb.push(v.ofertaDb);
             });
             $('#wresultado').html(mensaje);
         });
     },
     cargarOfertas: function () {
-
+        if (ofertasDb.length == 0){
+            apiComunNotificaciones.mensajeAdvertencia(i18n.t('importacion.noHayOfertas'));
+            return;
+        } 
+        apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/api/ofertas/fexcel", ofertasDb, function (err, data) {
+            if (err) return;
+            apiComunNotificaciones.mensajeAdvertencia(i18n.t('importacion.ficheroCargado'));
+        });
     }
 }
 

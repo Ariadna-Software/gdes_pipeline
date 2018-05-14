@@ -24,6 +24,7 @@ var apiComunNotificaciones = {
             color: "#C46A69",
             iconSmall: "fa fa-warning shake animated",
         });
+        $('html,body').scrollTop(0);
     },
     mensajeAceptarCancelar: function (mensaje, fnAceptar, fnCancelar) {
         $.SmartMessageBox({
@@ -50,6 +51,7 @@ var apiComunNotificaciones = {
             color: "#006666",
             iconSmall: "fa fa-info-circle bounce animated",
         });
+        $('html,body').scrollTop(0);
     },
     mensajeAdvertencia: function (mensaje) {
         html = "<hr/>";
@@ -62,5 +64,6 @@ var apiComunNotificaciones = {
             color: "orange",
             iconSmall: "fa fa-info-circle bounce animated",
         });
+        $('html,body').scrollTop(0);
     }
 }
