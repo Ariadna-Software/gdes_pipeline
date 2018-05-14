@@ -76,9 +76,14 @@ var apiImportacion = {
             apiComunNotificaciones.mensajeAdvertencia(i18n.t('importacion.elijaFichero'));
             return;
         }
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/importacion/" + filename, null, function(err, data){
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/importacion/" + filename, null, function (err, data) {
             if (err) return;
-            apiPaginaAreasDetalle.salir();
+            // mostrar en la ventana de mensajes 
+            var mensaje = "";
+            data.forEach(function(v){
+                mensaje += v.mensaje + "<br>";
+            });
+            $('#wresultado').html(mensaje);
         });
     },
     cargarOfertas: function () {
