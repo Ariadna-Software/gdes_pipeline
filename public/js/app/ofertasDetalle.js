@@ -76,6 +76,7 @@ var apiPaginaOfertasDetalle = {
         $('#cmbProbabilidad').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarProbabilidad();
 
+
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarAreas();
         $("#cmbAreas").select2().on('change', function (e) {
@@ -88,7 +89,9 @@ var apiPaginaOfertasDetalle = {
         $('#cmbCentros').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarCentros();
 
-        $('#cmbServicio').select2(select2_languages[usuario.codigoIdioma]);
+        var select2Options = select2_languages[usuario.codigoIdioma];
+        select2Options.maximumSelectionSize = 3;
+        $('#cmbServicio').select2(select2Options);
         apiPaginaOfertasDetalle.cargarServicio();
 
         $('#cmbFasesOferta').select2(select2_languages[usuario.codigoIdioma]);
@@ -110,6 +113,23 @@ var apiPaginaOfertasDetalle = {
                 vm.fechaUltimoEstado(moment(new Date()).format('DD/MM/YYYY'));
             }
         });
+
+
+        // $('#txtUbicacion').select2({
+        //     placeholder: 'Seleccione ubicacion',
+        //     allowClear: true,
+        //     id: function(object) {
+        //         return object.text;
+        //     },
+        //     createSearchChoice:function(term, data) {
+        //         if ( $(data).filter( function() {
+        //             return this.text.localeCompare(term)===0;
+        //         }).length===0) {
+        //             return {id:term, text:term};
+        //         }
+        //     },
+        //     data:[{id:'m1', text:'txtm1'}, {id:'m2', text:'txtm2'}]
+        // });
 
         $('#cmbProyectos').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarProyectos();
@@ -169,7 +189,7 @@ var apiPaginaOfertasDetalle = {
     cargarDatosPagina: function (data) {
         vm.ofertaId(data.ofertaId);
         vm.numeroOferta(data.numeroOferta);
-        vm.fechaOferta(moment(data.fechaOferta).format(i18n.t('util.date_format')));
+        if (data.fechaOferta) vm.fechaOferta(moment(data.fechaOferta).format(i18n.t('util.date_format')));
         if (data.fechaUltimoEstado) vm.fechaUltimoEstado(moment(data.fechaUltimoEstado).format(i18n.t('util.date_format')));
         if (data.fechaLimiteProyecto) vm.fechaLimiteProyecto(moment(data.fechaLimiteProyecto).format(i18n.t('util.date_format')));
         if (data.fechaEntrega) vm.fechaEntrega(moment(data.fechaEntrega).format(i18n.t('util.date_format')));
@@ -219,7 +239,7 @@ var apiPaginaOfertasDetalle = {
         vm.ubicacion(data.ubicacion);
         vm.paisUbicacion(data.paisUbicacion);
         apiPaginaOfertasDetalle.cargarUnidadNegocio(data.unidadNegocioId);
-        apiPaginaOfertasDetalle.cargarServicio(data.servicioId);
+        apiPaginaOfertasDetalle.cargarServicio(data.servicioId, data.servicioId2, data.servicioId3);
         if (data.fechaCreacion) vm.fechaCreacion(moment(data.fechaCreacion).format(i18n.t('util.date_format')));
         if (data.fechaAdjudicacion) vm.fechaAdjudicacion(moment(data.fechaAdjudicacion).format(i18n.t('util.date_format')));
         if (data.fechaInicioContrato) vm.fechaInicioContrato(moment(data.fechaInicioContrato).format(i18n.t('util.date_format')));
@@ -519,7 +539,6 @@ var apiPaginaOfertasDetalle = {
             ubicacion: vm.ubicacion(),
             paisUbicacion: vm.paisUbicacion(),
             unidadNegocioId: vm.sUnidadNegocio(),
-            servicioId: vm.sServicio(),
             duracion: vm.duracion(),
             probabilidad: vm.sProbabilidad(),
             notasPlanning: vm.notasPlanning(),
@@ -590,6 +609,15 @@ var apiPaginaOfertasDetalle = {
         if (vm.fechaAdjudicacion()) data.fechaAdjudicacion = moment(vm.fechaAdjudicacion(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaInicioContrato()) data.fechaInicioContrato = moment(vm.fechaInicioContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaFinContrato()) data.fechaFinContrato = moment(vm.fechaFinContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.selectedServicio().length > 0) {
+            data.servicioId = vm.selectedServicio()[0];
+            if (vm.selectedServicio()[1]) data.servicioId2 = vm.selectedServicio()[1]; else data.servicioId2 = null;
+            if (vm.selectedServicio()[2]) data.servicioId3 = vm.selectedServicio()[2]; else data.servicioId3 = null;
+        } else {
+            data.servicioId = null;
+            data.servicioId2 = null;
+            data.servicioId3 = null;
+        }
         var verb = "PUT";
         if (vm.ofertaId() == 0) {
             verb = "POST";
@@ -866,7 +894,7 @@ var apiPaginaOfertasDetalle = {
             $("#cmbUnidadNegocio").val([id]).trigger('change');
         });
     },
-    cargarServicio: function (id) {
+    cargarServicio: function (id, id2, id3) {
         var url = myconfig.apiUrl + "/api/servicios";
         if (usuario.codigoIdioma != "es") {
             url = myconfig.apiUrl + "/api/servicios/multi/" + usuario.codigoIdioma;
@@ -875,7 +903,7 @@ var apiPaginaOfertasDetalle = {
             if (err) return;
             var options = [{ servicioId: 0, nombre: " " }].concat(data);
             vm.optionsServicio(options);
-            $("#cmbServicio").val([id]).trigger('change');
+            $("#cmbServicio").val([id, id2, id3]).trigger('change');
         });
     },
     cargarFasesOferta: function (id) {
@@ -1328,7 +1356,6 @@ var apiPaginaOfertasDetalle = {
                 ubicacion: vm.ubicacion(),
                 paisUbicacion: vm.paisUbicacion(),
                 unidadNegocioId: vm.sUnidadNegocio(),
-                servicioId: vm.sServicio(),
                 duracion: vm.duracion(),
                 probabilidad: vm.sProbabilidad(),
                 notasPlanning: vm.notasPlanning(),
@@ -1376,6 +1403,15 @@ var apiPaginaOfertasDetalle = {
             if (vm.fechaAdjudicacion()) data.fechaAdjudicacion = moment(vm.fechaAdjudicacion(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
             if (vm.fechaInicioContrato()) data.fechaInicioContrato = moment(vm.fechaInicioContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
             if (vm.fechaFinContrato()) data.fechaFinContrato = moment(vm.fechaFinContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+            if (vm.selectedServicio().length > 0) {
+                data.servicioId = vm.selectedServicio()[0];
+                if (vm.selectedServicio()[1]) data.servicioId2 = vm.selectedServicio()[1]; else data.servicioId2 = null;
+                if (vm.selectedServicio()[2]) data.servicioId3 = vm.selectedServicio()[2]; else data.servicioId3 = null;
+            } else {
+                data.servicioId = null;
+                data.servicioId2 = null;
+                data.servicioId3 = null;
+            }
             verb = "POST";
             data.version = 0;
             apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
@@ -1386,7 +1422,7 @@ var apiPaginaOfertasDetalle = {
 
         })
     },
-    proposalReport: function() {
+    proposalReport: function () {
         var url = "infPR.html?ofertaId=" + vm.ofertaId();
         window.open(url, '_blank');
     }
