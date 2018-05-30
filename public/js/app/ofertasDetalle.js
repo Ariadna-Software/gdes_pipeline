@@ -115,22 +115,6 @@ var apiPaginaOfertasDetalle = {
         });
 
 
-        // $('#txtUbicacion').select2({
-        //     placeholder: 'Seleccione ubicacion',
-        //     allowClear: true,
-        //     id: function(object) {
-        //         return object.text;
-        //     },
-        //     createSearchChoice:function(term, data) {
-        //         if ( $(data).filter( function() {
-        //             return this.text.localeCompare(term)===0;
-        //         }).length===0) {
-        //             return {id:term, text:term};
-        //         }
-        //     },
-        //     data:[{id:'m1', text:'txtm1'}, {id:'m2', text:'txtm2'}]
-        // });
-
         $('#cmbProyectos').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarProyectos();
         $('#cmbTipoActividads').select2(select2_languages[usuario.codigoIdioma]);
@@ -173,6 +157,8 @@ var apiPaginaOfertasDetalle = {
             apiPaginaOfertasDetalle.cargarUnidadNegocio(usuario.unidadNegocioId);
             apiPaginaOfertasDetalle.cargarResponsables(usuario.responsableId);
             apiPaginaOfertasDetalle.cargarUsuarios(usuario.usuarioId);
+            apiPaginaOfertasDetalle.cargarDivisas(1); // Carga por defecto euro
+            vm.multiplicador(1); // por defecto multiplicador 1
             vm.ubicacion(usuario.ubicacion);
         } else {
             apiPaginaOfertasDetalle.cargarOferta(ofertaId);
@@ -982,9 +968,10 @@ var apiPaginaOfertasDetalle = {
     cargarEmpresaPais: function (data) {
         if (!data) return;
         var id = data.id;
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/paises/" + id, null, function (err, data) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/paises/empresa/" + id, null, function (err, data) {
             if (err) return;
-            apiPaginaOfertasDetalle.cargarPaiss(id);
+            if (data.length == 0) return;
+            apiPaginaOfertasDetalle.cargarPaiss(data[0].paisId);
         });
     },
     lanzarMensajeAyuda: function (mensaje) {

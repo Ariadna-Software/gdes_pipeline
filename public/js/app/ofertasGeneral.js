@@ -89,7 +89,7 @@ var apiPaginaOfertasGeneral = {
         }, {
             data: "uteSN"
         }, {
-            data: "importeUTE",
+            data: "gdesPor",
             render: function (data) {
                 return numeral(data).format('0,0');
             }

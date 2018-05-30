@@ -128,6 +128,7 @@ var apiPaginaUsuariosDetalle = {
             responsableId: vm.sResponsable(),
             ubicacion: vm.ubicacion()
         };
+        if (data.grupoUsuarioId == 0) data.grupoUsuarioId = null;
         var verb = "PUT";
         if (vm.usuarioId() == 0) verb = "POST";
         apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/usuarios", data, function (err, data) {
