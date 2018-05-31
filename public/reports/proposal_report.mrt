@@ -1979,7 +1979,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         <Text81 Ref="106" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <CanGrow>True</CanGrow>
-          <ClientRectangle>9.2,9.2,9.2,0.4</ClientRectangle>
+          <ClientRectangle>9.2,9.2,9.2,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
           <Font>Arial,9</Font>
@@ -1996,7 +1996,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         <Text82 Ref="107" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <CanGrow>True</CanGrow>
-          <ClientRectangle>9.2,9.6,3.4,0.6</ClientRectangle>
+          <ClientRectangle>9.2,10,3.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>6a012a3d2d434fe19f08980ecb4b22f1</Guid>
@@ -2012,7 +2012,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         <Text83 Ref="108" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <CanGrow>True</CanGrow>
-          <ClientRectangle>12.8,9.6,5.6,0.6</ClientRectangle>
+          <ClientRectangle>12.8,10,5.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>3ff60c9c4144471cb3aa6b22c4c3c522</Guid>
@@ -2028,7 +2028,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         <Text84 Ref="109" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <CanGrow>True</CanGrow>
-          <ClientRectangle>9.2,10,9.2,0.6</ClientRectangle>
+          <ClientRectangle>9.2,10.4,9.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>d19a9cfced654d0baa3f8d276af2ca9b</Guid>
@@ -2044,7 +2044,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         <Text85 Ref="110" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <CanGrow>True</CanGrow>
-          <ClientRectangle>9.2,10.4,9.2,1.4</ClientRectangle>
+          <ClientRectangle>9.2,10.8,9.2,1.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>2571c4edcdc14320bf5c7ffeb9084f60</Guid>
@@ -2060,7 +2060,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         <Text86 Ref="111" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <CanGrow>True</CanGrow>
-          <ClientRectangle>9.2,11.8,9.2,0.6</ClientRectangle>
+          <ClientRectangle>9.2,12.2,9.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>fd460c6b18c04228bdc4372d0742476b</Guid>
@@ -2076,7 +2076,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         <Text87 Ref="112" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <CanGrow>True</CanGrow>
-          <ClientRectangle>9.2,12.2,9.2,1.4</ClientRectangle>
+          <ClientRectangle>9.2,12.6,9.2,1</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>e7dd5ded93b4479fa1ea98743f2958e4</Guid>
@@ -3068,10 +3068,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <Page3 Ref="146" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="6">
+      <Components isList="true" count="8">
         <Text109 Ref="147" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>0,1.6,17.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
@@ -3082,12 +3083,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Parent isRef="146" />
           <Text>FINANTIALS</Text>
           <TextBrush>[255:255:255]</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text109>
         <Text111 Ref="148" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>17.6,1.6,10,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
@@ -3098,35 +3101,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Parent isRef="146" />
           <Text>FINANTIALS ASSUMPTIONS</Text>
           <TextBrush>[255:255:255]</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text111>
         <Text121 Ref="149" type="Text" isKey="true">
           <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>0,2,17,15.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
-          <Font>Arial,10</Font>
+          <Font>Arial,9</Font>
           <Guid>71279bd2101841f493e7cd38c19ac7cb</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text121</Name>
           <Page isRef="146" />
           <Parent isRef="146" />
           <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text121>
         <Text110 Ref="150" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>17.6,2,10,15.6</ClientRectangle>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>17.6,2,10,8.2</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
-          <Font>Arial,10</Font>
+          <Font>Arial,9</Font>
           <Guid>4e5efd7f22c141b19862426c125aa8cf</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text110</Name>
           <Page isRef="146" />
           <Parent isRef="146" />
           <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text110>
         <Text29 Ref="151" type="Text" isKey="true">
@@ -3145,11 +3153,45 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text29>
-        <DataBand2 Ref="152" type="DataBand" isKey="true">
+        <Text133 Ref="152" type="Text" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
+          <Brush>[31:73:125]</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>17.6,10.2,10,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,9,Bold</Font>
+          <Guid>1b66c0b769b342e3bc618c895ab439e6</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text133</Name>
+          <Page isRef="146" />
+          <Parent isRef="146" />
+          <Text>ECOMIC CONDITIONS</Text>
+          <TextBrush>[255:255:255]</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+          <Type>Expression</Type>
+          <VertAlignment>Center</VertAlignment>
+        </Text133>
+        <Text134 Ref="153" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>17.6,10.6,10,7</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Editable>True</Editable>
+          <Font>Arial,9</Font>
+          <Guid>2a70ab6984334adca46bfc9e1a690435</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text134</Name>
+          <Page isRef="146" />
+          <Parent isRef="146" />
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+          <Type>Expression</Type>
+        </Text134>
+        <DataBand2 Ref="154" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,27.7,0.8</ClientRectangle>
           <Components isList="true" count="3">
-            <Image3 Ref="153" type="Image" isKey="true">
+            <Image3 Ref="155" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <CanShrink>True</CanShrink>
               <ClientRectangle>24.4,0,3.2,0.8</ClientRectangle>
@@ -3678,10 +3720,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Image3</Name>
               <Page isRef="146" />
-              <Parent isRef="152" />
+              <Parent isRef="154" />
               <Stretch>True</Stretch>
             </Image3>
-            <Text189 Ref="154" type="Text" isKey="true">
+            <Text189 Ref="156" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,23.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -3689,24 +3731,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text189</Name>
               <Page isRef="146" />
-              <Parent isRef="152" />
+              <Parent isRef="154" />
               <Text>{Ofertas.nombreCorto}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text189>
-            <HorizontalLinePrimitive4 Ref="155" type="HorizontalLinePrimitive" isKey="true">
+            <HorizontalLinePrimitive4 Ref="157" type="HorizontalLinePrimitive" isKey="true">
               <ClientRectangle>0,0.8,27.6,0.0254</ClientRectangle>
               <Color>Black</Color>
-              <EndCap Ref="156" type="Cap" isKey="true">
+              <EndCap Ref="158" type="Cap" isKey="true">
                 <Color>Black</Color>
               </EndCap>
               <Guid>3835fef167c84977a7b4a62b47b0b00a</Guid>
               <Name>HorizontalLinePrimitive4</Name>
               <Page isRef="146" />
-              <Parent isRef="152" />
+              <Parent isRef="154" />
               <Size>2</Size>
-              <StartCap Ref="157" type="Cap" isKey="true">
+              <StartCap Ref="159" type="Cap" isKey="true">
                 <Color>Black</Color>
               </StartCap>
             </HorizontalLinePrimitive4>
@@ -3728,136 +3770,152 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
       <PageWidth>29.7</PageWidth>
       <PaperSize>A4</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="158" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="160" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page3>
-    <Page4 Ref="159" type="Page" isKey="true">
+    <Page4 Ref="161" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <Components isList="true" count="10">
-        <Text112 Ref="160" type="Text" isKey="true">
+        <Text112 Ref="162" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>0,1.6,13.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>c3b40c25113342daa21f763c4e81c56c</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text112</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <Text>STAFF AND SCENARIO ORGANISATION</Text>
           <TextBrush>[255:255:255]</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text112>
-        <Text113 Ref="161" type="Text" isKey="true">
+        <Text113 Ref="163" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>13.6,1.6,14,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>a31c1343476947c388d8341791301f10</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text113</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <Text>EQUIPMENTS AND OTHER TECHNICAL REQUERIMENTS ORGANISATION</Text>
           <TextBrush>[255:255:255]</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text113>
-        <Text114 Ref="162" type="Text" isKey="true">
+        <Text114 Ref="164" type="Text" isKey="true">
           <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>0,2,13.2,7</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
-          <Font>Arial,10</Font>
+          <Font>Arial,9</Font>
           <Guid>71279bd2101841f493e7cd38c19ac7cb</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text114</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text114>
-        <Text115 Ref="163" type="Text" isKey="true">
+        <Text115 Ref="165" type="Text" isKey="true">
           <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>13.6,2,14,7</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
-          <Font>Arial,10</Font>
+          <Font>Arial,9</Font>
           <Guid>4e5efd7f22c141b19862426c125aa8cf</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text115</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text115>
-        <Text120 Ref="164" type="Text" isKey="true">
+        <Text120 Ref="166" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>0,9.4,13.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>35ca2fae6fca46a7af8f344497aa18b5</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text120</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <Text>OTHER RELEVANT INFORMATION</Text>
           <TextBrush>[255:255:255]</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text120>
-        <Text122 Ref="165" type="Text" isKey="true">
+        <Text122 Ref="167" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>13.6,9.4,14,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>9d329484dc93436d9633d984a62cf65e</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text122</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <Text>APPROVAL MEETING COMMENTS</Text>
           <TextBrush>[255:255:255]</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text122>
-        <Text123 Ref="166" type="Text" isKey="true">
+        <Text123 Ref="168" type="Text" isKey="true">
           <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>0,9.8,13.2,7.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
-          <Font>Arial,10</Font>
+          <Font>Arial,9</Font>
           <Guid>5b6965b0ba174932af6928773aaa24dd</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text123</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text123>
-        <Text124 Ref="167" type="Text" isKey="true">
+        <Text124 Ref="169" type="Text" isKey="true">
           <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>13.6,9.8,14,7.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
-          <Font>Arial,10</Font>
+          <Font>Arial,9</Font>
           <Guid>2665efb654d847d99de0ceefa9c24314</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text124</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text124>
-        <Text117 Ref="168" type="Text" isKey="true">
+        <Text117 Ref="170" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>20.6,18.4,7,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -3866,18 +3924,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <HorAlignment>Right</HorAlignment>
           <Margins>0,0,0,0</Margins>
           <Name>Text117</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <Text>Página 3</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text117>
-        <DataBand3 Ref="169" type="DataBand" isKey="true">
+        <DataBand3 Ref="171" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,27.7,0.8</ClientRectangle>
           <Components isList="true" count="3">
-            <Image4 Ref="170" type="Image" isKey="true">
+            <Image4 Ref="172" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <CanShrink>True</CanShrink>
               <ClientRectangle>24.2,0,3.4,0.8</ClientRectangle>
@@ -4405,36 +4463,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</ImageBytes>
               <Margins>0,0,0,0</Margins>
               <Name>Image4</Name>
-              <Page isRef="159" />
-              <Parent isRef="169" />
+              <Page isRef="161" />
+              <Parent isRef="171" />
               <Stretch>True</Stretch>
             </Image4>
-            <Text119 Ref="171" type="Text" isKey="true">
+            <Text119 Ref="173" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,23.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,14,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text119</Name>
-              <Page isRef="159" />
-              <Parent isRef="169" />
+              <Page isRef="161" />
+              <Parent isRef="171" />
               <Text>{Ofertas.nombreCorto}(TECHICAL SPECIFICATIONS AND REQUIREMENTS)</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text119>
-            <HorizontalLinePrimitive5 Ref="172" type="HorizontalLinePrimitive" isKey="true">
+            <HorizontalLinePrimitive5 Ref="174" type="HorizontalLinePrimitive" isKey="true">
               <ClientRectangle>0,0.8,27.6,0.0254</ClientRectangle>
               <Color>Black</Color>
-              <EndCap Ref="173" type="Cap" isKey="true">
+              <EndCap Ref="175" type="Cap" isKey="true">
                 <Color>Black</Color>
               </EndCap>
               <Guid>55f6e96522a7416881d3d825742e35e1</Guid>
               <Name>HorizontalLinePrimitive5</Name>
-              <Page isRef="159" />
-              <Parent isRef="169" />
+              <Page isRef="161" />
+              <Parent isRef="171" />
               <Size>2</Size>
-              <StartCap Ref="174" type="Cap" isKey="true">
+              <StartCap Ref="176" type="Cap" isKey="true">
                 <Color>Black</Color>
               </StartCap>
             </HorizontalLinePrimitive5>
@@ -4442,8 +4500,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Conditions isList="true" count="0" />
           <Filters isList="true" count="0" />
           <Name>DataBand3</Name>
-          <Page isRef="159" />
-          <Parent isRef="159" />
+          <Page isRef="161" />
+          <Parent isRef="161" />
           <Sort isList="true" count="0" />
         </DataBand3>
       </Components>
@@ -4456,76 +4514,84 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
       <PageWidth>29.7</PageWidth>
       <PaperSize>A4</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="175" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="177" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page4>
-    <Page5 Ref="176" type="Page" isKey="true">
+    <Page5 Ref="178" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <Components isList="true" count="6">
-        <Text125 Ref="177" type="Text" isKey="true">
+        <Text125 Ref="179" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>0,1.6,13.8,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>c3b40c25113342daa21f763c4e81c56c</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text125</Name>
-          <Page isRef="176" />
-          <Parent isRef="176" />
+          <Page isRef="178" />
+          <Parent isRef="178" />
           <Text>CUSTOMER DESCRIPTION AND SERVICES</Text>
           <TextBrush>[255:255:255]</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text125>
-        <Text126 Ref="178" type="Text" isKey="true">
+        <Text126 Ref="180" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>14.4,1.6,13.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>a31c1343476947c388d8341791301f10</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text126</Name>
-          <Page isRef="176" />
-          <Parent isRef="176" />
+          <Page isRef="178" />
+          <Parent isRef="178" />
           <Text>MARKET SITUATION AND CUSTOMER RELATIONS</Text>
           <TextBrush>[255:255:255]</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text126>
-        <Text127 Ref="179" type="Text" isKey="true">
+        <Text127 Ref="181" type="Text" isKey="true">
           <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>0,2,13.8,15.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
-          <Font>Arial,10</Font>
+          <Font>Arial,9</Font>
           <Guid>71279bd2101841f493e7cd38c19ac7cb</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text127</Name>
-          <Page isRef="176" />
-          <Parent isRef="176" />
+          <Page isRef="178" />
+          <Parent isRef="178" />
           <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text127>
-        <Text128 Ref="180" type="Text" isKey="true">
+        <Text128 Ref="182" type="Text" isKey="true">
           <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
           <ClientRectangle>14.4,2,13.2,15.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
-          <Font>Arial,10</Font>
+          <Font>Arial,9</Font>
           <Guid>4e5efd7f22c141b19862426c125aa8cf</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text128</Name>
-          <Page isRef="176" />
-          <Parent isRef="176" />
+          <Page isRef="178" />
+          <Parent isRef="178" />
           <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text128>
-        <Text118 Ref="181" type="Text" isKey="true">
+        <Text118 Ref="183" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>20.6,18.4,7,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -4534,18 +4600,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <HorAlignment>Right</HorAlignment>
           <Margins>0,0,0,0</Margins>
           <Name>Text118</Name>
-          <Page isRef="176" />
-          <Parent isRef="176" />
+          <Page isRef="178" />
+          <Parent isRef="178" />
           <Text>Página 4</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text118>
-        <DataBand4 Ref="182" type="DataBand" isKey="true">
+        <DataBand4 Ref="184" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,27.7,0.8</ClientRectangle>
           <Components isList="true" count="3">
-            <Image5 Ref="183" type="Image" isKey="true">
+            <Image5 Ref="185" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <CanShrink>True</CanShrink>
               <ClientRectangle>24.4,0,3.2,0.8</ClientRectangle>
@@ -5073,36 +5139,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</ImageBytes>
               <Margins>0,0,0,0</Margins>
               <Name>Image5</Name>
-              <Page isRef="176" />
-              <Parent isRef="182" />
+              <Page isRef="178" />
+              <Parent isRef="184" />
               <Stretch>True</Stretch>
             </Image5>
-            <Text132 Ref="184" type="Text" isKey="true">
+            <Text132 Ref="186" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,23.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,14,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text132</Name>
-              <Page isRef="176" />
-              <Parent isRef="182" />
+              <Page isRef="178" />
+              <Parent isRef="184" />
               <Text>{Ofertas.nombreCorto} (CUSTOMER AND MARKET SITUATION)</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text132>
-            <HorizontalLinePrimitive6 Ref="185" type="HorizontalLinePrimitive" isKey="true">
+            <HorizontalLinePrimitive6 Ref="187" type="HorizontalLinePrimitive" isKey="true">
               <ClientRectangle>0,0.8,27.6,0.0254</ClientRectangle>
               <Color>Black</Color>
-              <EndCap Ref="186" type="Cap" isKey="true">
+              <EndCap Ref="188" type="Cap" isKey="true">
                 <Color>Black</Color>
               </EndCap>
               <Guid>8dbd272dedee4c6eacb886ca2137bf2c</Guid>
               <Name>HorizontalLinePrimitive6</Name>
-              <Page isRef="176" />
-              <Parent isRef="182" />
+              <Page isRef="178" />
+              <Parent isRef="184" />
               <Size>2</Size>
-              <StartCap Ref="187" type="Cap" isKey="true">
+              <StartCap Ref="189" type="Cap" isKey="true">
                 <Color>Black</Color>
               </StartCap>
             </HorizontalLinePrimitive6>
@@ -5110,8 +5176,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Conditions isList="true" count="0" />
           <Filters isList="true" count="0" />
           <Name>DataBand4</Name>
-          <Page isRef="176" />
-          <Parent isRef="176" />
+          <Page isRef="178" />
+          <Parent isRef="178" />
           <Sort isList="true" count="0" />
         </DataBand4>
       </Components>
@@ -5124,13 +5190,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
       <PageWidth>29.7</PageWidth>
       <PaperSize>A4</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="188" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="190" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page5>
   </Pages>
-  <PrinterSettings Ref="189" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <PrinterSettings Ref="191" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
   <ReferencedAssemblies isList="true" count="8">
     <value>System.Dll</value>
     <value>System.Drawing.Dll</value>
@@ -5142,10 +5208,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>5/31/2018 4:52:34 PM</ReportChanged>
+  <ReportChanged>5/31/2018 5:29:32 PM</ReportChanged>
   <ReportCreated>5/7/2018 1:08:45 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\proposal_report.mrt</ReportFile>
-  <ReportGuid>0d287967aa8a4dd5a4882e36e8fbe085</ReportGuid>
+  <ReportGuid>748430d154454c46b064ba62c30540ee</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
