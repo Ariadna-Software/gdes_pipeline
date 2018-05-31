@@ -502,6 +502,8 @@
     },
     "versiones": {
         "pregunta": "A change in economic conditions has been detected. Do you want to save the previous version?",
+        "cancelar": "Save WITHOUT version change",
+        "aceptar": "Save WITH version change",
         "version": "Version",
         "usuario": "User",
         "fechaCambio": "Date of change",

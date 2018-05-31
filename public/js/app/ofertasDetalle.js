@@ -657,7 +657,7 @@ var apiPaginaOfertasDetalle = {
                         }
                         apiPaginaOfertasDetalle.salir();
                     });
-                })
+                }, i18n.t("versiones.aceptar"), i18n.t("versiones.cancelar"))
             } else {
                 apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
                     if (err) return;

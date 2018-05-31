@@ -503,6 +503,8 @@
     },
     "versiones": {
         "pregunta": "Un changement de conditions économiques a été détecté. Voulez-vous sauvegarder la version précédente?",
+        "cancelar": "Enregistrer SANS changement de version",
+        "aceptar": "Enregistrer AVEC le changement de version",
         "version": "Version",
         "usuario": "Utilisateur",
         "fechaCambio": "Date de changement",

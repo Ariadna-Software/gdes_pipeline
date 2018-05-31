@@ -26,16 +26,18 @@ var apiComunNotificaciones = {
         });
         $('html,body').scrollTop(0);
     },
-    mensajeAceptarCancelar: function (mensaje, fnAceptar, fnCancelar) {
+    mensajeAceptarCancelar: function (mensaje, fnAceptar, fnCancelar, mAceptar, mCancelar) {
+        if (!mAceptar) mAceptar = "Aceptar";
+        if (!mCancelar) mCancelar = "Cancelar";
         $.SmartMessageBox({
             title: "<i class='fa fa-info'></i> Mensaje",
             content: mensaje,
-            buttons: '[Aceptar][Cancelar]'
+            buttons: '[' + mAceptar + '][' + mCancelar + ']'
         }, function (ButtonPressed) {
-            if (ButtonPressed === "Aceptar") {
+            if (ButtonPressed === mAceptar) {
                 fnAceptar();
             }
-            if (ButtonPressed === "Cancelar") {
+            if (ButtonPressed === mCancelar) {
                 fnCancelar();
             }
         });

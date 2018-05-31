@@ -522,6 +522,8 @@
     },
     "versiones": {
         "pregunta": "Se ha detectado un cambio en las condiciones económicas ¿Quiere guardar la versión anterior?",
+        "cancelar": "Guardar SIN cambio de versión",
+        "aceptar": "Guardar CON cambio de versión",
         "version": "Version",
         "usuario": "Usuario",
         "fechaCambio": "Fecha cambio",
