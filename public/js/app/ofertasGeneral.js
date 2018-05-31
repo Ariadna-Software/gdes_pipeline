@@ -34,9 +34,9 @@ var apiPaginaOfertasGeneral = {
         }, {
             data: "numeroOferta"
         }, {
-            data: "pais"
-        }, {
             data: "nomEmpresa"
+        }, {
+            data: "pais"
         }, {
             data: "faseOferta"
         }, {
