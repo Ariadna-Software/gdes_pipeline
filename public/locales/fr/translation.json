@@ -452,7 +452,8 @@
         "autorizacion0": "Approuver: Responsable de l'offre",
         "autorizacion1": "Approuve le directeur de la zone de service",
         "autorizacion2": "Requiert PPR et l'autorisation conjointe du CM et du directeur de BU",
-        "autorizacion3": "Nécessite PPR et le comité de candidature. Approuver le PDG"
+        "autorizacion3": "Nécessite PPR et le comité de candidature. Approuver le PDG",
+        "documentosEspeciales": "Documents spéciaux"
     },
     "proyectos": {
         "titulo": "Projets",

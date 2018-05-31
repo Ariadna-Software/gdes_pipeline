@@ -451,7 +451,8 @@
         "autorizacion0": "Approve: Responsible for offer",
         "autorizacion1": "Approves the director of the service area",
         "autorizacion2": "Requires PPR and joint authorization from CM and director of BU",
-        "autorizacion3": "Requires PPR and bid committee. Approve CEO"
+        "autorizacion3": "Requires PPR and bid committee. Approve CEO",
+        "documentosEspeciales": "Special documents"
     },
     "proyectos": {
         "titulo": "Projects",
