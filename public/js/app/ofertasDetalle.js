@@ -607,6 +607,7 @@ var apiPaginaOfertasDetalle = {
             data.servicioId2 = null;
             data.servicioId3 = null;
         }
+        if (vm.sRazonPerdida() == 0) data.razonPerdidaId = null;
         var verb = "PUT";
         if (vm.ofertaId() == 0) {
             verb = "POST";
@@ -1227,21 +1228,23 @@ var apiPaginaOfertasDetalle = {
     datosOk1: function () {
         var descript = apiPaginaOfertasDetalle.cargarDescriptoresError();
         var lerrors = i18n.t('lerrors1') + "<br>";
+        var mRules =  {
+            cmbFasesOferta: { required: true },
+            cmbPaiss: { required: true },
+            cmbEmpresas: { required: true },
+            cmbAreas: { required: true },
+            txtUbicacion: { required: true },
+            txtCliente: { required: true },
+            txtNombreCorto: { required: true },
+            cmbEstados: { required: true },
+            txtFechaAdjudicacion: { required: true },
+            txtFechaInicioContrato: { required: true },
+            txtDuracion: { required: true },
+            cmbProbabilidad: { required: true }
+        };
+        if (vm.sEstado() == 5) mRules.cmbRazonPerdida = {required: true};
         var validator = $('#oferta-form').validate({
-            rules: {
-                cmbFasesOferta: { required: true },
-                cmbPaiss: { required: true },
-                cmbEmpresas: { required: true },
-                cmbAreas: { required: true },
-                txtUbicacion: { required: true },
-                txtCliente: { required: true },
-                txtNombreCorto: { required: true },
-                cmbEstados: { required: true },
-                txtFechaAdjudicacion: { required: true },
-                txtFechaInicioContrato: { required: true },
-                txtDuracion: { required: true },
-                cmbProbabilidad: { required: true }
-            },
+            rules: mRules,
             errorPlacement: function (error, element) {
                 if (element.parent('.input-group').length) {
                     error.insertAfter(element.parent());      // radio/checkbox?
