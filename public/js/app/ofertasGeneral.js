@@ -56,7 +56,7 @@ var apiPaginaOfertasGeneral = {
         }, {
             data: "nombreCorto"
         }, {
-            data: "servicio"
+            data: "descripcion"
         }, {
             data: "estado"
         }, {

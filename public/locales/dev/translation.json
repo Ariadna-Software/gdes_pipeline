@@ -380,7 +380,7 @@
         "codigoDivisa": "Codigo divisa",
         "importeInversion": "Valor inversion",
         "importeRetorno": "Importe retorno",
-        "descripcion": "Nombre del servicio",
+        "descripcion": "Descripción",
         "observaciones": "Observaciones",
         "autorizaciones": "Autorizaciones",
         "numeroPedido": "Numero pedido",
