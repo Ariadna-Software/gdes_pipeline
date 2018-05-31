@@ -65,14 +65,14 @@ var apiPaginaOfertasGeneral = {
                 return numeral(data).format('0,0');
             }
         }, {
-            data: "divisa"
-        }, {
-            data: "margenContribucion",
+            data: "importePrimerAno",
             render: function (data) {
                 return numeral(data).format('0,0');
             }
         }, {
-            data: "importePrimerAno",
+            data: "divisa"
+        }, {
+            data: "margenContribucion",
             render: function (data) {
                 return numeral(data).format('0,0');
             }
