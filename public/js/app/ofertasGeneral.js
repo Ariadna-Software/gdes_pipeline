@@ -103,19 +103,19 @@ var apiPaginaOfertasGeneral = {
             data: "fechaAdjudicacion",
             render: function (data) {
                 if (!data) return "";
-                return moment(data).format('DD/MM/YYYY');
+                return moment(data).format('MM/YYYY');
             }
         }, {
             data: "fechaInicioContrato",
             render: function (data) {
                 if (!data) return "";
-                return moment(data).format('DD/MM/YYYY');
+                return moment(data).format('MM/YYYY');
             }
         }, {
             data: "fechaFinContrato",
             render: function (data) {
                 if (!data) return "";
-                return moment(data).format('DD/MM/YYYY');
+                return moment(data).format('MM/YYYY');
             }
         }, {
             data: "duracion"
