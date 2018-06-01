@@ -253,6 +253,7 @@
         "valNombre": "Nom nécessarie"
     },         
     "ofertas": {
+        "anexos": "ANNEXES",
         "titulo": "Offres",
         "panel": "Offres",
         "usuario": "Utilisateur",

@@ -46,14 +46,17 @@ var apiPaginaOfertasDetalle = {
         $('#oferta-form2').submit(function () { return false; });
         $('#oferta-form3').submit(function () { return false; });
         $('#oferta-form4').submit(function () { return false; });
+        $('#oferta-form7').submit(function () { return false; });
         $('#btnAceptar').click(apiPaginaOfertasDetalle.aceptar);
         $('#btnAceptar2').click(apiPaginaOfertasDetalle.aceptar);
         $('#btnAceptar3').click(apiPaginaOfertasDetalle.aceptar);
         $('#btnAceptar4').click(apiPaginaOfertasDetalle.aceptar);
+        $('#btnAceptar7').click(apiPaginaOfertasDetalle.aceptar);
         $('#btnSalir').click(apiPaginaOfertasDetalle.salir);
         $('#btnSalir2').click(apiPaginaOfertasDetalle.salir);
         $('#btnSalir3').click(apiPaginaOfertasDetalle.salir);
         $('#btnSalir4').click(apiPaginaOfertasDetalle.salir);
+        $('#btnSalir7').click(apiPaginaOfertasDetalle.salir);
         $('#btnCopiar').click(apiPaginaOfertasDetalle.copiar);
         $('#btnProposal').click(apiPaginaOfertasDetalle.proposalReport);
         $('#cmbTipoOfertas').select2(select2_languages[usuario.codigoIdioma]);
@@ -76,6 +79,8 @@ var apiPaginaOfertasDetalle = {
         $('#cmbProbabilidad').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarProbabilidad();
 
+        $('#cmbTipoInforme').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaOfertasDetalle.cargarTipoInforme();
 
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarAreas();
@@ -142,6 +147,10 @@ var apiPaginaOfertasDetalle = {
         $('#txtImportePrimerAnoDivisa').on('blur', apiPaginaOfertasDetalle.calcularPrimerAnoDesdeDivisa);
         apiSeguidores.init();
         apiVersiones.init();
+        // CKEDITOR
+        CKEDITOR.replace('anex', {
+            language: usuario.codigoIdioma
+        });
         ofertaId = apiComunGeneral.gup("id");
         if (ofertaId == 0) {
             vm.ofertaId(0);
@@ -293,6 +302,7 @@ var apiPaginaOfertasDetalle = {
         vm.razonReclamacion3(data.razonReclamacion3);
         vm.razonReclamacion4(data.razonReclamacion4);
         vm.documentosEspeciales(data.documentosEspeciales);
+        vm.anexos(data.anexos);
     },
     datosPagina: function () {
         var self = this;
@@ -414,6 +424,11 @@ var apiPaginaOfertasDetalle = {
         self.selectedRazonPerdida = ko.observableArray([]);
         self.sRazonPerdida = ko.observable();
 
+        self.optionsTipoInforme = ko.observableArray([]);
+        self.selectedTipoInforme = ko.observableArray([]);
+        self.sTipoInforme = ko.observable();
+
+
         self.notasEstado = ko.observable();
         self.codigoOferta = ko.observable();
         self.subrogacionSN = ko.observable();
@@ -481,6 +496,7 @@ var apiPaginaOfertasDetalle = {
         self.razonReclamacion3 = ko.observable();
         self.razonReclamacion4 = ko.observable();
         self.documentosEspeciales = ko.observable();
+        self.anexos = ko.observable();
     },
     aceptar: function () {
         // if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -587,7 +603,8 @@ var apiPaginaOfertasDetalle = {
             razonReclamacion2: vm.razonReclamacion2(),
             razonReclamacion3: vm.razonReclamacion3(),
             razonReclamacion4: vm.razonReclamacion3(),
-            documentosEspeciales: vm.documentosEspeciales()
+            documentosEspeciales: vm.documentosEspeciales(),
+            anexos: CKEDITOR.instances.txtAnexos.getData()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -918,6 +935,16 @@ var apiPaginaOfertasDetalle = {
         $("#cmbProbabilidad").val([id]).trigger('change');
 
     },
+    cargarTipoInforme: function (id) {
+        var options = [
+            { id: 1, nombre: "PPR Short" },
+            { id: 2, nombre: "PPR Complete" },
+            { id: 3, nombre: "PPR Annex" }
+        ];
+        vm.optionsTipoInforme(options);
+        $("#cmbTipoInforme").val(1).trigger('change');
+
+    },
     cargarTiposOportunidad: function (id) {
         var url = myconfig.apiUrl + "/api/tipos-oportunidad";
         if (usuario.codigoIdioma != "es") {
@@ -1228,7 +1255,7 @@ var apiPaginaOfertasDetalle = {
     datosOk1: function () {
         var descript = apiPaginaOfertasDetalle.cargarDescriptoresError();
         var lerrors = i18n.t('lerrors1') + "<br>";
-        var mRules =  {
+        var mRules = {
             cmbFasesOferta: { required: true },
             cmbPaiss: { required: true },
             cmbEmpresas: { required: true },
@@ -1242,7 +1269,7 @@ var apiPaginaOfertasDetalle = {
             txtDuracion: { required: true },
             cmbProbabilidad: { required: true }
         };
-        if (vm.sEstado() == 5) mRules.cmbRazonPerdida = {required: true};
+        if (vm.sEstado() == 5) mRules.cmbRazonPerdida = { required: true };
         var validator = $('#oferta-form').validate({
             rules: mRules,
             errorPlacement: function (error, element) {
@@ -1416,7 +1443,7 @@ var apiPaginaOfertasDetalle = {
         })
     },
     proposalReport: function () {
-        var url = "infPR.html?ofertaId=" + vm.ofertaId();
+        var url = "infPR.html?ofertaId=" + vm.ofertaId() + "&type=" + vm.sTipoInforme();
         window.open(url, '_blank');
     }
 

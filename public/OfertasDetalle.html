@@ -248,24 +248,28 @@
                 </li>
                 <li id="importacion">
                     <a href="#">
-                        <i class="fa fa-lg fa-fw fa-cloud"></i> <span class="menu-item-parent" data-i18n="menu.importacion.cab">Importacion</span>
+                        <i class="fa fa-lg fa-fw fa-cloud"></i>
+                        <span class="menu-item-parent" data-i18n="menu.importacion.cab">Importacion</span>
                     </a>
                     <ul>
                         <li id="ofertas">
                             <a href="Importacion.html">
-                                <i class="fa fa-fw fa-file"></i> <span data-i18n="menu.importacion.excel">Excel</span>
+                                <i class="fa fa-fw fa-file"></i>
+                                <span data-i18n="menu.importacion.excel">Excel</span>
                             </a>
                         </li>
                     </ul>
-                </li>                
+                </li>
                 <li id="gestion">
                     <a href="#">
-                        <i class="fa fa-lg fa-fw fa-puzzle-piece"></i> <span class="menu-item-parent" data-i18n="menu.gestion.cab">GESTION</span>
+                        <i class="fa fa-lg fa-fw fa-puzzle-piece"></i>
+                        <span class="menu-item-parent" data-i18n="menu.gestion.cab">GESTION</span>
                     </a>
                     <ul>
                         <li id="ofertas">
                             <a href="OfertasGeneral.html">
-                                <i class="fa fa-fw fa-file-o"></i> <span data-i18n="menu.gestion.ofertas">OferTas</span>
+                                <i class="fa fa-fw fa-file-o"></i>
+                                <span data-i18n="menu.gestion.ofertas">OferTas</span>
                             </a>
                         </li>
                     </ul>
@@ -295,13 +299,23 @@
                     </h1>
                 </div>
                 <div class="col col-md-8">
-                    <div class="pull-right">
-                        <button id="btnCopiar" data-i18n="[title]copiar" class="btn btn-primary btn-circle btn-lg">
-                            <i class="fa fa-copy"></i>
-                        </button>
-                        <button id="btnProposal" data-i18n="[title]ofertas.propuesta" class="btn btn-primary btn-circle btn-lg">
-                            <i class="fa fa-product-hunt"></i>
-                        </button>                        
+                    <div class="row">
+                        <section class="col col-md-6"></section>
+                        <section class="col-md-1">
+                            <button id="btnCopiar" data-i18n="[title]copiar" class="btn btn-primary btn-circle btn-lg">
+                                <i class="fa fa-copy"></i>
+                            </button>
+                        </section>
+                        <section class="col-md-4">
+                            <label class="label" data-i18n="ofertas.propuesta" style="color:black;">Tipo informe:</label>
+                            <select style="width:100%" id="cmbTipoInforme" name="cmbTipoInforme" data-bind="options: optionsTipoInforme, optionsText: 'nombre', optionsValue: 'id', value: sTipoInforme, valueAllowUnset: true, selectedOptions: selectedTipoInforme, selected2:{}">
+                            </select>
+                        </section>
+                        <section class="col-md-1">
+                            <button id="btnProposal" data-i18n="[title]ofertas.propuesta" class="btn btn-primary btn-circle btn-lg">
+                                <i class="fa fa-product-hunt"></i>
+                            </button>
+                        </section>
                     </div>
                 </div>
                 <!-- end col -->
@@ -328,6 +342,9 @@
                             <li>
                                 <a data-toggle="tab" href="#s6" data-i18n="ofertas.tab.versiones">PARTE</a>
                             </li>
+                            <li>
+                                <a data-toggle="tab" href="#s7" data-i18n="ofertas.anexos">PARTE</a>
+                            </li>                            
                         </ul>
                         <div class="tab-content padding-10" id="oferta_GT1">
                             <div class="tab-pane fade in active" id="s1">
@@ -489,7 +506,8 @@
                                                             <section class="col col-md-12">
                                                                 <label class="label" data-i18n="ofertas.servicio">Servicio:</label>
                                                                 <select class="aswselect2" id="cmbServicio" name="cmbServicio" data-bind="options: optionsServicio, optionsText: 'nombre', optionsValue: 'servicioId', 
-                                                                                value: sServicio, valueAllowUnset: true, selectedOptions: selectedServicio, selected2:{}" multiple="multiple">
+                                                                                value: sServicio, valueAllowUnset: true, selectedOptions: selectedServicio, selected2:{}"
+                                                                    multiple="multiple">
                                                                 </select>
                                                             </section>
                                                         </div>
@@ -976,7 +994,7 @@
                                                                         <textarea id="txtDocumentosEspeciales" rows="6" class="custom-scroll" data-bind="value:documentosEspeciales"></textarea>
                                                                     </label>
                                                                 </section>
-                                                            </div>                                                            
+                                                            </div>
                                                             <div class="row">
                                                                 <section class="col col-md-12">
                                                                     <div style="height: 8px;"></div>
@@ -1413,6 +1431,37 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="tab-pane fade" id="s7">
+                                        <div class="jarviswidget" id="wid-id-4" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                                            <header>
+                                                <span class="widget-icon">
+                                                    <i class="fa fa-edit"></i>
+                                                </span>
+                                            </header>
+                                            <div class="row">
+                                                <form id="oferta-form7" class="smart-form">
+                                                    <div class="row">
+                                                        <section class="col col-md-12">
+                                                            <label class="label" data-i18n="ofertas.anexos">NotasE:</label>
+                                                            <label class="textarea textarea-resizable">
+                                                                <textarea id="txtAnexos" name="anex" rows="10" class="custom-scroll" data-bind="value:anexos"></textarea>
+                                                            </label>
+                                                        </section>                                                       
+                                                    </div>
+                                                    <fieldset>
+                                                        <div class="pull-right">
+                                                            <button id="btnAceptar7" data-i18n="[title]aceptar" class="btn btn-success btn-circle btn-lg">
+                                                                <i class="fa fa-lg fa-check"></i>
+                                                            </button>
+                                                            <button id="btnSalir7" data-i18n="[title]salir" class="btn btn-warning btn-circle btn-lg">
+                                                                <i class="fa fa-lg fa-sign-out"></i>
+                                                            </button>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>                                
                             </div>
                     </article>
                     </div>
@@ -1507,6 +1556,8 @@
         <script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script>
         <script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script>
         <script src="js/plugin/select2/select2.min.js"></script>
+        <!-- CK EDITOR -->
+        <script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
         <!-- Idiomas -->
         <script src="js/libs/i18next/i18next-1.9.0.js"></script>
         <script src="locales/validator-languages.js"></script>

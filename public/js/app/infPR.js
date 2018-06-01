@@ -11,6 +11,7 @@ var vm;
 var viewer;
 var options;
 var ofertaId = 211;
+var type = 1;
 
 var apiInfPR = {
     ini: function () {
@@ -32,12 +33,15 @@ var apiInfPR = {
         options.toolbar.showSendEmailButton = true;
         // parámetros 
         ofertaId = apiComunGeneral.gup("ofertaId");
+        type = apiComunGeneral.gup("type");
         // llamar al informe 
         apiInfPR.obtainReport();
     },
     obtainReport: function() {
         StiOptions.WebServer.url = "/streport";
         var file = "reports/proposal_report.mrt";
+        if (type == 1) file = "reports/proposal_report_short.mrt";
+        if (type == 3) file = "reports/proposal_report_annex.mrt";
         // Create a new report instance
         var report = new Stimulsoft.Report.StiReport();
         report.loadFile(file);
