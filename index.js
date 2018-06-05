@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 
 // using cors for cross class
 app.use(cors());
@@ -34,7 +34,6 @@ app.use(cors());
 // servidor html estático
 app.use(express.static(__dirname + "/public"));
 app.use('/ficheros', serveIndex(__dirname + '/public/ficheros', { 'icons': true, 'view': 'details' }));
-
 
 
 // mounting routes

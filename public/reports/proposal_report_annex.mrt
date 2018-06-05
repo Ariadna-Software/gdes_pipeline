@@ -101,47 +101,13 @@ WHERE o.ofertaId = {ofertaId}</SqlCommand>
     <Page2 Ref="4" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="3">
-        <Text35 Ref="5" type="Text" isKey="true">
-          <Border>All;Black;1;Solid;False;4;Black</Border>
-          <Brush>[31:73:125]</Brush>
-          <CanGrow>True</CanGrow>
-          <ClientRectangle>0,1.4,27.6,0.4</ClientRectangle>
-          <Conditions isList="true" count="0" />
-          <Font>Arial,9,Bold</Font>
-          <Guid>c295e3bf3500468796bfb476006bc5cc</Guid>
-          <Margins>0,0,0,0</Margins>
-          <Name>Text35</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <Text>ANEXOS</Text>
-          <TextBrush>[255:255:255]</TextBrush>
-          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-          <Type>Expression</Type>
-          <VertAlignment>Center</VertAlignment>
-        </Text35>
-        <Text1 Ref="6" type="Text" isKey="true">
-          <AllowHtmlTags>True</AllowHtmlTags>
+      <Components isList="true" count="2">
+        <HeaderOfertas Ref="5" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
-          <ClientRectangle>0.2,2.2,27.2,16.6</ClientRectangle>
-          <Conditions isList="true" count="0" />
-          <Font>Arial,9</Font>
-          <Margins>0,0,0,0</Margins>
-          <Name>Text1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <Text>{Ofertas.anexos}</Text>
-          <TextBrush>Black</TextBrush>
-          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-          <TextQuality>Wysiwyg</TextQuality>
-          <Type>Expression</Type>
-        </Text1>
-        <DataBand1 Ref="7" type="DataBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,0.4,27.7,0.8</ClientRectangle>
+          <CanBreak>True</CanBreak>
+          <ClientRectangle>0,0.4,27.7,1</ClientRectangle>
           <Components isList="true" count="3">
-            <Image2 Ref="8" type="Image" isKey="true">
+            <Image2 Ref="6" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <CanShrink>True</CanShrink>
               <ClientRectangle>24.2,0,3.4,0.8</ClientRectangle>
@@ -670,10 +636,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Image2</Name>
               <Page isRef="4" />
-              <Parent isRef="7" />
+              <Parent isRef="5" />
               <Stretch>True</Stretch>
             </Image2>
-            <Text30 Ref="9" type="Text" isKey="true">
+            <Text30 Ref="7" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,23.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -681,34 +647,63 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text30</Name>
               <Page isRef="4" />
-              <Parent isRef="7" />
+              <Parent isRef="5" />
               <Text>{Ofertas.nombreCorto}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text30>
-            <HorizontalLinePrimitive3 Ref="10" type="HorizontalLinePrimitive" isKey="true">
+            <HorizontalLinePrimitive3 Ref="8" type="HorizontalLinePrimitive" isKey="true">
               <ClientRectangle>0,0.8,27.6,0.0254</ClientRectangle>
               <Color>Black</Color>
-              <EndCap Ref="11" type="Cap" isKey="true">
+              <EndCap Ref="9" type="Cap" isKey="true">
                 <Color>Black</Color>
               </EndCap>
               <Name>HorizontalLinePrimitive3</Name>
               <Page isRef="4" />
-              <Parent isRef="7" />
+              <Parent isRef="5" />
               <Size>2</Size>
-              <StartCap Ref="12" type="Cap" isKey="true">
+              <StartCap Ref="10" type="Cap" isKey="true">
                 <Color>Black</Color>
               </StartCap>
             </HorizontalLinePrimitive3>
           </Components>
           <Conditions isList="true" count="0" />
+          <Name>HeaderOfertas</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </HeaderOfertas>
+        <DataOfertas Ref="11" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,2.2,27.7,1.4</ClientRectangle>
+          <Components isList="true" count="1">
+            <DataOfertas_anexos Ref="12" type="Text" isKey="true">
+              <AllowHtmlTags>True</AllowHtmlTags>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0.2,0,27.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataOfertas_anexos</Name>
+              <Page isRef="4" />
+              <Parent isRef="11" />
+              <Text>{Ofertas.anexos}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextQuality>Wysiwyg</TextQuality>
+              <VertAlignment>Center</VertAlignment>
+            </DataOfertas_anexos>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>Ofertas</DataSourceName>
           <Filters isList="true" count="0" />
-          <Name>DataBand1</Name>
+          <Name>DataOfertas</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
           <Sort isList="true" count="0" />
-        </DataBand1>
+        </DataOfertas>
       </Components>
       <Conditions isList="true" count="0" />
       <Guid>65a82f986b9a4a1fb773d88ec93ed241</Guid>
@@ -737,10 +732,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/4/2018 8:42:31 AM</ReportChanged>
+  <ReportChanged>6/5/2018 11:16:47 AM</ReportChanged>
   <ReportCreated>5/7/2018 1:08:45 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\proposal_report_annex.mrt</ReportFile>
-  <ReportGuid>e13b0bf92a214873974800ab7122e8e6</ReportGuid>
+  <ReportGuid>4cb4dac0b5ed44f1a3aec8b936cff31f</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>

@@ -12,7 +12,7 @@
     <DataSources isList="true" count="1">
       <Ofertas Ref="3" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
         <Alias>Ofertas</Alias>
-        <Columns isList="true" count="46">
+        <Columns isList="true" count="51">
           <value>ofertaId,System.Int32</value>
           <value>nombreCorto,System.String</value>
           <value>cliente,System.String</value>
@@ -59,6 +59,11 @@
           <value>documentosEspeciales,System.String</value>
           <value>descripcion,System.String</value>
           <value>subrogacionNum,System.Int32</value>
+          <value>usuario,System.String</value>
+          <value>anexos,System.String</value>
+          <value>notasPlanning,System.String</value>
+          <value>subcontrataTXT,System.String</value>
+          <value>importeAnual,System.Decimal</value>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
@@ -77,11 +82,15 @@ o.proveedorActual, o.competidores, o.principalCompetidor, o.criteriosEvaluacion,
 o.subrogacionSN, o.subrogacionTXT, o.condicionesEstandarSN, o.condicionesEstandarTXT, o.penalizaciones, o.garantiasEspecialesTXT,
 o.puntosRelevantes, o.riesgos,
 o.estrategiaGDES, o.diferencialGDES, o.sinergias,
-o.probabilidad, o.documentosEspeciales, o.descripcion, subrogacionNum
+o.probabilidad, o.documentosEspeciales, o.descripcion, subrogacionNum,
+u2.nombre as usuario, o.anexos,
+o.notasPlanning, o.subrogacionTXT, o.subcontrataTXT,
+o.importeAnual
 FROM ofertas AS o
 LEFT JOIN areas AS a ON a.areaId = o.areaId
 LEFT JOIN empresas AS e ON e.empresaId = o.empresaId
 LEFT JOIN usuarios AS u ON u.usuarioId = o.responsableId
+LEFT JOIN usuarios as u2 ON u2.usuarioId = o.usuarioId
 LEFT JOIN tipos_oportunidad AS tpo ON tpo.tipoOportunidadId = o.tipoOportunidadId
 WHERE o.ofertaId = {ofertaId}</SqlCommand>
       </Ofertas>
@@ -100,7 +109,7 @@ WHERE o.ofertaId = {ofertaId}</SqlCommand>
     <Page1 Ref="4" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="32">
+      <Components isList="true" count="30">
         <PageFooterBand1 Ref="5" type="PageFooterBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,17.6,27.7,1.4</ClientRectangle>
@@ -851,7 +860,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Name>Text16</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
-          <Text>{Ofertas.responsable}</Text>
+          <Text>{Ofertas.usuario}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
@@ -880,6 +889,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Name>Text18</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
+          <Text>{Ofertas.responsable}</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
         </Text18>
@@ -1039,59 +1049,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text28>
-        <Text88 Ref="35" type="Text" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0.6,14.4,4.8,0.6</ClientRectangle>
-          <Conditions isList="true" count="0" />
-          <Font>Arial,10,Bold</Font>
-          <Guid>48b61db8fc52401c8c685c9cd62bce8f</Guid>
-          <Margins>0,0,0,0</Margins>
-          <Name>Text88</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <Text>SPECIAL DOCUMENTS:</Text>
-          <TextBrush>Black</TextBrush>
-          <Type>Expression</Type>
-        </Text88>
-        <Text116 Ref="36" type="Text" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>5.6,14.4,5.8,1.6</ClientRectangle>
-          <Conditions isList="true" count="0" />
-          <Font>Arial,10</Font>
-          <Guid>1552e34113d047b0ba78607981b7204d</Guid>
-          <Margins>0,0,0,0</Margins>
-          <Name>Text116</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <Text>{Ofertas.documentosEspeciales}</Text>
-          <TextBrush>Black</TextBrush>
-          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-          <Type>DataColumn</Type>
-        </Text116>
-        <HorizontalLinePrimitive1 Ref="37" type="HorizontalLinePrimitive" isKey="true">
+        <HorizontalLinePrimitive1 Ref="35" type="HorizontalLinePrimitive" isKey="true">
           <ClientRectangle>0,12,27.6,0.0254</ClientRectangle>
           <Color>Black</Color>
-          <EndCap Ref="38" type="Cap" isKey="true">
+          <EndCap Ref="36" type="Cap" isKey="true">
             <Color>Black</Color>
           </EndCap>
           <Name>HorizontalLinePrimitive1</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
-          <StartCap Ref="39" type="Cap" isKey="true">
+          <StartCap Ref="37" type="Cap" isKey="true">
             <Color>Black</Color>
           </StartCap>
         </HorizontalLinePrimitive1>
-        <HorizontalLinePrimitive2 Ref="40" type="HorizontalLinePrimitive" isKey="true">
+        <HorizontalLinePrimitive2 Ref="38" type="HorizontalLinePrimitive" isKey="true">
           <ClientRectangle>0,16.4,27.6,0.0254</ClientRectangle>
           <Color>Black</Color>
-          <EndCap Ref="41" type="Cap" isKey="true">
+          <EndCap Ref="39" type="Cap" isKey="true">
             <Color>Black</Color>
           </EndCap>
           <Guid>855b3b63044740448c12f42d649fcf81</Guid>
           <Name>HorizontalLinePrimitive2</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
-          <StartCap Ref="42" type="Cap" isKey="true">
+          <StartCap Ref="40" type="Cap" isKey="true">
             <Color>Black</Color>
           </StartCap>
         </HorizontalLinePrimitive2>
@@ -1105,16 +1086,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
       <PageWidth>29.7</PageWidth>
       <PaperSize>A4</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="43" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="41" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page1>
-    <Page2 Ref="44" type="Page" isKey="true">
+    <Page2 Ref="42" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <Components isList="true" count="82">
-        <Text31 Ref="45" type="Text" isKey="true">
+        <Text31 Ref="43" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
           <ClientRectangle>0,1.6,8.8,0.4</ClientRectangle>
@@ -1123,14 +1104,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>c3b40c25113342daa21f763c4e81c56c</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text31</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
           <Text>1. SCOPE OF WORKS</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text31>
-        <Text32 Ref="46" type="Text" isKey="true">
+        <Text32 Ref="44" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
           <ClientRectangle>9.2,1.6,9.2,0.4</ClientRectangle>
@@ -1139,14 +1120,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>01ed659cd0aa49c585fdff6bece2bcc4</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text32</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
           <Text>2. GEOGRAPHICAL SCOPE</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text32>
-        <Text33 Ref="47" type="Text" isKey="true">
+        <Text33 Ref="45" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
           <ClientRectangle>18.8,1.6,8.8,0.4</ClientRectangle>
@@ -1155,204 +1136,203 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>a31c1343476947c388d8341791301f10</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text33</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
           <Text>3. BASIC FINANTIALS</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text33>
-        <Text34 Ref="48" type="Text" isKey="true">
+        <Text34 Ref="46" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,7.8,8.8,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>352ed8fc3882430f8af7e17020eab627</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text34</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>4. PROJECT DEADLINES</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text34>
-        <Text35 Ref="49" type="Text" isKey="true">
+        <Text35 Ref="47" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,13.8,8.8,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>c295e3bf3500468796bfb476006bc5cc</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text35</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>7. PROJECT TEAM AND PLANNING</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text35>
-        <Text36 Ref="50" type="Text" isKey="true">
+        <Text36 Ref="48" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,7.8,9.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>b1b3216b39d84547a4205661ab6fa6b7</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text36</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>5. CONCURRENCE AND MARKET SITUATION</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text36>
-        <Text37 Ref="51" type="Text" isKey="true">
+        <Text37 Ref="49" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,13.8,9.2,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>4df8cff36db9492d80ea1f0d71b187e2</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text37</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>8. IDENTIFIED RISKS</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text37>
-        <Text38 Ref="52" type="Text" isKey="true">
+        <Text38 Ref="50" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,7.8,8.8,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>dac3ff6e07f244639e13a7a821ecdbd5</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text38</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>6. GDES VALUE AND STRATEGY</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text38>
-        <Text39 Ref="53" type="Text" isKey="true">
+        <Text39 Ref="51" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,13.8,8.8,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>ada6cd7f3a04472f909682cb0fa13b2e</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text39</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>9. LEGAL ISSUES</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text39>
-        <Text40 Ref="54" type="Text" isKey="true">
+        <Text40 Ref="52" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,2.2,3,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>ef0069e761f2453688ad6bab152aa2ca</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text40</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Opportunity type:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text40>
-        <Text41 Ref="55" type="Text" isKey="true">
+        <Text41 Ref="53" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>3.2,2.2,5.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>6da910ae58284a84aebafa4d70143ddd</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text41</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.tipoOportunidad}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text41>
-        <Text42 Ref="56" type="Text" isKey="true">
+        <Text42 Ref="54" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,2.8,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>a9a37d31561148cf8995656091a26ab4</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text42</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Scope:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text42>
-        <Text43 Ref="57" type="Text" isKey="true">
+        <Text43 Ref="55" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,3.4,8.8,2</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>71279bd2101841f493e7cd38c19ac7cb</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text43</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.alcance}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text43>
-        <Text44 Ref="58" type="Text" isKey="true">
+        <Text44 Ref="56" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,5.4,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>e6024b4dd6854f818fcd39996ee2af0a</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text44</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Appicable documents:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text44>
-        <Text45 Ref="59" type="Text" isKey="true">
+        <Text45 Ref="57" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,5.8,8.8,1.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
@@ -1360,31 +1340,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>fc11570a9a35418d8e0ee529cc2688b8</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text45</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
+          <Text>{Ofertas.documentosEspeciales}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text45>
-        <Text46 Ref="60" type="Text" isKey="true">
+        <Text46 Ref="58" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,2.2,9.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>fe4e1302609e4114b4050b7ebb350c87</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text46</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Location:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text46>
-        <Text47 Ref="61" type="Text" isKey="true">
+        <Text47 Ref="59" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,2.8,9.2,4.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
@@ -1392,75 +1373,76 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>ae32375c6aa7481b86135de6e2d7fbd8</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text47</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.ubicacion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text47>
-        <Text48 Ref="62" type="Text" isKey="true">
+        <Text48 Ref="60" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,2.2,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>733b9c025811429e9aefcce01e6a1ffe</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text48</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Offer presented in join venture:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text48>
-        <Text49 Ref="63" type="Text" isKey="true">
+        <Text49 Ref="61" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>24.2,2.2,0.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>470525225d3349448e4315aced3d1858</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text49</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.uteSN}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text49>
-        <Text50 Ref="64" type="Text" isKey="true">
+        <Text50 Ref="62" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>25.2,2.2,1.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>c886b79c0d844726b1db24df1969bd57</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text50</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>GDES %:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text50>
-        <Text51 Ref="65" type="Text" isKey="true">
+        <Text51 Ref="63" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>26.8,2.2,0.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>be71e2b85b68407a89fea99db771f7e2</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text51</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.gdesPor}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="66" type="NumberFormat" isKey="true">
+          <TextFormat Ref="64" type="NumberFormat" isKey="true">
             <DecimalDigits>0</DecimalDigits>
             <DecimalSeparator>,</DecimalSeparator>
             <GroupSeparator>.</GroupSeparator>
@@ -1470,36 +1452,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text51>
-        <Text52 Ref="67" type="Text" isKey="true">
+        <Text52 Ref="65" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,2.6,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>fde5e3c0b1cc407f96aed818cd20c99a</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text52</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Total contract revenue (GDES):</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text52>
-        <Text53 Ref="68" type="Text" isKey="true">
+        <Text53 Ref="66" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>24.2,2.6,3.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>9e25312bd9144408ba960fc1bddd26a1</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text53</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.importeGdes}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="69" type="CurrencyFormat" isKey="true">
+          <TextFormat Ref="67" type="CurrencyFormat" isKey="true">
             <DecimalDigits>0</DecimalDigits>
             <DecimalSeparator>,</DecimalSeparator>
             <GroupSeparator>.</GroupSeparator>
@@ -1511,69 +1493,69 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text53>
-        <Text54 Ref="70" type="Text" isKey="true">
+        <Text54 Ref="68" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,3,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>1dd8b117d518448cbcfed954a5953b24</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text54</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Gross Margin (%):</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text54>
-        <Text55 Ref="71" type="Text" isKey="true">
+        <Text55 Ref="69" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>24.2,3,3.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>219b3ae375534e53a4c80c1a36ea10ed</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text55</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.margenContribucion}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="72" type="CustomFormat" isKey="true" />
+          <TextFormat Ref="70" type="CustomFormat" isKey="true" />
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text55>
-        <Text56 Ref="73" type="Text" isKey="true">
+        <Text56 Ref="71" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,3.4,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>ee471eb63eda4f3e851895b3422a471d</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text56</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Yearly Revenue:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text56>
-        <Text57 Ref="74" type="Text" isKey="true">
+        <Text57 Ref="72" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>24.2,3.4,3.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>88c20456818e42c49be03f3a11442f96</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text57</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
-          <Text>{Ofertas.importeContribucion}</Text>
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
+          <Text>{Ofertas.importeAnual}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="75" type="CurrencyFormat" isKey="true">
+          <TextFormat Ref="73" type="CurrencyFormat" isKey="true">
             <DecimalDigits>0</DecimalDigits>
             <DecimalSeparator>,</DecimalSeparator>
             <GroupSeparator>.</GroupSeparator>
@@ -1585,36 +1567,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text57>
-        <Text58 Ref="76" type="Text" isKey="true">
+        <Text58 Ref="74" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,3.8,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>515b7d6e95854c73a4971c38040a7108</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text58</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Revenue current year:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text58>
-        <Text59 Ref="77" type="Text" isKey="true">
+        <Text59 Ref="75" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>24.2,3.8,3.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>89af848438104b2aad55728345a2ca48</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text59</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.importePrimerAno}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="78" type="CurrencyFormat" isKey="true">
+          <TextFormat Ref="76" type="CurrencyFormat" isKey="true">
             <DecimalDigits>0</DecimalDigits>
             <DecimalSeparator>,</DecimalSeparator>
             <GroupSeparator>.</GroupSeparator>
@@ -1626,68 +1608,68 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text59>
-        <Text60 Ref="79" type="Text" isKey="true">
+        <Text60 Ref="77" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,4.2,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>9026532d96894afda46406e061bc32ce</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text60</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Terms of payments:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text60>
-        <Text61 Ref="80" type="Text" isKey="true">
+        <Text61 Ref="78" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,4.6,8.8,0.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>0c43c1f96f7e4e4fa8bf006de40bd0a8</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text61</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.condicionesPago}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text61>
-        <Text62 Ref="81" type="Text" isKey="true">
+        <Text62 Ref="79" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,6,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>ee90bba787d74ee69383b56ae9e0a1ec</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text62</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Investment ammount</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text62>
-        <Text63 Ref="82" type="Text" isKey="true">
+        <Text63 Ref="80" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>24.2,6,3.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>222eb4e7d1604503bf04f7b1f673993a</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text63</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.importeInversion}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="83" type="CurrencyFormat" isKey="true">
+          <TextFormat Ref="81" type="CurrencyFormat" isKey="true">
             <DecimalDigits>0</DecimalDigits>
             <DecimalSeparator>,</DecimalSeparator>
             <GroupSeparator>.</GroupSeparator>
@@ -1699,222 +1681,220 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text63>
-        <Text64 Ref="84" type="Text" isKey="true">
+        <Text64 Ref="82" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,6.4,8.8,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>bc68a029584b43338276643744b817c1</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text64</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Description of the investment:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text64>
-        <Text65 Ref="85" type="Text" isKey="true">
+        <Text65 Ref="83" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,6.8,8.8,1</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>75f9521e96c04d008192a8ca19a833a0</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text65</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.descripcionInversion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text65>
-        <Text66 Ref="86" type="Text" isKey="true">
+        <Text66 Ref="84" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,8.4,3.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>942598e31ed846c6a8a9c73f9a6ad2d2</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text66</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Delivery Date:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text66>
-        <Text67 Ref="87" type="Text" isKey="true">
+        <Text67 Ref="85" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>3.4,8.4,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>5c5c4fe11b104153b25ebc3bd602bda4</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text67</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.fechaEntrega}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="88" type="DateFormat" isKey="true" />
+          <TextFormat Ref="86" type="DateFormat" isKey="true" />
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text67>
-        <Text68 Ref="89" type="Text" isKey="true">
+        <Text68 Ref="87" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,8.8,3.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>08346b359e5443e1b3612d28689accc4</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text68</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Awarding Date:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text68>
-        <Text69 Ref="90" type="Text" isKey="true">
+        <Text69 Ref="88" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>3.4,8.8,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>2697d11283d24d4e9cb40c5ae7090e6e</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text69</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.fechaAdjudicacion}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="91" type="DateFormat" isKey="true" />
+          <TextFormat Ref="89" type="DateFormat" isKey="true" />
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text69>
-        <Text70 Ref="92" type="Text" isKey="true">
+        <Text70 Ref="90" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,9.2,3.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>09763ffe2b90463eac566e53291eadd6</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text70</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Contract length:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text70>
-        <Text71 Ref="93" type="Text" isKey="true">
+        <Text71 Ref="91" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>3.4,9.2,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>dd87abd9d1894e25b0b0b2b2764aa0d1</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text71</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.duracion}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="94" type="DateFormat" isKey="true" />
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text71>
-        <Text72 Ref="95" type="Text" isKey="true">
+        <Text72 Ref="92" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,9.6,3.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>8e67d6e0cf4d4c2d8b429a8b179b4049</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text72</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Start contract date:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text72>
-        <Text73 Ref="96" type="Text" isKey="true">
+        <Text73 Ref="93" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>3.4,9.6,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>b946f93e9722440e91bed588817c93a2</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text73</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.fechaInicioContrato}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="97" type="DateFormat" isKey="true" />
+          <TextFormat Ref="94" type="DateFormat" isKey="true" />
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text73>
-        <Text74 Ref="98" type="Text" isKey="true">
+        <Text74 Ref="95" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,10,3.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>0697369ae73b474596e9f3efab93336d</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text74</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>End contract date:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text74>
-        <Text75 Ref="99" type="Text" isKey="true">
+        <Text75 Ref="96" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>3.4,10,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>3752aab9cc2548a597208656e1f4c1a8</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text75</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.fechaFinContrato}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="100" type="DateFormat" isKey="true" />
+          <TextFormat Ref="97" type="DateFormat" isKey="true" />
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text75>
-        <Text76 Ref="101" type="Text" isKey="true">
+        <Text76 Ref="98" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,10.4,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>bf9dc1dc11c64b3e95e9a1361f56b734</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text76</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Plannig notes:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text76>
-        <Text77 Ref="102" type="Text" isKey="true">
+        <Text77 Ref="99" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,11,8.8,2.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
@@ -1922,63 +1902,64 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>ef92321012d442b1a61f602fc0ef6e49</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text77</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
+          <Text>{Ofertas.notasPlanning}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text77>
-        <Text78 Ref="103" type="Text" isKey="true">
+        <Text78 Ref="100" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,8.4,3.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>af145927004e428da3dc906db91c4bb6</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text78</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Present supplier:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text78>
-        <Text79 Ref="104" type="Text" isKey="true">
+        <Text79 Ref="101" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>12.8,8.4,5.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>85210f3ee2c541e287072c4f17b9dc9b</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text79</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.proveedorActual}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text79>
-        <Text80 Ref="105" type="Text" isKey="true">
+        <Text80 Ref="102" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,8.8,9.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>916270609941452489d5e0ebc3eace29</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text80</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Competitors:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text80>
-        <Text81 Ref="106" type="Text" isKey="true">
+        <Text81 Ref="103" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,9.2,9.2,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
@@ -1986,112 +1967,112 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>4ce6f7ddff1340db95ac36eeaf813b97</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text81</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.competidores}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text81>
-        <Text82 Ref="107" type="Text" isKey="true">
+        <Text82 Ref="104" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,10,3.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>6a012a3d2d434fe19f08980ecb4b22f1</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text82</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Main competitor:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text82>
-        <Text83 Ref="108" type="Text" isKey="true">
+        <Text83 Ref="105" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>12.8,10,5.6,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>3ff60c9c4144471cb3aa6b22c4c3c522</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text83</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.principalCompetidor}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text83>
-        <Text84 Ref="109" type="Text" isKey="true">
+        <Text84 Ref="106" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,10.4,9.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>d19a9cfced654d0baa3f8d276af2ca9b</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text84</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Evaluation criteria:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text84>
-        <Text85 Ref="110" type="Text" isKey="true">
+        <Text85 Ref="107" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,10.8,9.2,1.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>2571c4edcdc14320bf5c7ffeb9084f60</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text85</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.criteriosEvaluacion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text85>
-        <Text86 Ref="111" type="Text" isKey="true">
+        <Text86 Ref="108" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,12.2,9.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>fd460c6b18c04228bdc4372d0742476b</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text86</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Other comercial data:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text86>
-        <Text87 Ref="112" type="Text" isKey="true">
+        <Text87 Ref="109" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,12.6,9.2,1</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>e7dd5ded93b4479fa1ea98743f2958e4</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text87</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.datosComerciales}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text87>
-        <Text89 Ref="113" type="Text" isKey="true">
+        <Text89 Ref="110" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>0,14.4,8.8,4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
@@ -2099,139 +2080,140 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>cf5eadcd9c3a44c88fe5108b12cd5071</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text89</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.puntosRelevantes}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text89>
-        <Text90 Ref="114" type="Text" isKey="true">
+        <Text90 Ref="111" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,8.4,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>66ada61cf8ce4d97bd52ce6ae5ee5c35</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text90</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>GDES strategy</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text90>
-        <Text91 Ref="115" type="Text" isKey="true">
+        <Text91 Ref="112" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,8.8,8.8,1</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>a0228c1e9f6e41fea8271c2cdaa76555</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text91</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.estrategiaGDES}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text91>
-        <Text92 Ref="116" type="Text" isKey="true">
+        <Text92 Ref="113" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,9.8,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>25209f8b89a54d7f9fc2fcf106fda1fa</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text92</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>GDES Value proposition:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text92>
-        <Text93 Ref="117" type="Text" isKey="true">
+        <Text93 Ref="114" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,10.2,8.8,1.2</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>88579e27c3934960909f27c3f71f7ad3</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text93</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.diferencialGDES}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text93>
-        <Text94 Ref="118" type="Text" isKey="true">
+        <Text94 Ref="115" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,11.4,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>cb71009052424aaa9f2c446bf9bb7bd2</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text94</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Any synergy with other contracts:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text94>
-        <Text95 Ref="119" type="Text" isKey="true">
+        <Text95 Ref="116" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,11.8,8.8,1.4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>89eff8b1bf204f279f1ad9f9ea8d3dcb</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text95</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.sinergias}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text95>
-        <Text96 Ref="120" type="Text" isKey="true">
+        <Text96 Ref="117" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,13,3.2,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>ee99b064cb59446e89ae5d24599dd684</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text96</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Probability %</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text96>
-        <Text97 Ref="121" type="Text" isKey="true">
+        <Text97 Ref="118" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>22.2,13,5.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>43b9cb93dd834f05b224caadab0eabee</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text97</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.probabilidad}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="122" type="NumberFormat" isKey="true">
+          <TextFormat Ref="119" type="NumberFormat" isKey="true">
             <DecimalDigits>0</DecimalDigits>
             <DecimalSeparator>,</DecimalSeparator>
             <GroupSeparator>.</GroupSeparator>
@@ -2241,9 +2223,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text97>
-        <Text98 Ref="123" type="Text" isKey="true">
+        <Text98 Ref="120" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>9.2,14.4,9.2,4</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
@@ -2251,110 +2232,111 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>5a518bc303ff4088860ab270548b80a3</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text98</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.riesgos}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text98>
-        <Text99 Ref="124" type="Text" isKey="true">
+        <Text99 Ref="121" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,14.4,3.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>9984fa5f720b4f5da1e2e215318566b6</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text99</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>HR Subrogation:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text99>
-        <Text100 Ref="125" type="Text" isKey="true">
+        <Text100 Ref="122" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>22.2,14.4,1,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>e2c261d5eca14c328c934915c8c8618c</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text100</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.subrogacionSN}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text100>
-        <Text101 Ref="126" type="Text" isKey="true">
+        <Text101 Ref="123" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,14.8,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>8db89936b4ac41459d3ad47160c06c87</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text101</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Labour issues:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text101>
-        <Text102 Ref="127" type="Text" isKey="true">
+        <Text102 Ref="124" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,15.2,8.8,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>bb484748d8b84e67b4d80bf575a79c27</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text102</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.subrogacionTXT}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text102>
-        <Text103 Ref="128" type="Text" isKey="true">
+        <Text103 Ref="125" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,15.6,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>907b21607bb64c0c85a5f9de3bef2272</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text103</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Contract issues:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text103>
-        <Text104 Ref="129" type="Text" isKey="true">
+        <Text104 Ref="126" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,16,8.8,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>d2f23f82963d471b98de0ebf2c74b14d</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text104</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.condicionesEstandarTXT}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text104>
-        <Text105 Ref="130" type="Text" isKey="true">
+        <Text105 Ref="127" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>18.8,16.4,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -2362,13 +2344,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>d3bfec55b98d46f789ff265de2642fc0</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text105</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Penalties:</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
         </Text105>
-        <Text106 Ref="131" type="Text" isKey="true">
+        <Text106 Ref="128" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>18.8,16.8,8.8,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -2376,13 +2359,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>f4f86df096b346fc8a62fff2d03b7c22</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text106</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.penalizaciones}</Text>
           <TextBrush>Black</TextBrush>
           <Type>DataColumn</Type>
         </Text106>
-        <Text107 Ref="132" type="Text" isKey="true">
+        <Text107 Ref="129" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>18.8,17.2,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -2390,13 +2374,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>3671b80e51c64bdf9231d0ea9f815718</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text107</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Warranties:</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
         </Text107>
-        <Text108 Ref="133" type="Text" isKey="true">
+        <Text108 Ref="130" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>18.8,17.6,8.8,0.8</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -2404,13 +2389,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>26dec518b75046a790439d2b70be647b</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text108</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.garantiasEspecialesTXT}</Text>
           <TextBrush>Black</TextBrush>
           <Type>DataColumn</Type>
         </Text108>
-        <Text13 Ref="134" type="Text" isKey="true">
+        <Text13 Ref="131" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>20.6,18.4,7,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -2418,59 +2404,59 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <HorAlignment>Right</HorAlignment>
           <Margins>0,0,0,0</Margins>
           <Name>Text13</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
           <Text>Página 1</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text13>
-        <Text129 Ref="135" type="Text" isKey="true">
+        <Text129 Ref="132" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,5,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9,Bold</Font>
           <Guid>eb936f877ad847f6956c9a4b6f195956</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text129</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>Economic considerations</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text129>
-        <Text130 Ref="136" type="Text" isKey="true">
+        <Text130 Ref="133" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>18.8,5.4,8.8,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>9dbc54bd86664c3caf57d90eba3f1561</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text130</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.consideracionesEconomicas}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text130>
-        <Text131 Ref="137" type="Text" isKey="true">
+        <Text131 Ref="134" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <CanGrow>True</CanGrow>
           <ClientRectangle>23.4,14.4,4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Font>Arial,9</Font>
           <Guid>4648fe55492a4baf8ce40f43c598dd2a</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text131</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
           <Text>{Ofertas.subrogacionNum}</Text>
           <TextBrush>Black</TextBrush>
-          <TextFormat Ref="138" type="NumberFormat" isKey="true">
+          <TextFormat Ref="135" type="NumberFormat" isKey="true">
             <DecimalSeparator>,</DecimalSeparator>
             <GroupSeparator>.</GroupSeparator>
             <NegativePattern>1</NegativePattern>
@@ -2478,11 +2464,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
         </Text131>
-        <DataBand1 Ref="139" type="DataBand" isKey="true">
+        <DataBand1 Ref="136" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,27.7,0.8</ClientRectangle>
           <Components isList="true" count="3">
-            <Image2 Ref="140" type="Image" isKey="true">
+            <Image2 Ref="137" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <CanShrink>True</CanShrink>
               <ClientRectangle>24.2,0,3.4,0.8</ClientRectangle>
@@ -3010,35 +2996,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</ImageBytes>
               <Margins>0,0,0,0</Margins>
               <Name>Image2</Name>
-              <Page isRef="44" />
-              <Parent isRef="139" />
+              <Page isRef="42" />
+              <Parent isRef="136" />
               <Stretch>True</Stretch>
             </Image2>
-            <Text30 Ref="141" type="Text" isKey="true">
+            <Text30 Ref="138" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,23.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,14,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text30</Name>
-              <Page isRef="44" />
-              <Parent isRef="139" />
+              <Page isRef="42" />
+              <Parent isRef="136" />
               <Text>{Ofertas.nombreCorto}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text30>
-            <HorizontalLinePrimitive3 Ref="142" type="HorizontalLinePrimitive" isKey="true">
+            <HorizontalLinePrimitive3 Ref="139" type="HorizontalLinePrimitive" isKey="true">
               <ClientRectangle>0,0.8,27.6,0.0254</ClientRectangle>
               <Color>Black</Color>
-              <EndCap Ref="143" type="Cap" isKey="true">
+              <EndCap Ref="140" type="Cap" isKey="true">
                 <Color>Black</Color>
               </EndCap>
               <Name>HorizontalLinePrimitive3</Name>
-              <Page isRef="44" />
-              <Parent isRef="139" />
+              <Page isRef="42" />
+              <Parent isRef="136" />
               <Size>2</Size>
-              <StartCap Ref="144" type="Cap" isKey="true">
+              <StartCap Ref="141" type="Cap" isKey="true">
                 <Color>Black</Color>
               </StartCap>
             </HorizontalLinePrimitive3>
@@ -3046,8 +3032,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Conditions isList="true" count="0" />
           <Filters isList="true" count="0" />
           <Name>DataBand1</Name>
-          <Page isRef="44" />
-          <Parent isRef="44" />
+          <Page isRef="42" />
+          <Parent isRef="42" />
           <Sort isList="true" count="0" />
         </DataBand1>
       </Components>
@@ -3060,13 +3046,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
       <PageWidth>29.7</PageWidth>
       <PaperSize>A4</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="145" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="142" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page2>
   </Pages>
-  <PrinterSettings Ref="146" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <PrinterSettings Ref="143" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
   <ReferencedAssemblies isList="true" count="8">
     <value>System.Dll</value>
     <value>System.Drawing.Dll</value>
@@ -3078,10 +3064,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>5/31/2018 5:52:22 PM</ReportChanged>
+  <ReportChanged>6/5/2018 12:16:46 PM</ReportChanged>
   <ReportCreated>5/7/2018 1:08:45 PM</ReportCreated>
-  <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\proposal_report_short.mrt</ReportFile>
-  <ReportGuid>a26aaf04a8794c4e909d2bb168d2069a</ReportGuid>
+  <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\proposal_report.mrt</ReportFile>
+  <ReportGuid>c5c36bb6ba60463cb227bd8d52671e75</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
