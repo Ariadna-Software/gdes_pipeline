@@ -1155,6 +1155,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>4. PROJECT DEADLINES</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1173,6 +1174,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>7. PROJECT TEAM AND PLANNING</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1191,6 +1193,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>5. CONCURRENCE AND MARKET SITUATION</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1209,6 +1212,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>8. IDENTIFIED RISKS</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1227,6 +1231,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>6. GDES VALUE AND STRATEGY</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1245,6 +1250,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>9. LEGAL ISSUES</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1262,6 +1268,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Opportunity type:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1278,6 +1285,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.tipoOportunidad}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1294,6 +1302,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Scope:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1310,6 +1319,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.alcance}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1326,6 +1336,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Appicable documents:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1343,6 +1354,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.documentosEspeciales}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1359,6 +1371,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Location:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1376,6 +1389,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.ubicacion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1392,6 +1406,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Offer presented in join venture:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1408,6 +1423,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.uteSN}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1424,6 +1440,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>GDES %:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1440,6 +1457,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.gdesPor}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="64" type="NumberFormat" isKey="true">
@@ -1463,6 +1481,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Total contract revenue (GDES):</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1479,6 +1498,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.importeGdes}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="67" type="CurrencyFormat" isKey="true">
@@ -1504,6 +1524,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Gross Margin (%):</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1520,6 +1541,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.margenContribucion}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="70" type="CustomFormat" isKey="true" />
@@ -1537,6 +1559,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Yearly Revenue:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1553,6 +1576,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.importeAnual}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="73" type="CurrencyFormat" isKey="true">
@@ -1578,6 +1602,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Revenue current year:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1594,6 +1619,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.importePrimerAno}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="76" type="CurrencyFormat" isKey="true">
@@ -1619,6 +1645,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Terms of payments:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1635,6 +1662,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.condicionesPago}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1651,6 +1679,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Investment ammount</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1667,6 +1696,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.importeInversion}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="81" type="CurrencyFormat" isKey="true">
@@ -1692,6 +1722,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Description of the investment:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1708,6 +1739,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.descripcionInversion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1724,6 +1756,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Delivery Date:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1740,6 +1773,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.fechaEntrega}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="86" type="DateFormat" isKey="true" />
@@ -1757,6 +1791,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Awarding Date:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1773,6 +1808,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.fechaAdjudicacion}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="89" type="DateFormat" isKey="true" />
@@ -1790,6 +1826,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Contract length:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1806,6 +1843,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.duracion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1822,6 +1860,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Start contract date:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1838,6 +1877,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.fechaInicioContrato}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="94" type="DateFormat" isKey="true" />
@@ -1855,6 +1895,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>End contract date:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1871,6 +1912,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.fechaFinContrato}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="97" type="DateFormat" isKey="true" />
@@ -1888,6 +1930,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Plannig notes:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1905,6 +1948,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.notasPlanning}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1921,6 +1965,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Present supplier:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1937,6 +1982,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.proveedorActual}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1953,6 +1999,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Competitors:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1970,6 +2017,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.competidores}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1986,6 +2034,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Main competitor:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2002,6 +2051,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.principalCompetidor}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2018,6 +2068,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Evaluation criteria:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2034,6 +2085,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.criteriosEvaluacion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2050,6 +2102,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Other comercial data:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2066,6 +2119,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.datosComerciales}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2083,6 +2137,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.puntosRelevantes}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2099,6 +2154,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>GDES strategy</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2115,6 +2171,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.estrategiaGDES}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2131,6 +2188,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>GDES Value proposition:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2147,6 +2205,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.diferencialGDES}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2163,6 +2222,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Any synergy with other contracts:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2179,6 +2239,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.sinergias}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2195,6 +2256,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Probability %</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2211,6 +2273,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.probabilidad}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="119" type="NumberFormat" isKey="true">
@@ -2235,6 +2298,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.riesgos}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2251,6 +2315,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>HR Subrogation:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2267,6 +2332,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.subrogacionSN}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2283,6 +2349,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Labour issues:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2299,6 +2366,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.subrogacionTXT}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2315,6 +2383,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Contract issues:</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2331,6 +2400,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.condicionesEstandarTXT}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2347,6 +2417,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Penalties:</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
@@ -2362,6 +2433,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.penalizaciones}</Text>
           <TextBrush>Black</TextBrush>
           <Type>DataColumn</Type>
@@ -2377,6 +2449,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Warranties:</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
@@ -2392,6 +2465,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.garantiasEspecialesTXT}</Text>
           <TextBrush>Black</TextBrush>
           <Type>DataColumn</Type>
@@ -2422,6 +2496,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>Economic considerations</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2438,6 +2513,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.consideracionesEconomicas}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2454,6 +2530,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.subrogacionNum}</Text>
           <TextBrush>Black</TextBrush>
           <TextFormat Ref="135" type="NumberFormat" isKey="true">
@@ -3064,10 +3141,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/5/2018 12:16:46 PM</ReportChanged>
+  <ReportChanged>6/5/2018 4:15:07 PM</ReportChanged>
   <ReportCreated>5/7/2018 1:08:45 PM</ReportCreated>
-  <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\proposal_report.mrt</ReportFile>
-  <ReportGuid>c5c36bb6ba60463cb227bd8d52671e75</ReportGuid>
+  <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\proposal_report_short.mrt</ReportFile>
+  <ReportGuid>4fdc877943fe49f1a1fc297719b45211</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
