@@ -254,40 +254,46 @@
                 </li>
                 <li id="importacion">
                     <a href="#">
-                        <i class="fa fa-lg fa-fw fa-cloud"></i> <span class="menu-item-parent" data-i18n="menu.importacion.cab">Importacion</span>
+                        <i class="fa fa-lg fa-fw fa-cloud"></i>
+                        <span class="menu-item-parent" data-i18n="menu.importacion.cab">Importacion</span>
                     </a>
                     <ul>
                         <li id="ofertas">
                             <a href="Importacion.html">
-                                <i class="fa fa-fw fa-file"></i> <span data-i18n="menu.importacion.excel">Excel</span>
+                                <i class="fa fa-fw fa-file"></i>
+                                <span data-i18n="menu.importacion.excel">Excel</span>
                             </a>
                         </li>
                     </ul>
-                </li>                
+                </li>
                 <li id="gestion">
                     <a href="#">
-                        <i class="fa fa-lg fa-fw fa-puzzle-piece"></i> <span class="menu-item-parent" data-i18n="menu.gestion.cab">GESTION</span>
+                        <i class="fa fa-lg fa-fw fa-puzzle-piece"></i>
+                        <span class="menu-item-parent" data-i18n="menu.gestion.cab">GESTION</span>
                     </a>
                     <ul>
                         <li id="ofertas">
                             <a href="OfertasGeneral.html">
-                                <i class="fa fa-fw fa-file-o"></i> <span data-i18n="menu.gestion.ofertas">OferTas</span>
+                                <i class="fa fa-fw fa-file-o"></i>
+                                <span data-i18n="menu.gestion.ofertas">OferTas</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li id="informes">
                     <a href="#">
-                        <i class="fa fa-lg fa-fw fa-edit"></i> <span class="menu-item-parent" data-i18n="menu.informes.cab">GESTION</span>
+                        <i class="fa fa-lg fa-fw fa-edit"></i>
+                        <span class="menu-item-parent" data-i18n="menu.informes.cab">GESTION</span>
                     </a>
                     <ul>
                         <li id="inf">
                             <a href="Report.html">
-                                <i class="fa fa-fw fa-edit"></i> <span data-i18n="menu.informes.inf">OferTas</span>
+                                <i class="fa fa-fw fa-edit"></i>
+                                <span data-i18n="menu.informes.inf">OferTas</span>
                             </a>
                         </li>
                     </ul>
-                </li>                
+                </li>
 
         </nav>
         <span class="minifyme" data-action="minifyMenu">
@@ -299,15 +305,15 @@
     <div id="main" role="main" style="min-height: 800px;">
         <div id="ribbon">
             <ol class="breadcrumb">
-                <li data-i18n="usuarios.titulo">Grupo usuarios</li>
+                <li>Inicio</li>
             </ol>
         </div>
         <div id="content">
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="page-title txt-color-blueDark">
-                        <i class="fa-fw fa fa-user"></i>
-                        <span data-i18n="usuarios.titulo">Grupo usuarios</span>
+                        <i class="fa-fw fa fa-edit"></i>
+                        <span data-i18n="informes.titulo">Inicio *</span>
                         <a href="#" title="Ayuda">
                             <i class="fa fa-question"></i>
                         </a>
@@ -324,95 +330,53 @@
                                 <span class="widget-icon">
                                     <i class="fa fa-edit"></i>
                                 </span>
-                                <h2 data-i18n="usuarios.panel"> Panel</h2>
+                                <h2 data-i18n="informes.T1TB1"> Panel de inicio *</h2>
                             </header>
-                            <div class="row">
-                                <form id="usuario-form" class="smart-form">
-                                    <fieldset>
-                                        <div class="row">
-                                            <section class="col col-md-6">
-                                                <label class="label" data-i18n="usuarios.nombre">Nombre:</label>
-                                                <label class="input">
-                                                    <input id="txtNombre" name="txtNombre" data-bind="value: nombre">
-                                                </label>
-                                            </section>
-                                            <section class="col col-md-4">
-                                                <label class="label" data-i18n="usuarios.grupo">Grupo:</label>
-                                                <select style="width:100%;" id="cmbGrupos" name="cmbGrupos" data-bind="options: optionsGrupos, optionsText: 'nombre', optionsValue: 'grupoUsuarioId', 
-                                                    value: sGrupo, valueAllowUnset: true, selectedOptions: selectedGrupos, selected2:{}">
-                                                </select>
-                                            </section>
-                                            <section class="col col-md-2">
-                                                <label class="label" data-i18n="usuarios.codigoIdioma">Nombre:</label>
-                                                <label class="input">
-                                                    <input id="txtCodigoIdioma" name="txtCodigoIdioma" data-bind="value: codigoIdioma">
-                                                </label>
-                                            </section>
-                                        </div>
-                                        <div class="row">
-                                            <section class="col col-md-6">
-                                                <label class="checkbox">
-                                                    <input id="chkEsAdministrador" type="checkbox" name="chkEsAdministrador" data-bind="checked: esAdministrador">
-                                                    <i></i>
-                                                    <span data-i18n="usuarios.esAdministrador">ESD</span>
-                                                </label>
-                                            </section>
-                                            <section class="col col-md-2">
-                                            </section>
-                                            <section class="col col-md-4">
-                                                <label class="label" data-i18n="usuarios.responsable">Responsable:</label>
-                                                <select style="width:100%;" id="cmbResponsables" name="cmbResponsables" data-bind="options: optionsResponsables, optionsText: 'nombre', optionsValue: 'usuarioId', 
-                                                    value: sResponsable, valueAllowUnset: true, selectedOptions: selectedResponsables, selected2:{}">
-                                                </select>
-                                            </section>
-                                        </div>
-                                        <div class="row">
-                                            <section class="col col-md-3">
-                                                <label class="label" data-i18n="usuarios.pais">Pais:</label>
-                                                <select class="aswselect2" id="cmbPaiss" name="cmbPaiss" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
-                                                    value: sPais, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
-                                                </select>
-                                            </section>
-                                            <section class="col col-md-3">
-                                                <label class="label" data-i18n="usuarios.empresa">Empresa:</label>
-                                                <select class="aswselect2" id="cmbEmpresas" name="cmbEmpresas" data-bind="options: optionsEmpresas, optionsText: 'nombre', optionsValue: 'empresaId', 
-                                                    value: sEmpresa, valueAllowUnset: true, selectedOptions: selectedEmpresas, selected2:{}">
-                                                </select>
-                                            </section>
-                                            <section class="col col-md-3">
-                                                <label class="label" data-i18n="usuarios.area">Area:</label>
-                                                <select class="aswselect2" id="cmbAreas" name="cmbAreas" data-bind="options: optionsAreas, optionsText: 'nombre', optionsValue: 'areaId', 
-                                                    value: sArea, valueAllowUnset: true, selectedOptions: selectedAreas, selected2:{}">
-                                                </select>
-                                            </section>
-                                            <section class="col col-md-3">
-                                                <label class="label" data-i18n="usuarios.unidadNegocio">Unidad negocio:</label>
-                                                <select class="aswselect2" id="cmbUnidadesNegocio" name="cmbUnidadesNegocio" data-bind="options: optionsUnidadesNegocio, optionsText: 'nombre', optionsValue: 'unidadNegocioId', 
-                                                    value: sUnidadNegocio, valueAllowUnset: true, selectedOptions: selectedUnidadesNegocio, selected2:{}">
-                                                </select>
-                                            </section>
-                                        </div>
-                                        <div class="row">
-                                            <section class="col col-md-6"></section>
-                                            <section class="col col-md-6">
-                                                <label class="label" data-i18n="usuarios.ubicacion">Nombre:</label>
-                                                <label class="input">
-                                                    <input id="txtUbicacion" name="txtUbicacion" data-bind="value: ubicacion">
-                                                </label>
-                                            </section>
-                                        </div>
-                                    </fieldset>
-                                    <fieldset>
-                                        <div class="pull-right">
-                                            <button id="btnSalir" data-i18n="[title]salir" class="btn btn-warning btn-circle btn-lg">
-                                                <i class="fa fa-lg fa-sign-out"></i>
-                                            </button>
-                                            <button id="btnAceptar" data-i18n="[title]aceptar" class="btn btn-success btn-circle btn-lg">
-                                                <i class="fa fa-lg fa-check"></i>
-                                            </button>
-                                        </div>
-                                    </fieldset>
-                                </form>
+                            <div>
+                                <div class="jarviswidget-editbox">
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="widget-body">
+                                    <div class="row">
+                                        <form id="frmT1TB1" class="smart-form">
+                                            <fieldset>
+                                                <div class="row">
+                                                    <section class="col col-md-4">
+                                                        <label class="label" data-i18n="ofertas.fasesOferta">FOF:</label>
+                                                        <select class="aswselect2" id="cmbFasesOferta" name="cmbFasesOferta" data-bind="options: optionsFasesOferta, optionsText: 'nombre', optionsValue: 'faseOfertaId', 
+                                                                                        value: sFasesOferta, valueAllowUnset: true, selectedOptions: selectedFasesOferta, selected2:{}">
+                                                        </select>
+                                                    </section>
+                                                    <section class="col col-md-2">
+                                                        <label class="label" data-i18n="informes.pais">Pais*:</label>
+                                                        <select class="aswselect2" id="cmbPaiss" name="cmbPaiss" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
+                                                                value: sPais, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
+                                                        </select>
+                                                    </section>
+                                                    <section class="col col-md-3">
+                                                        <label class="label" data-i18n="informes.fechaCreacionDesde">Fecha entrega:</label>
+                                                        <label class="input">
+                                                            <input id="txtFechaCreacion" name="txtFechaCreacion" data-bind="value: fechaCreacionDesde" class="datepicker" data-dateformat="dd/mm/yy">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-md-3">
+                                                        <label class="label" data-i18n="informes.fechaCreacionHasta">Fecha entrega:</label>
+                                                        <label class="input">
+                                                            <input id="txtFechaCreacion" name="txtFechaCreacion" data-bind="value: fechaCreacionHasta" class="datepicker" data-dateformat="dd/mm/yy">
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="pull-right">
+                                                    <button id="btnT1TB1" data-i18n="[title]aceptar" class="btn btn-success btn-circle btn-lg">
+                                                        <i class="fa fa-lg fa-check"></i>
+                                                    </button>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </article>
@@ -482,11 +446,11 @@
     <script src="js/comun/comun.ajax.js"></script>
     <script src="js/comun/comun.general.js"></script>
     <!-- Funciones propias de esta página -->
-    <script src="js/app/usuariosDetalle.js"></script>
+    <script src="js/app/report.js"></script>
     <script type="text/javascript">
         (function ($) {
             $(document).ready(function () {
-                apiPaginaUsuariosDetalle.ini();
+                apiReport.ini();
             });
         })(jQuery);
     </script>

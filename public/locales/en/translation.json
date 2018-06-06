@@ -56,6 +56,10 @@
         "importacion": {
             "cab": "Import data",
             "excel": "Import from Excel"
+        },
+        "informes": {
+            "cab": "Reports",
+            "inf": "General reports"
         }
     },
     "login": {
@@ -527,5 +531,9 @@
         "importeAnualDivisa": "Annual amount (CURRENCY)",
         "importePrimerAnoDivisa": "First year amount (CURRENCY)",
         "importeInversionDivisa": "Investment value (CURRENCY)"
+    },
+    "informes": {
+        "titulo": "General reports",
+        "panel": "General reports"
     }
 }

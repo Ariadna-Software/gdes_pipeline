@@ -56,6 +56,10 @@
         "importacion": {
             "cab": "Importar datos",
             "excel": "Importar desde excel"
+        },
+        "informes": {
+            "cab": "Informes",
+            "inf": "Informes generales"
         }
     },
     "login": {
@@ -547,5 +551,13 @@
         "importeAnualDivisa": "Importe Anual (DIVISA)",
         "importePrimerAnoDivisa": "Importe primer año (DIVISA)",
         "importeInversionDivisa": "Valor inversion (DIVISA)"
+    },
+    "informes": {
+        "titulo": "Informes generales",
+        "panel": "Informes generales",
+        "pais": "Pais",
+        "fechaCreacionDesde": "Fecha creación desde",
+        "fechaCreacionHasta": "Fecha creación hasta",
+        "T1TB1": "Bids General Map"
     }
 }

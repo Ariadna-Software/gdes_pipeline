@@ -56,6 +56,10 @@
         "importacion": {
             "cab": "Importer des données",
             "excel": "Importer depuis Excel"
+        },
+        "informes": {
+            "cab": "Rapports",
+            "inf": "Rapports généraux"
         }
     },
     "login": {
@@ -528,5 +532,9 @@
         "importeAnualDivisa": "Montant annuel (MONNAIE)",
         "importePrimerAnoDivisa": "Montant première année (MONNAIE)",
         "importeInversionDivisa": "Valeur d'investissement (MONNAIE)"
+    },
+    "informes": {
+        "titulo": "Rapports généraux",
+        "panel": "Rapports généraux"
     }
 }
