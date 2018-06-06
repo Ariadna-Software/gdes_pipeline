@@ -43,7 +43,17 @@ var apiReport = {
         self.fechaCreacionHasta = ko.observable();
     },
     aceptarT1TB1: function() {
-        alert(" T1TB1");
+        var fase = vm.sFasesOferta();
+        var pais = vm.sPais();
+        var dFecha = vm.fechaCreacionDesde();
+        var hFecha = vm.fechaCreacionHasta();
+        if (!fase) fase = "";
+        if (!pais) pais = "";
+        if (!dFecha) dFecha = "";
+        if (!hFecha) hFecha = "";
+        var url = "infT1TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
+        window.open(url, '_new');
+        
     },
     cargarFasesOferta: function (id) {
         var url = myconfig.apiUrl + "/api/fases-oferta";

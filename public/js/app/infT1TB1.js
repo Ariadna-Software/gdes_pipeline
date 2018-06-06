@@ -10,8 +10,10 @@ var vm;
 
 var viewer;
 var options;
-var ofertaId = 211;
-var type = 1;
+var fase;
+var pais;
+var dFecha;
+var hFecha;
 
 var apiInfT1TB1 = {
     ini: function () {
@@ -32,16 +34,16 @@ var apiInfT1TB1 = {
         options.appearance.fullScreenMode = true;
         options.toolbar.showSendEmailButton = true;
         // parámetros 
-        ofertaId = apiComunGeneral.gup("ofertaId");
-        type = apiComunGeneral.gup("type");
+        fase = apiComunGeneral.gup("fase");
+        pais = apiComunGeneral.gup("pais");
+        dFecha = apiComunGeneral.gup("dFecha");
+        hFecha = apiComunGeneral.gup("hFecha");
         // llamar al informe 
         apiInfT1TB1.obtainReport();
     },
-    obtainReport: function() {
+    obtainReport: function () {
         StiOptions.WebServer.url = "/streport";
-        var file = "reports/proposal_report.mrt";
-        if (type == 1) file = "reports/proposal_report_short.mrt";
-        if (type == 3) file = "reports/proposal_report_annex.mrt";
+        var file = "reports/T1TB1.mrt";
         // Create a new report instance
         var report = new Stimulsoft.Report.StiReport();
         report.loadFile(file);
@@ -53,12 +55,30 @@ var apiInfT1TB1 = {
         connectionString += "Pwd=" + myconfig.report.password + ";";
         report.dictionary.databases.list[0].connectionString = connectionString;
 
+        var sql = report.dataSources.items[0].sqlCommand;
+        var sql2 = apiInfT1TB1.processParameters(sql);
+        report.dataSources.items[0].sqlCommand = sql2;
+
         // Parámetros
-        report.dictionary.variables.items[0].val = ofertaId;
+        report.dictionary.variables.items[0].val = dFecha;
+        report.dictionary.variables.items[1].val = hFecha;
 
 
         // Assign report to the viewer, the report will be built automatically after rendering the viewer
         viewer.report = report;
         viewer.renderHtml("report_viewer");
+    },
+    processParameters: function(sql) {
+        if (fase != "") sql += " AND o.faseOfertaId = " + fase;
+        if (pais != "") sql += " AND o.paisId = " + pais;
+        if (dFecha != "") {
+            vFecha = moment(dFecha, "DD/MM/YYYY").format("YYYY-MM-DD");
+            sql += " AND fechaCreacion >= '" + vFecha + "'";
+        }
+        if (hFecha != "") {
+            vFecha = moment(hFecha, "DD/MM/YYYY").format("YYYY-MM-DD");
+            sql += " AND fechaCreacion <= '" + vFecha + "'";
+        }
+        return sql;
     }
 }
