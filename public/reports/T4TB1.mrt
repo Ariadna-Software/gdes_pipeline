@@ -595,9 +595,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             </Image1>
             <Text1 Ref="7" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.2,0,7.4,1.2</ClientRectangle>
+              <ClientRectangle>0,0,15.6,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,16,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text1</Name>
               <Page isRef="4" />
@@ -1218,7 +1219,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>6,0.2,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>5378851fe1a64beea03f1960ebcd68e0</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1240,7 +1241,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             </Text6>
             <Text9 Ref="53" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.6,0.2,5,0.6</ClientRectangle>
+              <ClientRectangle>0.6,0.2,5.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <HorAlignment>Right</HorAlignment>
@@ -1259,7 +1260,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>10,0.2,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>ba10dc09a28746eda733e4043378a7c4</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1285,7 +1286,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>11.6,0.2,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>eb255c8188e348879e5da4e615d67190</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1311,7 +1312,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>13,0.2,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>6a652379a1614a5582d6234582deaefe</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1337,7 +1338,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>14.4,0.2,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>d65eceb6de9142c3b9f4fcf168b99fa5</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1363,7 +1364,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>15.8,0.2,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>76a1194ea2c94289b336ee87f3f1fe42</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1389,7 +1390,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>17.4,0.2,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>78db352d7cc545adb03d007cb82873a4</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1421,7 +1422,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Components isList="true" count="8">
             <Text10 Ref="67" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.8,0,5,0.6</ClientRectangle>
+              <ClientRectangle>0.8,0,5,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>369ddc528fca44cea9e4179f51252077</Guid>
@@ -1441,7 +1442,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>457d4a17ed56487ead94e0c24cf9e499</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1467,7 +1468,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>10,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>34fea3ba62614d068495b4540665fd86</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1493,7 +1494,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>11.6,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>3c91c828cbf94862ae52fe722c6c04f5</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1519,7 +1520,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>13,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>8f9de3919a7d43c1ac645191a8afb95e</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1545,7 +1546,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>14.4,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>0427bd1236f04b83959391323beaf68a</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1571,7 +1572,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>15.8,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>3bd0d16d2f974dd78cb5ff8f95ec6901</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1597,7 +1598,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>17.4,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>8105fcf3370c4cf599b6a4c077022067</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1629,7 +1630,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Components isList="true" count="8">
             <Text14 Ref="83" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.8,0,5,0.6</ClientRectangle>
+              <ClientRectangle>0.8,0,5,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>e8af41a82459423a9aee81f437f0b514</Guid>
@@ -1649,7 +1650,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>8bf9fc362898427e9cc3038b44e325bf</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1675,7 +1676,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>10,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>96a26b1b772b44769c713af57c8c23e0</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1701,7 +1702,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>11.6,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>00273e682d014c498f63444b4faf4bb8</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1727,7 +1728,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>13,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>81232b07271b4df5af5429e49355b831</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1753,7 +1754,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>14.4,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>3128526e39b04c92a26b998021cbcf0e</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1779,7 +1780,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>15.8,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>1d2c13453e90469e92fc1f04c3952efe</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1805,7 +1806,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>17.4,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>08c500c1dc304efaa3504c92b40dd374</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1858,10 +1859,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/7/2018 3:34:25 PM</ReportChanged>
+  <ReportChanged>6/7/2018 3:48:42 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T4TB1.mrt</ReportFile>
-  <ReportGuid>1af2f4be3aee40fa97d4412ca5f9afcf</ReportGuid>
+  <ReportGuid>3dc60629b057476abfc90e17f28de59e</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>

@@ -71,11 +71,11 @@
     <Page1 Ref="4" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="7">
+      <Components isList="true" count="8">
         <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,27.7,1.4</ClientRectangle>
-          <Components isList="true" count="2">
+          <Components isList="true" count="1">
             <Image1 Ref="6" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <CanShrink>True</CanShrink>
@@ -608,32 +608,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Parent isRef="5" />
               <Stretch>True</Stretch>
             </Image1>
-            <Text1 Ref="7" type="Text" isKey="true">
-              <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.2,0,7.4,1.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,16,Bold</Font>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text1</Name>
-              <Page isRef="4" />
-              <Parent isRef="5" />
-              <Text>MONITORING REPORT</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text1>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>PageHeaderBand1</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
         </PageHeaderBand1>
-        <PageFooterBand1 Ref="8" type="PageFooterBand" isKey="true">
+        <PageFooterBand1 Ref="7" type="PageFooterBand" isKey="true">
           <Border>Top;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <ClientRectangle>0,18.2,27.7,0.8</ClientRectangle>
           <Components isList="true" count="1">
-            <Text18 Ref="9" type="Text" isKey="true">
+            <Text18 Ref="8" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
               <ClientRectangle>0,0,4,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -641,7 +627,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text18</Name>
               <Page isRef="4" />
-              <Parent isRef="8" />
+              <Parent isRef="7" />
               <Text>PRINTED: {Time}</Text>
               <TextBrush>[0:0:0]</TextBrush>
               <Type>Expression</Type>
@@ -653,7 +639,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="4" />
           <Parent isRef="4" />
         </PageFooterBand1>
-        <Text19 Ref="10" type="Text" isKey="true">
+        <Text19 Ref="9" type="Text" isKey="true">
           <Brush>[255:255:255]</Brush>
           <ClientRectangle>23.2,26.9,4.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -669,6 +655,20 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text19>
+        <Text1 Ref="10" type="Text" isKey="true">
+          <Brush>[255:255:255]</Brush>
+          <ClientRectangle>-0.2,0.4,24.6,1.2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,16,Bold</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+          <Text>MONITORING REPORT</Text>
+          <TextBrush>[0:0:0]</TextBrush>
+          <Type>Expression</Type>
+        </Text1>
         <GroupHeaderBand2 Ref="11" type="GroupHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,2.6,27.7,1</ClientRectangle>
@@ -1301,7 +1301,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <ClientRectangle>0,8.4,27.7,1</ClientRectangle>
           <Components isList="true" count="3">
             <DataDataSource1_fechaAdjudicacion Ref="56" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>9.6,0,1.2,0.8</ClientRectangle>
@@ -1322,7 +1321,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_fechaAdjudicacion>
             <Text2 Ref="58" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>10.8,0,1.6,0.8</ClientRectangle>
@@ -1378,11 +1376,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Name>DataDataSource1</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
-          <Sort isList="true" count="4">
+          <Sort isList="true" count="6">
             <value>ASC</value>
             <value>codPais</value>
             <value>ASC</value>
             <value>orden</value>
+            <value>ASC</value>
+            <value>areaServicio</value>
           </Sort>
         </DataDataSource1>
       </Components>
@@ -1413,10 +1413,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/7/2018 11:43:11 AM</ReportChanged>
+  <ReportChanged>6/7/2018 3:49:48 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T5TB1.mrt</ReportFile>
-  <ReportGuid>3d0d10e62db54ff7a462b3d4b553c608</ReportGuid>
+  <ReportGuid>fc3392f16b634e10a45d701a4f00b254</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>

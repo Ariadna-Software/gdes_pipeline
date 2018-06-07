@@ -610,9 +610,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             </Image1>
             <Text1 Ref="7" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.2,0,7.4,1.2</ClientRectangle>
+              <ClientRectangle>0.2,0,24.2,1.4</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,16,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text1</Name>
               <Page isRef="4" />
@@ -620,7 +621,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Text>MONITORING REPORT</Text>
               <TextBrush>[0:0:0]</TextBrush>
               <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
             </Text1>
           </Components>
           <Conditions isList="true" count="0" />
@@ -997,6 +997,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Parent isRef="4" />
         </HeaderDataSource1>
         <DataDataSource1 Ref="31" type="DataBand" isKey="true">
+          <Border>Top;[31:73:125];1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
           <ClientRectangle>0,6.4,27.7,0.8</ClientRectangle>
@@ -1309,16 +1310,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Conditions isList="true" count="0" />
           <DataRelationName isNull="true" />
           <DataSourceName>DataSource1</DataSourceName>
-          <EvenStyle>Collection1_Data1_Odd Style</EvenStyle>
           <Filters isList="true" count="0" />
           <Name>DataDataSource1</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
-          <Sort isList="true" count="4">
+          <Sort isList="true" count="6">
             <value>ASC</value>
             <value>codPais</value>
             <value>ASC</value>
             <value>orden</value>
+            <value>ASC</value>
+            <value>areaServicio</value>
           </Sort>
         </DataDataSource1>
       </Components>
@@ -1349,10 +1351,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/7/2018 11:32:08 AM</ReportChanged>
+  <ReportChanged>6/7/2018 3:50:59 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T5TB2.mrt</ReportFile>
-  <ReportGuid>1efc0761716d4d01a0eb63dea0013798</ReportGuid>
+  <ReportGuid>bb7c653888d641afa8028f661fa9a61e</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>

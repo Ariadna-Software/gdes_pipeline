@@ -62,7 +62,7 @@
       <Components isList="true" count="10">
         <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,0.4,19,1.4</ClientRectangle>
+          <ClientRectangle>0,0.4,19,2.2</ClientRectangle>
           <Components isList="true" count="3">
             <Image1 Ref="6" type="Image" isKey="true">
               <Brush>Transparent</Brush>
@@ -598,9 +598,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             </Image1>
             <Text1 Ref="7" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.2,0,4.4,1.2</ClientRectangle>
+              <ClientRectangle>0,0,15.6,1</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,16,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text1</Name>
               <Page isRef="4" />
@@ -612,9 +613,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             </Text1>
             <Text20 Ref="8" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>4.8,0,10,1.2</ClientRectangle>
+              <ClientRectangle>8.8,1.2,10,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,16,Bold</Font>
+              <Font>Arial,10,Bold</Font>
               <Guid>ea942883c43e4a59bb07464338062a7a</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -675,7 +676,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </Text19>
         <GroupHeaderBand2 Ref="12" type="GroupHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,2.6,19,0.8</ClientRectangle>
+          <ClientRectangle>0,3.4,19,0.8</ClientRectangle>
           <Components isList="true" count="1">
             <Text5 Ref="13" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
@@ -701,7 +702,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </GroupHeaderBand2>
         <GroupHeaderBand1 Ref="14" type="GroupHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,4.2,19,1</ClientRectangle>
+          <ClientRectangle>0,5,19,1</ClientRectangle>
           <Components isList="true" count="1">
             <Text4 Ref="15" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
@@ -726,7 +727,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </GroupHeaderBand1>
         <HeaderDataSource1 Ref="16" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,6,19,1.2</ClientRectangle>
+          <ClientRectangle>0,6.8,19,1.2</ClientRectangle>
           <Components isList="true" count="14">
             <HeaderDataSource1_ubicacion Ref="17" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
@@ -975,10 +976,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Border>Top;[31:73:125];1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,8,19,0.8</ClientRectangle>
+          <ClientRectangle>0,8.8,19,0.8</ClientRectangle>
           <Components isList="true" count="14">
             <DataDataSource1_ubicacion Ref="32" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0,1.2,0.8</ClientRectangle>
@@ -994,7 +994,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_ubicacion>
             <DataDataSource1_nombreCorto Ref="33" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>1.2,0,2.6,0.8</ClientRectangle>
@@ -1010,7 +1009,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_nombreCorto>
             <DataDataSource1_estado Ref="34" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>3.8,0,1,0.8</ClientRectangle>
@@ -1026,7 +1024,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_estado>
             <DataDataSource1_importeAnual Ref="35" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>4.8,0,1.4,0.8</ClientRectangle>
@@ -1050,7 +1047,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_importeAnual>
             <DataDataSource1_importeGdes Ref="37" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.2,0,1.6,0.8</ClientRectangle>
@@ -1074,7 +1070,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_importeGdes>
             <DataDataSource1_margen Ref="39" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>9.2,0,1,0.8</ClientRectangle>
@@ -1096,7 +1091,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_margen>
             <DataDataSource1_uteSN Ref="41" type="CheckBox" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <Checked>{DataSource1.uteSN}</Checked>
               <ClientRectangle>10.2,0,0.8,0.8</ClientRectangle>
@@ -1108,7 +1102,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <TextBrush>Black</TextBrush>
             </DataDataSource1_uteSN>
             <DataDataSource1_fechaAdjudicacion Ref="42" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>11,0,1.4,0.8</ClientRectangle>
@@ -1126,7 +1119,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_fechaAdjudicacion>
             <DataDataSource1_fechaInicioContrato Ref="44" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>12.4,0,1.4,0.8</ClientRectangle>
@@ -1144,7 +1136,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_fechaInicioContrato>
             <DataDataSource1_duracion Ref="46" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>13.8,0,1.2,0.8</ClientRectangle>
@@ -1160,7 +1151,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_duracion>
             <DataDataSource1_probabilidad Ref="47" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>15,0,1,0.8</ClientRectangle>
@@ -1182,7 +1172,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_probabilidad>
             <Text3 Ref="49" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>17.4,0,1.6,0.8</ClientRectangle>
@@ -1208,7 +1197,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </Text3>
             <DataDataSource1_importePrimerAno Ref="51" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>7.8,0,1.4,0.8</ClientRectangle>
@@ -1232,7 +1220,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_importePrimerAno>
             <Text22 Ref="53" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>16,0,1.4,0.8</ClientRectangle>
@@ -1274,7 +1261,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </DataDataSource1>
         <GroupFooterBand1 Ref="55" type="GroupFooterBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,9.6,19,1</ClientRectangle>
+          <ClientRectangle>0,10.4,19,1</ClientRectangle>
           <Components isList="true" count="5">
             <Text6 Ref="56" type="Text" isKey="true">
               <Border>Top;Black;1;Solid;False;4;Black</Border>
@@ -1282,7 +1269,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.2,0.2,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>5378851fe1a64beea03f1960ebcd68e0</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1308,7 +1295,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>17.4,0.2,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>76fe3f344b98433ea6a0d8cd61e01b80</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1334,7 +1321,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>7.8,0.2,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>e46172ccba03465f94a5f62bb84c3bf6</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1356,7 +1343,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             </Text8>
             <Text9 Ref="62" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.2,0.2,5.8,0.6</ClientRectangle>
+              <ClientRectangle>0.2,0.2,5.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <HorAlignment>Right</HorAlignment>
@@ -1375,7 +1362,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>15.8,0.2,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>b63705293fc74996aa4af399a7013957</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1403,11 +1390,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </GroupFooterBand1>
         <GroupFooterBand2 Ref="65" type="GroupFooterBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,11.4,19,0.8</ClientRectangle>
+          <ClientRectangle>0,12.2,19,0.8</ClientRectangle>
           <Components isList="true" count="5">
             <Text10 Ref="66" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.6,0,5.6,0.6</ClientRectangle>
+              <ClientRectangle>0.6,0,5.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>369ddc528fca44cea9e4179f51252077</Guid>
@@ -1427,7 +1414,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.2,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>457d4a17ed56487ead94e0c24cf9e499</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1453,7 +1440,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>17.4,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>a8ec323ac5c64cd389c1f27a4c8c953a</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1479,7 +1466,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>7.8,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>a9b538c48788464888a95d1b48127bd9</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1505,7 +1492,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>15.8,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>710445decef243cabcb9610c710fa003</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1533,11 +1520,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </GroupFooterBand2>
         <ReportSummaryBand1 Ref="75" type="ReportSummaryBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,13,19,1.2</ClientRectangle>
+          <ClientRectangle>0,13.8,19,1.2</ClientRectangle>
           <Components isList="true" count="5">
             <Text14 Ref="76" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.4,0,5.8,0.6</ClientRectangle>
+              <ClientRectangle>0.4,0,5.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>e8af41a82459423a9aee81f437f0b514</Guid>
@@ -1557,7 +1544,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.2,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>8bf9fc362898427e9cc3038b44e325bf</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1583,7 +1570,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>17.4,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>43d74af563fb4dc5b8c673d21619a0b6</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1609,7 +1596,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>7.8,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>53e78a0ffcea43a6a084b59374f08abe</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1635,7 +1622,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <CanGrow>True</CanGrow>
               <ClientRectangle>15.8,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
+              <Font>Arial,6,Bold</Font>
               <Guid>c5210174874f440f99167bb1d0240b1e</Guid>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -1688,10 +1675,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/7/2018 3:30:35 PM</ReportChanged>
+  <ReportChanged>6/7/2018 3:44:15 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T1TB1.mrt</ReportFile>
-  <ReportGuid>3cd992ad73aa47cfa233bfe65aab26f2</ReportGuid>
+  <ReportGuid>b4aa519255ba42e7a9d630413c4f7f16</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
