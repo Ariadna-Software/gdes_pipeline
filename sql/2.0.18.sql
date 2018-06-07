@@ -1,2 +1,2 @@
-ALTER TABLE `gdes_pipeline_test`.`ofertas`   
+ALTER TABLE `ofertas`   
   CHANGE `anexos` `anexos` LONGTEXT NULL;
