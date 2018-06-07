@@ -13,6 +13,9 @@ var apiReport = {
         $('#inf').attr('class', 'active');
         // control de envío de formularios
         $('#frmT1TB1').submit(function () { return false; });
+        $('#frmT1TB2').submit(function () { return false; });
+        $('#frmT5TB1').submit(function () { return false; });
+
         // carga datos de la página
         vm = new apiReport.datosPagina();
         ko.applyBindings(vm);
@@ -20,13 +23,25 @@ var apiReport = {
         // formatear desplegables
         $('#cmbFasesOferta').select2(select2_languages[usuario.codigoIdioma]);
         $('#cmbPaiss').select2(select2_languages[usuario.codigoIdioma]);
-        
+
+        $('#cmbFasesOferta2').select2(select2_languages[usuario.codigoIdioma]);
+        $('#cmbPaiss2').select2(select2_languages[usuario.codigoIdioma]);
+
+        $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
+
+        $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
+        $('#cmbPaiss3').select2(select2_languages[usuario.codigoIdioma]);
+
         // carga desplegables
         apiReport.cargarFasesOferta();
         apiReport.cargarPaiss();
+        apiReport.cargarEstados();
+        apiReport.cargarAreas();
 
         // botones de acción
-        $('#btnT1TB1').click(apiReport.aceptarT1TB1);        
+        $('#btnT1TB1').click(apiReport.aceptarT1TB1);
+        $('#btnT1TB2').click(apiReport.aceptarT1TB2);
+        $('#btnT5TB1').click(apiReport.aceptarT5TB1);
     },
     datosPagina: function () {
         var self = this;
@@ -34,15 +49,31 @@ var apiReport = {
         self.optionsFasesOferta = ko.observableArray([]);
         self.selectedFasesOferta = ko.observableArray([]);
         self.sFasesOferta = ko.observable();
+        self.sFasesOferta2 = ko.observable();
 
         self.optionsPaiss = ko.observableArray([]);
         self.selectedPaiss = ko.observableArray([]);
         self.sPais = ko.observable();
+        self.sPais2 = ko.observable();
+        self.sPais3 = ko.observable();
 
         self.fechaCreacionDesde = ko.observable();
         self.fechaCreacionHasta = ko.observable();
+
+        self.fechaCreacionDesde2 = ko.observable();
+        self.fechaCreacionHasta2 = ko.observable();
+
+        self.optionsEstados = ko.observableArray([]);
+        self.selectedEstados = ko.observableArray([]);
+        self.sEstado = ko.observable();
+
+        self.optionsAreas = ko.observableArray([]);
+        self.selectedAreas = ko.observableArray([]);
+        self.sArea = ko.observable();
+
+        self.optT5TB2 = ko.observable();
     },
-    aceptarT1TB1: function() {
+    aceptarT1TB1: function () {
         var fase = vm.sFasesOferta();
         var pais = vm.sPais();
         var dFecha = vm.fechaCreacionDesde();
@@ -53,7 +84,35 @@ var apiReport = {
         if (!hFecha) hFecha = "";
         var url = "infT1TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
         window.open(url, '_new');
-        
+
+    },
+    aceptarT1TB2: function () {
+        var fase = vm.sFasesOferta2();
+        var pais = vm.sPais2();
+        var dFecha = vm.fechaCreacionDesde2();
+        var hFecha = vm.fechaCreacionHasta2();
+        var estado = vm.sEstado();
+        if (!fase) fase = "";
+        if (!pais) pais = "";
+        if (!dFecha) dFecha = "";
+        if (!hFecha) hFecha = "";
+        if (!estado) estado = "";
+        var url = "infT1TB2.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
+        window.open(url, '_new');
+
+    },
+    aceptarT5TB1: function () {
+        var area = vm.sArea();
+        var pais = vm.sPais3();
+        if (!area) area = "";
+        if (!pais) pais = "";
+        var url = "infT5TB1.html?area=" + area + "&pais=" + pais;
+        if (vm.optT5TB2())
+            url += "&detail=1";
+        else
+            url += "&detail=0";
+        window.open(url, '_new');
+
     },
     cargarFasesOferta: function (id) {
         var url = myconfig.apiUrl + "/api/fases-oferta";
@@ -73,6 +132,30 @@ var apiReport = {
             var options = [{ paisId: 0, nombre: " " }].concat(data);
             vm.optionsPaiss(options);
             $("#cmbPaiss").val([id]).trigger('change');
+        });
+    },
+    cargarEstados: function (id) {
+        var url = myconfig.apiUrl + "/api/estados";
+        if (usuario.codigoIdioma != "es") {
+            url = myconfig.apiUrl + "/api/estados/multi/" + usuario.codigoIdioma;
+        }
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
+            if (err) return;
+            var options = [{ estadoId: 0, nombre: " " }].concat(data);
+            vm.optionsEstados(options);
+            $("#cmbEstados").val([id]).trigger('change');
+        });
+    },
+    cargarAreas: function (id) {
+        var url = myconfig.apiUrl + "/api/areas";
+        if (usuario.codigoIdioma != "es") {
+            url = myconfig.apiUrl + "/api/areas/multi/" + usuario.codigoIdioma;
+        }
+        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
+            if (err) return;
+            var options = [{ areaId: 0, nombre: " " }].concat(data);
+            vm.optionsAreas(options);
+            $("#cmbAreas").val([id]).trigger('change');
         });
     }
 }

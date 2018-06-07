@@ -555,9 +555,14 @@
     "informes": {
         "titulo": "Informes generales",
         "panel": "Informes generales",
-        "pais": "Pais",
-        "fechaCreacionDesde": "Fecha creación desde",
-        "fechaCreacionHasta": "Fecha creación hasta",
-        "T1TB1": "Bids General Map"
+        "pais": "Country",
+        "fechaCreacionDesde": "From creation date",
+        "fechaCreacionHasta": "To creation date",
+        "estado": "Status",
+        "area": "Service area",
+        "optT5TB2": "Version detail",
+        "T1TB1": "LEADS MAP",
+        "T1TB2": "OPEN LEADS",
+        "T5TB1": "BIDS MONITORING"
     }
 }

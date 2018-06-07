@@ -325,7 +325,8 @@
                 <div class="row" id="presentacion">
                     <!-- NEW WIDGET START -->
                     <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                        <!-- T1TB1 -->
+                        <div class="jarviswidget" id="wid-id-1" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
                             <header>
                                 <span class="widget-icon">
                                     <i class="fa fa-edit"></i>
@@ -344,13 +345,13 @@
                                                     <section class="col col-md-4">
                                                         <label class="label" data-i18n="ofertas.fasesOferta">FOF:</label>
                                                         <select class="aswselect2" id="cmbFasesOferta" name="cmbFasesOferta" data-bind="options: optionsFasesOferta, optionsText: 'nombre', optionsValue: 'faseOfertaId', 
-                                                                                        value: sFasesOferta, valueAllowUnset: true, selectedOptions: selectedFasesOferta, selected2:{}">
+                                                                                            value: sFasesOferta, valueAllowUnset: true, selectedOptions: selectedFasesOferta, selected2:{}">
                                                         </select>
                                                     </section>
                                                     <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.pais">Pais*:</label>
                                                         <select class="aswselect2" id="cmbPaiss" name="cmbPaiss" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
-                                                                value: sPais, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
+                                                                    value: sPais, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
                                                         </select>
                                                     </section>
                                                     <section class="col col-md-3">
@@ -370,6 +371,119 @@
                                             <fieldset>
                                                 <div class="pull-right">
                                                     <button id="btnT1TB1" data-i18n="[title]aceptar" class="btn btn-success btn-circle btn-lg">
+                                                        <i class="fa fa-lg fa-check"></i>
+                                                    </button>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- T1TB2 -->
+                        <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                            <header>
+                                <span class="widget-icon">
+                                    <i class="fa fa-edit"></i>
+                                </span>
+                                <h2 data-i18n="informes.T1TB2"> Panel de inicio *</h2>
+                            </header>
+                            <div>
+                                <div class="jarviswidget-editbox">
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="widget-body">
+                                    <div class="row">
+                                        <form id="frmT1TB2" class="smart-form">
+                                            <fieldset>
+                                                <div class="row">
+                                                    <section class="col col-md-3">
+                                                        <label class="label" data-i18n="ofertas.fasesOferta">FOF:</label>
+                                                        <select class="aswselect2" id="cmbFasesOferta2" name="cmbFasesOferta2" data-bind="options: optionsFasesOferta, optionsText: 'nombre', optionsValue: 'faseOfertaId', 
+                                                                                        value: sFasesOferta2, valueAllowUnset: true, selectedOptions: selectedFasesOferta, selected2:{}">
+                                                        </select>
+                                                    </section>
+                                                    <section class="col col-md-2">
+                                                        <label class="label" data-i18n="informes.pais">Pais*:</label>
+                                                        <select class="aswselect2" id="cmbPaiss2" name="cmbPaiss2" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
+                                                                value: sPais2, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
+                                                        </select>
+                                                    </section>
+                                                    <section class="col col-md-2">
+                                                        <label class="label" data-i18n="informes.fechaCreacionDesde">Fecha entrega:</label>
+                                                        <label class="input">
+                                                            <input id="txtFechaCreacion" name="txtFechaCreacion" data-bind="value: fechaCreacionDesde2" class="datepicker" data-dateformat="dd/mm/yy">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-md-2">
+                                                        <label class="label" data-i18n="informes.fechaCreacionHasta">Fecha entrega:</label>
+                                                        <label class="input">
+                                                            <input id="txtFechaCreacion" name="txtFechaCreacion" data-bind="value: fechaCreacionHasta2" class="datepicker" data-dateformat="dd/mm/yy">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-md-3">
+                                                        <label class="label">
+                                                            <span data-i18n="informes.estado">Estado:</span>
+                                                        </label>
+                                                        <select class="aswselect2" id="cmbEstados" name="cmbEstados" data-bind="options: optionsEstados, optionsText: 'nombre', optionsValue: 'estadoId', 
+                                                                                    value: sEstado, valueAllowUnset: true, selectedOptions: selectedEstados, selected2:{}">
+                                                        </select>
+                                                    </section>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="pull-right">
+                                                    <button id="btnT1TB2" data-i18n="[title]aceptar" class="btn btn-success btn-circle btn-lg">
+                                                        <i class="fa fa-lg fa-check"></i>
+                                                    </button>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- T5TB1-->
+                        <div class="jarviswidget" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+                            <header>
+                                <span class="widget-icon">
+                                    <i class="fa fa-edit"></i>
+                                </span>
+                                <h2 data-i18n="informes.T5TB1"> Panel de inicio *</h2>
+                            </header>
+                            <div>
+                                <div class="jarviswidget-editbox">
+                                    <input class="form-control" type="text">
+                                </div>
+                                <div class="widget-body">
+                                    <div class="row">
+                                        <form id="frmT5TB1" class="smart-form">
+                                            <fieldset>
+                                                <div class="row">
+                                                    <section class="col col-md-4">
+                                                        <label class="label" data-i18n="informes.area">Area:</label>
+                                                        <select class="aswselect2" id="cmbAreas" name="cmbAreas" data-bind="options: optionsAreas, optionsText: 'nombre', optionsValue: 'areaId', 
+                                                                                    value: sArea, valueAllowUnset: true, selectedOptions: selectedAreas, selected2:{}">
+                                                        </select>
+                                                    </section>
+                                                    <section class="col col-md-4">
+                                                        <label class="label" data-i18n="informes.pais">Pais*:</label>
+                                                        <select class="aswselect2" id="cmbPaiss3" name="cmbPaiss3" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
+                                                                    value: sPais3, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
+                                                        </select>
+                                                    </section>
+                                                    <section class="col col-md-2">
+                                                        <label class="checkbox">
+                                                            <input id="chkT5TB2" type="checkbox" name="chkT5TB2" data-bind="checked: optT5TB2">
+                                                            <i></i>
+                                                            <span data-i18n="informes.optT5TB2">ESD</span>
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="pull-right">
+                                                    <button id="btnT5TB1" data-i18n="[title]aceptar" class="btn btn-success btn-circle btn-lg">
                                                         <i class="fa fa-lg fa-check"></i>
                                                     </button>
                                                 </div>
