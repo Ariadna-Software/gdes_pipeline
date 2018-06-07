@@ -555,6 +555,7 @@
     "informes": {
         "titulo": "Informes generales",
         "panel": "Informes generales",
+        "fases": "Stages",
         "pais": "Country",
         "fechaCreacionDesde": "From creation date",
         "fechaCreacionHasta": "To creation date",
@@ -562,7 +563,8 @@
         "area": "Service area",
         "optT5TB2": "Version detail",
         "T1TB1": "LEADS MAP",
-        "T1TB2": "OPEN LEADS",
+        "T1TB2": "OPEN DEALS",
+        "T3TB1": "BUSINESS OPPORTUNITIES",
         "T5TB1": "BIDS MONITORING"
     }
 }

@@ -15,6 +15,7 @@ var apiReport = {
         $('#frmT1TB1').submit(function () { return false; });
         $('#frmT1TB2').submit(function () { return false; });
         $('#frmT5TB1').submit(function () { return false; });
+        $('#frmT3TB1').submit(function () { return false; });
 
         // carga datos de la página
         vm = new apiReport.datosPagina();
@@ -27,7 +28,11 @@ var apiReport = {
         $('#cmbFasesOferta2').select2(select2_languages[usuario.codigoIdioma]);
         $('#cmbPaiss2').select2(select2_languages[usuario.codigoIdioma]);
 
+        $('#cmbFasesOferta3').select2(select2_languages[usuario.codigoIdioma]);
+        $('#cmbPaiss4').select2(select2_languages[usuario.codigoIdioma]);
+
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
+        $('#cmbEstados2').select2(select2_languages[usuario.codigoIdioma]);
 
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         $('#cmbPaiss3').select2(select2_languages[usuario.codigoIdioma]);
@@ -42,6 +47,7 @@ var apiReport = {
         $('#btnT1TB1').click(apiReport.aceptarT1TB1);
         $('#btnT1TB2').click(apiReport.aceptarT1TB2);
         $('#btnT5TB1').click(apiReport.aceptarT5TB1);
+        $('#btnT3TB1').click(apiReport.aceptarT3TB1);
     },
     datosPagina: function () {
         var self = this;
@@ -50,22 +56,27 @@ var apiReport = {
         self.selectedFasesOferta = ko.observableArray([]);
         self.sFasesOferta = ko.observable();
         self.sFasesOferta2 = ko.observable();
+        self.sFasesOferta3 = ko.observable();
 
         self.optionsPaiss = ko.observableArray([]);
         self.selectedPaiss = ko.observableArray([]);
         self.sPais = ko.observable();
         self.sPais2 = ko.observable();
         self.sPais3 = ko.observable();
+        self.sPais4 = ko.observable();
 
         self.fechaCreacionDesde = ko.observable();
         self.fechaCreacionHasta = ko.observable();
 
         self.fechaCreacionDesde2 = ko.observable();
         self.fechaCreacionHasta2 = ko.observable();
+        self.fechaCreacionDesde3 = ko.observable();
+        self.fechaCreacionHasta3 = ko.observable();
 
         self.optionsEstados = ko.observableArray([]);
         self.selectedEstados = ko.observableArray([]);
         self.sEstado = ko.observable();
+        self.sEstado2 = ko.observable();
 
         self.optionsAreas = ko.observableArray([]);
         self.selectedAreas = ko.observableArray([]);
@@ -99,7 +110,20 @@ var apiReport = {
         if (!estado) estado = "";
         var url = "infT1TB2.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
         window.open(url, '_new');
-
+    },
+    aceptarT3TB1: function () {
+        var fase = vm.sFasesOferta3();
+        var pais = vm.sPais4();
+        var dFecha = vm.fechaCreacionDesde3();
+        var hFecha = vm.fechaCreacionHasta3();
+        var estado = vm.sEstado2();
+        if (!fase) fase = "";
+        if (!pais) pais = "";
+        if (!dFecha) dFecha = "";
+        if (!hFecha) hFecha = "";
+        if (!estado) estado = "";
+        var url = "infT3TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
+        window.open(url, '_new');
     },
     aceptarT5TB1: function () {
         var area = vm.sArea();
