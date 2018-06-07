@@ -71,7 +71,7 @@
     <Page1 Ref="4" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="7">
+      <Components isList="true" count="6">
         <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,27.7,1.4</ClientRectangle>
@@ -671,7 +671,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </Text19>
         <GroupHeaderBand2 Ref="11" type="GroupHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,2.6,27.7,0.8</ClientRectangle>
+          <ClientRectangle>0,2.6,27.7,1</ClientRectangle>
           <Components isList="true" count="1">
             <Text5 Ref="12" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
@@ -695,122 +695,97 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="4" />
           <Parent isRef="4" />
         </GroupHeaderBand2>
-        <GroupHeaderBand1 Ref="13" type="GroupHeaderBand" isKey="true">
+        <HeaderDataSource1 Ref="13" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,4.2,27.7,0.8</ClientRectangle>
-          <Components isList="true" count="1">
-            <Text4 Ref="14" type="Text" isKey="true">
-              <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0,0,18.8,0.8</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,12,Bold</Font>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text4</Name>
-              <Page isRef="4" />
-              <Parent isRef="13" />
-              <Text>SERVICE AREA: {DataSource1.areaEN}</Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text4>
-          </Components>
-          <Condition>{DataSource1.areaServicio}</Condition>
-          <Conditions isList="true" count="0" />
-          <Name>GroupHeaderBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupHeaderBand1>
-        <HeaderDataSource1 Ref="15" type="HeaderBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,5.8,27.7,1.2</ClientRectangle>
-          <Components isList="true" count="16">
-            <HeaderDataSource1_ubicacion Ref="16" type="Text" isKey="true">
+          <ClientRectangle>0,4.4,27.7,1.2</ClientRectangle>
+          <Components isList="true" count="17">
+            <HeaderDataSource1_ubicacion Ref="14" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>0,0,1.2,1.2</ClientRectangle>
+              <ClientRectangle>1.4,0,1.2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_ubicacion</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
-              <Text>OFFER N.</Text>
+              <Parent isRef="13" />
+              <Text>OFFER</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_ubicacion>
-            <HeaderDataSource1_nombreCorto Ref="17" type="Text" isKey="true">
+            <HeaderDataSource1_nombreCorto Ref="15" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>1.2,0,1.6,1.2</ClientRectangle>
+              <ClientRectangle>2.6,0,1.4,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_nombreCorto</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>PHASE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_nombreCorto>
-            <Text7 Ref="18" type="Text" isKey="true">
+            <Text7 Ref="16" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>2.8,0,2,1.2</ClientRectangle>
+              <ClientRectangle>4,0,2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>43e251ec15094b65b341898b167b666e</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text7</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>SHORT NAME</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text7>
-            <Text9 Ref="19" type="Text" isKey="true">
+            <Text9 Ref="17" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>4.8,0,2,1.2</ClientRectangle>
+              <ClientRectangle>6,0,2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>e759f7b36ef14bd892ecc1821d2c2780</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text9</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>CLIENT</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text9>
-            <Text11 Ref="20" type="Text" isKey="true">
+            <Text11 Ref="18" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>6.8,0,1.6,1.2</ClientRectangle>
+              <ClientRectangle>8,0,1.6,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>559ab4071d5f49c1b2d1041461efedef</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text11</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>RESPONSABLE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text11>
-            <Text13 Ref="21" type="Text" isKey="true">
+            <Text13 Ref="19" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>8.4,0,1.2,1.2</ClientRectangle>
+              <ClientRectangle>9.6,0,1.2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>2f02e75f879d4744a2cee36d8537795c</Guid>
@@ -818,84 +793,84 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text13</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>DELIVER DATE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text13>
-            <HeaderDataSource1_estado Ref="22" type="Text" isKey="true">
+            <HeaderDataSource1_estado Ref="20" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>11.2,0,1.2,1.2</ClientRectangle>
+              <ClientRectangle>12.4,0,1.2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_estado</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>STATUS</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_estado>
-            <HeaderDataSource1_importeGdes Ref="23" type="Text" isKey="true">
+            <HeaderDataSource1_importeGdes Ref="21" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>9.6,0,1.6,1.2</ClientRectangle>
+              <ClientRectangle>10.8,0,1.6,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_importeGdes</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>GDES CONTRACT REVENUE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_importeGdes>
-            <Text15 Ref="24" type="Text" isKey="true">
+            <Text15 Ref="22" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>12.4,0,2.6,1.2</ClientRectangle>
+              <ClientRectangle>13.6,0,2.4,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>4d7002171b974d4e910d9c23eefd076e</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text15</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>COMPETITORS</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text15>
-            <HeaderDataSource1_margen Ref="25" type="Text" isKey="true">
+            <HeaderDataSource1_margen Ref="23" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>15,0,1,1.2</ClientRectangle>
+              <ClientRectangle>16,0,1,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_margen</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>PROBABILITY</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_margen>
-            <Text17 Ref="26" type="Text" isKey="true">
+            <Text17 Ref="24" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>16,0,1.2,1.2</ClientRectangle>
+              <ClientRectangle>17,0,1.2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>ab3491f1965145d3afa529ac41adeae4</Guid>
@@ -903,17 +878,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text17</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>AWARNING DATE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text17>
-            <Text21 Ref="27" type="Text" isKey="true">
+            <Text21 Ref="25" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>17.2,0,1.2,1.2</ClientRectangle>
+              <ClientRectangle>18.2,0,1.2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>8908dd71fb664e4db7253bbc73c33ee6</Guid>
@@ -921,17 +896,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text21</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>START</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text21>
-            <Text23 Ref="28" type="Text" isKey="true">
+            <Text23 Ref="26" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>18.4,0,1.2,1.2</ClientRectangle>
+              <ClientRectangle>19.4,0,1.2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>e104b86144484aed930c007d34a09429</Guid>
@@ -939,58 +914,58 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text23</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>END</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text23>
-            <Text25 Ref="29" type="Text" isKey="true">
+            <Text25 Ref="27" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>19.6,0,1.6,1.2</ClientRectangle>
+              <ClientRectangle>20.6,0,1.6,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>4af912c5ebc449bba8f7be6a216db866</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text25</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>DURATION</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text25>
-            <Text27 Ref="30" type="Text" isKey="true">
+            <Text27 Ref="28" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>24,0,3.6,1.2</ClientRectangle>
+              <ClientRectangle>24.6,0,3,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>41fd59c50f8a4c379d8c0dbc5cc2c2d0</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text27</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>RECRUITMENT</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text27>
-            <Text29 Ref="31" type="Text" isKey="true">
+            <Text29 Ref="29" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>21.2,0,2.8,1.2</ClientRectangle>
+              <ClientRectangle>22.2,0,2.4,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Guid>1ca097c3dd894e4c8d9b5ae9ea2b929c</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text29</Name>
               <Page isRef="4" />
-              <Parent isRef="15" />
+              <Parent isRef="13" />
               <Text>ORGANIZATION CHART
 </Text>
               <TextBrush>[255:255:255]</TextBrush>
@@ -998,110 +973,121 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text29>
+            <Text2 Ref="30" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[31:73:125]</Brush>
+              <ClientRectangle>0,0,1.4,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>3ef5b83e80c54f328ba8a1d9e4209e24</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="4" />
+              <Parent isRef="13" />
+              <Text>AREA</Text>
+              <TextBrush>[255:255:255]</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>HeaderDataSource1</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
         </HeaderDataSource1>
-        <DataDataSource1 Ref="32" type="DataBand" isKey="true">
+        <DataDataSource1 Ref="31" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,7.8,27.7,0.8</ClientRectangle>
-          <Components isList="true" count="16">
-            <DataDataSource1_ubicacion Ref="33" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+          <ClientRectangle>0,6.4,27.7,0.8</ClientRectangle>
+          <Components isList="true" count="17">
+            <DataDataSource1_ubicacion Ref="32" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,1.2,0.8</ClientRectangle>
+              <ClientRectangle>1.4,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_ubicacion</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.numeroOferta}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_ubicacion>
-            <DataDataSource1_nombreCorto Ref="34" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <DataDataSource1_nombreCorto Ref="33" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>1.2,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>2.6,0,1.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_nombreCorto</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.fase}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_nombreCorto>
-            <Text6 Ref="35" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text6 Ref="34" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>2.8,0,2,0.8</ClientRectangle>
+              <ClientRectangle>4,0,2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>77fa41d0b29e43cbbb7e24e0914835f8</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text6</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.nombreCorto}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text6>
-            <Text8 Ref="36" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text8 Ref="35" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>4.8,0,2,0.8</ClientRectangle>
+              <ClientRectangle>6,0,2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>a1a62a8edcae4fa48b8599dac1ab6551</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text8</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.cliente}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text8>
-            <Text10 Ref="37" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text10 Ref="36" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>6.8,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>8,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>199d5f463b4c42798e147c8d2a9ea532</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text10</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.usuario}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text10>
-            <Text12 Ref="38" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text12 Ref="37" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>8.4,0,1.2,0.8</ClientRectangle>
+              <ClientRectangle>9.6,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>e9d48afaae7145e0a6be45fd044329ff</Guid>
@@ -1109,45 +1095,43 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text12</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.fechaEntrega}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="39" type="DateFormat" isKey="true" />
+              <TextFormat Ref="38" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text12>
-            <DataDataSource1_estado Ref="40" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <DataDataSource1_estado Ref="39" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>11.2,0,1.2,0.8</ClientRectangle>
+              <ClientRectangle>12.4,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_estado</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.estado}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_estado>
-            <DataDataSource1_importeGdes Ref="41" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <DataDataSource1_importeGdes Ref="40" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>9.6,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>10.8,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <HorAlignment>Right</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_importeGdes</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.importeGdes}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="42" type="CurrencyFormat" isKey="true">
+              <TextFormat Ref="41" type="CurrencyFormat" isKey="true">
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
@@ -1157,39 +1141,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_importeGdes>
-            <Text14 Ref="43" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text14 Ref="42" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>12.4,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>13.6,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>e7f2e9a18b204bee83977c3e82a8cca7</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text14</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.competidores}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text14>
-            <DataDataSource1_margen Ref="44" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <DataDataSource1_margen Ref="43" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>15,0,1,0.8</ClientRectangle>
+              <ClientRectangle>16,0,1,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_margen</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.probabilidad}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="45" type="NumberFormat" isKey="true">
+              <TextFormat Ref="44" type="NumberFormat" isKey="true">
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>1</NegativePattern>
@@ -1198,11 +1180,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_margen>
-            <Text16 Ref="46" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text16 Ref="45" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>16,0,1.2,0.8</ClientRectangle>
+              <ClientRectangle>17,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>cab5107e8fa34d10a35e598a53b0af3a</Guid>
@@ -1210,19 +1191,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text16</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.fechaAdjudicacion}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="47" type="DateFormat" isKey="true" />
+              <TextFormat Ref="46" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text16>
-            <Text20 Ref="48" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text20 Ref="47" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>17.2,0,1.2,0.8</ClientRectangle>
+              <ClientRectangle>18.2,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>081ae1e5248742bd983430a3853046ba</Guid>
@@ -1230,19 +1210,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text20</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.fechaInicioContrato}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="49" type="DateFormat" isKey="true" />
+              <TextFormat Ref="48" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text20>
-            <Text22 Ref="50" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text22 Ref="49" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>18.4,0,1.2,0.8</ClientRectangle>
+              <ClientRectangle>19.4,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>12553c8fbdd5421790644159b3cd935c</Guid>
@@ -1250,68 +1229,82 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text22</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.fechaFinContrato}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="51" type="DateFormat" isKey="true" />
+              <TextFormat Ref="50" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text22>
-            <Text24 Ref="52" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text24 Ref="51" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>19.6,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>20.6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>bc702ec845ba4258986daf25a4aa5c00</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text24</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.duracion}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text24>
-            <Text26 Ref="53" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text26 Ref="52" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>24,0,3.6,0.8</ClientRectangle>
+              <ClientRectangle>24.6,0,3,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>7099a0bc67f449d2b839011bc0ec42e2</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text26</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.subcontrataTXT}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text26>
-            <Text28 Ref="54" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
+            <Text28 Ref="53" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>21.2,0,2.8,0.8</ClientRectangle>
+              <ClientRectangle>22.2,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Guid>8cad07a64aff4a9f9a9444d65c7a3135</Guid>
               <Margins>0,0,0,0</Margins>
               <Name>Text28</Name>
               <Page isRef="4" />
-              <Parent isRef="32" />
+              <Parent isRef="31" />
               <Text>{DataSource1.puntosRelevantes}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text28>
+            <Text3 Ref="54" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6</Font>
+              <Guid>30ee3339a7e34878840a4ae15fbdbbfd</Guid>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="4" />
+              <Parent isRef="31" />
+              <Text>{DataSource1.areaEN}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>DataColumn</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
           </Components>
           <Conditions isList="true" count="0" />
           <DataRelationName isNull="true" />
@@ -1356,10 +1349,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/7/2018 11:02:50 AM</ReportChanged>
+  <ReportChanged>6/7/2018 11:32:08 AM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T5TB2.mrt</ReportFile>
-  <ReportGuid>9b14220aa8f647a19f4b1fa662627ebc</ReportGuid>
+  <ReportGuid>1efc0761716d4d01a0eb63dea0013798</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
