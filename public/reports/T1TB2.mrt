@@ -60,7 +60,7 @@
     <Page1 Ref="4" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="10">
+      <Components isList="true" count="9">
         <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,19,1.4</ClientRectangle>
@@ -636,11 +636,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         <PageFooterBand1 Ref="9" type="PageFooterBand" isKey="true">
           <Border>Top;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,26.9,19,0.8</ClientRectangle>
-          <Components isList="true" count="1">
+          <ClientRectangle>0,26.7,19,1</ClientRectangle>
+          <Components isList="true" count="2">
             <Text18 Ref="10" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0,0,4,0.6</ClientRectangle>
+              <ClientRectangle>0,0.2,4,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,8</Font>
               <Margins>0,0,0,0</Margins>
@@ -652,28 +652,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text18>
+            <Text19 Ref="11" type="Text" isKey="true">
+              <Brush>[255:255:255]</Brush>
+              <ClientRectangle>14.6,0.2,4.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Guid>f489a06550d54bc2b50faacd12016cd9</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="4" />
+              <Parent isRef="9" />
+              <Text>{PageNumber} / {TotalPageCount}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text19>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>PageFooterBand1</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
         </PageFooterBand1>
-        <Text19 Ref="11" type="Text" isKey="true">
-          <Brush>[255:255:255]</Brush>
-          <ClientRectangle>23.2,26.9,4.4,0.6</ClientRectangle>
-          <Conditions isList="true" count="0" />
-          <Font>Arial,8</Font>
-          <Guid>f489a06550d54bc2b50faacd12016cd9</Guid>
-          <HorAlignment>Right</HorAlignment>
-          <Margins>0,0,0,0</Margins>
-          <Name>Text19</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-          <Text>{PageNumber} / {TotalPageCount}</Text>
-          <TextBrush>[0:0:0]</TextBrush>
-          <Type>Expression</Type>
-          <VertAlignment>Center</VertAlignment>
-        </Text19>
         <GroupHeaderBand2 Ref="12" type="GroupHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,2.6,19,0.8</ClientRectangle>
@@ -702,7 +702,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </GroupHeaderBand2>
         <GroupHeaderBand1 Ref="14" type="GroupHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,4.2,19,0.8</ClientRectangle>
+          <ClientRectangle>0,4.2,19,1</ClientRectangle>
           <Components isList="true" count="1">
             <Text4 Ref="15" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
@@ -727,7 +727,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </GroupHeaderBand1>
         <HeaderDataSource1 Ref="16" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,5.8,19,1.2</ClientRectangle>
+          <ClientRectangle>0,6,19,1.2</ClientRectangle>
           <Components isList="true" count="9">
             <HeaderDataSource1_ubicacion Ref="17" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
@@ -887,12 +887,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Parent isRef="4" />
         </HeaderDataSource1>
         <DataDataSource1 Ref="26" type="DataBand" isKey="true">
+          <Border>Top;[31:73:125];1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,7.8,19,0.8</ClientRectangle>
+          <ClientRectangle>0,8,19,0.8</ClientRectangle>
           <Components isList="true" count="9">
             <DataDataSource1_ubicacion Ref="27" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0,1.2,0.8</ClientRectangle>
@@ -908,7 +909,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_ubicacion>
             <DataDataSource1_nombreCorto Ref="28" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>1.2,0,5.4,0.8</ClientRectangle>
@@ -924,7 +925,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_nombreCorto>
             <DataDataSource1_estado Ref="29" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.6,0,1,0.8</ClientRectangle>
@@ -940,7 +941,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_estado>
             <DataDataSource1_importeGdes Ref="30" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>7.6,0,1.6,0.8</ClientRectangle>
@@ -964,7 +965,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_importeGdes>
             <DataDataSource1_margen Ref="32" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>10.6,0,1,0.8</ClientRectangle>
@@ -986,7 +987,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_margen>
             <DataDataSource1_uteSN Ref="34" type="CheckBox" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <Checked>{DataSource1.uteSN}</Checked>
               <ClientRectangle>11.6,0,0.8,0.8</ClientRectangle>
@@ -998,7 +999,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <TextBrush>Black</TextBrush>
             </DataDataSource1_uteSN>
             <DataDataSource1_fechaAdjudicacion Ref="35" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>12.4,0,1.4,0.8</ClientRectangle>
@@ -1016,7 +1017,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_fechaAdjudicacion>
             <DataDataSource1_importePrimerAno Ref="37" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>9.2,0,1.4,0.8</ClientRectangle>
@@ -1040,7 +1041,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_importePrimerAno>
             <Text3 Ref="39" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>13.8,0,5,0.8</ClientRectangle>
@@ -1074,7 +1075,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </DataDataSource1>
         <GroupFooterBand1 Ref="40" type="GroupFooterBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,9.4,19,1</ClientRectangle>
+          <ClientRectangle>0,9.6,19,1</ClientRectangle>
           <Components isList="true" count="3">
             <Text6 Ref="41" type="Text" isKey="true">
               <Border>Top;Black;1;Solid;False;4;Black</Border>
@@ -1151,7 +1152,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </GroupFooterBand1>
         <GroupFooterBand2 Ref="46" type="GroupFooterBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,11.2,19,0.8</ClientRectangle>
+          <ClientRectangle>0,11.4,19,0.8</ClientRectangle>
           <Components isList="true" count="3">
             <Text10 Ref="47" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
@@ -1229,7 +1230,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </GroupFooterBand2>
         <ReportSummaryBand1 Ref="52" type="ReportSummaryBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,12.8,19,1.2</ClientRectangle>
+          <ClientRectangle>0,13,19,1.2</ClientRectangle>
           <Components isList="true" count="3">
             <Text14 Ref="53" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
@@ -1332,10 +1333,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/7/2018 8:36:06 AM</ReportChanged>
+  <ReportChanged>6/7/2018 3:31:51 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T1TB2.mrt</ReportFile>
-  <ReportGuid>bca0630cb8364f1ab46abc7d173334f4</ReportGuid>
+  <ReportGuid>fa5ea40b3ba84e008fd7231673a0c06f</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>

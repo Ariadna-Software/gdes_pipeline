@@ -16,6 +16,7 @@ var apiReport = {
         $('#frmT1TB2').submit(function () { return false; });
         $('#frmT5TB1').submit(function () { return false; });
         $('#frmT3TB1').submit(function () { return false; });
+        $('#frmT4TB1').submit(function () { return false; });
 
         // carga datos de la página
         vm = new apiReport.datosPagina();
@@ -37,6 +38,8 @@ var apiReport = {
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         $('#cmbPaiss3').select2(select2_languages[usuario.codigoIdioma]);
 
+        $('#cmbPaiss5').select2(select2_languages[usuario.codigoIdioma]);
+
         // carga desplegables
         apiReport.cargarFasesOferta();
         apiReport.cargarPaiss();
@@ -48,6 +51,7 @@ var apiReport = {
         $('#btnT1TB2').click(apiReport.aceptarT1TB2);
         $('#btnT5TB1').click(apiReport.aceptarT5TB1);
         $('#btnT3TB1').click(apiReport.aceptarT3TB1);
+        $('#btnT4TB1').click(apiReport.aceptarT4TB1);
     },
     datosPagina: function () {
         var self = this;
@@ -64,6 +68,7 @@ var apiReport = {
         self.sPais2 = ko.observable();
         self.sPais3 = ko.observable();
         self.sPais4 = ko.observable();
+        self.sPais5 = ko.observable();
 
         self.fechaCreacionDesde = ko.observable();
         self.fechaCreacionHasta = ko.observable();
@@ -124,6 +129,13 @@ var apiReport = {
         if (!estado) estado = "";
         var url = "infT3TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
         window.open(url, '_new');
+    },
+    aceptarT4TB1: function () {
+        var pais = vm.sPais5();
+        if (!pais) pais = "";
+        var url = "infT4TB1.html?pais=" + pais;
+        window.open(url, '_new');
+
     },
     aceptarT5TB1: function () {
         var area = vm.sArea();
