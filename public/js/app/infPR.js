@@ -46,19 +46,26 @@ var apiInfPR = {
         var report = new Stimulsoft.Report.StiReport();
         report.loadFile(file);
 
-        var connectionString = "Server=" + myconfig.report.host + ";";
-        connectionString += "Port=" + myconfig.report.port + ";"
-        connectionString += "Database=" + myconfig.report.database + ";"
-        connectionString += "UserId=" + myconfig.report.user + ";"
-        connectionString += "Pwd=" + myconfig.report.password + ";";
-        report.dictionary.databases.list[0].connectionString = connectionString;
+        var url = "/pwbi/config";
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + url, data, function (err, data) {
+            if (err) return;
+            var myconfig = data;
+            var connectionString = "Server=" + myconfig.host + ";";
+            connectionString += "Port=" + myconfig.port + ";"
+            connectionString += "Database=" + myconfig.database + ";"
+            connectionString += "UserId=" + myconfig.user + ";"
+            connectionString += "Pwd=" + myconfig.password + ";";
+            report.dictionary.databases.list[0].connectionString = connectionString;
+    
+            // Parámetros
+            report.dictionary.variables.items[0].val = ofertaId;
+    
+    
+            // Assign report to the viewer, the report will be built automatically after rendering the viewer
+            viewer.report = report;
+            viewer.renderHtml("report_viewer");
+        });
 
-        // Parámetros
-        report.dictionary.variables.items[0].val = ofertaId;
 
-
-        // Assign report to the viewer, the report will be built automatically after rendering the viewer
-        viewer.report = report;
-        viewer.renderHtml("report_viewer");
     }
 }
