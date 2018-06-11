@@ -18,6 +18,9 @@ var pack = require('./package.json');
 var config = require('./config.json');
 var loginDb = require('./lib/login/login_db_mysql');
 
+// config // env
+config.apiPort = process.env.API_PORT || config.apiPort;
+config.apiHost = process.env.API_HOST || config.apiHost;
 
 // starting express
 var app = express();
