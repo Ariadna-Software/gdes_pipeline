@@ -567,5 +567,9 @@
         "T3TB1": "BUSINESS OPPORTUNITIES",
         "T4TB1": "AWARDED CONTRACTS",
         "T5TB1": "BIDS MONITORING"
+    },
+    "auth": {
+        "noAuth": "Usted es usuario del dominio, pero no tiene permisos asignados para esta aplicación. Póngase en contacto con el administrador.",
+        "repetir": "Volver a intentar login"
     }
 }

@@ -1,0 +1,14 @@
+{
+	"returnURL": "http://localhost:8060/auth/openid/return",
+	"identityMetadata": "https://login.microsoftonline.com/grupodominguis.onmicrosoft.com/.well-known/openid-configuration",
+	"clientID": "1ab96df2-46b4-4353-9cce-ad5aaf136058",
+	"clientSecret": "DD5RNKpBEUx8NlDq4QlAIdHTW7xq/7BOKJMx2ewWm6U=",
+	"responseType": "code id_token",
+	"responseMode": "form_post",
+	"allowHttpForRedirectUrl": true,
+	"validateIssuer": true,
+	"isB2C": false,
+	"issuer": null,
+	"passReqToCallback": false,
+	"useCookieInsteadOdSession": false
+}

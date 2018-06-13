@@ -65,14 +65,36 @@
                             </header>
                             <fieldset>
                                 <section>
-                                    <div data-i18n="auth.noAuth">
-
+                                    <label class="label" data-i18n="login.login">Login</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-user"></i>
+                                        <input type="text" name="login" data-bind="value: login">
+                                        <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i>
+                                        <span data-i18n="login.valLogin"> Por favor, introduzca su login</span></b>
+                                    </label>
+                                </section>
+                                <section>
+                                    <label class="label" data-i18n="login.password">Password</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-lock"></i>
+                                        <input type="password" name="password" data-bind="value: password">
+                                        <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> 
+                                        <span data-i18n="login.valPassword">Introduzca su password</span></b>
+                                    </label>
+                                    <div class="note">
+                                        <a href="#" data-i18n="login.olvido">He olvidado el login o password</a>
                                     </div>
+                                </section>
+                                <section>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="remember" checked="">
+                                        <i></i><span data-i18n="login.conectado">Permanecer conectado</span>
+                                    </label>
                                 </section>
                             </fieldset>
                             <footer>
                                 <span id="mensaje" class="txt-color-red"></span>
-                                <button id="btnLogin" type="submit" class="btn btn-primary" data-i18n="auth.repetir">
+                                <button id="btnLogin" type="submit" class="btn btn-primary" data-i18n="login.btnLogin">
                                     Entrar
                                 </button>
                             </footer>

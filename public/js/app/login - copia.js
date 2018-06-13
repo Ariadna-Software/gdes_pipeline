@@ -10,25 +10,9 @@ var apiPaginaLogin = {
         apiComunGeneral.iniLogin();
         vm = new this.datosPagina();
         ko.applyBindings(vm);
-        $("#btnLogin").click(this.btnLogin2);
+        $("#btnLogin").click(this.btnLogin);
         $("#login-form").submit(function () { return false; });
         apiPaginaLogin.getVersion();
-        // Solicitar autorización azure
-        var email = apiComunGeneral.gup("email");
-        var error = apiComunGeneral.gup("error");
-        if (error != "") {
-            return
-        }
-        if (!email || email == "") {
-            window.open('/auth/openid', '_self');
-        } else {
-            var data = {
-                "usuario": {
-                    "email": email
-                }
-            };
-            apiPaginaLogin.lanzarLoginEmail(data);
-        }
     },
     datosPagina: function () {
         var self = this;
@@ -45,9 +29,6 @@ var apiPaginaLogin = {
         };
         apiPaginaLogin.lanzarLogin(data);
     },
-    btnLogin2: function () {
-        window.open('/auth/openid', '_self');
-    },    
     datosOK: function () {
         $('#login-form').validate({
             rules: {
@@ -81,23 +62,11 @@ var apiPaginaLogin = {
             }
         });
     },
-    lanzarLoginEmail: function (data) {
-        apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/login/email", data, function (err, data) {
-            if (err) return;
-            if (!data) {
-                window.open("login.html?error='AUTH'", '_self');
-            } else {
-                var a = data;
-                apiComunGeneral.setCookie("usuario", JSON.stringify(a), 1)
-                window.open('Index.html', '_self');
-            }
-        });
-    },
     mostrarMensaje: function (mensaje) {
         $("#mensaje").text(mens);
     },
-    getVersion: function () {
-        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/version", null, function (err, data) {
+    getVersion: function(){
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/version", null, function(err, data){
             if (err) return;
             if (!data.version) return this.mostrarMensaje('No se pudo obtener version');
             $("#version").text(data.version);
