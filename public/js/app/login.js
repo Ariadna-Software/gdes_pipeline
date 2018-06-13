@@ -17,7 +17,11 @@ var apiPaginaLogin = {
         var email = apiComunGeneral.gup("email");
         var error = apiComunGeneral.gup("error");
         if (error != "") {
-            return
+            if (error = "LOGOUT") {
+                apiComunGeneral.deleteCookie('usuario');
+                window.open('https://login.microsoftonline.com/common/oauth2/logout', '_self');
+            }
+            return;
         }
         if (!email || email == "") {
             window.open('/auth/openid', '_self');
