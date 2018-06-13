@@ -1,6 +1,6 @@
 {
   "name": "gdes_pipeline",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "GDES-PIPELINE",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Ariadna-Software/gdes_pipelinea#readme",
   "dependencies": {
+    "applicationinsights": "^1.0.3",
     "async": "^2.0.0",
     "body-parser": "^1.14.0",
     "connect": "^3.4.0",
