@@ -29,6 +29,8 @@ var OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 config.apiPort = process.env.PORT || config.apiPort;
 config.apiHost = process.env.API_HOST || config.apiHost;
 
+configAzure.returnURL = process.env.AZUREAD_RETURNURL || configAzure.returnURL;
+
 // Azure related functions
 passport.serializeUser(function (user, done) {
     done(null, user.email);
@@ -144,7 +146,7 @@ app.get('/auth/openid/return',
 app.post('/auth/openid/return',
     passport.authenticate('azuread-openidconnect', { failureRedirect: '/login.html?error=00' }),
     function (req, res) {
-        var user = req.user;    
+        var user = req.user;
         var url = "/login.html";
         if (user) {
             url = "/login.html?email=" + user.email;
