@@ -120,7 +120,7 @@ app.use('/ficheros', serveIndex(__dirname + '/public/ficheros', { 'icons': true,
 //   provider redirects the user back to this application at
 //   /auth/openid/return.
 app.get('/auth/openid',
-    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login' }),
+    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login2.html?error=AZAD' }),
     function (req, res) {
         console.log('Authentication was called in the Sample');
         res.redirect('/');
@@ -132,7 +132,7 @@ app.get('/auth/openid',
 //   sign-in page. Otherwise, the primary route function is called,
 //   which, in this example, redirects the user to the home page.
 app.get('/auth/openid/return',
-    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login' }),
+    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login2.html?error=AZAD' }),
     function (req, res) {
         console.log('We received a return from AzureAD.');
         res.redirect('/');
@@ -147,7 +147,7 @@ app.post('/auth/openid/return',
     passport.authenticate('azuread-openidconnect', { failureRedirect: '/login' }),
     function (req, res) {
         var user = req.user;
-        var url = "/login.html?error=NOUSER";
+        var url = "/login2.html?error=NOUSER";
         if (user) {
             url = "/login.html?email=" + user.email;
         }
