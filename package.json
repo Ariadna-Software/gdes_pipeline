@@ -1,6 +1,6 @@
 {
   "name": "gdes_pipeline",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "GDES-PIPELINE",
   "main": "index.js",
   "scripts": {
