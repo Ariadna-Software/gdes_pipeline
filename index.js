@@ -118,7 +118,7 @@ app.use('/ficheros', serveIndex(__dirname + '/public/ficheros', { 'icons': true,
 //   provider redirects the user back to this application at
 //   /auth/openid/return.
 app.get('/auth/openid',
-    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login' }),
+    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login.html?error=00' }),
     function (req, res) {
         console.log('Authentication was called in the Sample');
         res.redirect('/');
@@ -130,7 +130,7 @@ app.get('/auth/openid',
 //   sign-in page. Otherwise, the primary route function is called,
 //   which, in this example, redirects the user to the home page.
 app.get('/auth/openid/return',
-    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login' }),
+    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login.html?error=00' }),
     function (req, res) {
         console.log('We received a return from AzureAD.');
         res.redirect('/');
@@ -142,7 +142,7 @@ app.get('/auth/openid/return',
 //   sign-in page. Otherwise, the primary route function is called,
 //   which, in this example, redirects the user to the home page.
 app.post('/auth/openid/return',
-    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login' }),
+    passport.authenticate('azuread-openidconnect', { failureRedirect: '/login.html?error=00' }),
     function (req, res) {
         var user = req.user;    
         var url = "/login.html";
@@ -175,7 +175,7 @@ router.get('/', function (req, res) {
 });
 
 // -- registering routes
-app.use('/login', require('./lib/login/login_controller'));
+app.use('/login.html?error=00', require('./lib/login/login_controller'));
 app.use('/version', require('./lib/version/version_controller'));
 app.use('/pwbi', require('./lib/pwbi/pwbi.controller'));
 app.use('/api', router);
