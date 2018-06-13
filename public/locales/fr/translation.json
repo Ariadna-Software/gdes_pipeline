@@ -536,5 +536,9 @@
     "informes": {
         "titulo": "Rapports généraux",
         "panel": "Rapports généraux"
+    },
+    "auth": {
+        "noAuth": "Vous êtes un utilisateur de domaine, mais vous n'avez pas d'autorisations affectées à cette application. Contactez l'administrateur.",
+        "repetir": "Essayez à nouveau"
     }
 }

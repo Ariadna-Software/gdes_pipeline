@@ -85,7 +85,7 @@ var apiPaginaLogin = {
         apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/login/email", data, function (err, data) {
             if (err) return;
             if (!data) {
-                window.open("login.html?error='AUTH'", '_self');
+                window.open("login.html?error=AUTH", '_self');
             } else {
                 var a = data;
                 apiComunGeneral.setCookie("usuario", JSON.stringify(a), 1)

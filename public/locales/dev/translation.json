@@ -570,6 +570,6 @@
     },
     "auth": {
         "noAuth": "Usted es usuario del dominio, pero no tiene permisos asignados para esta aplicación. Póngase en contacto con el administrador.",
-        "repetir": "Volver a intentar login"
+        "repetir": "Volverlo a intentar"
     }
 }
