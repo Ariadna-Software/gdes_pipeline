@@ -117,7 +117,9 @@ var apiReport = {
         if (!dFecha) dFecha = "";
         if (!hFecha) hFecha = "";
         if (!estado) estado = "";
-        var url = "infT1TB2.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
+        // var url = "infT1TB2.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
+        // Forzamos que la fase sea oferta
+        var url = "infT1TB2.html?fase=0&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
         window.open(url, '_new');
     },
     aceptarT3TB1: function () {
@@ -175,6 +177,9 @@ var apiReport = {
             if (!usuario.esAdministrador && usuario.paisId) {
                 $("#cmbPaiss").val([usuario.paisId]).trigger('change');
                 $('#cmbPaiss').prop('disabled', 'disabled');
+                //
+                $("#cmbPaiss2").val([usuario.paisId]).trigger('change');
+                $('#cmbPaiss2').prop('disabled', 'disabled');
             }
         });
     },

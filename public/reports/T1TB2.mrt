@@ -623,7 +623,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Name>Text20</Name>
               <Page isRef="4" />
               <Parent isRef="5" />
-              <Text>FROM {dFecha} TO {dFecha}</Text>
+              <Text>FROM {dFecha} TO {hFecha}</Text>
               <TextBrush>[0:0:0]</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
@@ -733,7 +733,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             <HeaderDataSource1_ubicacion Ref="17" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>0,0,1.2,1.2</ClientRectangle>
+              <ClientRectangle>0,0,2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Margins>0,0,0,0</Margins>
@@ -835,7 +835,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             <HeaderDataSource1_nombreCorto Ref="23" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
-              <ClientRectangle>1.2,0,5.4,1.2</ClientRectangle>
+              <ClientRectangle>2,0,4.6,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
               <Margins>0,0,0,0</Margins>
@@ -854,6 +854,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <ClientRectangle>6.6,0,1,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_estado</Name>
               <Page isRef="4" />
@@ -888,7 +889,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Parent isRef="4" />
         </HeaderDataSource1>
         <DataDataSource1 Ref="26" type="DataBand" isKey="true">
-          <Border>Top;[31:73:125];1;Solid;False;4;Black</Border>
+          <Border>None;[31:73:125];1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
           <ClientRectangle>0,8.6,19,0.8</ClientRectangle>
@@ -896,7 +897,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             <DataDataSource1_ubicacion Ref="27" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>0,0,1.2,0.8</ClientRectangle>
+              <ClientRectangle>0,0,2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Margins>0,0,0,0</Margins>
@@ -911,7 +912,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             <DataDataSource1_nombreCorto Ref="28" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>1.2,0,5.4,0.8</ClientRectangle>
+              <ClientRectangle>2,0,4.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
               <Margins>0,0,0,0</Margins>
@@ -929,6 +930,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <ClientRectangle>6.6,0,1,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_estado</Name>
               <Page isRef="4" />
@@ -952,10 +954,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Text>{DataSource1.importeGdes}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="31" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
                 <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
                 <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1024,10 +1028,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Text>{DataSource1.importePrimerAno}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="38" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
                 <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
                 <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1056,6 +1062,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <DataSourceName>DataSource1</DataSourceName>
           <Filters isList="true" count="0" />
           <Name>DataDataSource1</Name>
+          <OddStyle>Collection1_Data1_Odd Style</OddStyle>
           <Page isRef="4" />
           <Parent isRef="4" />
           <Sort isList="true" count="4">
@@ -1085,10 +1092,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Text>{Sum(GroupHeaderBand1,DataSource1.importeGdes)}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="42" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
                 <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
                 <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1111,10 +1120,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Text>{Sum(GroupHeaderBand1,DataSource1.importePrimerAno)}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="44" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
                 <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
                 <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1178,10 +1189,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Text>{Sum(GroupHeaderBand2,DataSource1.importeGdes)}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="49" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
                 <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
                 <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1204,10 +1217,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Text>{Sum(GroupHeaderBand2,DataSource1.importePrimerAno)}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="51" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
                 <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
                 <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1256,10 +1271,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Text>{Sum(DataDataSource1,DataSource1.importeGdes)}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="55" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
                 <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
                 <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1282,10 +1299,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Text>{Sum(DataDataSource1,DataSource1.importePrimerAno)}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="57" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
                 <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
                 <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1325,10 +1344,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/7/2018 3:45:46 PM</ReportChanged>
+  <ReportChanged>6/18/2018 5:32:46 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T1TB2.mrt</ReportFile>
-  <ReportGuid>90ed415c12464ec99c571a94b1627351</ReportGuid>
+  <ReportGuid>e66da0a493674ecca3885d2726edc230</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
@@ -1356,5 +1375,199 @@ namespace Reports
 }
 </Script>
   <ScriptLanguage>CSharp</ScriptLanguage>
-  <Styles isList="true" count="0" />
+  <Styles isList="true" count="12">
+    <Collection1_Report_Title1 Ref="60" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item48 Ref="61" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item48>
+      </Conditions>
+      <Font>Arial,14,Bold</Font>
+      <Name>Collection1_Report_Title1</Name>
+      <TextBrush>[84:141:212]</TextBrush>
+    </Collection1_Report_Title1>
+    <Collection1_Report_Title2 Ref="62" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item50 Ref="63" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item50>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Collection1_Report_Title2</Name>
+      <TextBrush>[84:141:212]</TextBrush>
+    </Collection1_Report_Title2>
+    <Collection1_Report_Summary1 Ref="64" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item52 Ref="65" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item52>
+      </Conditions>
+      <Font>Arial,12,Bold</Font>
+      <Name>Collection1_Report_Summary1</Name>
+      <TextBrush>[84:141:212]</TextBrush>
+    </Collection1_Report_Summary1>
+    <Collection1_Report_Summary2 Ref="66" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item54 Ref="67" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportSummary</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item54>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Collection1_Report_Summary2</Name>
+      <TextBrush>[84:141:212]</TextBrush>
+    </Collection1_Report_Summary2>
+    <Collection1_Page_Header Ref="68" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item56 Ref="69" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item56>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Collection1_Page_Header</Name>
+      <TextBrush>[84:141:212]</TextBrush>
+    </Collection1_Page_Header>
+    <Collection1_Page_Footer Ref="70" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item58 Ref="71" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item58>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Collection1_Page_Footer</Name>
+      <TextBrush>[84:141:212]</TextBrush>
+    </Collection1_Page_Footer>
+    <Collection1_Group_Header1 Ref="72" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item60 Ref="73" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item60>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Collection1_Group_Header1</Name>
+      <TextBrush>[84:141:212]</TextBrush>
+    </Collection1_Group_Header1>
+    <Collection1_Group_Footer1 Ref="74" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item62 Ref="75" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item62>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Collection1_Group_Footer1</Name>
+      <TextBrush>[84:141:212]</TextBrush>
+    </Collection1_Group_Footer1>
+    <Collection1_Header1 Ref="76" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[34:91:162];1;Solid;False;4;Black;True</Border>
+      <Brush>[84:141:212]</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item64 Ref="77" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item64>
+      </Conditions>
+      <Font>Arial,8,Bold</Font>
+      <Name>Collection1_Header1</Name>
+      <TextBrush>[0:0:12]</TextBrush>
+    </Collection1_Header1>
+    <Collection1_Data1 Ref="78" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[34:91:162];1;Solid;False;4;Black;True</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item66 Ref="79" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item66>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Collection1_Data1</Name>
+      <TextBrush>[0:0:12]</TextBrush>
+    </Collection1_Data1>
+    <Collection1_Data1_Odd_x0020_Style Ref="80" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[34:91:162];1;Solid;False;4;Black;True</Border>
+      <Brush>[159:216:255]</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item68 Ref="81" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item68>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Collection1_Data1_Odd Style</Name>
+      <TextBrush>[0:0:12]</TextBrush>
+    </Collection1_Data1_Odd_x0020_Style>
+    <Collection1_Data1_Even_x0020_Style Ref="82" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
+      <Border>None;[34:91:162];1;Solid;False;4;Black;True</Border>
+      <Brush>[121:178:249]</Brush>
+      <CollectionName>Collection1</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item70 Ref="83" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item70>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Collection1_Data1_Even Style</Name>
+      <TextBrush>[0:0:12]</TextBrush>
+    </Collection1_Data1_Even_x0020_Style>
+  </Styles>
 </StiSerializer>
