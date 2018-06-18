@@ -367,7 +367,7 @@
                                                         <select class="aswselect2" id="cmbEstados3" name="cmbEstados3" data-bind="options: optionsEstados, optionsText: 'nombre', optionsValue: 'estadoId', 
                                                                                     value: sEstado3, valueAllowUnset: true, selectedOptions: selectedEstados, selected2:{}">
                                                         </select>
-                                                    </section>                                                    
+                                                    </section>
                                                 </div>
                                             </fieldset>
                                             <fieldset>
@@ -408,13 +408,15 @@
                                                     <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.fechaCreacionDesde">Fecha entrega:</label>
                                                         <label class="input">
-                                                            <input id="txtFechaCreacionDesde2" name="txtFechaCreacionDesde2" data-bind="value: fechaCreacionDesde2" class="datepicker" data-dateformat="dd/mm/yy">
+                                                            <input id="txtFechaCreacionDesde2" name="txtFechaCreacionDesde2" data-bind="value: fechaCreacionDesde2" class="datepicker"
+                                                                data-dateformat="dd/mm/yy">
                                                         </label>
                                                     </section>
                                                     <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.fechaCreacionHasta">Fecha entrega:</label>
                                                         <label class="input">
-                                                            <input id="txtFechaCreacionHasta2" name="txtFechaCreacionHasta2" data-bind="value: fechaCreacionHasta2" class="datepicker" data-dateformat="dd/mm/yy">
+                                                            <input id="txtFechaCreacionHasta2" name="txtFechaCreacionHasta2" data-bind="value: fechaCreacionHasta2" class="datepicker"
+                                                                data-dateformat="dd/mm/yy">
                                                         </label>
                                                     </section>
                                                     <section class="col col-md-4">
@@ -465,13 +467,15 @@
                                                     <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.fechaCreacionDesde">Fecha entrega:</label>
                                                         <label class="input">
-                                                            <input id="txtFechaCreacionDesde3" name="txtFechaCreacionDesde3" data-bind="value: fechaCreacionDesde3" class="datepicker" data-dateformat="dd/mm/yy">
+                                                            <input id="txtFechaCreacionDesde3" name="txtFechaCreacionDesde3" data-bind="value: fechaCreacionDesde3" class="datepicker"
+                                                                data-dateformat="dd/mm/yy">
                                                         </label>
                                                     </section>
                                                     <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.fechaCreacionHasta">Fecha entrega:</label>
                                                         <label class="input">
-                                                            <input id="txtFechaCreacionHasta3" name="txtFechaCreacionHasta3" data-bind="value: fechaCreacionHasta3" class="datepicker" data-dateformat="dd/mm/yy">
+                                                            <input id="txtFechaCreacionHasta3" name="txtFechaCreacionHasta3" data-bind="value: fechaCreacionHasta3" class="datepicker"
+                                                                data-dateformat="dd/mm/yy">
                                                         </label>
                                                     </section>
                                                     <section class="col col-md-4">
@@ -495,7 +499,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>       
+                        </div>
                         <!-- T4TB1 -->
                         <div class="jarviswidget" id="wid-id-4" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
                             <header>
@@ -522,15 +526,17 @@
                                                     <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.fechaCreacionDesde">Fecha entrega:</label>
                                                         <label class="input">
-                                                            <input id="txtFechaCreacionDesde5" name="txtFechaCreacionDesde5" data-bind="value: fechaCreacionDesde5" class="datepicker" data-dateformat="dd/mm/yy">
+                                                            <input id="txtFechaCreacionDesde5" name="txtFechaCreacionDesde5" data-bind="value: fechaCreacionDesde5" class="datepicker"
+                                                                data-dateformat="dd/mm/yy">
                                                         </label>
                                                     </section>
                                                     <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.fechaCreacionHasta">Fecha entrega:</label>
                                                         <label class="input">
-                                                            <input id="txtFechaCreacionHasta5" name="txtFechaCreacionHasta5" data-bind="value: fechaCreacionHasta5" class="datepicker" data-dateformat="dd/mm/yy">
+                                                            <input id="txtFechaCreacionHasta5" name="txtFechaCreacionHasta5" data-bind="value: fechaCreacionHasta5" class="datepicker"
+                                                                data-dateformat="dd/mm/yy">
                                                         </label>
-                                                    </section>                                                    
+                                                    </section>
                                                 </div>
                                             </fieldset>
                                             <fieldset>
@@ -544,7 +550,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                                         
+                        </div>
                         <!-- T5TB1-->
                         <div class="jarviswidget" id="wid-id-2" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
                             <header>
@@ -563,22 +569,40 @@
                                             <fieldset>
                                                 <div class="row">
                                                     <section class="col col-md-4">
+                                                        <label class="label" data-i18n="informes.pais">Pais*:</label>
+                                                        <select class="aswselect2" id="cmbPaiss3" name="cmbPaiss3" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
+                                                                            value: sPais3, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
+                                                        </select>
+                                                    </section>
+                                                    <section class="col col-md-4">
                                                         <label class="label" data-i18n="informes.area">Area:</label>
                                                         <select class="aswselect2" id="cmbAreas" name="cmbAreas" data-bind="options: optionsAreas, optionsText: 'nombre', optionsValue: 'areaId', 
                                                                                     value: sArea, valueAllowUnset: true, selectedOptions: selectedAreas, selected2:{}">
                                                         </select>
                                                     </section>
-                                                    <section class="col col-md-4">
-                                                        <label class="label" data-i18n="informes.pais">Pais*:</label>
-                                                        <select class="aswselect2" id="cmbPaiss3" name="cmbPaiss3" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
-                                                                    value: sPais3, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
-                                                        </select>
-                                                    </section>
+
                                                     <section class="col col-md-2">
                                                         <label class="checkbox">
                                                             <input id="chkT5TB2" type="checkbox" name="chkT5TB2" data-bind="checked: optT5TB2">
                                                             <i></i>
                                                             <span data-i18n="informes.optT5TB2">ESD</span>
+                                                        </label>
+                                                    </section>
+                                                </div>
+                                                <div class="row">
+                                                    <section class="col col-md-4"></section>
+                                                    <section class="col col-md-2">
+                                                        <label class="label" data-i18n="informes.fechaCreacionDesde">Fecha entrega:</label>
+                                                        <label class="input">
+                                                            <input id="txtFechaCreacionDesde6" name="txtFechaCreacionDesde6" data-bind="value: fechaCreacionDesde6" class="datepicker"
+                                                                data-dateformat="dd/mm/yy">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-md-2">
+                                                        <label class="label" data-i18n="informes.fechaCreacionHasta">Fecha entrega:</label>
+                                                        <label class="input">
+                                                            <input id="txtFechaCreacionHasta6" name="txtFechaCreacionHasta6" data-bind="value: fechaCreacionHasta6" class="datepicker"
+                                                                data-dateformat="dd/mm/yy">
                                                         </label>
                                                     </section>
                                                 </div>

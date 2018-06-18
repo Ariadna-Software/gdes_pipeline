@@ -80,6 +80,8 @@ var apiReport = {
         self.fechaCreacionHasta3 = ko.observable();
         self.fechaCreacionDesde5 = ko.observable();
         self.fechaCreacionHasta5 = ko.observable();
+        self.fechaCreacionDesde6 = ko.observable();
+        self.fechaCreacionHasta6 = ko.observable();        
 
         self.optionsEstados = ko.observableArray([]);
         self.selectedEstados = ko.observableArray([]);
@@ -153,9 +155,13 @@ var apiReport = {
     aceptarT5TB1: function () {
         var area = vm.sArea();
         var pais = vm.sPais3();
+        var dFecha = vm.fechaCreacionDesde6();
+        var hFecha = vm.fechaCreacionHasta6();
         if (!area) area = "";
         if (!pais) pais = "";
-        var url = "infT5TB1.html?area=" + area + "&pais=" + pais;
+        if (!dFecha) dFecha = "";
+        if (!hFecha) hFecha = "";        
+        var url = "infT5TB1.html?area=" + area + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
         if (vm.optT5TB2())
             url += "&detail=1";
         else

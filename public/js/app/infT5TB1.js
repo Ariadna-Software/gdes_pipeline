@@ -13,6 +13,8 @@ var options;
 var area;
 var pais;
 var detail;
+var dFecha;
+var hFecha;
 
 var apiInfT5TB1 = {
     ini: function () {
@@ -36,12 +38,14 @@ var apiInfT5TB1 = {
         area = apiComunGeneral.gup("area");
         pais = apiComunGeneral.gup("pais");
         detail = apiComunGeneral.gup("detail");
+        dFecha = apiComunGeneral.gup("dFecha");
+        hFecha = apiComunGeneral.gup("hFecha");
         // llamar al informe 
         apiInfT5TB1.obtainJSON();
     },
     obtainJSON: function () {
-        var url = "/pwbi/T5TB1?area=" + area + "&pais=" + pais ;
-        if (detail == "0") url = "/pwbi/T5TB2?area=" + area + "&pais=" + pais ;
+        var url = "/pwbi/T5TB1?area=" + area + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
+        if (detail == "0") url = "/pwbi/T5TB2?area=" + area + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + url, data, function (err, data) {
             if (err) return;
             apiInfT5TB1.obtainReport(data);
@@ -71,8 +75,8 @@ var apiInfT5TB1 = {
         // Remove all connections from the report template
         report.dictionary.databases.clear();
         // Parámetros
-        // report.dictionary.variables.items[0].val = dFecha;
-        // report.dictionary.variables.items[1].val = hFecha;
+        report.dictionary.variables.items[0].val = dFecha;
+        report.dictionary.variables.items[1].val = hFecha;
         //
         report.regData(dataSet.dataSetName, "", dataSet);
         report.dictionary.synchronize();

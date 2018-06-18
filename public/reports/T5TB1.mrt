@@ -74,8 +74,8 @@
       <Components isList="true" count="8">
         <PageHeaderBand1 Ref="5" type="PageHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,0.4,27.7,1.4</ClientRectangle>
-          <Components isList="true" count="1">
+          <ClientRectangle>0,0.4,27.7,2</ClientRectangle>
+          <Components isList="true" count="2">
             <Image1 Ref="6" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <CanShrink>True</CanShrink>
@@ -608,18 +608,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Parent isRef="5" />
               <Stretch>True</Stretch>
             </Image1>
+            <Text4 Ref="7" type="Text" isKey="true">
+              <Brush>[255:255:255]</Brush>
+              <ClientRectangle>19.2,1.2,8.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,12,Bold</Font>
+              <Guid>f2f4662607124ee6960484329def7e7d</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="4" />
+              <Parent isRef="5" />
+              <Text>FROM {dFecha} TO {hFecha}</Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>PageHeaderBand1</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
         </PageHeaderBand1>
-        <PageFooterBand1 Ref="7" type="PageFooterBand" isKey="true">
+        <PageFooterBand1 Ref="8" type="PageFooterBand" isKey="true">
           <Border>Top;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <ClientRectangle>0,18.2,27.7,0.8</ClientRectangle>
           <Components isList="true" count="1">
-            <Text18 Ref="8" type="Text" isKey="true">
+            <Text18 Ref="9" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
               <ClientRectangle>0,0,4,0.6</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -627,7 +643,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text18</Name>
               <Page isRef="4" />
-              <Parent isRef="7" />
+              <Parent isRef="8" />
               <Text>PRINTED: {Time}</Text>
               <TextBrush>[0:0:0]</TextBrush>
               <Type>Expression</Type>
@@ -639,7 +655,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="4" />
           <Parent isRef="4" />
         </PageFooterBand1>
-        <Text19 Ref="9" type="Text" isKey="true">
+        <Text19 Ref="10" type="Text" isKey="true">
           <Brush>[255:255:255]</Brush>
           <ClientRectangle>23.2,26.9,4.4,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -655,7 +671,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text19>
-        <Text1 Ref="10" type="Text" isKey="true">
+        <Text1 Ref="11" type="Text" isKey="true">
           <Brush>[255:255:255]</Brush>
           <ClientRectangle>-0.2,0.4,24.6,1.2</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -669,11 +685,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <TextBrush>[0:0:0]</TextBrush>
           <Type>Expression</Type>
         </Text1>
-        <GroupHeaderBand2 Ref="11" type="GroupHeaderBand" isKey="true">
+        <GroupHeaderBand2 Ref="12" type="GroupHeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,2.6,27.7,1</ClientRectangle>
+          <ClientRectangle>0,3.2,27.7,1</ClientRectangle>
           <Components isList="true" count="1">
-            <Text5 Ref="12" type="Text" isKey="true">
+            <Text5 Ref="13" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
               <ClientRectangle>0,0,18.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -682,7 +698,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text5</Name>
               <Page isRef="4" />
-              <Parent isRef="11" />
+              <Parent isRef="12" />
               <Text>COUNTRY: {DataSource1.codPais}</Text>
               <TextBrush>[0:0:0]</TextBrush>
               <Type>Expression</Type>
@@ -695,12 +711,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="4" />
           <Parent isRef="4" />
         </GroupHeaderBand2>
-        <GroupHeaderBand3 Ref="13" type="GroupHeaderBand" isKey="true">
+        <GroupHeaderBand3 Ref="14" type="GroupHeaderBand" isKey="true">
           <Border>Top;[79:129:189];1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,4.4,27.7,1.2</ClientRectangle>
+          <ClientRectangle>0,5,27.7,1.2</ClientRectangle>
           <Components isList="true" count="17">
-            <DataDataSource1_ubicacion Ref="14" type="Text" isKey="true">
+            <DataDataSource1_ubicacion Ref="15" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>1.6,0.2,1.2,0.8</ClientRectangle>
@@ -709,13 +725,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_ubicacion</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.numeroOferta}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </DataDataSource1_ubicacion>
-            <DataDataSource1_nombreCorto Ref="15" type="Text" isKey="true">
+            <DataDataSource1_nombreCorto Ref="16" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>2.8,0.2,1.6,0.8</ClientRectangle>
@@ -724,13 +740,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_nombreCorto</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.fase}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </DataDataSource1_nombreCorto>
-            <Text6 Ref="16" type="Text" isKey="true">
+            <Text6 Ref="17" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>4.4,0.2,1.8,0.8</ClientRectangle>
@@ -740,13 +756,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text6</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.nombreCorto}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text6>
-            <Text8 Ref="17" type="Text" isKey="true">
+            <Text8 Ref="18" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.2,0.2,1.8,0.8</ClientRectangle>
@@ -756,13 +772,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text8</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.cliente}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text8>
-            <Text10 Ref="18" type="Text" isKey="true">
+            <Text10 Ref="19" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>8,0.2,1.6,0.8</ClientRectangle>
@@ -772,13 +788,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text10</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.usuario}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text10>
-            <Text12 Ref="19" type="Text" isKey="true">
+            <Text12 Ref="20" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>9.6,0.2,1.2,0.8</ClientRectangle>
@@ -789,28 +805,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text12</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.fechaEntrega}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="20" type="DateFormat" isKey="true" />
+              <TextFormat Ref="21" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text12>
-            <DataDataSource1_estado Ref="21" type="Text" isKey="true">
+            <DataDataSource1_estado Ref="22" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>12.4,0.2,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_estado</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.estado}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
             </DataDataSource1_estado>
-            <DataDataSource1_importeGdes Ref="22" type="Text" isKey="true">
+            <DataDataSource1_importeGdes Ref="23" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>10.8,0.2,1.6,0.8</ClientRectangle>
@@ -820,19 +837,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_importeGdes</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.importeGdes}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="23" type="CurrencyFormat" isKey="true">
+              <TextFormat Ref="24" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
                 <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
                 <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
             </DataDataSource1_importeGdes>
-            <Text14 Ref="24" type="Text" isKey="true">
+            <Text14 Ref="25" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>13.6,0.2,2.6,0.8</ClientRectangle>
@@ -842,13 +861,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text14</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.competidores}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text14>
-            <DataDataSource1_margen Ref="25" type="Text" isKey="true">
+            <DataDataSource1_margen Ref="26" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>16.2,0.2,1,0.8</ClientRectangle>
@@ -858,18 +877,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_margen</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.probabilidad}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="26" type="NumberFormat" isKey="true">
+              <TextFormat Ref="27" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
-                <NegativePattern>1</NegativePattern>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
+                <Symbol>€</Symbol>
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </DataDataSource1_margen>
-            <Text16 Ref="27" type="Text" isKey="true">
+            <Text16 Ref="28" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>17.2,0.2,1.2,0.8</ClientRectangle>
@@ -880,14 +903,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text16</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.fechaAdjudicacion}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="28" type="DateFormat" isKey="true" />
+              <TextFormat Ref="29" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text16>
-            <Text20 Ref="29" type="Text" isKey="true">
+            <Text20 Ref="30" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>18.4,0.2,1.2,0.8</ClientRectangle>
@@ -898,14 +921,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text20</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.fechaInicioContrato}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="30" type="DateFormat" isKey="true" />
+              <TextFormat Ref="31" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text20>
-            <Text22 Ref="31" type="Text" isKey="true">
+            <Text22 Ref="32" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>19.6,0.2,1.2,0.8</ClientRectangle>
@@ -916,14 +939,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text22</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.fechaFinContrato}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="32" type="DateFormat" isKey="true" />
+              <TextFormat Ref="33" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text22>
-            <Text24 Ref="33" type="Text" isKey="true">
+            <Text24 Ref="34" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>20.8,0.2,1.6,0.8</ClientRectangle>
@@ -933,13 +956,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text24</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.duracion}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text24>
-            <Text26 Ref="34" type="Text" isKey="true">
+            <Text26 Ref="35" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>24.8,0.2,2.8,0.8</ClientRectangle>
@@ -949,13 +972,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text26</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.subcontrataTXT}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text26>
-            <Text28 Ref="35" type="Text" isKey="true">
+            <Text28 Ref="36" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>22.4,0.2,2.4,0.8</ClientRectangle>
@@ -965,13 +988,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text28</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.puntosRelevantes}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
             </Text28>
-            <Text30 Ref="36" type="Text" isKey="true">
+            <Text30 Ref="37" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0.2,1.6,0.8</ClientRectangle>
@@ -981,7 +1004,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text30</Name>
               <Page isRef="4" />
-              <Parent isRef="13" />
+              <Parent isRef="14" />
               <Text>{DataSource1.areaEN}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -994,11 +1017,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="4" />
           <Parent isRef="4" />
         </GroupHeaderBand3>
-        <HeaderDataSource1 Ref="37" type="HeaderBand" isKey="true">
+        <HeaderDataSource1 Ref="38" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,6.4,27.7,1.2</ClientRectangle>
+          <ClientRectangle>0,7,27.7,1.2</ClientRectangle>
           <Components isList="true" count="17">
-            <HeaderDataSource1_ubicacion Ref="38" type="Text" isKey="true">
+            <HeaderDataSource1_ubicacion Ref="39" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>1.6,0,1.2,1.2</ClientRectangle>
@@ -1007,14 +1030,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_ubicacion</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>OFFER</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_ubicacion>
-            <HeaderDataSource1_nombreCorto Ref="39" type="Text" isKey="true">
+            <HeaderDataSource1_nombreCorto Ref="40" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>2.8,0,1.6,1.2</ClientRectangle>
@@ -1023,14 +1046,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_nombreCorto</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>PHASE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_nombreCorto>
-            <Text7 Ref="40" type="Text" isKey="true">
+            <Text7 Ref="41" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>4.4,0,1.8,1.2</ClientRectangle>
@@ -1040,14 +1063,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text7</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>SHORT NAME</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text7>
-            <Text9 Ref="41" type="Text" isKey="true">
+            <Text9 Ref="42" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>6.2,0,1.8,1.2</ClientRectangle>
@@ -1057,14 +1080,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text9</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>CLIENT</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text9>
-            <Text11 Ref="42" type="Text" isKey="true">
+            <Text11 Ref="43" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>8,0,1.6,1.2</ClientRectangle>
@@ -1074,14 +1097,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text11</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>RESPONSABLE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text11>
-            <Text13 Ref="43" type="Text" isKey="true">
+            <Text13 Ref="44" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>9.6,0,1.2,1.2</ClientRectangle>
@@ -1092,30 +1115,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text13</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>DELIVER DATE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text13>
-            <HeaderDataSource1_estado Ref="44" type="Text" isKey="true">
+            <HeaderDataSource1_estado Ref="45" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>12.4,0,1.2,1.2</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,6,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_estado</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>STATUS</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_estado>
-            <HeaderDataSource1_importeGdes Ref="45" type="Text" isKey="true">
+            <HeaderDataSource1_importeGdes Ref="46" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>10.8,0,1.6,1.2</ClientRectangle>
@@ -1125,14 +1149,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_importeGdes</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>GDES CONTRACT REVENUE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_importeGdes>
-            <Text15 Ref="46" type="Text" isKey="true">
+            <Text15 Ref="47" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>13.6,0,2.6,1.2</ClientRectangle>
@@ -1142,14 +1166,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text15</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>COMPETITORS</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text15>
-            <HeaderDataSource1_margen Ref="47" type="Text" isKey="true">
+            <HeaderDataSource1_margen Ref="48" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>16.2,0,1,1.2</ClientRectangle>
@@ -1159,14 +1183,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>HeaderDataSource1_margen</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>PROBABILITY</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_margen>
-            <Text17 Ref="48" type="Text" isKey="true">
+            <Text17 Ref="49" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>17.2,0,1.2,1.2</ClientRectangle>
@@ -1177,14 +1201,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text17</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>AWARNING DATE</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text17>
-            <Text21 Ref="49" type="Text" isKey="true">
+            <Text21 Ref="50" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>18.4,0,1.2,1.2</ClientRectangle>
@@ -1195,14 +1219,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text21</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>START</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text21>
-            <Text23 Ref="50" type="Text" isKey="true">
+            <Text23 Ref="51" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>19.6,0,1.2,1.2</ClientRectangle>
@@ -1213,14 +1237,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text23</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>END</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text23>
-            <Text25 Ref="51" type="Text" isKey="true">
+            <Text25 Ref="52" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>20.8,0,1.6,1.2</ClientRectangle>
@@ -1230,14 +1254,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text25</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>DURATION</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text25>
-            <Text27 Ref="52" type="Text" isKey="true">
+            <Text27 Ref="53" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>24.8,0,2.8,1.2</ClientRectangle>
@@ -1247,14 +1271,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text27</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>RECRUITMENT</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text27>
-            <Text29 Ref="53" type="Text" isKey="true">
+            <Text29 Ref="54" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>22.4,0,2.4,1.2</ClientRectangle>
@@ -1264,7 +1288,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text29</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>ORGANIZATION CHART
 </Text>
               <TextBrush>[255:255:255]</TextBrush>
@@ -1272,7 +1296,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text29>
-            <Text31 Ref="54" type="Text" isKey="true">
+            <Text31 Ref="55" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>0,0,1.6,1.2</ClientRectangle>
@@ -1282,7 +1306,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text31</Name>
               <Page isRef="4" />
-              <Parent isRef="37" />
+              <Parent isRef="38" />
               <Text>AREA</Text>
               <TextBrush>[255:255:255]</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1295,12 +1319,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="4" />
           <Parent isRef="4" />
         </HeaderDataSource1>
-        <DataDataSource1 Ref="55" type="DataBand" isKey="true">
+        <DataDataSource1 Ref="56" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
-          <ClientRectangle>0,8.4,27.7,1</ClientRectangle>
+          <ClientRectangle>0,9,27.7,1</ClientRectangle>
           <Components isList="true" count="3">
-            <DataDataSource1_fechaAdjudicacion Ref="56" type="Text" isKey="true">
+            <DataDataSource1_fechaAdjudicacion Ref="57" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>9.6,0,1.2,0.8</ClientRectangle>
@@ -1312,15 +1336,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_fechaAdjudicacion</Name>
               <Page isRef="4" />
-              <Parent isRef="55" />
+              <Parent isRef="56" />
               <Text>{DataSource1.fechaVersion}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="57" type="DateFormat" isKey="true" />
+              <TextFormat Ref="58" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_fechaAdjudicacion>
-            <Text2 Ref="58" type="Text" isKey="true">
+            <Text2 Ref="59" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>10.8,0,1.6,0.8</ClientRectangle>
@@ -1333,10 +1357,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text2</Name>
               <Page isRef="4" />
-              <Parent isRef="55" />
+              <Parent isRef="56" />
               <Text>{DataSource1.importeVersion}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="59" type="CurrencyFormat" isKey="true">
+              <TextFormat Ref="60" type="CurrencyFormat" isKey="true">
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
                 <NegativePattern>8</NegativePattern>
@@ -1347,7 +1371,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Type>DataColumn</Type>
               <VertAlignment>Center</VertAlignment>
             </Text2>
-            <Text3 Ref="60" type="Text" isKey="true">
+            <Text3 Ref="61" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>5.6,0,3.8,0.8</ClientRectangle>
@@ -1360,10 +1384,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text3</Name>
               <Page isRef="4" />
-              <Parent isRef="55" />
+              <Parent isRef="56" />
               <Text>Versión:</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="61" type="DateFormat" isKey="true" />
+              <TextFormat Ref="62" type="DateFormat" isKey="true" />
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
@@ -1395,13 +1419,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
       <PageWidth>29.7</PageWidth>
       <PaperSize>A4</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="62" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="63" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page1>
   </Pages>
-  <PrinterSettings Ref="63" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <PrinterSettings Ref="64" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
   <ReferencedAssemblies isList="true" count="8">
     <value>System.Dll</value>
     <value>System.Drawing.Dll</value>
@@ -1413,10 +1437,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/7/2018 3:49:48 PM</ReportChanged>
+  <ReportChanged>6/18/2018 6:15:50 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T5TB1.mrt</ReportFile>
-  <ReportGuid>fc3392f16b634e10a45d701a4f00b254</ReportGuid>
+  <ReportGuid>9240ee78422e4600829148d0d9db1e4a</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
