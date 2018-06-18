@@ -133,7 +133,8 @@ var apiReport = {
         if (!dFecha) dFecha = "";
         if (!hFecha) hFecha = "";
         if (!estado) estado = "";
-        var url = "infT3TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
+        //var url = "infT3TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
+        var url = "infT3TB1.html?fase=0&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
         window.open(url, '_new');
     },
     aceptarT4TB1: function () {
@@ -180,6 +181,9 @@ var apiReport = {
                 //
                 $("#cmbPaiss2").val([usuario.paisId]).trigger('change');
                 $('#cmbPaiss2').prop('disabled', 'disabled');
+                //
+                $("#cmbPaiss3").val([usuario.paisId]).trigger('change');
+                $('#cmbPaiss3').prop('disabled', 'disabled');                
             }
         });
     },
