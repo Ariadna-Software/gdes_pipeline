@@ -19,6 +19,7 @@ var apiPaginaOfertasGeneral = {
         apiPaginaOfertasGeneral.iniOfertasTabla();
         apiPaginaOfertasGeneral.cargarOfertas();
         $('#btnNuevo').click(apiPaginaOfertasGeneral.nuevo);
+        $('#btnNuevo2').click(apiPaginaOfertasGeneral.nuevo2);
 
         //evento de guardado de configuración
         $(window).unload(apiPaginaOfertasGeneral.guardarConfiguracion);
@@ -125,8 +126,9 @@ var apiPaginaOfertasGeneral = {
             data: "ofertaId",
             render: function (data, type, row) {
                 var bt1 = "<button class='btn btn-circle btn-danger' onclick='apiPaginaOfertasGeneral.eliminar(" + data + ");' title='Eliminar registro'> <i class='fa fa-trash-o fa-fw'></i> </button>";
-                var bt2 = "<button class='btn btn-circle btn-success' onclick='apiPaginaOfertasGeneral.editar(" + data + ");' title='Editar registro'> <i class='fa fa-edit fa-fw'></i> </button>";
-                var html = "<div class='pull-right'>" + bt1 + " " + bt2 + "</div>";
+                var bt2 = "<button class='btn btn-circle btn-primary' onclick='apiPaginaOfertasGeneral.editar2(" + data + ");' title='Editar registro'> <i class='fa fa-edit fa-fw'></i> </button>";
+                var bt3 = "<button class='btn btn-circle btn-success' onclick='apiPaginaOfertasGeneral.editar(" + data + ");' title='Editar registro'> <i class='fa fa-edit fa-fw'></i> </button>";
+                var html = "<div class='pull-right'>" + bt1 + " " + bt2 + bt3 + "</div>";
                 return html;
             }
         }];
@@ -144,14 +146,14 @@ var apiPaginaOfertasGeneral = {
         if (!estado) {
             estado = [];
             estado.push("true", "true", "true", "true", "true", "true", "true", "true");
-            for (var i = 8; i < 31; i++) {
+            for (var i = 8; i < 33; i++) {
                 tabla.columns(i).visible(false);
                 estado.push(tabla.columns(i).visible()[0]);
             }
             estado.push("true");
         } else {
             var booleana = estado.split(",")
-            for (var j = 0; j < 31; j++) {
+            for (var j = 0; j < 33; j++) {
                 if (booleana[j] == "true") booleana[j] = true;
                 else if (booleana[j] == "false") booleana[j] = false;
                 tabla.columns(j).visible(booleana[j]);
@@ -176,8 +178,14 @@ var apiPaginaOfertasGeneral = {
     nuevo: function () {
         window.open(sprintf('OfertasDetalle.html?id=%s', 0), '_new');
     },
+    nuevo2: function () {
+        window.open(sprintf('OfertasCortaDetalle.html?id=%s', 0), '_new');
+    },
     editar: function (id) {
         window.open(sprintf('OfertasDetalle.html?id=%s', id), '_new');
+    },
+    editar2: function (id) {
+        window.open(sprintf('OfertasCortaDetalle.html?id=%s', id), '_new');
     },
     eliminar: function (id) {
         apiComunNotificaciones.mensajeAceptarCancelar(i18n.t("eliminar_pregunta"), function () {
@@ -190,7 +198,7 @@ var apiPaginaOfertasGeneral = {
 
     guardarConfiguracion: function () {
         var conf = [];
-        for (var i = 0; i < 26; i++) {
+        for (var i = 0; i < 33; i++) {
             conf.push(tabla.columns(i).visible()[0]);
         }
         setCookie('confOferta' + usuario.nombre, conf, 10000);
