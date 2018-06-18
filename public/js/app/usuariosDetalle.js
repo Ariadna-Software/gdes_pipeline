@@ -77,6 +77,8 @@ var apiPaginaUsuariosDetalle = {
         apiPaginaUsuariosDetalle.cargarAreas(data.areaId);
         apiPaginaUsuariosDetalle.cargarUnidadesNegocio(data.unidadNegocioId);
         vm.ubicacion(data.ubicacion);
+        vm.veInformes(data.veInformes);
+        vm.emailAzure(data.emailAzure);
     },
     datosPagina: function () {
         var self = this;
@@ -111,6 +113,8 @@ var apiPaginaUsuariosDetalle = {
         self.sUnidadNegocio = ko.observable();
 
         self.ubicacion = ko.observable();
+        self.veInformes = ko.observable();
+        self.emailAzure = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaUsuariosDetalle.datosOk()) return;
@@ -126,7 +130,9 @@ var apiPaginaUsuariosDetalle = {
             areaId: vm.sArea(),
             unidadNegocioId: vm.sUnidadNegocio(),
             responsableId: vm.sResponsable(),
-            ubicacion: vm.ubicacion()
+            ubicacion: vm.ubicacion(),
+            veInformes: vm.veInformes(),
+            emailAzure: vm.emailAzure()
         };
         if (data.grupoUsuarioId == 0) data.grupoUsuarioId = null;
         var verb = "PUT";

@@ -34,6 +34,7 @@ var apiReport = {
 
         $('#cmbEstados').select2(select2_languages[usuario.codigoIdioma]);
         $('#cmbEstados2').select2(select2_languages[usuario.codigoIdioma]);
+        $('#cmbEstados3').select2(select2_languages[usuario.codigoIdioma]);
 
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         $('#cmbPaiss3').select2(select2_languages[usuario.codigoIdioma]);
@@ -82,6 +83,7 @@ var apiReport = {
         self.selectedEstados = ko.observableArray([]);
         self.sEstado = ko.observable();
         self.sEstado2 = ko.observable();
+        self.sEstado3 = ko.observable();
 
         self.optionsAreas = ko.observableArray([]);
         self.selectedAreas = ko.observableArray([]);
@@ -94,11 +96,13 @@ var apiReport = {
         var pais = vm.sPais();
         var dFecha = vm.fechaCreacionDesde();
         var hFecha = vm.fechaCreacionHasta();
+        var estado = vm.sEstado3();
         if (!fase) fase = "";
         if (!pais) pais = "";
         if (!dFecha) dFecha = "";
         if (!hFecha) hFecha = "";
-        var url = "infT1TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
+        if (!estado) estado = "";
+        var url = "infT1TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
         window.open(url, '_new');
 
     },
@@ -168,6 +172,10 @@ var apiReport = {
             var options = [{ paisId: 0, nombre: " " }].concat(data);
             vm.optionsPaiss(options);
             $("#cmbPaiss").val([id]).trigger('change');
+            if (!usuario.esAdministrador && usuario.paisId) {
+                $("#cmbPaiss").val([usuario.paisId]).trigger('change');
+                $('#cmbPaiss').prop('disabled', 'disabled');
+            }
         });
     },
     cargarEstados: function (id) {

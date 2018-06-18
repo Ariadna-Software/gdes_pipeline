@@ -108,7 +108,9 @@
         "verOfertasGrupo": "Este usuario puede ver ofertas de los responsables de su grupo de usuarios",
         "responsable": "Responsable",
         "ubicacion": "Ubicación",
-        "unidadNegocio": "Unidad negocio"
+        "unidadNegocio": "Unidad negocio",
+        "veInformes": "Puede consultar informes",
+        "emailAzure": "Correo Azure AD"
     },
     "responsables": {
         "titulo": "Responsables",

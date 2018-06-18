@@ -393,8 +393,20 @@
                                             </section>
                                         </div>
                                         <div class="row">
-                                            <section class="col col-md-6"></section>
                                             <section class="col col-md-6">
+                                                <label class="checkbox">
+                                                    <input id="chkVeInformes" type="checkbox" name="chkVeInformes" data-bind="checked: veInformes">
+                                                    <i></i>
+                                                    <span data-i18n="usuarios.veInformes">ESD</span>
+                                                </label>
+                                            </section>
+                                            <section class="col col-md-3">
+                                                <label class="label" data-i18n="usuarios.emailAzure">Nombre:</label>
+                                                <label class="input">
+                                                    <input id="txtEmailAzure" name="txtEmailAzure" data-bind="value: emailAzure">
+                                                </label>
+                                            </section>                                            
+                                            <section class="col col-md-3">
                                                 <label class="label" data-i18n="usuarios.ubicacion">Nombre:</label>
                                                 <label class="input">
                                                     <input id="txtUbicacion" name="txtUbicacion" data-bind="value: ubicacion">

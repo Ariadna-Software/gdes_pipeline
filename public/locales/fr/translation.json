@@ -108,7 +108,9 @@
         "verOfertasGrupo": "Cet utilisateur peut voir des offres des responsables de son groupe d'utilisateurs",
         "responsable": "Utilisateur responsable",
         "ubicacion": "Centre de travail",
-        "unidadNegocio": "Business Unit"
+        "unidadNegocio": "Business Unit",
+        "veInformes": "Peut voir les rapports",
+        "emailAzure": "Email Azure AD"
     },
     "responsables": {
         "titulo": "Responsables",

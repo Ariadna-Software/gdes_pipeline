@@ -38,11 +38,12 @@ var apiInfT1TB1 = {
         pais = apiComunGeneral.gup("pais");
         dFecha = apiComunGeneral.gup("dFecha");
         hFecha = apiComunGeneral.gup("hFecha");
+        estado = apiComunGeneral.gup("estado");
         // llamar al informe 
         apiInfT1TB1.obtainJSON();
     },
     obtainJSON: function () {
-        var url = "/pwbi/T1TB1?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
+        var url = "/pwbi/T1TB1?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + url, data, function (err, data) {
             if (err) return;
             apiInfT1TB1.obtainReport(data);

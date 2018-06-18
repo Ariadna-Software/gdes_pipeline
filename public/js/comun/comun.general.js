@@ -177,6 +177,9 @@ var apiComunGeneral = {
         if (!usuario.esAdministrador) {
             $("#administracion").hide();
         }
+        if (!usuario.veInformes) {
+            $("#informes").hide();
+        }
     },
     redondeo2Decimales: function (num) {
         return +(Math.round(num + "e+2") + "e-2");

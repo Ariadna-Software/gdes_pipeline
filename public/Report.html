@@ -343,29 +343,31 @@
                                             <fieldset>
                                                 <div class="row">
                                                     <section class="col col-md-4">
-                                                        <label class="label" data-i18n="informes.fases">FOF:</label>
-                                                        <select class="aswselect2" id="cmbFasesOferta" name="cmbFasesOferta" data-bind="options: optionsFasesOferta, optionsText: 'nombre', optionsValue: 'faseOfertaId', 
-                                                                                            value: sFasesOferta, valueAllowUnset: true, selectedOptions: selectedFasesOferta, selected2:{}">
-                                                        </select>
-                                                    </section>
-                                                    <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.pais">Pais*:</label>
                                                         <select class="aswselect2" id="cmbPaiss" name="cmbPaiss" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
                                                                     value: sPais, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
                                                         </select>
                                                     </section>
-                                                    <section class="col col-md-3">
+                                                    <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.fechaCreacionDesde">Fecha entrega:</label>
                                                         <label class="input">
                                                             <input id="txtFechaCreacionDesde" name="txtFechaCreacionDesde" data-bind="value: fechaCreacionDesde" class="datepicker" data-dateformat="dd/mm/yy">
                                                         </label>
                                                     </section>
-                                                    <section class="col col-md-3">
+                                                    <section class="col col-md-2">
                                                         <label class="label" data-i18n="informes.fechaCreacionHasta">Fecha entrega:</label>
                                                         <label class="input">
                                                             <input id="txtFechaCreacionHasta" name="txtFechaCreacionHasta" data-bind="value: fechaCreacionHasta" class="datepicker" data-dateformat="dd/mm/yy">
                                                         </label>
                                                     </section>
+                                                    <section class="col col-md-4">
+                                                        <label class="label">
+                                                            <span data-i18n="informes.estado">Estado:</span>
+                                                        </label>
+                                                        <select class="aswselect2" id="cmbEstados3" name="cmbEstados3" data-bind="options: optionsEstados, optionsText: 'nombre', optionsValue: 'estadoId', 
+                                                                                    value: sEstado3, valueAllowUnset: true, selectedOptions: selectedEstados, selected2:{}">
+                                                        </select>
+                                                    </section>                                                    
                                                 </div>
                                             </fieldset>
                                             <fieldset>
