@@ -12,6 +12,8 @@ var viewer;
 var options;
 var area;
 var pais;
+var dFecha;
+var hFecha;
 var detail;
 
 var apiInfT4TB1 = {
@@ -34,11 +36,13 @@ var apiInfT4TB1 = {
         options.toolbar.showSendEmailButton = true;
         // parámetros 
         pais = apiComunGeneral.gup("pais");
+        dFecha = apiComunGeneral.gup("dFecha");
+        hFecha = apiComunGeneral.gup("hFecha");
         // llamar al informe 
         apiInfT4TB1.obtainJSON();
     },
     obtainJSON: function () {
-        var url = "/pwbi/T4TB1?pais=" + pais ;
+        var url = "/pwbi/T4TB1?pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + url, data, function (err, data) {
             if (err) return;
             apiInfT4TB1.obtainReport(data);
@@ -68,8 +72,8 @@ var apiInfT4TB1 = {
         // Remove all connections from the report template
         report.dictionary.databases.clear();
         // Parámetros
-        // report.dictionary.variables.items[0].val = dFecha;
-        // report.dictionary.variables.items[1].val = hFecha;
+        report.dictionary.variables.items[0].val = dFecha;
+        report.dictionary.variables.items[1].val = hFecha;
         //
         report.regData(dataSet.dataSetName, "", dataSet);
         report.dictionary.synchronize();

@@ -78,6 +78,8 @@ var apiReport = {
         self.fechaCreacionHasta2 = ko.observable();
         self.fechaCreacionDesde3 = ko.observable();
         self.fechaCreacionHasta3 = ko.observable();
+        self.fechaCreacionDesde5 = ko.observable();
+        self.fechaCreacionHasta5 = ko.observable();
 
         self.optionsEstados = ko.observableArray([]);
         self.selectedEstados = ko.observableArray([]);
@@ -139,8 +141,12 @@ var apiReport = {
     },
     aceptarT4TB1: function () {
         var pais = vm.sPais5();
+        var dFecha = vm.fechaCreacionDesde5();
+        var hFecha = vm.fechaCreacionHasta5();
         if (!pais) pais = "";
-        var url = "infT4TB1.html?pais=" + pais;
+        if (!dFecha) dFecha = "";
+        if (!hFecha) hFecha = "";
+        var url = "infT4TB1.html?pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
         window.open(url, '_new');
 
     },
@@ -183,7 +189,10 @@ var apiReport = {
                 $('#cmbPaiss2').prop('disabled', 'disabled');
                 //
                 $("#cmbPaiss3").val([usuario.paisId]).trigger('change');
-                $('#cmbPaiss3').prop('disabled', 'disabled');                
+                $('#cmbPaiss3').prop('disabled', 'disabled');      
+                //
+                $("#cmbPaiss5").val([usuario.paisId]).trigger('change');
+                $('#cmbPaiss5').prop('disabled', 'disabled');                             
             }
         });
     },

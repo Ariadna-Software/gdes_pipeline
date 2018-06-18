@@ -513,12 +513,24 @@
                                         <form id="frmT4TB1" class="smart-form">
                                             <fieldset>
                                                 <div class="row">
-                                                    <section class="col col-md-2">
+                                                    <section class="col col-md-4">
                                                         <label class="label" data-i18n="informes.pais">Pais*:</label>
                                                         <select class="aswselect2" id="cmbPaiss5" name="cmbPaiss5" data-bind="options: optionsPaiss, optionsText: 'nombre', optionsValue: 'paisId', 
                                                                 value: sPais5, valueAllowUnset: true, selectedOptions: selectedPaiss, selected2:{}">
                                                         </select>
                                                     </section>
+                                                    <section class="col col-md-2">
+                                                        <label class="label" data-i18n="informes.fechaCreacionDesde">Fecha entrega:</label>
+                                                        <label class="input">
+                                                            <input id="txtFechaCreacionDesde5" name="txtFechaCreacionDesde5" data-bind="value: fechaCreacionDesde5" class="datepicker" data-dateformat="dd/mm/yy">
+                                                        </label>
+                                                    </section>
+                                                    <section class="col col-md-2">
+                                                        <label class="label" data-i18n="informes.fechaCreacionHasta">Fecha entrega:</label>
+                                                        <label class="input">
+                                                            <input id="txtFechaCreacionHasta5" name="txtFechaCreacionHasta5" data-bind="value: fechaCreacionHasta5" class="datepicker" data-dateformat="dd/mm/yy">
+                                                        </label>
+                                                    </section>                                                    
                                                 </div>
                                             </fieldset>
                                             <fieldset>
