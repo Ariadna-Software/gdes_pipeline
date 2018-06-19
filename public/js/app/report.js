@@ -197,6 +197,9 @@ var apiReport = {
                 $("#cmbPaiss3").val([usuario.paisId]).trigger('change');
                 $('#cmbPaiss3').prop('disabled', 'disabled');      
                 //
+                $("#cmbPaiss4").val([usuario.paisId]).trigger('change');
+                $('#cmbPaiss4').prop('disabled', 'disabled');      
+                //
                 $("#cmbPaiss5").val([usuario.paisId]).trigger('change');
                 $('#cmbPaiss5').prop('disabled', 'disabled');                             
             }
