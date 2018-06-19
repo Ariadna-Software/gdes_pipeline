@@ -17,7 +17,7 @@ var apiPaginaLogin = {
         var email = apiComunGeneral.gup("email");
         var error = apiComunGeneral.gup("error");
         if (error != "") {
-            if (error = "LOGOUT") {
+            if (error == "LOGOUT") {
                 apiComunGeneral.deleteCookie('usuario');
                 window.open('https://login.microsoftonline.com/common/oauth2/logout', '_self');
             }

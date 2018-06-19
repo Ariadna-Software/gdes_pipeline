@@ -26,6 +26,7 @@ var OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 
 // Application Insights
 var appInsights = require('applicationinsights');
+// 28e92a57-d1d3-4f63-ad59-3449a868b01a
 appInsights.setup('28e92a57-d1d3-4f63-ad59-3449a868b01a');
 appInsights.start();
 
