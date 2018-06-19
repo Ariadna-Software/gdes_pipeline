@@ -64,6 +64,7 @@ var apiComunGeneral = {
             if (err) return;
             if (!data.version) return this.mostrarMensaje('No se pudo obtener version');
             $("#version").text(data.version);
+            $("#version2").text(data.version);
         });
     },
     mostrarMensaje: function (mensaje) {

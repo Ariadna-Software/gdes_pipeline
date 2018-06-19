@@ -146,14 +146,14 @@ var apiPaginaOfertasGeneral = {
         if (!estado) {
             estado = [];
             estado.push("true", "true", "true", "true", "true", "true", "true", "true");
-            for (var i = 8; i < 33; i++) {
+            for (var i = 8; i < 32; i++) {
                 tabla.columns(i).visible(false);
                 estado.push(tabla.columns(i).visible()[0]);
             }
             estado.push("true");
         } else {
             var booleana = estado.split(",")
-            for (var j = 0; j < 33; j++) {
+            for (var j = 0; j < 32; j++) {
                 if (booleana[j] == "true") booleana[j] = true;
                 else if (booleana[j] == "false") booleana[j] = false;
                 tabla.columns(j).visible(booleana[j]);
@@ -198,7 +198,7 @@ var apiPaginaOfertasGeneral = {
 
     guardarConfiguracion: function () {
         var conf = [];
-        for (var i = 0; i < 33; i++) {
+        for (var i = 0; i < 32; i++) {
             conf.push(tabla.columns(i).visible()[0]);
         }
         setCookie('confOferta' + usuario.nombre, conf, 10000);
