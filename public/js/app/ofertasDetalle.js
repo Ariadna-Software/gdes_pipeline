@@ -229,7 +229,7 @@ var apiPaginaOfertasDetalle = {
         vm.version(data.version);
         vm.multiplicador(data.multiplicador);
         anteriorMultiplicador = vm.multiplicador();
-        anteriorEstado = vm.sEstado();
+        anteriorEstado = data.estadoId;
         // vrs 2.0.1
         vm.ubicacion(data.ubicacion);
         vm.paisUbicacion(data.paisUbicacion);
