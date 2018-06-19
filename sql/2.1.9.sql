@@ -1,2 +1,2 @@
-ALTER TABLE `gdes_pipeline_test`.`usuarios`   
+ALTER TABLE `usuarios`   
   ADD COLUMN `veInformes` BOOL DEFAULT FALSE NULL AFTER `emailAzure`;

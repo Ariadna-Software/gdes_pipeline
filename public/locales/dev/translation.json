@@ -51,7 +51,8 @@
         },
         "gestion": {
             "cab": "Gestión",
-            "ofertas": "Ofertas"
+            "ofertas": "Ofertas",
+            "ofertasCorta": "Ofertas cortas"
         },
         "importacion": {
             "cab": "Importar datos",

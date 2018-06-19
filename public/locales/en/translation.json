@@ -51,7 +51,8 @@
         },
         "gestion": {
             "cab": "Pool",
-            "ofertas": "Deals"
+            "ofertas": "Deals",
+            "ofertasCorta": "Short deals"
         },
         "importacion": {
             "cab": "Import data",

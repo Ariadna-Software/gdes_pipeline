@@ -126,8 +126,8 @@ var apiPaginaOfertasGeneral = {
             data: "ofertaId",
             render: function (data, type, row) {
                 var bt1 = "<button class='btn btn-circle btn-danger' onclick='apiPaginaOfertasGeneral.eliminar(" + data + ");' title='Eliminar registro'> <i class='fa fa-trash-o fa-fw'></i> </button>";
-                var bt3 = "<button class='btn btn-circle btn-success' onclick='apiPaginaOfertasGeneral.editar(" + data + ");' title='Editar registro'> <i class='fa fa-edit fa-fw'></i> </button>";
-                var html = "<div class='pull-right'>" + bt1 + " " + bt3 + "</div>";
+                var bt2 = "<button class='btn btn-circle btn-primary' onclick='apiPaginaOfertasGeneral.editar2(" + data + ");' title='Editar registro'> <i class='fa fa-edit fa-fw'></i> </button>";
+                var html = "<div class='pull-right'>" + bt1 + " " + bt2  + "</div>";
                 return html;
             }
         }];
@@ -160,9 +160,9 @@ var apiPaginaOfertasGeneral = {
         }
     },
     cargarOfertas: function () {
-        var url = myconfig.apiUrl + "/api/ofertas/seguidores/" + usuario.responsableId + "/" + usuario.usuarioId;
+        var url = myconfig.apiUrl + "/api/ofertas-cortas/seguidores/" + usuario.responsableId + "/" + usuario.usuarioId;
         // if (usuario.verOfertasGrupo) url = myconfig.apiUrl + "/api/ofertas/responsable/grupo/" + usuario.responsableId;
-        if (usuario.esAdministrador) url = myconfig.apiUrl + "/api/ofertas";
+        if (usuario.esAdministrador) url = myconfig.apiUrl + "/api/ofertas/cortas";
         apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
             if (err) return;
             apiPaginaOfertasGeneral.cargarOfertasTabla(data);

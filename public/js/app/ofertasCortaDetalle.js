@@ -737,7 +737,7 @@ var apiPaginaOfertasDetalle = {
         return validos;
     },
     salir: function () {
-        window.open(sprintf('OfertasGeneral.html'), '_self');
+        window.open(sprintf('OfertasCortaGeneral.html'), '_self');
     },
     cargarTipoOfertas: function (id) {
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-oferta", null, function (err, data) {
