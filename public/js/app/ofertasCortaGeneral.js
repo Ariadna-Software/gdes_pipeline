@@ -160,7 +160,7 @@ var apiPaginaOfertasGeneral = {
         }
     },
     cargarOfertas: function () {
-        var url = myconfig.apiUrl + "/api/ofertas-cortas/seguidores/" + usuario.responsableId + "/" + usuario.usuarioId;
+        var url = myconfig.apiUrl + "/api/ofertas/seguidores-corta/" + usuario.responsableId + "/" + usuario.usuarioId;
         // if (usuario.verOfertasGrupo) url = myconfig.apiUrl + "/api/ofertas/responsable/grupo/" + usuario.responsableId;
         if (usuario.esAdministrador) url = myconfig.apiUrl + "/api/ofertas/cortas";
         apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
