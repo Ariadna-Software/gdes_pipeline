@@ -45,12 +45,16 @@
     <header id="header" style="background-color:#FFFFFF; background-image:none;">
         <!-- #PROJECTS: projects dropdown -->
         <div>
-            <span id="logo"> <img src="/img/logo_gdes.png" alt="GDES-PIPELINE"> </span>
+            <span id="logo">
+                <img src="/img/logo_gdes.png" alt="GDES-PIPELINE"> </span>
         </div>
         <div>
         </div>
         <div style="padding-left:5px">
-            <h1><span data-i18n="app_titulo">GDES PIPELINE</span> <span id="version2">NO VERSION</span></h1>
+            <h1>
+                <span data-i18n="app_titulo">GDES PIPELINE</span>
+                <span id="version2">NO VERSION</span>
+            </h1>
         </div>
         <div class="pull-right">
             <div id="hide-menu" class="btn-header pull-right">
@@ -76,17 +80,24 @@
             </div>
             <ul class="header-dropdown-list hidden-xs">
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img id="language-flag" src="img/blank.gif" class="flag flag-es" alt="Español (España)"> <span id="language-abrv"> ES</span> <i class="fa fa-angle-down"></i> </a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img id="language-flag" src="img/blank.gif" class="flag flag-es" alt="Español (España)">
+                        <span id="language-abrv"> ES</span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
                     <ul class="dropdown-menu pull-right">
                         <li>
-                            <a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('en');"><img src="img/blank.gif" class="flag flag-us" alt="en-US"> English (US)</a>
+                            <a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('en');">
+                                <img src="img/blank.gif" class="flag flag-us" alt="en-US"> English (US)</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('es');"><img src="img/blank.gif" class="flag flag-es" alt="es"> Español (España)</a>
+                            <a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('es');">
+                                <img src="img/blank.gif" class="flag flag-es" alt="es"> Español (España)</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('fr');"><img src="img/blank.gif" class="flag flag-fr" alt="es"> Français (France)</a>
-                        </li>                        
+                            <a href="javascript:void(0);" onclick="apiComunIdiomas.cambiaIdioma('fr');">
+                                <img src="img/blank.gif" class="flag flag-fr" alt="es"> Français (France)</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -98,7 +109,7 @@
                 <a href="javascript:void(0);" id="show-shortcut">
                     <i class="fa fa-user fa-2x"></i>
                     <span id="nombreUsuario"></span>
-            </a>
+                </a>
             </span>
         </div>
         <!-- NAVIGATION : -->
@@ -106,12 +117,14 @@
             <ul>
                 <li id="inicio">
                     <a href="index.html" title="Inicio">
-                        <i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent" data-i18n="menu.inicio">INICIO</span>
+                        <i class="fa fa-lg fa-fw fa-home"></i>
+                        <span class="menu-item-parent" data-i18n="menu.inicio">INICIO</span>
                     </a>
                 </li>
                 <li id="administracion">
                     <a href="#">
-                        <i class="fa fa-lg fa-fw fa-bank"></i> <span class="menu-item-parent" data-i18n="menu.administracion.cab">ADMINISTRACIÓN</span>
+                        <i class="fa fa-lg fa-fw fa-bank"></i>
+                        <span class="menu-item-parent" data-i18n="menu.administracion.cab">ADMINISTRACIÓN</span>
                     </a>
                     <ul>
                         <li id="parametros">
@@ -119,7 +132,7 @@
                                 <i class="fa fa-cogs"></i>
                                 <span data-i18n="menu.administracion.parametros">Parametros</span>
                             </a>
-                        </li>                        
+                        </li>
                         <li id="gruposUsuarios">
                             <a href="GruposUsuariosGeneral.html">
                                 <i class="fa fa-users"></i>
@@ -128,121 +141,144 @@
                         </li>
                         <li id="usuarios">
                             <a href="UsuariosGeneral.html">
-                                <i class="fa fa-user"></i> <span data-i18n="menu.administracion.usuarios">Usuarios</span>
+                                <i class="fa fa-user"></i>
+                                <span data-i18n="menu.administracion.usuarios">Usuarios</span>
                             </a>
                         </li>
                         <li id="responsables">
                             <a href="ResponsablesGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.responsables">Responsables</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.responsables">Responsables</span>
                             </a>
                         </li>
                         <li id="empresas">
                             <a href="EmpresasGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.empresas">Empresas</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.empresas">Empresas</span>
                             </a>
                         </li>
                         <li id="paises">
                             <a href="PaisesGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.paises">Paises</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.paises">Paises</span>
                             </a>
                         </li>
                         <li id="areas">
                             <a href="AreasGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.areas">Areas</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.areas">Areas</span>
                             </a>
                         </li>
                         <li id="razonPerdida">
                             <a href="RazonPerdidaGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.razonPerdida">RZ PERD</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.razonPerdida">RZ PERD</span>
                             </a>
                         </li>
                         <li id="centros">
                             <a href="CentrosGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.centros">Centros</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.centros">Centros</span>
                             </a>
                         </li>
                         <li id="servicios">
                             <a href="ServiciosGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.servicios">Servicios</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.servicios">Servicios</span>
                             </a>
                         </li>
                         <li id="fasesOferta">
                             <a href="FasesOfertaGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.fasesOferta">FasesOferta</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.fasesOferta">FasesOferta</span>
                             </a>
                         </li>
                         <li id="gruposActividades">
                             <a href="GruposActividadesGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.gruposActividades">GruposActividades</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.gruposActividades">GruposActividades</span>
                             </a>
                         </li>
                         <li id="tiposActividades">
                             <a href="TiposActividadesGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.tiposActividades">TiposActividades</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.tiposActividades">TiposActividades</span>
                             </a>
                         </li>
                         <li id="tiposSoporte">
                             <a href="TiposSoporteGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.tiposSoporte">TiposSoporte</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.tiposSoporte">TiposSoporte</span>
                             </a>
                         </li>
                         <li id="tiposOferta">
                             <a href="TiposOfertaGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.tiposOferta">TiposOferta</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.tiposOferta">TiposOferta</span>
                             </a>
                         </li>
                         <li id="tiposOportunidad">
                             <a href="TiposOportunidadGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.tiposOportunidad">TiposOportunidad</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.tiposOportunidad">TiposOportunidad</span>
                             </a>
                         </li>
                         <li id="tiposContrato">
                             <a href="TiposContratoGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.tiposContrato">TiposContrato</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.tiposContrato">TiposContrato</span>
                             </a>
                         </li>
                         <li id="proyectos">
                             <a href="ProyectosGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.proyectos">Proyectos</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.proyectos">Proyectos</span>
                             </a>
                         </li>
                         <li id="centrosEstablecidos">
                             <a href="CentrosEstablecidosGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.centrosEstablecidos">CentrosEstablecidos</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.centrosEstablecidos">CentrosEstablecidos</span>
                             </a>
                         </li>
                         <li id="divisas">
                             <a href="DivisasGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.divisas">Divisas</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.divisas">Divisas</span>
                             </a>
                         </li>
                         <li id="ubicaciones">
                             <a href="UbicacionesGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.ubicaciones">Ubicaciones</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.ubicaciones">Ubicaciones</span>
                             </a>
                         </li>
                         <li id="unidadesNegocio">
                             <a href="UnidadesNegocioGeneral.html">
-                                <i class="fa fa-cog"></i> <span data-i18n="menu.administracion.unidadesNegocio">UnidadesNegocio</span>
+                                <i class="fa fa-cog"></i>
+                                <span data-i18n="menu.administracion.unidadesNegocio">UnidadesNegocio</span>
                             </a>
-                        </li> 
+                        </li>
                     </ul>
                 </li>
                 <li id="importacion">
                     <a href="#">
-                        <i class="fa fa-lg fa-fw fa-cloud"></i> <span class="menu-item-parent" data-i18n="menu.importacion.cab">Importacion</span>
+                        <i class="fa fa-lg fa-fw fa-cloud"></i>
+                        <span class="menu-item-parent" data-i18n="menu.importacion.cab">Importacion</span>
                     </a>
                     <ul>
                         <li id="ofertas">
                             <a href="Importacion.html">
-                                <i class="fa fa-fw fa-file"></i> <span data-i18n="menu.importacion.excel">Excel</span>
+                                <i class="fa fa-fw fa-file"></i>
+                                <span data-i18n="menu.importacion.excel">Excel</span>
                             </a>
                         </li>
                     </ul>
-                </li>                
+                </li>
                 <li id="gestion">
                     <a href="#">
-                        <i class="fa fa-lg fa-fw fa-puzzle-piece"></i> <span class="menu-item-parent" data-i18n="menu.gestion.cab">GESTION</span>
+                        <i class="fa fa-lg fa-fw fa-puzzle-piece"></i>
+                        <span class="menu-item-parent" data-i18n="menu.gestion.cab">GESTION</span>
                     </a>
                     <ul>
                         <li id="ofertas">
@@ -256,24 +292,28 @@
                                 <i class="fa fa-fw fa-file-o"></i>
                                 <span data-i18n="menu.gestion.ofertasCorta">OferTas</span>
                             </a>
-                        </li>  
+                        </li>
                     </ul>
                 </li>
                 <li id="informes">
                     <a href="#">
-                        <i class="fa fa-lg fa-fw fa-edit"></i> <span class="menu-item-parent" data-i18n="menu.informes.cab">GESTION</span>
+                        <i class="fa fa-lg fa-fw fa-edit"></i>
+                        <span class="menu-item-parent" data-i18n="menu.informes.cab">GESTION</span>
                     </a>
                     <ul>
                         <li id="inf">
                             <a href="Report.html">
-                                <i class="fa fa-fw fa-edit"></i> <span data-i18n="menu.informes.inf">OferTas</span>
+                                <i class="fa fa-fw fa-edit"></i>
+                                <span data-i18n="menu.informes.inf">OferTas</span>
                             </a>
                         </li>
                     </ul>
-                </li>                
+                </li>
 
         </nav>
-        <span class="minifyme" data-action="minifyMenu"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+        <span class="minifyme" data-action="minifyMenu">
+            <i class="fa fa-arrow-circle-left hit"></i>
+        </span>
     </aside>
     <!-- END NAVIGATION -->
     <!-- MAIN PANEL -->
@@ -287,7 +327,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="page-title txt-color-blueDark">
-                        <i class="fa-fw fa fa-cogs"></i> <span data-i18n="parametros.titulo">Centros</span> <a href="#" title="Ayuda"><i class="fa fa-question"></i></a>
+                        <i class="fa-fw fa fa-cogs"></i>
+                        <span data-i18n="parametros.titulo">Centros</span>
+                        <a href="#" title="Ayuda">
+                            <i class="fa fa-question"></i>
+                        </a>
                     </h1>
                 </div>
                 <!-- end col -->
@@ -298,7 +342,9 @@
                     <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
                             <header>
-                                <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+                                <span class="widget-icon">
+                                    <i class="fa fa-edit"></i>
+                                </span>
                                 <h2 data-i18n="parametros.panel"> Panel</h2>
                             </header>
                             <div class="row">
@@ -326,6 +372,30 @@
                                                 </label>
                                             </section>
                                         </div>
+                                        <div class="row">
+                                            <section class="col col-md-12">
+                                                <label class="label" data-i18n="parametros.docAppSpain">PSPAIN:</label>
+                                                <label class="textarea textarea-resizable">
+                                                    <textarea id="txtDocAppSpain" rows="5" class="custom-scroll" data-bind="value:docAppSpain"></textarea>
+                                                </label>
+                                            </section>
+                                        </div>
+                                        <div class="row">
+                                            <section class="col col-md-12">
+                                                <label class="label" data-i18n="parametros.docAppUk">PSPAIN:</label>
+                                                <label class="textarea textarea-resizable">
+                                                    <textarea id="txtDocAppUk" rows="5" class="custom-scroll" data-bind="value:docAppUk"></textarea>
+                                                </label>
+                                            </section>
+                                        </div>
+                                        <div class="row">
+                                            <section class="col col-md-12">
+                                                <label class="label" data-i18n="parametros.docAppFrance">PSPAIN:</label>
+                                                <label class="textarea textarea-resizable">
+                                                    <textarea id="txtDocAppFrance" rows="5" class="custom-scroll" data-bind="value:docAppFrance"></textarea>
+                                                </label>
+                                            </section>
+                                        </div>
                                     </fieldset>
                                     <fieldset>
                                         <div class="pull-right">
@@ -350,12 +420,18 @@
     <div class="page-footer">
         <div class="row">
             <div class="col-xs-12 col-sm-6">
-                <span class="txt-color-white">GDES-PIPELINE <span id="version">NO VERSION</span> <span class="hidden-xs"> - Aplicación general</span> © Ariadna Software S.L. 2017-2018</span>
+                <span class="txt-color-white">GDES-PIPELINE
+                    <span id="version">NO VERSION</span>
+                    <span class="hidden-xs"> - Aplicación general</span> © Ariadna Software S.L. 2017-2018</span>
             </div>
             <div class="col-xs-6 col-sm-6 text-right hidden-xs">
                 <div class="txt-color-white inline-block">
-                    <i class="txt-color-blueLight hidden-mobile"><i class="fa fa-phone"></i> <strong> &nbsp;</strong>
-                    <i class="fa fa-envelope"></i> <strong> &nbsp;</strong> </i>
+                    <i class="txt-color-blueLight hidden-mobile">
+                        <i class="fa fa-phone"></i>
+                        <strong> &nbsp;</strong>
+                        <i class="fa fa-envelope"></i>
+                        <strong> &nbsp;</strong>
+                    </i>
                 </div>
             </div>
         </div>
@@ -402,11 +478,11 @@
     <!-- Funciones propias de esta página -->
     <script src="js/app/parametrosDetalle.js"></script>
     <script type="text/javascript">
-    (function($) {
-        $(document).ready(function() {
-            apiPaginaParametrosDetalle.ini();
-        });
-    })(jQuery);
+        (function ($) {
+            $(document).ready(function () {
+                apiPaginaParametrosDetalle.ini();
+            });
+        })(jQuery);
     </script>
 </body>
 

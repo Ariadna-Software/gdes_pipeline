@@ -36,6 +36,9 @@ var apiPaginaParametrosDetalle = {
         vm.valorInicialAno(data.valorInicialAno);
         vm.anoEnCurso(data.anoEnCurso);
         vm.valorActualAno(data.valorActualAno);
+        vm.docAppSpain(data.docAppSpain);
+        vm.docAppUk(data.docAppUk);
+        vm.docAppFrance(data.docAppFrance);
     },
     datosPagina: function () {
         var self = this;
@@ -43,6 +46,9 @@ var apiPaginaParametrosDetalle = {
         self.valorInicialAno = ko.observable();
         self.anoEnCurso = ko.observable();
         self.valorActualAno = ko.observable();
+        self.docAppSpain = ko.observable();
+        self.docAppUk = ko.observable();
+        self.docAppFrance = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaParametrosDetalle.datosOk()) return;
@@ -50,7 +56,10 @@ var apiPaginaParametrosDetalle = {
             parametrosId: 0,
             valorInicialAno: vm.valorInicialAno(),
             anoEnCurso: vm.anoEnCurso(),
-            valorActualAno:vm.valorActualAno()
+            valorActualAno:vm.valorActualAno(),
+            docAppSpain: vm.docAppSpain(),
+            docAppUk: vm.docAppUk(),
+            docAppFrance: vm.docAppFrance()
         };
         var verb = "PUT";
         apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/parametros", data, function(err, data){

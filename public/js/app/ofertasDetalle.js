@@ -70,6 +70,11 @@ var apiPaginaOfertasDetalle = {
 
         $('#cmbPaiss').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarPaiss();
+        $("#cmbPaiss").select2().on('change', function (e) {
+            if (e.added && e.added.id) {
+                apiPaginaOfertasDetalle.cambioDocumentosAplicables(e.added.id);
+            }
+        });
 
         $('#cmbEmpresas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarEmpresas();
@@ -185,6 +190,7 @@ var apiPaginaOfertasDetalle = {
                 vm.numeroOferta(data.numeroOferta);
                 vm.codigoOferta(data.codigoOferta);
             });
+            if (usuario.paisId) apiPaginaOfertasDetalle.cambioDocumentosAplicables(usuario.paisId);
         } else {
             apiPaginaOfertasDetalle.cargarOferta(ofertaId);
             apiSeguidores.cargarSeguidores(ofertaId);
@@ -200,7 +206,7 @@ var apiPaginaOfertasDetalle = {
     cargarDatosPagina: function (data) {
         vm.ofertaId(data.ofertaId);
         vm.numeroOferta(data.numeroOferta);
-        _contador = data.numeroOferta.split('-')[1];
+        if (data.numeroOferta) _contador = data.numeroOferta.split('-')[1];
         if (data.fechaOferta) vm.fechaOferta(moment(data.fechaOferta).format(i18n.t('util.date_format')));
         if (data.fechaUltimoEstado) vm.fechaUltimoEstado(moment(data.fechaUltimoEstado).format(i18n.t('util.date_format')));
         if (data.fechaLimiteProyecto) vm.fechaLimiteProyecto(moment(data.fechaLimiteProyecto).format(i18n.t('util.date_format')));
@@ -1462,6 +1468,22 @@ var apiPaginaOfertasDetalle = {
     proposalReport: function () {
         var url = "infPR.html?ofertaId=" + vm.ofertaId() + "&type=" + vm.sTipoInforme();
         window.open(url, '_blank');
+    },
+    cambioDocumentosAplicables: function (paisId) {
+        var verb = "GET";
+        var url = myconfig.apiUrl + "/api/paises/" + paisId;
+        apiComunAjax.llamadaGeneral(verb, url, null, function (err, data) {
+            if (err) return;
+            var codPais = data.codPais;
+            var url = myconfig.apiUrl + "/api/parametros/0";
+            apiComunAjax.llamadaGeneral(verb, url, null, function (err, data) {
+                if (err) return;
+                var docApp = data.docAppSpain;
+                if (codPais == "UK") docApp = data.docAppUk;
+                if (codPais == "FR") docApp = data.docAppFrance;
+                vm.documentosEspeciales(docApp);
+            });
+        });
     }
 
 }
