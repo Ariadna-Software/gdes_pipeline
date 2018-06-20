@@ -41,6 +41,7 @@ var apiPaginaEmpresasDetalle = {
         vm.empresaId(data.empresaId);
         vm.nombre(data.nombre);
         apiPaginaEmpresasDetalle.cargarPaiss(data.paisId);
+        vm.cod(data.cod);
     },
     datosPagina: function () {
         var self = this;
@@ -50,13 +51,15 @@ var apiPaginaEmpresasDetalle = {
         self.optionsPaiss = ko.observableArray([]);
         self.selectedPaiss = ko.observableArray([]);
         self.sPais = ko.observable();
+        self.cod = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaEmpresasDetalle.datosOk()) return;
         var data = {
             empresaId: vm.empresaId(),
             nombre: vm.nombre(),
-            paisId: vm.sPais()
+            paisId: vm.sPais(),
+            cod: vm.cod()
         };
         var verb = "PUT";
         if (vm.empresaId() == 0) verb = "POST";
@@ -68,7 +71,8 @@ var apiPaginaEmpresasDetalle = {
     datosOk: function(){
         $('#empresa-form').validate({
             rules: {
-                txtNombre: { required: true }
+                txtNombre: { required: true },
+                txtCod: { required: true }
             },
             errorPlacement: function (error, element) {
                 error.insertAfter(element.parent());

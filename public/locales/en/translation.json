@@ -47,7 +47,8 @@
             "fasesOferta": "Stages",
             "tiposOportunidad": "Opportunity types",
             "tiposContrato": "Contract types",
-            "razonPerdida": "Reasons loss / no bid"
+            "razonPerdida": "Reasons loss / no bid",
+            "parametros": "Parámetros"
         },
         "gestion": {
             "cab": "Pool",
@@ -542,5 +543,12 @@
     "auth": {
         "noAuth": "You are a domain user, but you do not have permissions assigned to this application. Contact the administrator.",
         "repetir": "Try again"
+    },
+    "parametros": {
+        "valorInicialAno": "Contador inicial año",
+        "anoEnCurso": "Año del contador",
+        "valorActualAno": "Contador actual",
+        "titulo": "Parámetros",
+        "panel": "Parámetros"
     }
 }

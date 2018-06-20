@@ -47,7 +47,8 @@
             "fasesOferta": "Fases de oferta",
             "tiposOportunidad": "Tipos de oportunidad",
             "tiposContrato": "Tipos de contrato",
-            "razonPerdida": "Razones perdida / no presentación"
+            "razonPerdida": "Razones perdida / no presentación",
+            "parametros": "Parámetros"
         },
         "gestion": {
             "cab": "Gestión",
@@ -574,5 +575,12 @@
     "auth": {
         "noAuth": "Usted es usuario del dominio, pero no tiene permisos asignados para esta aplicación. Póngase en contacto con el administrador.",
         "repetir": "Volverlo a intentar"
+    },
+    "parametros": {
+        "valorInicialAno": "Contador inicial año",
+        "anoEnCurso": "Año del contador",
+        "valorActualAno": "Contador actual",
+        "titulo": "Parámetros",
+        "panel": "Parámetros"
     }
 }

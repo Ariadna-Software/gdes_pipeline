@@ -42,6 +42,7 @@ var apiPaginaAreasDetalle = {
         vm.nombre(data.nombre);
         vm.nombreEN(data.nombreEN);
         vm.nombreFR(data.nombreFR);
+        vm.cod(data.cod);
         apiPaginaAreasDetalle.cargarUnidadNegocio(data.unidadNegocioId);
     },
     datosPagina: function () {
@@ -53,6 +54,7 @@ var apiPaginaAreasDetalle = {
         self.optionsUnidadNegocio = ko.observableArray([]);
         self.selectedUnidadNegocio = ko.observableArray([]);
         self.sUnidadNegocio = ko.observable();
+        self.cod = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaAreasDetalle.datosOk()) return;
@@ -61,7 +63,8 @@ var apiPaginaAreasDetalle = {
             nombre: vm.nombre(),
             nombreEN: vm.nombreEN(),
             nombreFR: vm.nombreFR(),
-            unidadNegocioId: vm.sUnidadNegocio()
+            unidadNegocioId: vm.sUnidadNegocio(),
+            cod: vm.cod()
         };
         var verb = "PUT";
         if (vm.areaId() == 0) verb = "POST";
@@ -73,7 +76,8 @@ var apiPaginaAreasDetalle = {
     datosOk: function(){
         $('#area-form').validate({
             rules: {
-                txtNombre: { required: true }
+                txtNombre: { required: true },
+                txtCod: { required: true }
             },
             errorPlacement: function (error, element) {
                 error.insertAfter(element.parent());

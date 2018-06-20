@@ -30,6 +30,7 @@ var _importeInversionDivisa;
 var _divisaId;
 var _multiplicador;
 var _fechaDivisa;
+var _contador;
 
 
 var apiPaginaOfertasDetalle = {
@@ -169,6 +170,14 @@ var apiPaginaOfertasDetalle = {
             apiPaginaOfertasDetalle.cargarDivisas(1); // Carga por defecto euro
             vm.multiplicador(1); // por defecto multiplicador 1
             vm.ubicacion(usuario.ubicacion);
+            // Obtención de contadores
+            var url = myconfig.apiUrl + "/api/parametros/contadores/" + usuario.empresaId + "/" + usuario.areaId;
+            apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
+                if (err) return;
+                _contador = data.contador;
+                vm.numeroOferta(data.numeroOferta);
+                vm.codigoOferta(data.codigoOferta);
+            });
         } else {
             apiPaginaOfertasDetalle.cargarOferta(ofertaId);
             apiSeguidores.cargarSeguidores(ofertaId);
@@ -184,6 +193,7 @@ var apiPaginaOfertasDetalle = {
     cargarDatosPagina: function (data) {
         vm.ofertaId(data.ofertaId);
         vm.numeroOferta(data.numeroOferta);
+        _contador = data.numeroOferta.split('-')[1];
         if (data.fechaOferta) vm.fechaOferta(moment(data.fechaOferta).format(i18n.t('util.date_format')));
         if (data.fechaUltimoEstado) vm.fechaUltimoEstado(moment(data.fechaUltimoEstado).format(i18n.t('util.date_format')));
         if (data.fechaLimiteProyecto) vm.fechaLimiteProyecto(moment(data.fechaLimiteProyecto).format(i18n.t('util.date_format')));

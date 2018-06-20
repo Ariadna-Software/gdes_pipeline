@@ -47,7 +47,8 @@
             "fasesOferta": "Phases d'Offre",
             "tiposOportunidad": "Types d'opportunités",
             "tiposContrato": "Types de contrat",
-            "razonPerdida": "Raisons perte / non-présentation"
+            "razonPerdida": "Raisons perte / non-présentation",
+            "parametros": "Parámetros"
         },
         "gestion": {
             "cab": "Gestion",
@@ -543,5 +544,12 @@
     "auth": {
         "noAuth": "Vous êtes un utilisateur de domaine, mais vous n'avez pas d'autorisations affectées à cette application. Contactez l'administrateur.",
         "repetir": "Essayez à nouveau"
+    },
+    "parametros": {
+        "valorInicialAno": "Contador inicial año",
+        "anoEnCurso": "Año del contador",
+        "valorActualAno": "Contador actual",
+        "titulo": "Parámetros",
+        "panel": "Parámetros"
     }
 }
