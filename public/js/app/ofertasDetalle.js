@@ -102,6 +102,13 @@ var apiPaginaOfertasDetalle = {
 
         $('#cmbFasesOferta').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarFasesOferta();
+        $("#cmbFasesOferta").select2().on('change', function (e) {
+            if (e.added && e.added.id != 0) {
+                var c1 = "OP-" + _contador;
+                vm.numeroOferta(c1);
+                vm.codigoOferta(c1);
+            }
+        });
 
         $('#cmbTiposOportunidad').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaOfertasDetalle.cargarTiposOportunidad();
