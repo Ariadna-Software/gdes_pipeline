@@ -461,7 +461,8 @@
         "autorizacion1": "Approves the director of the service area",
         "autorizacion2": "Requires PPR and joint authorization from CM and director of BU",
         "autorizacion3": "Requires PPR and bid committee. Approve CEO",
-        "documentosEspeciales": "Applicable documents"
+        "documentosEspeciales": "Applicable documents",
+        "financieros": "FINANCIALS"
     },
     "proyectos": {
         "titulo": "Projects",

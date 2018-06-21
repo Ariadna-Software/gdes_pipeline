@@ -12,7 +12,7 @@
     <DataSources isList="true" count="1">
       <Ofertas Ref="3" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
         <Alias>Ofertas</Alias>
-        <Columns isList="true" count="55">
+        <Columns isList="true" count="56">
           <value>ofertaId,System.Int32</value>
           <value>nombreCorto,System.String</value>
           <value>cliente,System.String</value>
@@ -68,6 +68,7 @@
           <value>subcontrataSN,System.Boolean</value>
           <value>importeTotal,System.Decimal</value>
           <value>observaciones,System.String</value>
+          <value>financieros,System.String</value>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
@@ -87,7 +88,7 @@ o.subrogacionSN, o.subrogacionTXT, o.condicionesEstandarSN, o.condicionesEstanda
 o.puntosRelevantes, o.riesgos,
 o.estrategiaGDES, o.diferencialGDES, o.sinergias,
 o.probabilidad, o.documentosEspeciales, o.descripcion, subrogacionNum,
-u2.nombre as usuario, o.anexos,
+u2.nombre as usuario, o.anexos, o.financieros,
 o.notasPlanning, o.subrogacionTXT, o.subcontrataSN, o.subcontrataTXT,o.uteTXT,
 o.importeAnual, o.importeTotal, o.observaciones
 FROM ofertas AS o
@@ -3941,6 +3942,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <VertAlignment>Center</VertAlignment>
         </Text111>
         <Text121 Ref="164" type="Text" isKey="true">
+          <AllowHtmlTags>True</AllowHtmlTags>
           <Brush>Transparent</Brush>
           <ClientRectangle>0,2,17,15.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -3953,9 +3955,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Parent isRef="161" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
           <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <Text>{Ofertas.financieros}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-          <Type>Expression</Type>
+          <TextQuality>Wysiwyg</TextQuality>
+          <Type>DataColumn</Type>
         </Text121>
         <Text110 Ref="165" type="Text" isKey="true">
           <Brush>Transparent</Brush>
@@ -4592,10 +4596,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/20/2018 6:30:29 PM</ReportChanged>
+  <ReportChanged>6/21/2018 9:07:21 AM</ReportChanged>
   <ReportCreated>5/7/2018 1:08:45 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\proposal_report.mrt</ReportFile>
-  <ReportGuid>58d25dc5b1cd47ef83665ced18923dc6</ReportGuid>
+  <ReportGuid>8cf091528ee0404d972a7ad56654ca84</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
