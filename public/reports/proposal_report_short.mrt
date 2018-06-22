@@ -12,7 +12,7 @@
     <DataSources isList="true" count="1">
       <Ofertas Ref="3" type="Stimulsoft.Report.Dictionary.StiMySqlSource" isKey="true">
         <Alias>Ofertas</Alias>
-        <Columns isList="true" count="53">
+        <Columns isList="true" count="57">
           <value>ofertaId,System.Int32</value>
           <value>nombreCorto,System.String</value>
           <value>cliente,System.String</value>
@@ -66,6 +66,10 @@
           <value>importeAnual,System.Decimal</value>
           <value>subcontrataSN,System.Boolean</value>
           <value>financieros,System.String</value>
+          <value>uteTXT,System.String</value>
+          <value>importeTotal,System.Decimal</value>
+          <value>observaciones,System.String</value>
+          <value>responsableOferta,System.String</value>
         </Columns>
         <CommandTimeout>30</CommandTimeout>
         <Dictionary isRef="1" />
@@ -85,15 +89,17 @@ o.subrogacionSN, o.subrogacionTXT, o.condicionesEstandarSN, o.condicionesEstanda
 o.puntosRelevantes, o.riesgos,
 o.estrategiaGDES, o.diferencialGDES, o.sinergias,
 o.probabilidad, o.documentosEspeciales, o.descripcion, subrogacionNum,
-u2.nombre as usuario, o.anexos,
-o.notasPlanning, o.subrogacionTXT, o.subcontrataTXT,o.subcontrataSN,
-o.importeAnual, o.financieros
+u2.nombre AS usuario, o.anexos, o.financieros,
+o.notasPlanning, o.subrogacionTXT, o.subcontrataSN, o.subcontrataTXT,o.uteTXT,
+o.importeAnual, o.importeTotal, o.observaciones,
+u3.nombre AS responsableOferta
 FROM ofertas AS o
 LEFT JOIN areas AS a ON a.areaId = o.areaId
 LEFT JOIN empresas AS e ON e.empresaId = o.empresaId
 LEFT JOIN usuarios AS u ON u.usuarioId = o.responsableId
-LEFT JOIN usuarios as u2 ON u2.usuarioId = o.usuarioId
+LEFT JOIN usuarios AS u2 ON u2.usuarioId = o.usuarioId
 LEFT JOIN tipos_oportunidad AS tpo ON tpo.tipoOportunidadId = o.tipoOportunidadId
+LEFT JOIN (SELECT u.usuarioId, u2.nombre FROM  usuarios AS u LEFT JOIN usuarios AS u2 ON u2.usuarioId = u.responsableId) AS u3 ON u3.usuarioId = o.usuarioId
 WHERE o.ofertaId = {ofertaId}</SqlCommand>
       </Ofertas>
     </DataSources>
@@ -862,7 +868,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Name>Text16</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
-          <Text>{Ofertas.usuario}</Text>
+          <Text>{Ofertas.responsable}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>DataColumn</Type>
@@ -891,9 +897,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Name>Text18</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
-          <Text>{Ofertas.responsable}</Text>
+          <Text>{Ofertas.responsableOferta}</Text>
           <TextBrush>Black</TextBrush>
-          <Type>Expression</Type>
+          <Type>DataColumn</Type>
         </Text18>
         <Text19 Ref="25" type="Text" isKey="true">
           <Brush>Transparent</Brush>
@@ -3790,10 +3796,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/21/2018 9:08:37 AM</ReportChanged>
+  <ReportChanged>6/22/2018 1:36:54 PM</ReportChanged>
   <ReportCreated>5/7/2018 1:08:45 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\proposal_report_short.mrt</ReportFile>
-  <ReportGuid>1fc54c610f78425381c0bf395778eccf</ReportGuid>
+  <ReportGuid>2282994c2edc4420bcda2cdf1b8de811</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>

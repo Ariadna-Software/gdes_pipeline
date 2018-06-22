@@ -1657,10 +1657,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/18/2018 4:50:36 PM</ReportChanged>
+  <ReportChanged>6/22/2018 1:27:24 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T1TB1.mrt</ReportFile>
-  <ReportGuid>b3b9c49f7a89424ba14f0afce07f0321</ReportGuid>
+  <ReportGuid>b835cc757303425ab6b1a250f27f3bd8</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
