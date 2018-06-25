@@ -643,6 +643,8 @@ var apiPaginaOfertasDetalle = {
             data.version = 0;
             apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
                 if (err) return;
+                // Aun en el alta se guarda una versión 0
+                apiPaginaOfertasDetalle.guardarVersion(0);
                 if (vm.sEstado() != anteriorEstado) {
                     var data = {
                         asunto: "Cambio estado OFERTA: " + vm.nombreCorto(),

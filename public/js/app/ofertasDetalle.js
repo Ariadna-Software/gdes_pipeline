@@ -529,6 +529,12 @@ var apiPaginaOfertasDetalle = {
         self.anexos = ko.observable();
 
         self.financieros = ko.observable();
+
+        // campos para mantenimiento de versiones
+        self.fechaCambio = ko.observable();
+        self.fechaEntregaVersion = ko.observable();
+        self.importePresuestoVersion = ko.observable();
+        self.observacionesVersion = ko.observable();
     },
     aceptar: function () {
         // if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -664,6 +670,9 @@ var apiPaginaOfertasDetalle = {
             data.version = 0;
             apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
                 if (err) return;
+                // Aun en el alta se guarda una versión 0
+                vm.ofertaId(data.ofertaId);
+                apiPaginaOfertasDetalle.guardarVersion(0);
                 if (vm.sEstado() != anteriorEstado) {
                     var data = {
                         asunto: "Cambio estado OFERTA: " + vm.nombreCorto(),
@@ -682,7 +691,7 @@ var apiPaginaOfertasDetalle = {
                 apiComunNotificaciones.mensajeAceptarCancelar(i18n.t("versiones.pregunta"), function () {
                     // SI
                     data.version += 1
-                    apiPaginaOfertasDetalle.guardarVersion(data.version - 1);
+                    apiPaginaOfertasDetalle.guardarVersion(data.version);
                     apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
                         if (err) return;
                         if (vm.sEstado() != anteriorEstado) {
@@ -1227,23 +1236,23 @@ var apiPaginaOfertasDetalle = {
             ofertaId: vm.ofertaId(),
             fechaCambio: moment(new Date()).format('YYYY-MM-DD'),
             usuarioId: usuario.usuarioId,
-            importePresupuesto: _importePresupuesto,
-            importePresupuestoDivisa: _importePresupuestoDivisa,
-            importeUTE: _importeUTE,
-            importeUTEDivisa: _importeUTEDivisa,
-            importeTotal: _importeTotal,
-            importeTotalDivisa: _importeTotalDivisa,
-            margenContribucion: _margenContribucion,
-            importeContribucion: _importeContribucion,
-            importeContribucionDivisa: _importeContribucionDivisa,
-            importeAnual: _importeAnual,
-            importeAnualDivisa: _importeAnualDivisa,
-            importePrimerAno: _importePrimerAno,
-            importePrimerAnoDivisa: _importePrimerAnoDivisa,
-            importeInversion: _importeInversion,
-            importeInversionDivisa: _importeInversionDivisa,
-            divisaId: _divisaId,
-            multiplicador: _multiplicador,
+            importePresupuesto:vm.importePresupuesto(),
+            importePresupuestoDivisa: vm.importePresupuestoDivisa(),
+            importeUTE: vm.importeUTE(),
+            importeUTEDivisa: vm.importeUTEDivisa(),
+            importeTotal: vm.importeTotal(),
+            importeTotalDivisa: vm.importeTotalDivisa(),
+            margenContribucion: vm.margenContribucion(),
+            importeContribucion: vm.importeContribucion(),
+            importeContribucionDivisa: vm.importeContribucionDivisa(),
+            importeAnual: vm.importeAnual(),
+            importeAnualDivisa: vm.importeAnualDivisa(),
+            importePrimerAno: vm.importePrimerAno(),
+            importePrimerAnoDivisa: vm.importePrimerAnoDivisa(),
+            importeInversion: vm.importeInversion(),
+            importeInversionDivisa: vm.importeInversionDivisa(),
+            divisaId: vm.sDivisa(),
+            multiplicador: vm.multiplicador(),
             numVersion: version
         };
         if (_fechaDivisa) data.fechaDivisa = _fechaDivisa;

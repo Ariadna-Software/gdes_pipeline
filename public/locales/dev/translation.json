@@ -401,7 +401,7 @@
         "pais": "Pais",
         "estado": "Estado",
         "tipoSoporte": "Tipo soporte",
-        "responsable": "Responsable",
+        "responsable": "Responsable oferta",
         "centro": "Centro",
         "tipoOferta": "Tipo oferta",
         "tiempoEmpleado": "Tiempo empleado",
@@ -555,7 +555,11 @@
         "importeContribucionDivisa": "Importe contribución (DIVISA)",
         "importeAnualDivisa": "Importe Anual (DIVISA)",
         "importePrimerAnoDivisa": "Importe primer año (DIVISA)",
-        "importeInversionDivisa": "Valor inversion (DIVISA)"
+        "importeInversionDivisa": "Valor inversion (DIVISA)",
+        "titulo": "VERSIONES",
+        "fechaEntrega": "Fecha de entrega",
+        "nroVersion": "Número VRS",
+        "observaciones": "Observaciones"
     },
     "informes": {
         "titulo": "Informes generales",
