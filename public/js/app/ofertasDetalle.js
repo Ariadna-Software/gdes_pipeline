@@ -31,6 +31,7 @@ var _divisaId;
 var _multiplicador;
 var _fechaDivisa;
 var _contador;
+var _versionEnEdicion = null;
 
 
 var apiPaginaOfertasDetalle = {
@@ -531,10 +532,13 @@ var apiPaginaOfertasDetalle = {
         self.financieros = ko.observable();
 
         // campos para mantenimiento de versiones
+        self.nroVersion = ko.observable()
+        self.fechaCambioVersion = ko.observable();     
         self.fechaCambio = ko.observable();
         self.fechaEntregaVersion = ko.observable();
-        self.importePresuestoVersion = ko.observable();
+        self.importePresupuestoVersion = ko.observable();
         self.observacionesVersion = ko.observable();
+        
     },
     aceptar: function () {
         // if (!apiPaginaOfertasDetalle.datosOk()) return;

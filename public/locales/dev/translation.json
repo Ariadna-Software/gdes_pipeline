@@ -557,9 +557,12 @@
         "importePrimerAnoDivisa": "Importe primer año (DIVISA)",
         "importeInversionDivisa": "Valor inversion (DIVISA)",
         "titulo": "VERSIONES",
-        "fechaEntrega": "Fecha de entrega",
+        "fechaEntrega": "Fecha entrega",
         "nroVersion": "Número VRS",
-        "observaciones": "Observaciones"
+        "observaciones": "Observaciones",
+        "nuevo": "Nueva version",
+        "ok": "Aceptar",
+        "cancel": "Cancelar"
     },
     "informes": {
         "titulo": "Informes generales",

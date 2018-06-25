@@ -1386,6 +1386,17 @@
                                             </span>
                                         </header>
                                         <div class="row">
+                                            <form id="versiones-form" class="smart-form">
+                                                <fieldset>
+                                                    <div class="pull-right">
+                                                        <button id="btnNuevaVersion" data-i18n="[title]versiones.nuevo" class="btn btn-success btn-circle btn-lg" >
+                                                            <i class="fa fa-lg fa-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                        <div class="row">
                                             <div id="tb_versiones">
                                                 <table id="dt_versiones" class="table table-striped table-bordered table-hover" width="100%">
                                                     <thead>
@@ -1400,6 +1411,12 @@
                                                             <th data-hide="phone">
                                                                 <span data-i18n="versiones.fechaCambio">FECHA CAMBIO</span>
                                                             </th>
+                                                            <th data-hide="phone">
+                                                                <span data-i18n="versiones.fechaEntrega">FECHA FECHA ENTREGA</span>
+                                                            </th>     
+                                                            <th data-hide="phone">
+                                                                <span data-i18n="versiones.observaciones">FECHA FECHA ENTREGA</span>
+                                                            </th>                                                                                                                    
                                                             <th data-hide="phone">
                                                                 <span data-i18n="versiones.importePresupuesto">IMPORTE PRESUPUESTO</span>
                                                             </th>
@@ -1453,10 +1470,10 @@
                                                             </th>
                                                             <th data-hide="phone">
                                                                 <span data-i18n="versiones.importeInversionDivisa">IMPORTE INVERSION DIVISA</span>
-
-                                                                <th style="text-align: center;" width="8%">
-                                                                    <i class="fa fa-fw fa-cogs text-muted hidden-md hidden-sm hidden-xs"></i>
-                                                                </th>
+                                                            </th>
+                                                            <th style="text-align: center;" width="8%">
+                                                                <i class="fa fa-fw fa-cogs text-muted hidden-md hidden-sm hidden-xs"></i>
+                                                            </th>
                                                         </tr>
                                                     </thead>
                                                 </table>
@@ -1590,7 +1607,7 @@
                         </h4>
                     </div>
                     <div class="modal-body no-padding">
-                        <form id="modalversiones-form" class="smart-form">
+                        <form id="modalVersiones-form" class="smart-form">
                             <fieldset>
                                 <section>
                                     <div class="row">
@@ -1603,30 +1620,33 @@
                                         <section class="col col-md-4">
                                             <label class="label" data-i18n="versiones.fechaCambio">Fecha cambio:</label>
                                             <label class="input">
-                                                <input id="txtFechaCambio" name="txtFechaCambio" data-bind="value: fechaCambio" class="datepicker" data-dateformat="dd/mm/yy" disabled="true">
+                                                <input id="txtFechaCambio" name="txtFechaCambioVersion" data-bind="value: fechaCambioVersion" class="datepicker" data-dateformat="dd/mm/yy"
+                                                    disabled="true">
                                             </label>
                                         </section>
                                         <section class="col col-md-4">
                                             <label class="label" data-i18n="versiones.fechaEntrega">Fecha entrega:</label>
                                             <label class="input">
-                                                <input id="txtFechaEntregaVersion" name="txtFechaEntregaVersion" data-bind="value: fechaEntregaVersion" class="datepicker" data-dateformat="dd/mm/yy">
+                                                <input id="txtFechaEntregaVersion" name="txtFechaEntregaVersion" data-bind="value: fechaEntregaVersion" class="datepicker"
+                                                    data-dateformat="dd/mm/yy">
                                             </label>
                                         </section>
                                         <section class="col col-md-2">
                                             <label class="label" data-i18n="versiones.importePresupuesto">IMP:</label>
                                             <label class="input">
-                                                <input id="txtImportePresupuestoVersion" name="txtImportePresupuestoVersion" data-bind="value: vm.importePresupuestoVersion" disabled="true">
+                                                <input id="txtImportePresupuestoVersion" name="txtImportePresupuestoVersion" data-bind="value: vm.importePresupuestoVersion"
+                                                    disabled="true">
                                             </label>
-                                        </section>                                        
+                                        </section>
                                     </div>
                                     <div class="row">
                                         <section class="col col-md-12">
                                             <label class="label" data-i18n="versiones.observaciones">NotasE:</label>
                                             <label class="textarea textarea-resizable">
-                                                <textarea id="txtObservacionesVersion" rows="3" class="custom-scroll" data-bind="value:observacionesVersion"></textarea>
+                                                <textarea id="txtObservacionesVersion" name="txtObservacionesVersion" rows="3" class="custom-scroll" data-bind="value:observacionesVersion"></textarea>
                                             </label>
                                         </section>
-                                    </div>                                    
+                                    </div>
                                 </section>
                             </fieldset>
                             <footer>
