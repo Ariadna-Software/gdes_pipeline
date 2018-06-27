@@ -43,6 +43,7 @@ var apiInfT1TB1 = {
         apiInfT1TB1.obtainJSON();
     },
     obtainJSON: function () {
+        // forzamos solo ofertas
         var url = "/pwbi/T1TB1?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + url, data, function (err, data) {
             if (err) return;
