@@ -305,16 +305,26 @@
                                 <form id="servicio-form" class="smart-form">
                                     <fieldset>
                                         <div class="row">
-                                            <section class="col col-md-8">
+                                            <section class="col col-md-12">
                                                 <label class="label" data-i18n="servicios.nombre">Nombre:</label>
                                                 <label class="input">
                                                     <input id="txtNombre" name="txtNombre" data-bind="value: nombre">
                                                 </label>
                                             </section>
+                                            <!-- 
                                             <section class="col col-md-4">
                                                 <label class="label" data-i18n="servicios.area">Area:</label>
                                                 <select class="aswselect2" id="cmbAreas" name="cmbAreas" data-bind="options: optionsAreas, optionsText: 'nombre', optionsValue: 'areaId', 
                                                                 value: sArea, valueAllowUnset: true, selectedOptions: selectedAreas, selected2:{}">
+                                                </select>
+                                            </section>                                            
+                                            -->
+                                        </div>
+                                        <div class="row">
+                                            <section class="col col-md-12">
+                                                <label class="label" data-i18n="servicios.area">Area:</label>
+                                                <select class="aswselect2" id="cmbAreas2" name="cmbAreas2" data-bind="options: optionsAreas2, optionsText: 'nombre', optionsValue: 'areaId', 
+                                                                value: sArea2, valueAllowUnset: true, selectedOptions: selectedAreas2, selected2:{}" multiple="multiple">
                                                 </select>
                                             </section>                                            
                                         </div>

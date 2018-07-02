@@ -22,6 +22,10 @@ var apiPaginaServiciosDetalle = {
         $('#cmbAreas').select2(select2_languages[usuario.codigoIdioma]);
         apiPaginaServiciosDetalle.cargarAreas();
 
+        $('#cmbAreas2').select2(select2_languages[usuario.codigoIdioma]);
+        apiPaginaServiciosDetalle.cargarAreasServicios();
+
+
         $('#btnAceptar').click(apiPaginaServiciosDetalle.aceptar);
         $('#btnSalir').click(apiPaginaServiciosDetalle.salir);
 
@@ -44,6 +48,7 @@ var apiPaginaServiciosDetalle = {
         vm.nombreEN(data.nombreEN);
         vm.nombreFR(data.nombreFR);
         apiPaginaServiciosDetalle.cargarAreas(data.areaId);
+        apiPaginaServiciosDetalle.cargarAreasServicios(data.servicioId);
     },
     datosPagina: function () {
         var self = this;
@@ -55,6 +60,10 @@ var apiPaginaServiciosDetalle = {
         self.optionsAreas = ko.observableArray([]);
         self.selectedAreas = ko.observableArray([]);
         self.sArea = ko.observable();
+
+        self.optionsAreas2 = ko.observableArray([]);
+        self.selectedAreas2 = ko.observableArray([]);
+        self.sArea2 = ko.observable();
     },
     aceptar: function () {
         if (!apiPaginaServiciosDetalle.datosOk()) return;
@@ -69,7 +78,13 @@ var apiPaginaServiciosDetalle = {
         if (vm.servicioId() == 0) verb = "POST";
         apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/servicios", data, function(err, data){
             if (err) return;
-            apiPaginaServiciosDetalle.salir();
+            vm.servicioId(data.servicioId);
+            var data2 = vm.selectedAreas2();
+            // dar de alta las áreas relacionadas
+            apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/api/servicios-areas/areas/" + vm.servicioId(), data2, function(err, data){
+                if (err) return;
+                apiPaginaServiciosDetalle.salir();
+            });
         });
     },
     datosOk: function(){
@@ -91,6 +106,25 @@ var apiPaginaServiciosDetalle = {
             $("#cmbAreas").val([id]).trigger('change');
         });
     },    
+    cargarAreasServicios: function (servicioId) {
+        apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/areas", null, function (err, data) {
+            if (err) return;
+            var options = [{ areaId: 0, nombre: " " }].concat(data);
+            vm.optionsAreas2(options);
+        });
+        // si hay un servicio y tiene áreas cargaremos las seleccionadas
+        if (servicioId) {
+            apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/servicios-areas/" + servicioId, null, function (err, data) {
+                if (err) return;
+                var _selectedAreas = [];
+                data.forEach(function(sa) {
+                    _selectedAreas.push(sa.areaId);
+                });
+                vm.selectedAreas2(_selectedAreas);
+                $("#cmbAreas2").val(_selectedAreas).trigger('change');
+            });
+        }
+    },     
     salir: function () {
         window.open(sprintf('ServiciosGeneral.html'), '_self');
     }

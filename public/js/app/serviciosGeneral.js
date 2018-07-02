@@ -24,7 +24,7 @@ var apiPaginaServiciosGeneral = {
         }, {
             data: "nombre"
         }, {
-            data: "nombreArea"
+            data: "areas"
         }, {
             data: "servicioId",
             render: function (data, type, row) {
@@ -59,7 +59,10 @@ var apiPaginaServiciosGeneral = {
         apiComunNotificaciones.mensajeAceptarCancelar(i18n.t("eliminar_pregunta"),function(){
             apiComunAjax.llamadaGeneral("DELETE", myconfig.apiUrl + "/api/servicios/" + id, null, function(err){
                 if (err) return;
-                apiPaginaServiciosGeneral.cargarServicios();
+                apiComunAjax.llamadaGeneral("DELETE", myconfig.apiUrl + "/api/servicios-areas/" + id, null, function(err){
+                    if (err) return;
+                    apiPaginaServiciosGeneral.cargarServicios();
+                })
             })
         }, function(){})
     }
