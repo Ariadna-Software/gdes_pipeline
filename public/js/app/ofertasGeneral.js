@@ -17,14 +17,19 @@ var apiPaginaOfertasGeneral = {
         $('#ofertas').attr('class', 'active');
         $('#ofertas-form').submit(function () { return false; });
         apiPaginaOfertasGeneral.iniOfertasTabla();
-        apiPaginaOfertasGeneral.cargarOfertas();
         $('#btnNuevo').click(apiPaginaOfertasGeneral.nuevo);
         $('#btnNuevo2').click(apiPaginaOfertasGeneral.nuevo2);
+        $('#btnBuscar').click(apiPaginaOfertasGeneral.buscar);
 
         //evento de guardado de configuración
         $(window).unload(apiPaginaOfertasGeneral.guardarConfiguracion);
         $('.ColVis').blur(apiPaginaOfertasGeneral.guardarConfiguracion)
-
+        var _id = apiComunGeneral.gup("id");
+        if (_id) {
+            apiPaginaOfertasGeneral.cargarOfertas(_id);
+        } else {
+            apiPaginaOfertasGeneral.cargarOfertas();
+        }
     },
     iniOfertasTabla: function () {
         var options = apiComunGeneral.initTableOptions('dt_ofertas', usuario.codigoIdioma);
@@ -159,14 +164,24 @@ var apiPaginaOfertasGeneral = {
             }
         }
     },
-    cargarOfertas: function () {
-        var url = myconfig.apiUrl + "/api/ofertas/seguidores/" + usuario.responsableId + "/" + usuario.usuarioId;
-        // if (usuario.verOfertasGrupo) url = myconfig.apiUrl + "/api/ofertas/responsable/grupo/" + usuario.responsableId;
-        if (usuario.esAdministrador) url = myconfig.apiUrl + "/api/ofertas";
-        apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
-            if (err) return;
-            apiPaginaOfertasGeneral.cargarOfertasTabla(data);
-        });
+    cargarOfertas: function (id) {
+        if (!id) {
+            var url = myconfig.apiUrl + "/api/ofertas/seguidores/" + usuario.responsableId + "/" + usuario.usuarioId;
+            // if (usuario.verOfertasGrupo) url = myconfig.apiUrl + "/api/ofertas/responsable/grupo/" + usuario.responsableId;
+            if (usuario.esAdministrador) url = myconfig.apiUrl + "/api/ofertas";
+            apiComunAjax.llamadaGeneral("GET", url, null, function (err, data) {
+                if (err) return;
+                apiPaginaOfertasGeneral.cargarOfertasTabla(data);
+            });
+        } else {
+            apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/ofertas/" + id, null, function (err, data) {
+                if (err) return;
+                var data2 = [];
+                data2.push(data);
+                apiPaginaOfertasGeneral.cargarOfertasTabla(data2);
+            });
+
+        }
     },
     cargarOfertasTabla: function (data) {
         var dt = $('#dt_ofertas').dataTable();
@@ -194,7 +209,9 @@ var apiPaginaOfertasGeneral = {
             })
         }, function () { })
     },
-
+    buscar: function (id) {
+        apiPaginaOfertasGeneral.cargarOfertas();
+    },
     guardarConfiguracion: function () {
         var conf = [];
         for (var i = 0; i < 32; i++) {

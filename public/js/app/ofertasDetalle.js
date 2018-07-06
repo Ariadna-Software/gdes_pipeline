@@ -170,7 +170,7 @@ var apiPaginaOfertasDetalle = {
         });
         CKEDITOR.replace('finantials', {
             language: usuario.codigoIdioma
-        });        
+        });
         ofertaId = apiComunGeneral.gup("id");
         if (ofertaId == 0) {
             vm.ofertaId(0);
@@ -533,12 +533,12 @@ var apiPaginaOfertasDetalle = {
 
         // campos para mantenimiento de versiones
         self.nroVersion = ko.observable()
-        self.fechaCambioVersion = ko.observable();     
+        self.fechaCambioVersion = ko.observable();
         self.fechaCambio = ko.observable();
         self.fechaEntregaVersion = ko.observable();
         self.importePresupuestoVersion = ko.observable();
         self.observacionesVersion = ko.observable();
-        
+
     },
     aceptar: function () {
         // if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -673,6 +673,7 @@ var apiPaginaOfertasDetalle = {
             verb = "POST";
             data.version = 0;
             apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
+                vm.ofertaId(data.ofertaId);
                 if (err) return;
                 // Aun en el alta se guarda una versión 0
                 vm.ofertaId(data.ofertaId);
@@ -686,10 +687,10 @@ var apiPaginaOfertasDetalle = {
                         return;
                     });
                 }
-                apiPaginaOfertasDetalle.salir();
+                apiPaginaOfertasDetalle.salir(vm.ofertaId());
             });
         } else {
-            var verb = "PUT";
+            verb = "PUT";
             if (apiPaginaOfertasDetalle.comprobarCambioDeImportes()) {
                 // tratar el cambio de importes
                 apiComunNotificaciones.mensajeAceptarCancelar(i18n.t("versiones.pregunta"), function () {
@@ -707,7 +708,7 @@ var apiPaginaOfertasDetalle = {
                                 return;
                             });
                         }
-                        apiPaginaOfertasDetalle.salir();
+                        apiPaginaOfertasDetalle.salir(vm.ofertaId());
                     });
                 }, function () {
                     // NO
@@ -722,7 +723,7 @@ var apiPaginaOfertasDetalle = {
                                 return;
                             });
                         }
-                        apiPaginaOfertasDetalle.salir();
+                        apiPaginaOfertasDetalle.salir(vm.ofertaId());
                     });
                 }, i18n.t("versiones.aceptar"), i18n.t("versiones.cancelar"))
             } else {
@@ -737,7 +738,7 @@ var apiPaginaOfertasDetalle = {
                             return;
                         });
                     }
-                    apiPaginaOfertasDetalle.salir();
+                    apiPaginaOfertasDetalle.salir(vm.ofertaId());
                 });
             }
         }
@@ -820,8 +821,10 @@ var apiPaginaOfertasDetalle = {
         }
         return validos;
     },
-    salir: function () {
-        window.open(sprintf('OfertasGeneral.html'), '_self');
+    salir: function (id) {
+        var url = 'OfertasGeneral.html';
+        if (id) url = 'OfertasGeneral.html?id=' + id;
+        window.open(sprintf(url), '_self');
     },
     cargarTipoOfertas: function (id) {
         apiComunAjax.llamadaGeneral("GET", myconfig.apiUrl + "/api/tipos-oferta", null, function (err, data) {
@@ -1235,32 +1238,58 @@ var apiPaginaOfertasDetalle = {
         }
         return this.cambioImporte;
     },
-    guardarVersion: function (version) {
-        var data = {
-            ofertaId: vm.ofertaId(),
-            fechaCambio: moment(new Date()).format('YYYY-MM-DD'),
-            usuarioId: usuario.usuarioId,
-            importePresupuesto:vm.importePresupuesto(),
-            importePresupuestoDivisa: vm.importePresupuestoDivisa(),
-            importeUTE: vm.importeUTE(),
-            importeUTEDivisa: vm.importeUTEDivisa(),
-            importeTotal: vm.importeTotal(),
-            importeTotalDivisa: vm.importeTotalDivisa(),
-            margenContribucion: vm.margenContribucion(),
-            importeContribucion: vm.importeContribucion(),
-            importeContribucionDivisa: vm.importeContribucionDivisa(),
-            importeAnual: vm.importeAnual(),
-            importeAnualDivisa: vm.importeAnualDivisa(),
-            importePrimerAno: vm.importePrimerAno(),
-            importePrimerAnoDivisa: vm.importePrimerAnoDivisa(),
-            importeInversion: vm.importeInversion(),
-            importeInversionDivisa: vm.importeInversionDivisa(),
-            divisaId: vm.sDivisa(),
-            multiplicador: vm.multiplicador(),
-            numVersion: version
-        };
-        if (_fechaDivisa) data.fechaDivisa = _fechaDivisa;
-        apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/api/versiones", data, function (err, data) {
+    guardarVersion: function (version, ofertaId, data) {
+        if (!data) {
+            var data2 = {
+                ofertaId: vm.ofertaId(),
+                fechaCambio: moment(new Date()).format('YYYY-MM-DD'),
+                usuarioId: usuario.usuarioId,
+                importePresupuesto: vm.importePresupuesto(),
+                importePresupuestoDivisa: vm.importePresupuestoDivisa(),
+                importeUTE: vm.importeUTE(),
+                importeUTEDivisa: vm.importeUTEDivisa(),
+                importeTotal: vm.importeTotal(),
+                importeTotalDivisa: vm.importeTotalDivisa(),
+                margenContribucion: vm.margenContribucion(),
+                importeContribucion: vm.importeContribucion(),
+                importeContribucionDivisa: vm.importeContribucionDivisa(),
+                importeAnual: vm.importeAnual(),
+                importeAnualDivisa: vm.importeAnualDivisa(),
+                importePrimerAno: vm.importePrimerAno(),
+                importePrimerAnoDivisa: vm.importePrimerAnoDivisa(),
+                importeInversion: vm.importeInversion(),
+                importeInversionDivisa: vm.importeInversionDivisa(),
+                divisaId: vm.sDivisa(),
+                multiplicador: vm.multiplicador(),
+                numVersion: version
+            };
+        } else {
+            var data2 = {
+                ofertaId: ofertaId,
+                fechaCambio: moment(new Date()).format('YYYY-MM-DD'),
+                usuarioId: usuario.usuarioId,
+                importePresupuesto: data.importePresupuesto,
+                importePresupuestoDivisa: data.importePresupuestoDivisa,
+                importeUTE: data.importeUTE,
+                importeUTEDivisa: data.importeUTEDivisa,
+                importeTotal: data.importeTotal,
+                importeTotalDivisa: data.importeTotalDivisa,
+                margenContribucion: data.margenContribucion,
+                importeContribucion: data.importeContribucion,
+                importeContribucionDivisa: data.importeContribucionDivisa,
+                importeAnual: data.importeAnual,
+                importeAnualDivisa: data.importeAnualDivisa,
+                importePrimerAno: data.importePrimerAno,
+                importePrimerAnoDivisa: data.importePrimerAnoDivisa,
+                importeInversion: data.importeInversion,
+                importeInversionDivisa: data.importeInversionDivisa,
+                divisaId: data.divisaId,
+                multiplicador: data.multiplicador,
+                numVersion: version
+            };
+        }
+        if (_fechaDivisa) data2.fechaDivisa = _fechaDivisa;
+        apiComunAjax.llamadaGeneral("POST", myconfig.apiUrl + "/api/versiones", data2, function (err, data) {
             if (err) return;
         });
     },
@@ -1478,11 +1507,21 @@ var apiPaginaOfertasDetalle = {
                 data.servicioId2 = null;
                 data.servicioId3 = null;
             }
-            verb = "POST";
-            data.version = 0;
-            apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
+            // Obtener el contador para la oferta copiada.
+            var url = myconfig.apiUrl + "/api/parametros/contadores/" + data.empresaId + "/" + data.areaId;
+            apiComunAjax.llamadaGeneral("GET", url, null, function (err, data2) {
                 if (err) return;
-                window.open('OfertasDetalle.html?id=' + data.ofertaId, '_blank');
+                _contador = data2.numeroOferta;
+                data.numeroOferta = data2.numeroOferta;
+                data.codigoOferta = data2.codigoOferta;
+                verb = "POST";
+                data.version = 0;
+                apiComunAjax.llamadaGeneral(verb, myconfig.apiUrl + "/api/ofertas", data, function (err, data) {
+                    if (err) return;
+                    apiPaginaOfertasDetalle.guardarVersion(0, data.ofertaId, data);
+                    window.open('OfertasDetalle.html?id=' + data.ofertaId, '_blank');
+                });
+
             });
         }, function () {
 
