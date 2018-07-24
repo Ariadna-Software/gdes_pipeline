@@ -4,7 +4,7 @@
 */
 
 var usuario = apiComunGeneral.obtenerUsuario();
-var allowedFileExtensions = ['xls', 'xlsx'];
+var allowedFileExtensions = ['xls', 'xlsx', 'xlsm'];
 var invoicesUp = [];
 var filename = "";
 var ofertasDb = [];
