@@ -15,6 +15,7 @@ var pais;
 var dFecha;
 var hFecha;
 var estado;
+var detalle = false;
 
 var apiInfT3TB1 = {
     ini: function () {
@@ -40,6 +41,7 @@ var apiInfT3TB1 = {
         dFecha = apiComunGeneral.gup("dFecha");
         hFecha = apiComunGeneral.gup("hFecha");
         estado = apiComunGeneral.gup("estado");
+        detalle = apiComunGeneral.gup("detalle") == "true" ? true : false;
         // llamar al informe 
         apiInfT3TB1.obtainJSON();
     },
@@ -52,7 +54,8 @@ var apiInfT3TB1 = {
     },
     obtainReport: function (data) {
         StiOptions.WebServer.url = "/streport";
-        var file = "reports/T3TB1.mrt";
+        var file = "reports/T3TB1_SHORT.mrt";
+        if (detalle) file = "reports/T3TB1.mrt";
         // Create a new report instance
         var report = new Stimulsoft.Report.StiReport();
         report.loadFile(file);

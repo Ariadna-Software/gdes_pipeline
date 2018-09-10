@@ -618,7 +618,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Name>Text1</Name>
               <Page isRef="4" />
               <Parent isRef="5" />
-              <Text>BUSINESS OPPORTUNITIES</Text>
+              <Text>BUSINESS OPPORTUNITIES DETAIL</Text>
               <TextBrush>[0:0:0]</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
@@ -1250,10 +1250,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/22/2018 1:28:36 PM</ReportChanged>
+  <ReportChanged>9/10/2018 1:09:46 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T3TB1.mrt</ReportFile>
-  <ReportGuid>3aa3a16be7904a1faeba7e8ce29d7ca5</ReportGuid>
+  <ReportGuid>da5ce9f5553f4a8da1ca22141dd63f58</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
