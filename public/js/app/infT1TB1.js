@@ -14,6 +14,7 @@ var fase;
 var pais;
 var dFecha;
 var hFecha;
+var detalle = false;
 
 var apiInfT1TB1 = {
     ini: function () {
@@ -39,6 +40,8 @@ var apiInfT1TB1 = {
         dFecha = apiComunGeneral.gup("dFecha");
         hFecha = apiComunGeneral.gup("hFecha");
         estado = apiComunGeneral.gup("estado");
+        // el problema es que detalle viene como texto
+        detalle = apiComunGeneral.gup("detalle") == "true" ? true : false;
         // llamar al informe 
         apiInfT1TB1.obtainJSON();
     },
@@ -52,7 +55,8 @@ var apiInfT1TB1 = {
     },
     obtainReport: function (data) {
         StiOptions.WebServer.url = "/streport";
-        var file = "reports/T1TB1.mrt";
+        var file = "reports/T1TB1_SHORT.mrt";
+        if (detalle) file = "reports/T1TB1.mrt";
         // Create a new report instance
         var report = new Stimulsoft.Report.StiReport();
         report.loadFile(file);

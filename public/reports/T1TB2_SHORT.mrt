@@ -607,7 +607,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Name>Text1</Name>
               <Page isRef="4" />
               <Parent isRef="5" />
-              <Text>OPEN BIDS DETAIL</Text>
+              <Text>OPEN BIDS</Text>
               <TextBrush>[0:0:0]</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
@@ -729,25 +729,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         <HeaderDataSource1 Ref="16" type="HeaderBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,6.6,19,1.2</ClientRectangle>
-          <Components isList="true" count="9">
-            <HeaderDataSource1_ubicacion Ref="17" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[31:73:125]</Brush>
-              <ClientRectangle>0,0,2,1.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderDataSource1_ubicacion</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>LOCATION</Text>
-              <TextBrush>[255:255:255]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderDataSource1_ubicacion>
-            <HeaderDataSource1_importeGdes Ref="18" type="Text" isKey="true">
+          <Components isList="true" count="2">
+            <HeaderDataSource1_importeGdes Ref="17" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[31:73:125]</Brush>
               <ClientRectangle>7.6,0,1.6,1.2</ClientRectangle>
@@ -764,59 +747,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_importeGdes>
-            <HeaderDataSource1_margen Ref="19" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[31:73:125]</Brush>
-              <ClientRectangle>10.6,0,1,1.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderDataSource1_margen</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>M 
-%</Text>
-              <TextBrush>[255:255:255]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderDataSource1_margen>
-            <HeaderDataSource1_uteSN Ref="20" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[31:73:125]</Brush>
-              <ClientRectangle>11.6,0,0.8,1.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderDataSource1_uteSN</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>UTE</Text>
-              <TextBrush>[255:255:255]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderDataSource1_uteSN>
-            <HeaderDataSource1_fechaAdjudicacion Ref="21" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[31:73:125]</Brush>
-              <ClientRectangle>12.4,0,1.4,1.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderDataSource1_fechaAdjudicacion</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>AWARNING DATE</Text>
-              <TextBrush>[255:255:255]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderDataSource1_fechaAdjudicacion>
-            <HeaderDataSource1_importePrimerAno Ref="22" type="Text" isKey="true">
+            <HeaderDataSource1_importePrimerAno Ref="18" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[247:150:70]</Brush>
               <ClientRectangle>9.2,0,1.4,1.2</ClientRectangle>
@@ -833,71 +764,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </HeaderDataSource1_importePrimerAno>
-            <HeaderDataSource1_nombreCorto Ref="23" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[31:73:125]</Brush>
-              <ClientRectangle>2,0,4.6,1.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderDataSource1_nombreCorto</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>SHORT NAME</Text>
-              <TextBrush>[255:255:255]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderDataSource1_nombreCorto>
-            <HeaderDataSource1_estado Ref="24" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[31:73:125]</Brush>
-              <ClientRectangle>6.6,0,1,1.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>HeaderDataSource1_estado</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>STATUS</Text>
-              <TextBrush>[255:255:255]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </HeaderDataSource1_estado>
-            <Text2 Ref="25" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[247:150:70]</Brush>
-              <ClientRectangle>13.8,0,5.2,1.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <Guid>9851bcb2b65c4e459a273d6ac6c8e55f</Guid>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text2</Name>
-              <Page isRef="4" />
-              <Parent isRef="16" />
-              <Text>ASSOCIATED ACTIVITIES</Text>
-              <TextBrush>[255:255:255]</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text2>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>HeaderDataSource1</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
         </HeaderDataSource1>
-        <DataDataSource1 Ref="26" type="DataBand" isKey="true">
+        <DataDataSource1 Ref="19" type="DataBand" isKey="true">
           <Border>None;[31:73:125];1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
           <BusinessObjectGuid isNull="true" />
           <ClientRectangle>0,8.6,19,0.8</ClientRectangle>
           <Components isList="true" count="9">
-            <DataDataSource1_ubicacion Ref="27" type="Text" isKey="true">
+            <DataDataSource1_ubicacion Ref="20" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0,2,0.8</ClientRectangle>
@@ -906,13 +785,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_ubicacion</Name>
               <Page isRef="4" />
-              <Parent isRef="26" />
+              <Parent isRef="19" />
               <Text>{DataSource1.ubicacion}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_ubicacion>
-            <DataDataSource1_nombreCorto Ref="28" type="Text" isKey="true">
+            <DataDataSource1_nombreCorto Ref="21" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>2,0,4.6,0.8</ClientRectangle>
@@ -921,13 +800,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_nombreCorto</Name>
               <Page isRef="4" />
-              <Parent isRef="26" />
+              <Parent isRef="19" />
               <Text>{DataSource1.nombreCorto}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_nombreCorto>
-            <DataDataSource1_estado Ref="29" type="Text" isKey="true">
+            <DataDataSource1_estado Ref="22" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.6,0,1,0.8</ClientRectangle>
@@ -937,13 +816,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_estado</Name>
               <Page isRef="4" />
-              <Parent isRef="26" />
+              <Parent isRef="19" />
               <Text>{DataSource1.estado}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </DataDataSource1_estado>
-            <DataDataSource1_importeGdes Ref="30" type="Text" isKey="true">
+            <DataDataSource1_importeGdes Ref="23" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>7.6,0,1.6,0.8</ClientRectangle>
@@ -953,8 +832,82 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource1_importeGdes</Name>
               <Page isRef="4" />
-              <Parent isRef="26" />
+              <Parent isRef="19" />
               <Text>{DataSource1.importeGdes}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="24" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataDataSource1_importeGdes>
+            <DataDataSource1_margen Ref="25" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.6,0,1,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataDataSource1_margen</Name>
+              <Page isRef="4" />
+              <Parent isRef="19" />
+              <Text>{DataSource1.margen}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="26" type="NumberFormat" isKey="true">
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataDataSource1_margen>
+            <DataDataSource1_uteSN Ref="27" type="CheckBox" isKey="true">
+              <Brush>Transparent</Brush>
+              <Checked>{DataSource1.uteSN}</Checked>
+              <ClientRectangle>11.6,0,0.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <ContourColor>Black</ContourColor>
+              <Name>DataDataSource1_uteSN</Name>
+              <Page isRef="4" />
+              <Parent isRef="19" />
+              <TextBrush>Black</TextBrush>
+            </DataDataSource1_uteSN>
+            <DataDataSource1_fechaAdjudicacion Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>12.4,0,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataDataSource1_fechaAdjudicacion</Name>
+              <Page isRef="4" />
+              <Parent isRef="19" />
+              <Text>{DataSource1.fechaAdjudicacion}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="29" type="DateFormat" isKey="true" />
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataDataSource1_fechaAdjudicacion>
+            <DataDataSource1_importePrimerAno Ref="30" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.2,0,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataDataSource1_importePrimerAno</Name>
+              <Page isRef="4" />
+              <Parent isRef="19" />
+              <Text>{DataSource1.importePrimerAno}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="31" type="CurrencyFormat" isKey="true">
                 <DecimalDigits>0</DecimalDigits>
@@ -967,82 +920,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               </TextFormat>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <VertAlignment>Center</VertAlignment>
-            </DataDataSource1_importeGdes>
-            <DataDataSource1_margen Ref="32" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>10.6,0,1,0.8</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataDataSource1_margen</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{DataSource1.margen}</Text>
-              <TextBrush>Black</TextBrush>
-              <TextFormat Ref="33" type="NumberFormat" isKey="true">
-                <DecimalSeparator>,</DecimalSeparator>
-                <GroupSeparator>.</GroupSeparator>
-                <NegativePattern>1</NegativePattern>
-              </TextFormat>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <VertAlignment>Center</VertAlignment>
-            </DataDataSource1_margen>
-            <DataDataSource1_uteSN Ref="34" type="CheckBox" isKey="true">
-              <Brush>Transparent</Brush>
-              <Checked>{DataSource1.uteSN}</Checked>
-              <ClientRectangle>11.6,0,0.8,0.8</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <ContourColor>Black</ContourColor>
-              <Name>DataDataSource1_uteSN</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <TextBrush>Black</TextBrush>
-            </DataDataSource1_uteSN>
-            <DataDataSource1_fechaAdjudicacion Ref="35" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>12.4,0,1.4,0.8</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataDataSource1_fechaAdjudicacion</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{DataSource1.fechaAdjudicacion}</Text>
-              <TextBrush>Black</TextBrush>
-              <TextFormat Ref="36" type="DateFormat" isKey="true" />
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <VertAlignment>Center</VertAlignment>
-            </DataDataSource1_fechaAdjudicacion>
-            <DataDataSource1_importePrimerAno Ref="37" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>9.2,0,1.4,0.8</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6</Font>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>DataDataSource1_importePrimerAno</Name>
-              <Page isRef="4" />
-              <Parent isRef="26" />
-              <Text>{DataSource1.importePrimerAno}</Text>
-              <TextBrush>Black</TextBrush>
-              <TextFormat Ref="38" type="CurrencyFormat" isKey="true">
-                <DecimalDigits>0</DecimalDigits>
-                <DecimalSeparator>,</DecimalSeparator>
-                <GroupSeparator>.</GroupSeparator>
-                <NegativePattern>8</NegativePattern>
-                <PositivePattern>3</PositivePattern>
-                <State>DecimalDigits</State>
-                <Symbol>€</Symbol>
-              </TextFormat>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <VertAlignment>Center</VertAlignment>
             </DataDataSource1_importePrimerAno>
-            <Text3 Ref="39" type="Text" isKey="true">
+            <Text3 Ref="32" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>13.8,0,5,0.8</ClientRectangle>
@@ -1052,7 +931,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text3</Name>
               <Page isRef="4" />
-              <Parent isRef="26" />
+              <Parent isRef="19" />
               <Text>{DataSource1.notasEstado}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1063,6 +942,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Conditions isList="true" count="0" />
           <DataRelationName isNull="true" />
           <DataSourceName>DataSource1</DataSourceName>
+          <Enabled>False</Enabled>
           <Filters isList="true" count="0" />
           <Name>DataDataSource1</Name>
           <OddStyle>Collection1_Data1_Odd Style</OddStyle>
@@ -1075,11 +955,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
             <value>orden</value>
           </Sort>
         </DataDataSource1>
-        <GroupFooterBand1 Ref="40" type="GroupFooterBand" isKey="true">
+        <GroupFooterBand1 Ref="33" type="GroupFooterBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,10.2,19,1</ClientRectangle>
           <Components isList="true" count="3">
-            <Text6 Ref="41" type="Text" isKey="true">
+            <Text6 Ref="34" type="Text" isKey="true">
               <Border>Top;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -1091,8 +971,105 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text6</Name>
               <Page isRef="4" />
-              <Parent isRef="40" />
+              <Parent isRef="33" />
               <Text>{Sum(GroupHeaderBand1,DataSource1.importeGdes)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="35" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text8 Ref="36" type="Text" isKey="true">
+              <Border>Top;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.2,0.2,1.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>e46172ccba03465f94a5f62bb84c3bf6</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="4" />
+              <Parent isRef="33" />
+              <Text>{Sum(GroupHeaderBand1,DataSource1.importePrimerAno)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="37" type="CurrencyFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <DecimalSeparator>,</DecimalSeparator>
+                <GroupSeparator>.</GroupSeparator>
+                <NegativePattern>8</NegativePattern>
+                <PositivePattern>3</PositivePattern>
+                <State>DecimalDigits</State>
+                <Symbol>€</Symbol>
+              </TextFormat>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="38" type="Text" isKey="true">
+              <Brush>[255:255:255]</Brush>
+              <ClientRectangle>0.2,0.2,7,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="4" />
+              <Parent isRef="33" />
+              <Text>AREA TOTALS ({DataSource1.areaEN}): </Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="4" />
+          <Parent isRef="4" />
+        </GroupFooterBand1>
+        <GroupFooterBand2 Ref="39" type="GroupFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,12,19,0.8</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text10 Ref="40" type="Text" isKey="true">
+              <Brush>[255:255:255]</Brush>
+              <ClientRectangle>0.6,0,6.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>369ddc528fca44cea9e4179f51252077</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>COUNTRY TOTALS ({DataSource1.codPais}): </Text>
+              <TextBrush>[0:0:0]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="41" type="Text" isKey="true">
+              <Border>Top;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7.6,0,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,6,Bold</Font>
+              <Guid>457d4a17ed56487ead94e0c24cf9e499</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="4" />
+              <Parent isRef="39" />
+              <Text>{Sum(GroupHeaderBand2,DataSource1.importeGdes)}</Text>
               <TextBrush>Black</TextBrush>
               <TextFormat Ref="42" type="CurrencyFormat" isKey="true">
                 <DecimalDigits>0</DecimalDigits>
@@ -1106,105 +1083,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
               <Type>Totals</Type>
               <VertAlignment>Center</VertAlignment>
-            </Text6>
-            <Text8 Ref="43" type="Text" isKey="true">
-              <Border>Top;Black;1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>9.2,0.2,1.4,0.8</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <Guid>e46172ccba03465f94a5f62bb84c3bf6</Guid>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text8</Name>
-              <Page isRef="4" />
-              <Parent isRef="40" />
-              <Text>{Sum(GroupHeaderBand1,DataSource1.importePrimerAno)}</Text>
-              <TextBrush>Black</TextBrush>
-              <TextFormat Ref="44" type="CurrencyFormat" isKey="true">
-                <DecimalDigits>0</DecimalDigits>
-                <DecimalSeparator>,</DecimalSeparator>
-                <GroupSeparator>.</GroupSeparator>
-                <NegativePattern>8</NegativePattern>
-                <PositivePattern>3</PositivePattern>
-                <State>DecimalDigits</State>
-                <Symbol>€</Symbol>
-              </TextFormat>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Totals</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text8>
-            <Text9 Ref="45" type="Text" isKey="true">
-              <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.2,0.2,7,0.8</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text9</Name>
-              <Page isRef="4" />
-              <Parent isRef="40" />
-              <Text>AREA TOTALS ({DataSource1.areaEN}): </Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text9>
-          </Components>
-          <Conditions isList="true" count="0" />
-          <Name>GroupFooterBand1</Name>
-          <Page isRef="4" />
-          <Parent isRef="4" />
-        </GroupFooterBand1>
-        <GroupFooterBand2 Ref="46" type="GroupFooterBand" isKey="true">
-          <Brush>Transparent</Brush>
-          <ClientRectangle>0,12,19,0.8</ClientRectangle>
-          <Components isList="true" count="3">
-            <Text10 Ref="47" type="Text" isKey="true">
-              <Brush>[255:255:255]</Brush>
-              <ClientRectangle>0.6,0,6.8,0.8</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <Guid>369ddc528fca44cea9e4179f51252077</Guid>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text10</Name>
-              <Page isRef="4" />
-              <Parent isRef="46" />
-              <Text>COUNTRY TOTALS ({DataSource1.codPais}): </Text>
-              <TextBrush>[0:0:0]</TextBrush>
-              <Type>Expression</Type>
-              <VertAlignment>Center</VertAlignment>
-            </Text10>
-            <Text11 Ref="48" type="Text" isKey="true">
-              <Border>Top;Black;1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <CanGrow>True</CanGrow>
-              <ClientRectangle>7.6,0,1.6,0.8</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,6,Bold</Font>
-              <Guid>457d4a17ed56487ead94e0c24cf9e499</Guid>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text11</Name>
-              <Page isRef="4" />
-              <Parent isRef="46" />
-              <Text>{Sum(GroupHeaderBand2,DataSource1.importeGdes)}</Text>
-              <TextBrush>Black</TextBrush>
-              <TextFormat Ref="49" type="CurrencyFormat" isKey="true">
-                <DecimalDigits>0</DecimalDigits>
-                <DecimalSeparator>,</DecimalSeparator>
-                <GroupSeparator>.</GroupSeparator>
-                <NegativePattern>8</NegativePattern>
-                <PositivePattern>3</PositivePattern>
-                <State>DecimalDigits</State>
-                <Symbol>€</Symbol>
-              </TextFormat>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
-              <Type>Totals</Type>
-              <VertAlignment>Center</VertAlignment>
             </Text11>
-            <Text13 Ref="50" type="Text" isKey="true">
+            <Text13 Ref="43" type="Text" isKey="true">
               <Border>Top;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -1216,10 +1096,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text13</Name>
               <Page isRef="4" />
-              <Parent isRef="46" />
+              <Parent isRef="39" />
               <Text>{Sum(GroupHeaderBand2,DataSource1.importePrimerAno)}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="51" type="CurrencyFormat" isKey="true">
+              <TextFormat Ref="44" type="CurrencyFormat" isKey="true">
                 <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
@@ -1238,11 +1118,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="4" />
           <Parent isRef="4" />
         </GroupFooterBand2>
-        <ReportSummaryBand1 Ref="52" type="ReportSummaryBand" isKey="true">
+        <ReportSummaryBand1 Ref="45" type="ReportSummaryBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,13.6,19,1.2</ClientRectangle>
           <Components isList="true" count="3">
-            <Text14 Ref="53" type="Text" isKey="true">
+            <Text14 Ref="46" type="Text" isKey="true">
               <Brush>[255:255:255]</Brush>
               <ClientRectangle>0.4,0,7,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -1252,13 +1132,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text14</Name>
               <Page isRef="4" />
-              <Parent isRef="52" />
+              <Parent isRef="45" />
               <Text>REPORT TOTALS: </Text>
               <TextBrush>[0:0:0]</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text14>
-            <Text15 Ref="54" type="Text" isKey="true">
+            <Text15 Ref="47" type="Text" isKey="true">
               <Border>Top;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -1270,10 +1150,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text15</Name>
               <Page isRef="4" />
-              <Parent isRef="52" />
+              <Parent isRef="45" />
               <Text>{Sum(DataDataSource1,DataSource1.importeGdes)}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="55" type="CurrencyFormat" isKey="true">
+              <TextFormat Ref="48" type="CurrencyFormat" isKey="true">
                 <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
@@ -1286,7 +1166,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Type>Totals</Type>
               <VertAlignment>Center</VertAlignment>
             </Text15>
-            <Text17 Ref="56" type="Text" isKey="true">
+            <Text17 Ref="49" type="Text" isKey="true">
               <Border>Top;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
@@ -1298,10 +1178,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text17</Name>
               <Page isRef="4" />
-              <Parent isRef="52" />
+              <Parent isRef="45" />
               <Text>{Sum(DataDataSource1,DataSource1.importePrimerAno)}</Text>
               <TextBrush>Black</TextBrush>
-              <TextFormat Ref="57" type="CurrencyFormat" isKey="true">
+              <TextFormat Ref="50" type="CurrencyFormat" isKey="true">
                 <DecimalDigits>0</DecimalDigits>
                 <DecimalSeparator>,</DecimalSeparator>
                 <GroupSeparator>.</GroupSeparator>
@@ -1329,13 +1209,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
       <PageWidth>21</PageWidth>
       <PaperSize>A4</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="58" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="51" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page1>
   </Pages>
-  <PrinterSettings Ref="59" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <PrinterSettings Ref="52" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
   <ReferencedAssemblies isList="true" count="8">
     <value>System.Dll</value>
     <value>System.Drawing.Dll</value>
@@ -1347,10 +1227,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>9/10/2018 12:53:33 PM</ReportChanged>
+  <ReportChanged>9/10/2018 12:54:51 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
-  <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T1TB2.mrt</ReportFile>
-  <ReportGuid>e06e42acd663485397d13a86d860907c</ReportGuid>
+  <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T1TB2_SHORT.mrt</ReportFile>
+  <ReportGuid>946da225db734ad5926077783842137b</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
@@ -1379,194 +1259,194 @@ namespace Reports
 </Script>
   <ScriptLanguage>CSharp</ScriptLanguage>
   <Styles isList="true" count="12">
-    <Collection1_Report_Title1 Ref="60" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Report_Title1 Ref="53" type="Stimulsoft.Report.StiStyle" isKey="true">
       <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item48 Ref="61" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item41 Ref="54" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <Placement>ReportTitle</Placement>
           <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item48>
+        </Item41>
       </Conditions>
       <Font>Arial,14,Bold</Font>
       <Name>Collection1_Report_Title1</Name>
       <TextBrush>[84:141:212]</TextBrush>
     </Collection1_Report_Title1>
-    <Collection1_Report_Title2 Ref="62" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Report_Title2 Ref="55" type="Stimulsoft.Report.StiStyle" isKey="true">
       <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item50 Ref="63" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item43 Ref="56" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
           <Placement>ReportTitle</Placement>
           <PlacementNestedLevel>2</PlacementNestedLevel>
           <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item50>
+        </Item43>
       </Conditions>
       <Font>Arial,10,Bold</Font>
       <Name>Collection1_Report_Title2</Name>
       <TextBrush>[84:141:212]</TextBrush>
     </Collection1_Report_Title2>
-    <Collection1_Report_Summary1 Ref="64" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Report_Summary1 Ref="57" type="Stimulsoft.Report.StiStyle" isKey="true">
       <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item52 Ref="65" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item45 Ref="58" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <Placement>ReportSummary</Placement>
           <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item52>
+        </Item45>
       </Conditions>
       <Font>Arial,12,Bold</Font>
       <Name>Collection1_Report_Summary1</Name>
       <TextBrush>[84:141:212]</TextBrush>
     </Collection1_Report_Summary1>
-    <Collection1_Report_Summary2 Ref="66" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Report_Summary2 Ref="59" type="Stimulsoft.Report.StiStyle" isKey="true">
       <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item54 Ref="67" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item47 Ref="60" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
           <Placement>ReportSummary</Placement>
           <PlacementNestedLevel>2</PlacementNestedLevel>
           <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item54>
+        </Item47>
       </Conditions>
       <Font>Arial,10,Bold</Font>
       <Name>Collection1_Report_Summary2</Name>
       <TextBrush>[84:141:212]</TextBrush>
     </Collection1_Report_Summary2>
-    <Collection1_Page_Header Ref="68" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Page_Header Ref="61" type="Stimulsoft.Report.StiStyle" isKey="true">
       <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item56 Ref="69" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item49 Ref="62" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <Placement>PageHeader</Placement>
           <Type>ComponentType, Placement</Type>
-        </Item56>
+        </Item49>
       </Conditions>
       <Font>Arial,10</Font>
       <Name>Collection1_Page_Header</Name>
       <TextBrush>[84:141:212]</TextBrush>
     </Collection1_Page_Header>
-    <Collection1_Page_Footer Ref="70" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Page_Footer Ref="63" type="Stimulsoft.Report.StiStyle" isKey="true">
       <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item58 Ref="71" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item51 Ref="64" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <Placement>PageFooter</Placement>
           <Type>ComponentType, Placement</Type>
-        </Item58>
+        </Item51>
       </Conditions>
       <Font>Arial,10</Font>
       <Name>Collection1_Page_Footer</Name>
       <TextBrush>[84:141:212]</TextBrush>
     </Collection1_Page_Footer>
-    <Collection1_Group_Header1 Ref="72" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Group_Header1 Ref="65" type="Stimulsoft.Report.StiStyle" isKey="true">
       <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
       <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item60 Ref="73" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item53 Ref="66" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
           <Placement>GroupHeader</Placement>
           <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item60>
+        </Item53>
       </Conditions>
       <Font>Arial,13,Bold</Font>
       <Name>Collection1_Group_Header1</Name>
       <TextBrush>[84:141:212]</TextBrush>
     </Collection1_Group_Header1>
-    <Collection1_Group_Footer1 Ref="74" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Group_Footer1 Ref="67" type="Stimulsoft.Report.StiStyle" isKey="true">
       <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
       <Border>None;[34:91:162];1;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item62 Ref="75" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item55 Ref="68" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <Placement>GroupFooter</Placement>
           <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item62>
+        </Item55>
       </Conditions>
       <Font>Arial,13,Bold</Font>
       <Name>Collection1_Group_Footer1</Name>
       <TextBrush>[84:141:212]</TextBrush>
     </Collection1_Group_Footer1>
-    <Collection1_Header1 Ref="76" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Header1 Ref="69" type="Stimulsoft.Report.StiStyle" isKey="true">
       <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
       <Border>None;[34:91:162];1;Solid;False;4;Black;True</Border>
       <Brush>[84:141:212]</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item64 Ref="77" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item57 Ref="70" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
           <Placement>Header</Placement>
           <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item64>
+        </Item57>
       </Conditions>
       <Font>Arial,8,Bold</Font>
       <Name>Collection1_Header1</Name>
       <TextBrush>[0:0:12]</TextBrush>
     </Collection1_Header1>
-    <Collection1_Data1 Ref="78" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Data1 Ref="71" type="Stimulsoft.Report.StiStyle" isKey="true">
       <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
       <Border>None;[34:91:162];1;Solid;False;4;Black;True</Border>
       <Brush>Transparent</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item66 Ref="79" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item59 Ref="72" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
           <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
           <Placement>Data</Placement>
           <Type>ComponentType, Placement, PlacementNestedLevel</Type>
-        </Item66>
+        </Item59>
       </Conditions>
       <Font>Arial,8</Font>
       <Name>Collection1_Data1</Name>
       <TextBrush>[0:0:12]</TextBrush>
     </Collection1_Data1>
-    <Collection1_Data1_Odd_x0020_Style Ref="80" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Data1_Odd_x0020_Style Ref="73" type="Stimulsoft.Report.StiStyle" isKey="true">
       <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
       <Border>None;[34:91:162];1;Solid;False;4;Black;True</Border>
       <Brush>[159:216:255]</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item68 Ref="81" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item61 Ref="74" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
           <Placement>DataOddStyle</Placement>
           <Type>Placement, PlacementNestedLevel</Type>
-        </Item68>
+        </Item61>
       </Conditions>
       <Font>Arial,8</Font>
       <Name>Collection1_Data1_Odd Style</Name>
       <TextBrush>[0:0:12]</TextBrush>
     </Collection1_Data1_Odd_x0020_Style>
-    <Collection1_Data1_Even_x0020_Style Ref="82" type="Stimulsoft.Report.StiStyle" isKey="true">
+    <Collection1_Data1_Even_x0020_Style Ref="75" type="Stimulsoft.Report.StiStyle" isKey="true">
       <AllowUseBorderSidesFromLocation>True</AllowUseBorderSidesFromLocation>
       <Border>None;[34:91:162];1;Solid;False;4;Black;True</Border>
       <Brush>[121:178:249]</Brush>
       <CollectionName>Collection1</CollectionName>
       <Conditions isList="true" count="1">
-        <Item70 Ref="83" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+        <Item63 Ref="76" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
           <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
           <Placement>DataEvenStyle</Placement>
           <Type>Placement, PlacementNestedLevel</Type>
-        </Item70>
+        </Item63>
       </Conditions>
       <Font>Arial,8</Font>
       <Name>Collection1_Data1_Even Style</Name>

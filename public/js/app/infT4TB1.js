@@ -15,6 +15,7 @@ var pais;
 var dFecha;
 var hFecha;
 var detail;
+var detalle = false;
 
 var apiInfT4TB1 = {
     ini: function () {
@@ -38,6 +39,7 @@ var apiInfT4TB1 = {
         pais = apiComunGeneral.gup("pais");
         dFecha = apiComunGeneral.gup("dFecha");
         hFecha = apiComunGeneral.gup("hFecha");
+        detalle = apiComunGeneral.gup("detalle") == "true" ? true : false;
         // llamar al informe 
         apiInfT4TB1.obtainJSON();
     },
@@ -50,7 +52,8 @@ var apiInfT4TB1 = {
     },
     obtainReport: function (data) {
         StiOptions.WebServer.url = "/streport";
-        var file = "reports/T4TB1.mrt";
+        var file = "reports/T4TB1_SHORT.mrt";
+        if (detalle) file = "reports/T4TB1.mrt";
         if (detail == "0") file = "reports/T5TB2.mrt";
         // Create a new report instance
         var report = new Stimulsoft.Report.StiReport();
