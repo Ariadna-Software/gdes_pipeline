@@ -81,7 +81,7 @@ var apiReport = {
         self.fechaCreacionDesde5 = ko.observable();
         self.fechaCreacionHasta5 = ko.observable();
         self.fechaCreacionDesde6 = ko.observable();
-        self.fechaCreacionHasta6 = ko.observable();        
+        self.fechaCreacionHasta6 = ko.observable();
 
         self.optionsEstados = ko.observableArray([]);
         self.selectedEstados = ko.observableArray([]);
@@ -94,6 +94,11 @@ var apiReport = {
         self.sArea = ko.observable();
 
         self.optT5TB2 = ko.observable();
+        self.optT1TB1 = ko.observable();
+        self.optT1TB2 = ko.observable();
+        self.optT3TB1 = ko.observable();
+        self.optT4TB1 = ko.observable();
+        self.optT5TB1 = ko.observable();
     },
     aceptarT1TB1: function () {
         var fase = vm.sFasesOferta();
@@ -101,12 +106,14 @@ var apiReport = {
         var dFecha = vm.fechaCreacionDesde();
         var hFecha = vm.fechaCreacionHasta();
         var estado = vm.sEstado3();
+        var detalle = vm.optT1TB1();
         if (!fase) fase = "";
         if (!pais) pais = "";
         if (!dFecha) dFecha = "";
         if (!hFecha) hFecha = "";
         if (!estado) estado = "";
-        var url = "infT1TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
+        if (!detalle) detalle = false;
+        var url = "infT1TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado + "&detalle=" + detalle;
         window.open(url, '_new');
 
     },
@@ -116,14 +123,16 @@ var apiReport = {
         var dFecha = vm.fechaCreacionDesde2();
         var hFecha = vm.fechaCreacionHasta2();
         var estado = vm.sEstado();
+        var detalle = vm.optT1TB2();
         if (!fase) fase = "";
         if (!pais) pais = "";
         if (!dFecha) dFecha = "";
         if (!hFecha) hFecha = "";
         if (!estado) estado = "";
+        if (!detalle) detalle = false;
         // var url = "infT1TB2.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
         // Forzamos que la fase sea oferta
-        var url = "infT1TB2.html?fase=0&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
+        var url = "infT1TB2.html?fase=0&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado + "&detalle=" + detalle;
         window.open(url, '_new');
     },
     aceptarT3TB1: function () {
@@ -132,23 +141,27 @@ var apiReport = {
         var dFecha = vm.fechaCreacionDesde3();
         var hFecha = vm.fechaCreacionHasta3();
         var estado = vm.sEstado2();
+        var detalle = vm.optT3TB1();
         if (!fase) fase = "";
         if (!pais) pais = "";
         if (!dFecha) dFecha = "";
         if (!hFecha) hFecha = "";
         if (!estado) estado = "";
+        if (!detalle) detalle = false;
         //var url = "infT3TB1.html?fase=" + fase + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
-        var url = "infT3TB1.html?fase=0&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado;
+        var url = "infT3TB1.html?fase=0&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&estado=" + estado + "&detalle=" + detalle;
         window.open(url, '_new');
     },
     aceptarT4TB1: function () {
         var pais = vm.sPais5();
         var dFecha = vm.fechaCreacionDesde5();
         var hFecha = vm.fechaCreacionHasta5();
+        var detalle = vm.optT4TB1();
         if (!pais) pais = "";
         if (!dFecha) dFecha = "";
         if (!hFecha) hFecha = "";
-        var url = "infT4TB1.html?pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
+        if (!detalle) detalle = false;
+        var url = "infT4TB1.html?pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&detalle=" + detalle;
         window.open(url, '_new');
 
     },
@@ -157,11 +170,13 @@ var apiReport = {
         var pais = vm.sPais3();
         var dFecha = vm.fechaCreacionDesde6();
         var hFecha = vm.fechaCreacionHasta6();
+        var detalle = vm.optT5TB1();
         if (!area) area = "";
         if (!pais) pais = "";
         if (!dFecha) dFecha = "";
-        if (!hFecha) hFecha = "";        
-        var url = "infT5TB1.html?area=" + area + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha;
+        if (!hFecha) hFecha = "";
+        if (!detalle) detalle = false;
+        var url = "infT5TB1.html?area=" + area + "&pais=" + pais + "&dFecha=" + dFecha + "&hFecha=" + hFecha + "&detalle=" + detalle;
         if (vm.optT5TB2())
             url += "&detail=1";
         else
@@ -195,13 +210,13 @@ var apiReport = {
                 $('#cmbPaiss2').prop('disabled', 'disabled');
                 //
                 $("#cmbPaiss3").val([usuario.paisId]).trigger('change');
-                $('#cmbPaiss3').prop('disabled', 'disabled');      
+                $('#cmbPaiss3').prop('disabled', 'disabled');
                 //
                 $("#cmbPaiss4").val([usuario.paisId]).trigger('change');
-                $('#cmbPaiss4').prop('disabled', 'disabled');      
+                $('#cmbPaiss4').prop('disabled', 'disabled');
                 //
                 $("#cmbPaiss5").val([usuario.paisId]).trigger('change');
-                $('#cmbPaiss5').prop('disabled', 'disabled');                             
+                $('#cmbPaiss5').prop('disabled', 'disabled');
             }
         });
     },

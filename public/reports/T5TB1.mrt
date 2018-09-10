@@ -681,7 +681,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Name>Text1</Name>
           <Page isRef="4" />
           <Parent isRef="4" />
-          <Text>MONITORING REPORT</Text>
+          <Text>MONITORING REPORT DETAIL</Text>
           <TextBrush>[0:0:0]</TextBrush>
           <Type>Expression</Type>
         </Text1>
@@ -1447,10 +1447,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/22/2018 1:29:22 PM</ReportChanged>
+  <ReportChanged>9/10/2018 1:21:57 PM</ReportChanged>
   <ReportCreated>6/6/2018 1:26:55 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\T5TB1.mrt</ReportFile>
-  <ReportGuid>d89a13c99cb046389befa49ccb78582d</ReportGuid>
+  <ReportGuid>7498c600cc5c4fcaaba80f15ca71aa73</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
