@@ -1103,7 +1103,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <Page2 Ref="42" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="80">
+      <Components isList="true" count="81">
         <Text31 Ref="43" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
@@ -1241,7 +1241,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
           <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
-          <Text>6. CONCURRENCE AND MARKETING SITUATION</Text>
+          <Text>6. CONCURRENCE AND MARKET</Text>
           <TextBrush>[255:255:255]</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
@@ -1328,7 +1328,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.alcance}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1363,7 +1363,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.ubicacion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1679,7 +1679,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.descripcionInversion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -1888,7 +1888,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.notasPlanning}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2025,7 +2025,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.criteriosEvaluacion}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2059,7 +2059,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.datosComerciales}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2077,7 +2077,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.puntosRelevantes}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2111,7 +2111,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.estrategiaGDES}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2145,7 +2145,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.diferencialGDES}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2179,7 +2179,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.sinergias}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2228,7 +2228,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
         </Text97>
         <Text98 Ref="116" type="Text" isKey="true">
           <Brush>Transparent</Brush>
-          <ClientRectangle>9.2,14.4,9.2,3.6</ClientRectangle>
+          <ClientRectangle>9.2,14.6,9.2,3.8</ClientRectangle>
           <Conditions isList="true" count="0" />
           <Editable>True</Editable>
           <Font>Arial,9</Font>
@@ -2238,7 +2238,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.riesgos}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2289,7 +2289,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.subrogacionTXT}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2323,7 +2323,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.condicionesEstandarTXT}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2356,7 +2356,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.penalizaciones}</Text>
           <TextBrush>Black</TextBrush>
           <Type>DataColumn</Type>
@@ -2372,7 +2372,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>Warranties:</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
@@ -2388,7 +2388,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.garantiasEspecialesTXT}</Text>
           <TextBrush>Black</TextBrush>
           <Type>DataColumn</Type>
@@ -2475,7 +2475,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.subcontrataTXT}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
@@ -2508,16 +2508,33 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Page isRef="42" />
           <Parent isRef="42" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.documentosEspeciales}</Text>
           <TextBrush>Black</TextBrush>
           <Type>DataColumn</Type>
         </Text88>
-        <DataBand1 Ref="134" type="DataBand" isKey="true">
+        <Text101 Ref="134" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>9.2,14.2,8.8,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Arial,9,Bold</Font>
+          <Guid>af1e717b50a5469ba2d1be2f57aa12cb</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text101</Name>
+          <Page isRef="42" />
+          <Parent isRef="42" />
+          <ShrinkFontToFit>True</ShrinkFontToFit>
+          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <Text>Risks</Text>
+          <TextBrush>Black</TextBrush>
+          <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+          <Type>Expression</Type>
+        </Text101>
+        <DataBand1 Ref="135" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,27.7,0.8</ClientRectangle>
           <Components isList="true" count="3">
-            <Image2 Ref="135" type="Image" isKey="true">
+            <Image2 Ref="136" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <CanShrink>True</CanShrink>
               <ClientRectangle>24.2,0,3.4,0.8</ClientRectangle>
@@ -3046,10 +3063,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Image2</Name>
               <Page isRef="42" />
-              <Parent isRef="134" />
+              <Parent isRef="135" />
               <Stretch>True</Stretch>
             </Image2>
-            <Text30 Ref="136" type="Text" isKey="true">
+            <Text30 Ref="137" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,23.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -3057,23 +3074,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
               <Margins>0,0,0,0</Margins>
               <Name>Text30</Name>
               <Page isRef="42" />
-              <Parent isRef="134" />
+              <Parent isRef="135" />
               <Text>{Ofertas.nombreCorto}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text30>
-            <HorizontalLinePrimitive3 Ref="137" type="HorizontalLinePrimitive" isKey="true">
+            <HorizontalLinePrimitive3 Ref="138" type="HorizontalLinePrimitive" isKey="true">
               <ClientRectangle>0,0.8,27.6,0.0254</ClientRectangle>
               <Color>Black</Color>
-              <EndCap Ref="138" type="Cap" isKey="true">
+              <EndCap Ref="139" type="Cap" isKey="true">
                 <Color>Black</Color>
               </EndCap>
               <Name>HorizontalLinePrimitive3</Name>
               <Page isRef="42" />
-              <Parent isRef="134" />
+              <Parent isRef="135" />
               <Size>2</Size>
-              <StartCap Ref="139" type="Cap" isKey="true">
+              <StartCap Ref="140" type="Cap" isKey="true">
                 <Color>Black</Color>
               </StartCap>
             </HorizontalLinePrimitive3>
@@ -3095,16 +3112,16 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
       <PageWidth>29.7</PageWidth>
       <PaperSize>A4</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="140" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="141" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page2>
-    <Page3 Ref="141" type="Page" isKey="true">
+    <Page3 Ref="142" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
       <Components isList="true" count="6">
-        <Text109 Ref="142" type="Text" isKey="true">
+        <Text109 Ref="143" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
           <ClientRectangle>0,1.6,17.2,0.4</ClientRectangle>
@@ -3113,8 +3130,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>c3b40c25113342daa21f763c4e81c56c</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text109</Name>
-          <Page isRef="141" />
-          <Parent isRef="141" />
+          <Page isRef="142" />
+          <Parent isRef="142" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
           <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>FINANTIALS</Text>
@@ -3123,7 +3140,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text109>
-        <Text111 Ref="143" type="Text" isKey="true">
+        <Text111 Ref="144" type="Text" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>[31:73:125]</Brush>
           <ClientRectangle>17.6,1.6,10,0.4</ClientRectangle>
@@ -3132,8 +3149,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>a31c1343476947c388d8341791301f10</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text111</Name>
-          <Page isRef="141" />
-          <Parent isRef="141" />
+          <Page isRef="142" />
+          <Parent isRef="142" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
           <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
           <Text>FINANTIALS ASSUMPTIONS</Text>
@@ -3142,7 +3159,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text111>
-        <Text121 Ref="144" type="Text" isKey="true">
+        <Text121 Ref="145" type="Text" isKey="true">
           <AllowHtmlTags>True</AllowHtmlTags>
           <Brush>Transparent</Brush>
           <ClientRectangle>0,2,17,15.6</ClientRectangle>
@@ -3152,17 +3169,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>71279bd2101841f493e7cd38c19ac7cb</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text121</Name>
-          <Page isRef="141" />
-          <Parent isRef="141" />
+          <Page isRef="142" />
+          <Parent isRef="142" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <Text>{Ofertas.financieros}</Text>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <TextQuality>Wysiwyg</TextQuality>
           <Type>DataColumn</Type>
         </Text121>
-        <Text110 Ref="145" type="Text" isKey="true">
+        <Text110 Ref="146" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>17.6,2,10,15.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -3171,15 +3188,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Guid>4e5efd7f22c141b19862426c125aa8cf</Guid>
           <Margins>0,0,0,0</Margins>
           <Name>Text110</Name>
-          <Page isRef="141" />
-          <Parent isRef="141" />
+          <Page isRef="142" />
+          <Parent isRef="142" />
           <ShrinkFontToFit>True</ShrinkFontToFit>
-          <ShrinkFontToFitMinimumSize>6</ShrinkFontToFitMinimumSize>
+          <ShrinkFontToFitMinimumSize>8</ShrinkFontToFitMinimumSize>
           <TextBrush>Black</TextBrush>
           <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
           <Type>Expression</Type>
         </Text110>
-        <Text29 Ref="146" type="Text" isKey="true">
+        <Text29 Ref="147" type="Text" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>20.6,18.4,7,0.6</ClientRectangle>
           <Conditions isList="true" count="0" />
@@ -3188,18 +3205,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <HorAlignment>Right</HorAlignment>
           <Margins>0,0,0,0</Margins>
           <Name>Text29</Name>
-          <Page isRef="141" />
-          <Parent isRef="141" />
+          <Page isRef="142" />
+          <Parent isRef="142" />
           <Text>Página 2</Text>
           <TextBrush>Black</TextBrush>
           <Type>Expression</Type>
           <VertAlignment>Center</VertAlignment>
         </Text29>
-        <DataBand2 Ref="147" type="DataBand" isKey="true">
+        <DataBand2 Ref="148" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <ClientRectangle>0,0.4,27.7,0.8</ClientRectangle>
           <Components isList="true" count="3">
-            <Image3 Ref="148" type="Image" isKey="true">
+            <Image3 Ref="149" type="Image" isKey="true">
               <Brush>Transparent</Brush>
               <CanShrink>True</CanShrink>
               <ClientRectangle>24.4,0,3.2,0.8</ClientRectangle>
@@ -3727,36 +3744,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</ImageBytes>
               <Margins>0,0,0,0</Margins>
               <Name>Image3</Name>
-              <Page isRef="141" />
-              <Parent isRef="147" />
+              <Page isRef="142" />
+              <Parent isRef="148" />
               <Stretch>True</Stretch>
             </Image3>
-            <Text189 Ref="149" type="Text" isKey="true">
+            <Text189 Ref="150" type="Text" isKey="true">
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,23.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,9,Bold</Font>
               <Margins>0,0,0,0</Margins>
               <Name>Text189</Name>
-              <Page isRef="141" />
-              <Parent isRef="147" />
+              <Page isRef="142" />
+              <Parent isRef="148" />
               <Text>{Ofertas.nombreCorto}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text189>
-            <HorizontalLinePrimitive4 Ref="150" type="HorizontalLinePrimitive" isKey="true">
+            <HorizontalLinePrimitive4 Ref="151" type="HorizontalLinePrimitive" isKey="true">
               <ClientRectangle>0,0.8,27.6,0.0254</ClientRectangle>
               <Color>Black</Color>
-              <EndCap Ref="151" type="Cap" isKey="true">
+              <EndCap Ref="152" type="Cap" isKey="true">
                 <Color>Black</Color>
               </EndCap>
               <Guid>3835fef167c84977a7b4a62b47b0b00a</Guid>
               <Name>HorizontalLinePrimitive4</Name>
-              <Page isRef="141" />
-              <Parent isRef="147" />
+              <Page isRef="142" />
+              <Parent isRef="148" />
               <Size>2</Size>
-              <StartCap Ref="152" type="Cap" isKey="true">
+              <StartCap Ref="153" type="Cap" isKey="true">
                 <Color>Black</Color>
               </StartCap>
             </HorizontalLinePrimitive4>
@@ -3764,8 +3781,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
           <Conditions isList="true" count="0" />
           <Filters isList="true" count="0" />
           <Name>DataBand2</Name>
-          <Page isRef="141" />
-          <Parent isRef="141" />
+          <Page isRef="142" />
+          <Parent isRef="142" />
           <Sort isList="true" count="0" />
         </DataBand2>
       </Components>
@@ -3778,13 +3795,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
       <PageWidth>29.7</PageWidth>
       <PaperSize>A4</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="153" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="154" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page3>
   </Pages>
-  <PrinterSettings Ref="154" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <PrinterSettings Ref="155" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
   <ReferencedAssemblies isList="true" count="8">
     <value>System.Dll</value>
     <value>System.Drawing.Dll</value>
@@ -3796,10 +3813,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBJ/Z//8/8BVNBxBhz51hsAAAAASUVORK5CYII=</Im
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>6/22/2018 1:36:54 PM</ReportChanged>
+  <ReportChanged>9/10/2018 5:32:07 PM</ReportChanged>
   <ReportCreated>5/7/2018 1:08:45 PM</ReportCreated>
   <ReportFile>C:\PROYECTOS\gdes_pipeline\public\reports\proposal_report_short.mrt</ReportFile>
-  <ReportGuid>2282994c2edc4420bcda2cdf1b8de811</ReportGuid>
+  <ReportGuid>4f5bf71e2718416f83f24b895c04852c</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.2.2.0</ReportVersion>
