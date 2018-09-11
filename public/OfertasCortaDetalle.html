@@ -497,9 +497,25 @@
                                                                             value: sTiposOportunidad, valueAllowUnset: true, selectedOptions: selectedTiposOportunidad, selected2:{}">
                                                     </select>
                                                 </section>
+                                                <section class="col col-md-4">
+                                                    <label class="label" data-i18n="ofertas.tiposContrato">TCN:</label>
+                                                    <select class="aswselect2" id="cmbTiposContrato" name="cmbTiposContrato"
+                                                        data-bind="options: optionsTiposContrato, optionsText: 'nombre', optionsValue: 'tipoContratoId', 
+                                                                            value: sTiposContrato, valueAllowUnset: true, selectedOptions: selectedTiposContrato, selected2:{}">
+                                                    </select>
+                                                </section>
                                             </div>
                                             <div class="row">
-                                                <section class="col col-md-4">
+                                                <section class="col col-md-3">
+                                                    <label class="label" data-i18n="ofertas.fechaAdjudicacion">Fecha
+                                                        adj:</label>
+                                                    <label class="input">
+                                                        <input id="txtFechaAdjudicacion" name="txtFechaAdjudicacion"
+                                                            data-bind="value: fechaAdjudicacion" class="datepicker"
+                                                            data-dateformat="dd/mm/yy">
+                                                    </label>
+                                                </section>
+                                                <section class="col col-md-3">
                                                     <label class="label" data-i18n="ofertas.fechaInicioContrato">Fecha
                                                         entrega:</label>
                                                     <label class="input">
@@ -508,7 +524,7 @@
                                                             data-dateformat="dd/mm/yy">
                                                     </label>
                                                 </section>
-                                                <section class="col col-md-4">
+                                                <section class="col col-md-3">
                                                     <label class="label" data-i18n="ofertas.fechaFinContrato">Fecha
                                                         entrega:</label>
                                                     <label class="input">
@@ -517,7 +533,7 @@
                                                             data-dateformat="dd/mm/yy">
                                                     </label>
                                                 </section>
-                                                <section class="col col-md-4">
+                                                <section class="col col-md-3">
                                                     <label class="label" data-i18n="ofertas.duracion">Dur:</label>
                                                     <label class="input">
                                                         <input id="txtDuracion" name="txtDuracion" data-bind="value: duracion">
