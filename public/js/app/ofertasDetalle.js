@@ -334,6 +334,12 @@ var apiPaginaOfertasDetalle = {
         vm.documentosEspeciales(data.documentosEspeciales);
         vm.anexos(data.anexos);
         vm.financieros(data.financieros);
+        // -----
+        console.log("LEE ANEXOS: ", vm.anexos());
+        console.log("LEE FINANCIEROS: ", vm.financieros());
+        //
+        CKEDITOR.instances.txtAnexos.setData(vm.anexos());
+        CKEDITOR.instances.txtFinancieros.setData(vm.financieros());
     },
     datosPagina: function () {
         var self = this;
