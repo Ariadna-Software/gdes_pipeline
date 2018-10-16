@@ -261,6 +261,7 @@
         "valNombre": "Nom nécessaire"
     },         
     "ofertas": {
+        "relevante": "Pertinent",
         "anexos": "ANNEXES",
         "titulo": "Offres",
         "panel": "Offres",
