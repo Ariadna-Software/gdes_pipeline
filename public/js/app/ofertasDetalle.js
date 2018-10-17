@@ -247,6 +247,7 @@ var apiPaginaOfertasDetalle = {
         vm.observaciones(data.observaciones);
         vm.autorizaciones(data.autorizaciones);
         vm.ofertaSingular(data.ofertaSingular);
+        vm.relevante(data.relevante);
         vm.periodo(data.periodo);
         vm.colaboradores(data.colaboradores);
         vm.margenContribucion(data.margenContribucion);
@@ -375,6 +376,7 @@ var apiPaginaOfertasDetalle = {
         self.selectedTipoOfertas = ko.observableArray([]);
         self.sTipoOferta = ko.observable();
         self.ofertaSingular = ko.observable();
+        self.relevante = ko.observable();
         self.nombreCorto = ko.observable();
         self.version = ko.observable();
 
@@ -575,6 +577,7 @@ var apiPaginaOfertasDetalle = {
             observaciones: vm.observaciones(),
             autorizaciones: vm.autorizaciones(),
             ofertaSingular: vm.ofertaSingular(),
+            relevante: vm.relevante(),
             periodo: vm.periodo(),
             colaboradores: vm.colaboradores(),
             margenContribucion: vm.margenContribucion(),
@@ -828,8 +831,9 @@ var apiPaginaOfertasDetalle = {
         return validos;
     },
     salir: function (id) {
+        console.log("TYPS: ", typeof(id));
         var url = 'OfertasGeneral.html';
-        if (id) url = 'OfertasGeneral.html?id=' + id;
+        if (id && typeof(id) != "object") url = 'OfertasGeneral.html?id=' + id;
         window.open(sprintf(url), '_self');
     },
     cargarTipoOfertas: function (id) {
@@ -1448,6 +1452,7 @@ var apiPaginaOfertasDetalle = {
                 observaciones: vm.observaciones(),
                 autorizaciones: vm.autorizaciones(),
                 ofertaSingular: vm.ofertaSingular(),
+                relevante: vm.relevante(),
                 periodo: vm.periodo(),
                 colaboradores: vm.colaboradores(),
                 centroEstablecidoId: vm.sCentroEstablecido(),
