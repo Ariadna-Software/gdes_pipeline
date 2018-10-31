@@ -1,7 +1,7 @@
 {
-    "host": "mysql01.ariadnasw.com",
+    "host": "localhost",
     "user": "root",
     "password": "aritel",
-    "database": "gdes_pipeline",
+    "database": "gdes_pipeline_test",
     "port": 3306
 }
