@@ -116,6 +116,13 @@ var apiPaginaOfertasDetalle = {
                 var c1 = "OP-" + _contador;
                 vm.numeroOferta(c1);
                 vm.codigoOferta(c1);
+                vm.conversionOportunidad(0);
+                vm.fechaConversionOportunidad(null);
+            }
+            if (vm.originalFaseOfertaId() == 1 && e.added.id == 3) {
+                // cambio de oportunidad a oferta
+                vm.conversionOportunidad(1);
+                vm.fechaConversionOportunidad(moment(new Date()).format('DD/MM/YYYY'));
             }
         });
 
@@ -335,6 +342,10 @@ var apiPaginaOfertasDetalle = {
         vm.documentosEspeciales(data.documentosEspeciales);
         vm.anexos(data.anexos);
         vm.financieros(data.financieros);
+        // -- Conversion de oportunidades
+        vm.conversionOportunidad(data.conversionOportunidad);
+        if (data.fechaConversionOportunidad) vm.fechaConversionOportunidad(moment(data.fechaConversionOportunidad).format(i18n.t('util.date_format')));
+        vm.originalFaseOfertaId(data.faseOfertaId);
         // -----
         console.log("LEE ANEXOS: ", vm.anexos());
         console.log("LEE FINANCIEROS: ", vm.financieros());
@@ -547,6 +558,11 @@ var apiPaginaOfertasDetalle = {
         self.importePresupuestoVersion = ko.observable();
         self.observacionesVersion = ko.observable();
 
+        // control de oportunidades
+        self.conversionOportunidad = ko.observable();
+        self.fechaConversionOportunidad = ko.observable();
+        // 
+        self.originalFaseOfertaId = ko.observable();
     },
     aceptar: function () {
         // if (!apiPaginaOfertasDetalle.datosOk()) return;
@@ -656,7 +672,8 @@ var apiPaginaOfertasDetalle = {
             razonReclamacion4: vm.razonReclamacion3(),
             documentosEspeciales: vm.documentosEspeciales(),
             anexos: CKEDITOR.instances.txtAnexos.getData(),
-            financieros: CKEDITOR.instances.txtFinancieros.getData()
+            financieros: CKEDITOR.instances.txtFinancieros.getData(),
+            conversionOportunidad: vm.conversionOportunidad()
         };
         if (vm.fechaOferta()) data.fechaOferta = moment(vm.fechaOferta(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaUltimoEstado()) data.fechaUltimoEstado = moment(vm.fechaUltimoEstado(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
@@ -667,6 +684,7 @@ var apiPaginaOfertasDetalle = {
         if (vm.fechaAdjudicacion()) data.fechaAdjudicacion = moment(vm.fechaAdjudicacion(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaInicioContrato()) data.fechaInicioContrato = moment(vm.fechaInicioContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.fechaFinContrato()) data.fechaFinContrato = moment(vm.fechaFinContrato(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
+        if (vm.fechaConversionOportunidad()) data.fechaConversionOportunidad = moment(vm.fechaConversionOportunidad(), i18n.t('util.date_format')).format(i18n.t('util.date_iso'));
         if (vm.selectedServicio().length > 0) {
             data.servicioId = vm.selectedServicio()[0];
             if (vm.selectedServicio()[1]) data.servicioId2 = vm.selectedServicio()[1]; else data.servicioId2 = null;
@@ -831,9 +849,9 @@ var apiPaginaOfertasDetalle = {
         return validos;
     },
     salir: function (id) {
-        console.log("TYPS: ", typeof(id));
+        console.log("TYPS: ", typeof (id));
         var url = 'OfertasGeneral.html';
-        if (id && typeof(id) != "object") url = 'OfertasGeneral.html?id=' + id;
+        if (id && typeof (id) != "object") url = 'OfertasGeneral.html?id=' + id;
         window.open(sprintf(url), '_self');
     },
     cargarTipoOfertas: function (id) {

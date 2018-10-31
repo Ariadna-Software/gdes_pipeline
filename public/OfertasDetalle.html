@@ -483,7 +483,7 @@
                                                             <section class="col col-md-12">
                                                                 <label class="label" data-i18n="ofertas.notasPlanning">NotasP:</label>
                                                                 <label class="textarea textarea-resizable">
-                                                                    <textarea id="txtNotasPlanning" rows="2" class="custom-scroll" data-bind="value:notasPlanning"></textarea>
+                                                                    <textarea id="txtNotasPlanning" rows="8" class="custom-scroll" data-bind="value:notasPlanning"></textarea>
                                                                 </label>
                                                             </section>
                                                         </div>
@@ -591,7 +591,7 @@
                                                                                 value: sProbabilidad, valueAllowUnset: true, selectedOptions: selectedProbabilidad, selected2:{}">
                                                                 </select>
                                                             </section>
-                                                            <section class="col col-md-2">
+                                                            <section class="col col-md-4">
                                                                 <label class="label">
                                                                     <a href="javascript:void(0);" rel="popover" data-placement="top" data-original-title="<i class='fa fa-lg fa-info-circle'></i>"
                                                                         data-i18n="[data-content]ofertas.ayudaOfertaSingular"
@@ -605,13 +605,6 @@
                                                                     <span data-i18n="ofertas.ofertaSingular">ESD</span>
                                                                 </label>
                                                             </section>
-                                                            <section class="col col-md-2">
-                                                                <label class="checkbox">
-                                                                    <input id="chkRelevante" type="checkbox" name="chkRelevante" data-bind="checked: relevante">
-                                                                    <i></i>
-                                                                    <span data-i18n="ofertas.relevante">Relevante</span>
-                                                                </label>
-                                                            </section>                                                            
                                                             <section class="col col-md-4">
                                                                 <label class="label">
                                                                     <span data-i18n="ofertas.autorizaciones">Autorizaciones:</span>
@@ -624,7 +617,29 @@
                                                                 <label class="textarea textarea-resizable">
                                                                     <textarea id="txtAutorizaciones" rows="3" class="custom-scroll" data-bind="value:autorizaciones"></textarea>
                                                                 </label>
-                                                            </section </div>
+                                                            </section>
+                                                        </div>
+                                                        <div class="row">
+                                                            <section class="col col-md-2">
+                                                                <label class="checkbox">
+                                                                    <input id="chkRelevante" type="checkbox" name="chkRelevante" data-bind="checked: relevante">
+                                                                    <i></i>
+                                                                    <span data-i18n="ofertas.relevante">Relevante</span>
+                                                                </label>
+                                                            </section>
+                                                            <section class="col col-md-6">
+                                                                <label class="checkbox">
+                                                                    <input id="chkConversionOportunidad" type="checkbox" name="chkConversionOportunidad" data-bind="checked: conversionOportunidad">
+                                                                    <i></i>
+                                                                    <span data-i18n="ofertas.conversion">Conversion</span>
+                                                                </label>
+                                                            </section>
+                                                            <section class="col col-md-4">
+                                                                <label class="label" data-i18n="ofertas.fechaConversion">Fecha conversion:</label>
+                                                                <label class="input">
+                                                                    <input id="txtFechaConversion" name="txtFechaConversion" data-bind="value: fechaConversionOportunidad" class="datepicker" data-dateformat="dd/mm/yy">
+                                                                </label>
+                                                            </section>                                                            
                                                         </div>
                                                 </section>
                                                 </div>

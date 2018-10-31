@@ -262,6 +262,8 @@
     },         
     "ofertas": {
         "relevante": "Pertinent",
+        "conversion": "Occasion convertie",
+        "fechaConversion": "Date de conversion",
         "anexos": "ANNEXES",
         "titulo": "Offres",
         "panel": "Offres",

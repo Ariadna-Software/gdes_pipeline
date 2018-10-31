@@ -281,7 +281,9 @@
         "valNombre": "Nombre necesario"
     },
     "ofertas": {
-        "relecvante": "Relevante",
+        "relevante": "Relevante",
+        "conversion": "Convertida de oportunidad",
+        "fechaConversion": "Fecha de conversión",
         "anexos": "ANEXOS",
         "titulo": "Ofertas",
         "panel": "Ofertas",
