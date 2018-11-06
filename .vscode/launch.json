@@ -15,7 +15,8 @@
                 "--nolazy"
             ],
             "env": {
-                "NODE_ENV": "development"
+                "NODE_ENV": "development",
+                "WEBIX_TEST": true
             },
             "externalConsole": false,
             "sourceMaps": false,
